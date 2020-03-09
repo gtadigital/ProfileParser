@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root>
+    <entry>
+		<_01_actor_local_institutionalContributor>grp</_01_actor_local_institutionalContributor>
+		<_01_actor_local_type>E40_LegalBody</_01_actor_local_type>
+		<_01_actor_nameclass_identifier_identifier>A2DF84D0-133F-4EBE-A1AD-44C1EE3F1DC1</_01_actor_nameclass_identifier_identifier>
+		<_01_actor_nameclass_identifier_identifierURI>https://resource.swissartresearch.net/group/A2DF84D0-133F-4EBE-A1AD-44C1EE3F1DC1</_01_actor_nameclass_identifier_identifierURI>
+		<_01_actor_nameclass_identifier_identifierType>URI</_01_actor_nameclass_identifier_identifierType>
+		<_01_actor_nameclass_identifier_identifierProvider>3E1F990A-2368-4B81-9B05-10675779E790</_01_actor_nameclass_identifier_identifierProvider>
+		<_01_actor_nameclass_identifier_identifierProviderURI>https://resource.swissartresearch.net/group/3E1F990A-2368-4B81-9B05-10675779E790</_01_actor_nameclass_identifier_identifierProviderURI>
+		<_01_actor_nameclass_name>5 Architekten AG</_01_actor_nameclass_name>
+		<_01_actor_nameclass_name_language/>
+		<_01_actor_nameclass_nameHonorific/>
+		<_01_actor_nameclass_gender/>
+		<_02_actor_existence_birthDate_p81a/>
+		<_02_actor_existence_birthDate_p81b/>
+		<_02_actor_existence_birthDate_p82a/>
+		<_02_actor_existence_birthDate_p82b/>
+		<_02_actor_existence_birthDate_uncertainty/>
+		<_02_actor_existence_birthPlace_UUID/>
+		<_02_actor_existence_birthPlace_uri/>
+		<_02_actor_existence_deathDate_p81a/>
+		<_02_actor_existence_deathDate_p81b/>
+		<_02_actor_existence_deathDate_p82a/>
+		<_02_actor_existence_deathDate_p82b/>
+		<_02_actor_existence_deathDate_uncertainty/>
+		<_02_actor_existence_deathPlace_UUID/>
+		<_02_actor_existence_deathPlace_uri/>
+		<_05_actor_documentation_fullbio_de>Sitz in Wettingen/AG, gegründet von fünf Studenten der HTL Brugg-Windisch</_05_actor_documentation_fullbio_de>
+		<_05_actor_documentation_fullbio_en/>
+		<_05_actor_documentation_shortbio_de>Schweizer Architekturbüro, gegründet 1997</_05_actor_documentation_shortbio_de>
+		<_05_actor_documentation_shortbio_en>Identified Legal Body</_05_actor_documentation_shortbio_en>
+		<_99_actor_nameclass_identifierGND_identifier/>
+		<_99_actor_nameclass_identifierGND_identifierProvider/>
+		<_99_actor_nameclass_identifierGND_identifierType/>
+		<_99_actor_nameclass_identifierSIKART_identifier/>
+		<_99_actor_nameclass_identifierSIKART_identifierProvider/>
+		<_99_actor_nameclass_identifierSIKART_identifierType/>
+		<_99_actor_nameclass_identifierULAN_identifier/>
+		<_99_actor_nameclass_identifierULAN_identifierProvider/>
+		<_99_actor_nameclass_identifierULAN_identifierType/>
+		<_99_actor_nameclass_identifierWikidata_identifier/>
+		<_99_actor_nameclass_identifierWikidata_identifierProvider/>
+		<_99_actor_nameclass_identifierWikidata_identifierType/>
+		<_99_actor_nameclass_identifierWikipedia_identifier/>
+		<_99_actor_nameclass_identifierWikipedia_identifierProvider/>
+		<_99_actor_nameclass_identifierWikipedia_identifierType/>
+	</entry>
+</root>

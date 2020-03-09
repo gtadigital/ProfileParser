@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+<objects xmlns="https://schema.easydb.de/EASYDB/1.0/objects/" instance="gta_collections" uuid="8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5" base-schema="230" user-schema="101" timestamp="2020-03-09T10:05:28+01:00">
+  <act>
+    <_id>21373</_id>
+    <_system_object_id>43209</_system_object_id>
+    <_version>6</_version>
+    <_standard>
+      <de-DE>5 Architekten AG (Schweizer Architekturb&#xFC;ro, gegr&#xFC;ndet 1997)</de-DE>
+      <en-US>5 Architekten AG (Individualised Legal Body)</en-US>
+    </_standard>
+    <_objecttype>act</_objecttype>
+    <_global_object_id>43209@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+    <_uuid>c59f35c5-719c-4f19-abc5-08182d0b62f1</_uuid>
+    <pool id="2">
+      <de-DE>Standard-Pool</de-DE>
+      <en-US>Default pool</en-US>
+    </pool>
+    <_exported_at>2020-03-09T10:05:28+01:00</_exported_at>
+    <_mask>act__all_fields</_mask>
+    <_last_modified>2020-01-22T10:51:59Z</_last_modified>
+    <_created>2019-10-27T14:04:46Z</_created>
+    <_urls>
+      <url type="deep-link">https://collections.gta.arch.ethz.ch/api/v1/objects/uuid/c59f35c5-719c-4f19-abc5-08182d0b62f1</url>
+      <url type="easydb-id">https://collections.gta.arch.ethz.ch/detail/43209</url>
+    </_urls>
+    <act_uuid_manual type="string"/>
+    <act_type_crm>
+      <act_type_crm>
+        <_id>3</_id>
+        <_system_object_id>111416</_system_object_id>
+        <_version>1</_version>
+        <_id_parent>2</_id_parent>
+        <_path>
+          <act_type_crm level="0" parent-level="1">
+            <_system_object_id>111415</_system_object_id>
+            <_global_object_id>111415@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_uuid>83d57854-6268-4c31-904e-3e6ad90a1350</_uuid>
+            <_id>2</_id>
+            <_objecttype>act_type_crm</_objecttype>
+            <_standard>
+              <de-DE>E74_Group</de-DE>
+              <en-US>E74_Group</en-US>
+              <es-ES>E74_Group</es-ES>
+              <it-IT>E74_Group</it-IT>
+              <fr-FR>E74_Group</fr-FR>
+            </_standard>
+          </act_type_crm>
+          <act_type_crm level="1" parent-level="0">
+            <_system_object_id>111416</_system_object_id>
+            <_global_object_id>111416@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_uuid>61cffc99-8db8-49c5-9607-a2ec959b465d</_uuid>
+            <_id>3</_id>
+            <_objecttype>act_type_crm</_objecttype>
+            <_standard>
+              <de-DE>E40_LegalBody</de-DE>
+              <en-US>E40_LegalBody</en-US>
+              <es-ES>E40_LegalBody</es-ES>
+              <it-IT>E40_LegalBody</it-IT>
+              <fr-FR>E40_LegalBody</fr-FR>
+            </_standard>
+          </act_type_crm>
+        </_path>
+        <_standard>
+          <de-DE>E40_LegalBody</de-DE>
+          <en-US>E40_LegalBody</en-US>
+          <es-ES>E40_LegalBody</es-ES>
+          <it-IT>E40_LegalBody</it-IT>
+          <fr-FR>E40_LegalBody</fr-FR>
+        </_standard>
+        <_objecttype>act_type_crm</_objecttype>
+        <_global_object_id>111416@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+        <_uuid>61cffc99-8db8-49c5-9607-a2ec959b465d</_uuid>
+        <act_type_crm_uri type="string"/>
+        <act_type_crm_name type="text_oneline">E40_LegalBody</act_type_crm_name>
+      </act_type_crm>
+    </act_type_crm>
+    <act_name type="text_oneline">5 Architekten AG</act_name>
+    <act_honname type="text_oneline"/>
+    <act_person_gender_source type="text_oneline"/>
+    <act_identifier_gnd type="string"/>
+    <act_identifier_sikart type="string"/>
+    <act_identifier_ulan type="string"/>
+    <act_identifier_wikidata type="string"/>
+    <act_identifier_wikipedia type="string"/>
+    <_nested__act__act_descr_short>
+      <act__act_descr_short>
+        <_id>0</_id>
+        <_system_object_id>0</_system_object_id>
+        <act_descr_short type="text_l10n_oneline">
+          <de-DE>Schweizer Architekturb&#xFC;ro, gegr&#xFC;ndet 1997</de-DE>
+          <en-US>Individualised Legal Body</en-US>
+        </act_descr_short>
+        <act_descr_short_source>
+          <generic_contributor>
+            <_id>6</_id>
+            <_system_object_id>125083</_system_object_id>
+            <_version>2</_version>
+            <_standard>
+              <de-DE>gta Archiv</de-DE>
+              <en-US>gta Archives</en-US>
+            </_standard>
+            <_objecttype>generic_contributor</_objecttype>
+            <_global_object_id>125083@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_uuid>a9fae7f3-2b3f-47ad-b776-5ace153294e7</_uuid>
+            <generic_contributor_uri type="string"/>
+            <generic_contributor_name type="text_l10n_oneline">
+              <de-DE>gta Archiv</de-DE>
+              <en-US>gta Archives</en-US>
+            </generic_contributor_name>
+          </generic_contributor>
+        </act_descr_short_source>
+      </act__act_descr_short>
+    </_nested__act__act_descr_short>
+    <_nested__act__act_descr_long>
+      <act__act_descr_long>
+        <_id>0</_id>
+        <_system_object_id>0</_system_object_id>
+        <act_descr_long type="text_l10n">
+          <de-DE>Sitz in Wettingen/AG, gegr&#xFC;ndet von f&#xFC;nf Studenten der HTL Brugg-Windisch</de-DE>
+        </act_descr_long>
+      </act__act_descr_long>
+    </_nested__act__act_descr_long>
+    <_nested__act__act_nat>
+      <act__act_nat>
+        <_id>0</_id>
+        <_system_object_id>0</_system_object_id>
+        <act_nat>
+          <act_nat>
+            <_id>33</_id>
+            <_system_object_id>111093</_system_object_id>
+            <_version>1</_version>
+            <_standard>
+              <de-DE>Schweizerisch</de-DE>
+              <en-US>Swiss</en-US>
+            </_standard>
+            <_objecttype>act_nat</_objecttype>
+            <_global_object_id>111093@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_uuid>3752fd5a-05f4-458a-bed6-762c8a48b7f0</_uuid>
+            <act_nat_uuid type="string">7F880909-6694-485F-8109-71CAB0FE1C88</act_nat_uuid>
+            <act_nat_name type="text_l10n_oneline">
+              <de-DE>Schweizerisch</de-DE>
+              <en-US>Swiss </en-US>
+            </act_nat_name>
+            <act_nat_aat_uri type="string"/>
+          </act_nat>
+        </act_nat>
+      </act__act_nat>
+    </_nested__act__act_nat>
+    <_nested__act__act_activity_occupation>
+      <act__act_activity_occupation>
+        <_id>0</_id>
+        <_system_object_id>0</_system_object_id>
+        <act_occ>
+          <act_occ>
+            <_id>219</_id>
+            <_system_object_id>111151</_system_object_id>
+            <_version>1</_version>
+            <_standard>
+              <de-DE>Architekturb&#xFC;ro</de-DE>
+              <en-US>architectural firm</en-US>
+            </_standard>
+            <_objecttype>act_occ</_objecttype>
+            <_global_object_id>111151@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_uuid>355e032b-54c1-4afe-a1f0-afd1307dec92</_uuid>
+            <act_occ_uuid type="string"/>
+            <act_occ_name type="text_l10n_oneline">
+              <de-DE>Architekturb&#xFC;ro</de-DE>
+              <en-US>architectural firm</en-US>
+            </act_occ_name>
+            <act_occ_aat_uri type="string"/>
+          </act_occ>
+        </act_occ>
+      </act__act_activity_occupation>
+    </_nested__act__act_activity_occupation>
+    <act_uuid type="string">A2DF84D0-133F-4EBE-A1AD-44C1EE3F1DC1</act_uuid>
+    <act_name_display type="text_l10n_oneline">
+      <de-DE>5 Architekten AG</de-DE>
+    </act_name_display>
+    <act_description_bioshort type="text_l10n_oneline">
+      <de-DE>Schweizer Architekturb&#xFC;ro, gegr&#xFC;ndet 1997</de-DE>
+      <en-US>Identified Legal Body</en-US>
+    </act_description_bioshort>
+    <act_type type="string">E40_LegalBody</act_type>
+    <act_migrationlog_source>
+      <act_migrationlog_source>
+        <_id>1</_id>
+        <_system_object_id>111454</_system_object_id>
+        <_version>2</_version>
+        <_standard>
+          <de-DE>grp Authoritative Dataset (Batch A)</de-DE>
+          <en-US>grp Authoritative Dataset (Batch A)</en-US>
+          <es-ES>grp Authoritative Dataset (Batch A)</es-ES>
+          <it-IT>grp Authoritative Dataset (Batch A)</it-IT>
+          <fr-FR>grp Authoritative Dataset (Batch A)</fr-FR>
+        </_standard>
+        <_objecttype>act_migrationlog_source</_objecttype>
+        <_global_object_id>111454@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+        <_uuid>8c487dca-286b-45f3-af9e-79fc6bb22c10</_uuid>
+        <act_migrationlog_source type="string"/>
+      </act_migrationlog_source>
+    </act_migrationlog_source>
+    <act_dc_editorial_note type="text_oneline"/>
+    <act_dc_chekbox_uncertain_alignement type="text_oneline"/>
+    <act_dc_chekbox_duplicate type="text_oneline"/>
+    <act_dc_chekbox_type type="text_oneline"/>
+  </act>
+</objects>
