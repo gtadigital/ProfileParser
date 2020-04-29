@@ -8,9 +8,9 @@ The goal of the framework is to transform the XML dump(s) from EasyDB to the tar
 ## Installation:
 
 prerequisites: 
-1.) XSLT version 3.0, 
 
-2.) Java SE 13
+1. XSLT version 3.0, 
+2. Java SE 13
 
 The Java project can be run in Eclipse for instance.
 
