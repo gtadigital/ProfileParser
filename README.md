@@ -2,13 +2,12 @@
 
 ## Description: 
 
-This project provides several XSLT files which can be applied to XML files downloaded from EasyDB. The XSLT files transform the XML files to other, differently structured XML files that can be imported into ResearchSpace. There are XSLT files for the CIDOC CRM entities builtwork, person, place and group.
-The project also comprises a Java program which takes as an input an XSLT file and an XML file, performs the transformation specified in the XSLT file on the XML file and outputs the new XML file.
+The goal of the framework is to transform the XML dump(s) from EasyDB to the target XML file for the data mapping into CIDOC-CRM. The four XSLT schema(s) have been defined according to the main entities of our data-model: builtwork (E22_Man-Made_Object), person (E21_Person), place (E53_Place) and group (E74_Group).
 
 
 ## Installation:
 
-prerequisites: XSLT processor, Java
+prerequisites: XSLT version 3.0, Java SE 13
 
 The Java project can be run in Eclipse for instance.
 
