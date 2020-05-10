@@ -1,9 +1,14 @@
+/* author: ETH Zurich, gta digital, Zoé Reinke
+        license: please refer to the license.txt file in our git repository (https://github.com/gtadigital/XSLT) */
+
 import javax.xml.transform.*;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
+
+
 
 public class XsltTransformer {
     public static void main(String[] args) throws IOException, URISyntaxException, TransformerException {
