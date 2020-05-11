@@ -34,7 +34,7 @@ Institute for the History and Theory of Architecture, gta digital, ETH Zurich
 XML2XMLTransformer (c) by Institute for the History and Theory of Architecture, gta digital, ETH Zurich
 
 XML2XMLTransformer is licensed under a
-[![Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/)](https://creativecommons.org/licenses/by-sa/4.0/)
+Creative Commons Attribution-ShareAlike 4.0 International License.
 
 This file is subject to the terms and conditions defined in file 'LICENSE.txt', which is part of this source code package.
 
