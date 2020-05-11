@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!-- author: ETH Zurich, gta digital, Zoe Reinke -->
+<!-- license: please refer to the license.txt file in our git repository (https://github.com/gtadigital/XSLT) -->
+
 <root>
     <entry>
 		<_01_actor_local_institutionalContributor>grp</_01_actor_local_institutionalContributor>
