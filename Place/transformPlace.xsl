@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!-- author: ETH Zurich, gta digital, Zoe Reinke -->
+<!-- license: please refer to the license.txt file in our git repository (https://github.com/gtadigital/XSLT) -->
+
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:pr="https://schema.easydb.de/EASYDB/1.0/objects/" exclude-result-prefixes="pr">
 <xsl:output method="xml" indent="yes"/>
 <xsl:template match="/">
