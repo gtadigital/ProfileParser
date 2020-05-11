@@ -26,7 +26,7 @@ The Java project can be run in Eclipse for instance.
 
 ## Credits:
 
-Zoé Reinke, gta digital, ETH Zurich
+Institute for the History and Theory of Architecture, gta digital, ETH Zurich
 
 
 ## License:
