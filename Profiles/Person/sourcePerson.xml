@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+
+<!-- author: ETH Zurich, gta digital, Zoe Reinke -->
+<!-- license: please refer to the license.txt file in our git repository (https://github.com/gtadigital/XSLT) -->
+
+<objects xmlns="https://schema.easydb.de/EASYDB/1.0/objects/" instance="gta_collections" uuid="8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5" base-schema="226" user-schema="75" timestamp="2020-02-11T11:35:33+01:00">
+
+
+  <act>
+    <_version>6</_version>
+    <_id>1127</_id>
+    <_system_object_id>22963</_system_object_id>
+    <_standard>
+      <de-DE>Baumgartner, Andreas (Schweizer Bauingenieur, 20. und 21. Jahrhundert)</de-DE>
+      <en-US>Baumgartner, Andreas (Individualised Person)</en-US>
+    </_standard>
+    <_objecttype>act</_objecttype>
+    <_global_object_id>22963@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+    <_uuid>13baea5a-6e10-4253-8d1c-a348103189f7</_uuid>
+    <pool id="2">
+      <de-DE>Standard-Pool</de-DE>
+      <en-US>Default pool</en-US>
+    </pool>
+    <_exported_at>2020-02-11T11:35:00+01:00</_exported_at>
+    <_mask>act__all_fields</_mask>
+    <_last_modified>2020-01-22T09:25:34Z</_last_modified>
+    <_created>2019-10-27T13:50:30Z</_created>
+    <_urls>
+      <url type="deep-link">https://collections.gta.arch.ethz.ch/api/v1/objects/uuid/13baea5a-6e10-4253-8d1c-a348103189f7</url>
+      <url type="easydb-id">https://collections.gta.arch.ethz.ch/detail/22963</url>
+    </_urls>
+    <act_uuid type="string">B3EC4212-11BA-4508-9187-E3E4ADBD372D</act_uuid>
+    <act_name_display type="text_l10n_oneline">
+      <de-DE>Baumgartner, Andreas</de-DE>
+    </act_name_display>
+    <act_description_bioshort type="text_l10n_oneline">
+      <de-DE>Schweizer Bauingenieur, 20. und 21. Jahrhundert</de-DE>
+      <en-US>Identified Person</en-US>
+    </act_description_bioshort>
+    <act_type type="string"/>
+    <act_migrationlog_source>
+      <act_migrationlog_source>
+        <_version>2</_version>
+        <_id>1</_id>
+        <_system_object_id>111454</_system_object_id>
+        <_standard>
+          <de-DE>grp Authoritative Dataset (Batch A)</de-DE>
+          <en-US>grp Authoritative Dataset (Batch A)</en-US>
+          <es-ES>grp Authoritative Dataset (Batch A)</es-ES>
+          <it-IT>grp Authoritative Dataset (Batch A)</it-IT>
+          <fr-FR>grp Authoritative Dataset (Batch A)</fr-FR>
+        </_standard>
+        <_objecttype>act_migrationlog_source</_objecttype>
+        <_global_object_id>111454@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+        <_uuid>8c487dca-286b-45f3-af9e-79fc6bb22c10</_uuid>
+        <act_migrationlog_source type="string">grp Authoritative Dataset (Batch A)</act_migrationlog_source>
+      </act_migrationlog_source>
+    </act_migrationlog_source>
+    <act_dc_editorial_note type="text_oneline"/>
+    <act_dc_chekbox_uncertain_alignement type="text_oneline"/>
+    <act_dc_chekbox_duplicate type="text_oneline"/>
+    <act_dc_chekbox_type type="text_oneline"/>
+    <act_uuid_manual type="string"/>
+    <act_type_crm>
+      <act_type_crm>
+        <_version>1</_version>
+        <_id>1</_id>
+        <_system_object_id>111414</_system_object_id>
+        <_standard>
+          <de-DE>E21_Person</de-DE>
+          <en-US>E21_Person</en-US>
+          <es-ES>E21_Person</es-ES>
+          <it-IT>E21_Person</it-IT>
+          <fr-FR>E21_Person</fr-FR>
+        </_standard>
+        <_objecttype>act_type_crm</_objecttype>
+        <_global_object_id>111414@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+        <_uuid>0838e425-d5ac-4037-b612-e472b3510fe1</_uuid>
+        <act_type_crm_uri type="string"/>
+        <act_type_crm_name type="text_oneline">E21_Person</act_type_crm_name>
+      </act_type_crm>
+    </act_type_crm>
+    <act_name type="text_oneline">Baumgartner, Andreas</act_name>
+    <act_honname type="text_oneline"/>
+    <act_person_gender>
+      <act_person_gender>
+        <_version>3</_version>
+        <_id>1</_id>
+        <_system_object_id>111395</_system_object_id>
+        <_standard>
+          <de-DE>m&#xE4;nnlich</de-DE>
+          <en-US>male</en-US>
+        </_standard>
+        <_objecttype>act_person_gender</_objecttype>
+        <_global_object_id>111395@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+        <_uuid>3a9a5fbc-c290-4e9f-bec5-f13588e088cc</_uuid>
+        <act_person_gender_uuid type="string"/>
+        <act_person_gender_name type="text_l10n_oneline">
+          <de-DE>m&#xE4;nnlich</de-DE>
+          <en-US>male</en-US>
+        </act_person_gender_name>
+        <act_person_gender_aat_uri type="string">http://vocab.getty.edu/aat/300189559</act_person_gender_aat_uri>
+      </act_person_gender>
+    </act_person_gender>
+    <act_person_gender_source type="text_oneline">data curation</act_person_gender_source>
+    <act_identifier_gnd type="string"/>
+    <act_identifier_sikart type="string"/>
+    <act_identifier_ulan type="string"/>
+    <act_identifier_wikidata type="string"/>
+    <act_identifier_wikipedia type="string"/>
+    <_nested__act__act_descr_short>
+      <act__act_descr_short>
+        <act_descr_short type="text_l10n_oneline">
+          <de-DE>Schweizer Bauingenieur, 20. und 21. Jahrhundert</de-DE>
+          <en-US>Individualised Person</en-US>
+        </act_descr_short>
+        <act_descr_short_source>
+          <generic_contributor>
+            <_version>1</_version>
+            <_id>6</_id>
+            <_system_object_id>125083</_system_object_id>
+            <_standard>
+              <de-DE>gta Research Portal</de-DE>
+              <en-US>gta Research Portal</en-US>
+            </_standard>
+            <_objecttype>generic_contributor</_objecttype>
+            <_global_object_id>125083@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_uuid>a9fae7f3-2b3f-47ad-b776-5ace153294e7</_uuid>
+            <generic_contributor_uri type="string"/>
+            <generic_contributor_name type="text_l10n_oneline">
+              <de-DE>gta Research Portal</de-DE>
+              <en-US>gta Research Portal</en-US>
+            </generic_contributor_name>
+          </generic_contributor>
+        </act_descr_short_source>
+      </act__act_descr_short>
+    </_nested__act__act_descr_short>
+    <_nested__act__act_descr_long>
+      <act__act_descr_long>
+        <act_descr_long type="text_l10n">
+          <de-DE>Mitbegr&#xFC;nder von Intep AG 1979. Heute Senior Consultant bei Amstein + Walthert</de-DE>
+        </act_descr_long>
+      </act__act_descr_long>
+    </_nested__act__act_descr_long>
+    <_nested__act__act_nat>
+      <act__act_nat>
+        <act_nat>
+          <act_nat>
+            <_version>1</_version>
+            <_id>33</_id>
+            <_system_object_id>111093</_system_object_id>
+            <_standard>
+              <de-DE>Schweizerisch</de-DE>
+              <en-US>Swiss</en-US>
+            </_standard>
+            <_objecttype>act_nat</_objecttype>
+            <_global_object_id>111093@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_uuid>3752fd5a-05f4-458a-bed6-762c8a48b7f0</_uuid>
+            <act_nat_uuid type="string">7F880909-6694-485F-8109-71CAB0FE1C88</act_nat_uuid>
+            <act_nat_name type="text_l10n_oneline">
+              <de-DE>Schweizerisch</de-DE>
+              <en-US>Swiss </en-US>
+            </act_nat_name>
+            <act_nat_aat_uri type="string"/>
+          </act_nat>
+        </act_nat>
+      </act__act_nat>
+    </_nested__act__act_nat>
+  </act>
+ 
+
+
+
+</objects>
