@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!-- author: ETH Zurich, gta digital, Zoe Reinke -->
+<!-- license: please refer to the license.txt file in our git repository (https://github.com/gtadigital/XSLT) -->
+
+
 <root>
 	<Entry>
 		<plIdentifier_uuid>5B231501-0C3D-4A73-B8E0-027B2E057554</plIdentifier_uuid>
