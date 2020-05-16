@@ -1,15 +1,19 @@
-# XSLT XML to XML data transformation
+# ProfileParser
 
-## Description: 
+## Description:
 
-The goal of the framework is to transform the XML dump(s) from EasyDB to the target XML file for the data mapping into CIDOC-CRM. The four XSLT schema(s) have been defined according to the main entities of our data-model: builtwork (E22_Man-Made_Object), person (E21_Person), place (E53_Place) and group (E74_Group).
+The goal of the framework is to transform the XML dump(s) from EasyDB to the target XML file for the data mapping into CIDOC-CRM. The four XSLT schema(s) have been defined according to the main entities of our data-model:
+* Builtwork (E22_Man-Made_Object)
+* Person (E21_Person)
+* Place (E53_Place)
+* Group (E74_Group).
 
 
 ## Installation:
 
-prerequisites: 
+prerequisites:
 
-1. XSLT version 3.0, 
+1. XSLT version 3.0,
 2. Java SE 13
 
 The Java project can be run in Eclipse for instance.
@@ -31,9 +35,9 @@ Institute for the History and Theory of Architecture, gta digital, ETH Zurich
 
 ## License:
 
-XML2XMLTransformer (c) by Institute for the History and Theory of Architecture, gta digital, ETH Zurich
+ProfileParser (c) by Institute for the History and Theory of Architecture, gta digital, ETH Zurich
 
-XML2XMLTransformer is licensed under a
+ProfileParser is licensed under a
 Creative Commons Attribution-ShareAlike 4.0 International License.
 
 This file is subject to the terms and conditions defined in file 'LICENSE.txt', which is part of this source code package.
