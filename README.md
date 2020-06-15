@@ -3,7 +3,7 @@
 ## Description:
 
 The goal of the framework is to transform the XML dump(s) from EasyDB to the target XML file for the data mapping into CIDOC-CRM. The four XSLT schema(s) have been defined according to the main entities of our data-model:
-* Builtwork (E22_Man-Made_Object)
+
 * Person (E21_Person)
 * Place (E53_Place)
 * Group (E74_Group).
