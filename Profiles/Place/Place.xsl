@@ -26,21 +26,26 @@
 	 	<xsl:value-of select="pr:_nested__pl__pl_nc_name/pr:pl__pl_nc_name/pr:pl_nc_name_source/pr:generic_contributor/pr:_standard/pr:de-DE"/>
 	 </plIdentifier_nameGeneric_source>
 	 <plIdentifier_nameEn>
-	 	<xsl:value-of select="pr:_nested__pl__pl_nc_name/pr:pl__pl_nc_name/pr:pl_nc_name_source/pr:generic_contributor/pr:_standard/pr:en-US"/>
+	 	<xsl:value-of select="pr:_path/pr:pl[4]/pr:_standard/pr:en-US"/>
 	 </plIdentifier_nameEn>
 	 <plIdentifier_nameEn_source/>
 	 <plIdentifier_nameDe>
-	 	<xsl:value-of select="pr:_nested__pl__pl_nc_name/pr:pl__pl_nc_name/pr:pl_nc_name_source/pr:generic_contributor/pr:_standard/pr:de-DE"/>
-	 </plIdentifier_nameDe><plIdentifier_nameDe_source/>
-	 <plIdentifier_nameFr></plIdentifier_nameFr>
+	 	<xsl:value-of select="pr:_path/pr:pl[4]/pr:_standard/pr:de-DE"/>
+	 </plIdentifier_nameDe>
+	 <plIdentifier_nameDe_source/>
+	 <plIdentifier_nameFr>
+	 	<xsl:value-of select="pr:_path/pr:pl[4]/pr:_standard/pr:fr-FR"/>
+	 </plIdentifier_nameFr>
 	 <plIdentifier_nameFr_source/>
-	 <plIdentifier_nameIT></plIdentifier_nameIT>
+	 <plIdentifier_nameIT>
+	 	<xsl:value-of select="pr:_path/pr:pl[4]/pr:_standard/pr:it-IT"/>
+	 </plIdentifier_nameIT>
 	 <plIdentifier_nameIt_source/>
 	 <plIdentifier_type>
-	 	<xsl:value-of select="pr:_objecttype"/>
+	 	<xsl:value-of select="pr:pl_nc_type/pr:pl_type/pr:_path/pr:pl_type/pr:_id"/>
 	 </plIdentifier_type>
 	 <plParthood_currentPartOf>
-	 	<xsl:value-of select="pr:pl_parent_string"/>
+	 	<xsl:value-of select="pr:pl_ph_current_partof_place/pr:pl/pr:_uuid"/>
 	 </plParthood_currentPartOf>
 	 <plParthood_currentHasPart/>
 	 <plParthood_parentString>
@@ -49,7 +54,9 @@
 	 <plParthood_parentStringSource>
 	 	<xsl:value-of select="pr:_nested__pl__pl_nc_name/pr:pl__pl_nc_name/pr:pl_nc_name_source/pr:generic_contributor/pr:_standard/pr:de-DE"/>
 	 </plParthood_parentStringSource>
-	 <plSubstance_geoWKT/>
+	 <plSubstance_geoWKT>
+	 	<xsl:value-of select="pr:pl_sub_coordinates_wkt_v1"/>
+	 </plSubstance_geoWKT>
 	 <plIdentifier_geonamesURI>
 	 	<xsl:value-of select="pr:pl_nc_indentifier_geonames"/>
 	 </plIdentifier_geonamesURI>
@@ -71,8 +78,11 @@
 	 </plIdentifier_tgn_provider>
 	 <plIdentifier_tgn_preferredTerm></plIdentifier_tgn_preferredTerm>
 	 <plIdentifier_tgn_parentURI>
-	 	<xsl:value-of select="pr:pl_name_display"/>
+	 	<xsl:value-of select="pr:pl_nc_indentifier_tgn"/>
 	 </plIdentifier_tgn_parentURI>
+	 <pl_uuid_parent>
+	 	<xsl:value-of select="pr:pl_uuid_parent"/>
+	 </pl_uuid_parent>
 	 <plIdentifier_tgn_parentString></plIdentifier_tgn_parentString>
 	 <plSubstance_tgn_lat></plSubstance_tgn_lat>
 	 <plSubstance_tgn_long></plSubstance_tgn_long>
