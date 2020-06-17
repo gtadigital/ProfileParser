@@ -13,7 +13,7 @@
 <xsl:template match="pr:objects/pr:pl">
  <entry>
 	 <plIdentifier_uuid>
-	<xsl:value-of select="pr:pl_uuid"/> <!-- here we should go for '_uuid' instead -->
+	<xsl:value-of select="pr:_uuid"/> 
 	 </plIdentifier_uuid>
 	 <plIdentifier_uuid_type>
 	 	<xsl:value-of select="pr:pl_uuid/@type"/>
@@ -51,9 +51,20 @@
 	 <plSubstance_geoWKT>
 	 	<xsl:value-of select="pr:pl_sub_coordinates_wkt_v1"/>
 	 </plSubstance_geoWKT>
+	 <plIdentifier_gnd>
+		<xsl:value-of select="pr:pl_nc_indentifier_gnd"/>
+	 </plIdentifier_gnd>
 	 <plIdentifier_geonamesURI>
 	 	<xsl:value-of select="pr:pl_nc_indentifier_geonames"/>
 	 </plIdentifier_geonamesURI>
+	<plIdentifier_dbpediaURI>
+		<xsl:value-of select="pr:pl_nc_indentifier_dbpedia"/>
+	</plIdentifier_dbpediaURI>
+		
+	<plIdentifier_viafURI>
+		<xsl:value-of select="pr:pl_nc_indentifier_viaf"/>
+	</plIdentifier_viafURI>
+
 	 <plIdentifier_geonamesProvider/>
 	 <plIdentifier_tgn_uri>
 	 	<xsl:value-of select="pr:pl_nc_indentifier_tgn"/>
