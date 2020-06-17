@@ -51,6 +51,11 @@
 	 <plSubstance_geoWKT>
 	 	<xsl:value-of select="pr:pl_sub_coordinates_wkt_v1"/>
 	 </plSubstance_geoWKT>
+
+	<plIdentifier_swisstopo>
+		<xsl:value-of select="pr:pl_nc_indentifier_swisstopo"/>
+	</plIndentifier_swisstopo>
+
 	 <plIdentifier_gnd>
 		<xsl:value-of select="pr:pl_nc_indentifier_gnd"/>
 	 </plIdentifier_gnd>
