@@ -13,7 +13,7 @@
 <xsl:template match="pr:objects/pr:pl">
  <entry>
 	 <plIdentifier_uuid>
-	 	<xsl:value-of select="pr:pl_uuid"/>
+	<xsl:value-of select="pr:pl_uuid"/> <!-- here we should go for '_uuid' instead -->
 	 </plIdentifier_uuid>
 	 <plIdentifier_uuid_type>
 	 	<xsl:value-of select="pr:pl_uuid/@type"/>
