@@ -18,6 +18,7 @@
         <plParthood_currentPartOf>bcec8ddd-80fc-4f21-8681-3c0c672bc5de</plParthood_currentPartOf>
         <plParthood_currentHasPart/>
         <plSubstance_geoWKT>POINT(10.316666666667 43.55)</plSubstance_geoWKT>
+        <plIdentifier_swisstopo/>
         <plIdentifier_gnd>http://d-nb.info/gnd/4114431-4</plIdentifier_gnd>
         <plIdentifier_geonamesURI>https://www.geonames.org/6540122</plIdentifier_geonamesURI>
         <plIdentifier_dbpediaURI>http://dbpedia.org/resource/Livorno</plIdentifier_dbpediaURI>
