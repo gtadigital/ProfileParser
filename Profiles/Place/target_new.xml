@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><root>
       
     <entry>
-        <plIdentifier_uuid>2017F368-1006-4466-B99C-B29C931A242C</plIdentifier_uuid>
+        <plIdentifier_uuid>833d0d54-f1ab-4108-8002-2e22b2cbb318</plIdentifier_uuid>
         <plIdentifier_uuid_type>string</plIdentifier_uuid_type>
         <plIdentifier_uuid_provider/>
         <plIdentifier_nameGeneric>Livorno</plIdentifier_nameGeneric>
@@ -17,19 +17,17 @@
         <plIdentifier_type>184</plIdentifier_type>
         <plParthood_currentPartOf>bcec8ddd-80fc-4f21-8681-3c0c672bc5de</plParthood_currentPartOf>
         <plParthood_currentHasPart/>
-        <plParthood_parentString>Livorno, Toscana, Italia, Europe, World</plParthood_parentString>
-        <plParthood_parentStringSource>J. Paul Getty Trust</plParthood_parentStringSource>
         <plSubstance_geoWKT>POINT(10.316666666667 43.55)</plSubstance_geoWKT>
+        <plIdentifier_gnd>http://d-nb.info/gnd/4114431-4</plIdentifier_gnd>
         <plIdentifier_geonamesURI>https://www.geonames.org/6540122</plIdentifier_geonamesURI>
-        <plIdentifier_geonamesType>string</plIdentifier_geonamesType>
+        <plIdentifier_dbpediaURI>http://dbpedia.org/resource/Livorno</plIdentifier_dbpediaURI>
+        <plIdentifier_viafURI>http://viaf.org/viaf/134273104</plIdentifier_viafURI>
         <plIdentifier_geonamesProvider/>
-        <plIdentifier_geonamesSource>wd:Q6761</plIdentifier_geonamesSource>
         <plIdentifier_tgn_uri>http://vocab.getty.edu/page/tgn/7006074</plIdentifier_tgn_uri>
         <plIdentifier_tgn_type>string</plIdentifier_tgn_type>
         <plIdentifier_tgn_provider>J. Paul Getty Trust</plIdentifier_tgn_provider>
         <plIdentifier_tgn_preferredTerm/>
         <plIdentifier_tgn_parentURI>http://vocab.getty.edu/page/tgn/7006074</plIdentifier_tgn_parentURI>
-        <pl_uuid_parent/>
         <plIdentifier_tgn_parentString/>
         <plSubstance_tgn_lat/>
         <plSubstance_tgn_long/>
