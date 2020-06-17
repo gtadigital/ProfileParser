@@ -12,12 +12,12 @@ import java.net.URISyntaxException;
 
 public class XsltTransformer {
     public static void main(String[] args) throws IOException, URISyntaxException, TransformerException {
-            String xmlFile = ""; //put path of input XML file between ""
-            String xslFile = ""; //put path of input XSL file between ""
+            String xmlFile = "/Users/mac-pro/GTA_Repo/ProfileParser/Profiles/Place/Livorno.xml"; //put path of input XML file between ""
+            String xslFile = "/Users/mac-pro/GTA_Repo/ProfileParser/Profiles/Place/Place.xsl"; //put path of input XSL file between ""
             TransformerFactory factory = TransformerFactory.newInstance();
             Source xslt = new StreamSource(new File(xslFile));
             Transformer transformer = factory.newTransformer(xslt);
             Source text = new StreamSource(new File(xmlFile));
-            transformer.transform(text, new StreamResult(new File(""))); //put path of newly created XML file between ""
+            transformer.transform(text, new StreamResult(new File("/Users/mac-pro/GTA_Repo/ProfileParser/Profiles/Place/target_new.xml"))); //put path of newly created XML file between ""
     }
 }

@@ -1,29 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<!-- author: ETH Zurich, gta digital, Zoe Reinke -->
-<!-- license: please refer to the license.txt file in our git repository (https://github.com/gtadigital/XSLT) -->
-
-<objects xmlns="https://schema.easydb.de/EASYDB/1.0/objects/" instance="gta_collections" uuid="8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5" base-schema="228" user-schema="94" timestamp="2020-03-02T11:28:58+01:00">
+<objects xmlns="https://schema.easydb.de/EASYDB/1.0/objects/" instance="gta_collections" uuid="8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5" base-schema="234" user-schema="189" timestamp="2020-06-16T18:15:45+02:00">
   <pl>
-    <_version>6</_version>
-    <_id>37001</_id>
-    <_id_parent>36942</_id_parent>
-    <_system_object_id>103121</_system_object_id>
-    <_standard>
-      <de-DE>Deitingen [Siedlung]</de-DE>
-      <en-US>Deitingen [inhabited places]</en-US>
-    </_standard>
-    <_objecttype>pl</_objecttype>
-    <_global_object_id>103121@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
-    <_uuid>9e1101f8-b27e-42b5-b568-d91d2899a808</_uuid>
-    <pool id="4">
-      <de-DE>gta Research Portal</de-DE>
-      <en-US>gta Research Portal</en-US>
-    </pool>
-    <_exported_at>2020-03-02T11:28:58+01:00</_exported_at>
-    <_mask>pl__all_fields</_mask>
-    <_last_modified>2020-01-22T14:21:47Z</_last_modified>
-    <_created>2019-12-18T22:54:22Z</_created>
+    <_id>39290</_id>
+    <_system_object_id>105410</_system_object_id>
+    <_version>14</_version>
+    <_id_parent>48391</_id_parent>
     <_path>
       <pl level="0" parent-level="4">
         <_system_object_id>95963</_system_object_id>
@@ -34,7 +15,6 @@
         <_standard>
           <de-DE>World</de-DE>
           <en-US>World</en-US>
-          <es-ES>World</es-ES>
           <it-IT>World</it-IT>
           <fr-FR>World</fr-FR>
         </_standard>
@@ -48,166 +28,249 @@
         <_standard>
           <de-DE>Europe</de-DE>
           <en-US>Europe</en-US>
-          <es-ES>Europe</es-ES>
           <it-IT>Europe</it-IT>
           <fr-FR>Europe</fr-FR>
         </_standard>
       </pl>
       <pl level="2" parent-level="2">
-        <_system_object_id>101009</_system_object_id>
-        <_global_object_id>101009@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
-        <_uuid>87cb0135-3a22-4126-9563-94ce3d6d739f</_uuid>
-        <_id>34889</_id>
+        <_system_object_id>297859</_system_object_id>
+        <_global_object_id>297859@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+        <_uuid>5d2dcfe8-033d-4e47-b014-cf8db88eacde</_uuid>
+        <_id>44788</_id>
         <_objecttype>pl</_objecttype>
         <_standard>
           <de-DE>Schweiz</de-DE>
           <en-US>Schweiz</en-US>
-          <es-ES>Schweiz</es-ES>
           <it-IT>Schweiz</it-IT>
           <fr-FR>Schweiz</fr-FR>
         </_standard>
       </pl>
       <pl level="3" parent-level="1">
-        <_system_object_id>103062</_system_object_id>
-        <_global_object_id>103062@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
-        <_uuid>0f3e7b2f-9d5f-4d97-b783-526fce218c09</_uuid>
-        <_id>36942</_id>
+        <_system_object_id>301462</_system_object_id>
+        <_global_object_id>301462@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+        <_uuid>5927d90f-d5e8-4a55-b219-b600f2faa7ec</_uuid>
+        <_id>48391</_id>
         <_objecttype>pl</_objecttype>
         <_standard>
-          <de-DE>Solothurn</de-DE>
-          <en-US>Solothurn</en-US>
-          <es-ES>Solothurn</es-ES>
-          <it-IT>Solothurn</it-IT>
-          <fr-FR>Solothurn</fr-FR>
+          <de-DE>Zug</de-DE>
+          <en-US>Zug</en-US>
+          <it-IT>Zug</it-IT>
+          <fr-FR>Zug</fr-FR>
         </_standard>
       </pl>
       <pl level="4" parent-level="0">
-        <_system_object_id>103121</_system_object_id>
-        <_global_object_id>103121@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
-        <_uuid>9e1101f8-b27e-42b5-b568-d91d2899a808</_uuid>
-        <_id>37001</_id>
+        <_system_object_id>105410</_system_object_id>
+        <_global_object_id>105410@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+        <_uuid>a92f092d-c801-47af-96ef-acfb2dd9da9d</_uuid>
+        <_id>39290</_id>
         <_objecttype>pl</_objecttype>
         <_standard>
-          <de-DE>Deitingen</de-DE>
-          <en-US>Deitingen</en-US>
-          <es-ES>Deitingen</es-ES>
-          <it-IT>Deitingen</it-IT>
-          <fr-FR>Deitingen</fr-FR>
+          <de-DE>Zug, Leimatt</de-DE>
+          <en-US>Zug, Leimatt</en-US>
+          <it-IT>Zug, Leimatt</it-IT>
+          <fr-FR>Zug, Leimatt</fr-FR>
         </_standard>
       </pl>
     </_path>
+    <_standard>
+      <de-DE>Zug, Leimatt</de-DE>
+      <en-US>Zug, Leimatt</en-US>
+    </_standard>
+    <_objecttype>pl</_objecttype>
+    <_global_object_id>105410@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+    <_uuid>a92f092d-c801-47af-96ef-acfb2dd9da9d</_uuid>
+    <pool id="40">
+      <de-DE>_swiss_places_obsolete</de-DE>
+      <en-US>_swiss_places_obsolete</en-US>
+    </pool>
+    <_exported_at>2020-06-16T18:15:45+02:00</_exported_at>
+    <_mask>pl__all_fields</_mask>
+    <_last_modified>2020-06-02T20:30:14Z</_last_modified>
+    <_created>2019-12-18T22:59:26Z</_created>
+    <tags>
+      <tag id="23">
+        <name>
+          <de-DE>gta Archive used</de-DE>
+          <en-US>gta Archive used</en-US>
+        </name>
+      </tag>
+    </tags>
     <_urls>
-      <url type="deep-link">https://collections.gta.arch.ethz.ch/api/v1/objects/uuid/9e1101f8-b27e-42b5-b568-d91d2899a808</url>
-      <url type="easydb-id">https://collections.gta.arch.ethz.ch/detail/103121</url>
+      <url type="deep-link">https://collections.gta.arch.ethz.ch/api/v1/objects/uuid/a92f092d-c801-47af-96ef-acfb2dd9da9d</url>
+      <url type="easydb-id">https://collections.gta.arch.ethz.ch/detail/105410</url>
     </_urls>
-    <pl_uuid type="string">5B231501-0C3D-4A73-B8E0-027B2E057554</pl_uuid>
-    <pl_dc_note type="text"/>
-    <pl_dc_note_duplicate type="string"/>
-    <pl_dc_note_misspelled_nowcorrect_duplicate type="string"/>
-    <pl_dc_note_misspelled_nowcorrect type="string"/>
-    <pl_dc_note_tgn_type type="string"/>
-    <pl_dc_note_tgn_failure type="string"/>
+    <pl_dc_place_to_merge_to_comment type="text_oneline"/>
+    <pl_dc_wikidata_identifier_verified type="string"/>
+    <pl_dc_note_used_archivar type="string">Used in Archivar as of 20203010-0139</pl_dc_note_used_archivar>
+    <pl_dc_archives_note type="text"/>
     <_nested__pl__pl_nc_name>
       <pl__pl_nc_name>
-        <pl_nc_name_literal type="text_oneline">Deitingen</pl_nc_name_literal>
+        <_id>0</_id>
+        <_system_object_id>0</_system_object_id>
+        <pl_nc_name_literal type="text_oneline">Zug, Leimatt</pl_nc_name_literal>
         <pl_nc_name_source>
           <generic_contributor>
-            <_version>1</_version>
-            <_id>5</_id>
-            <_system_object_id>125082</_system_object_id>
+            <_id>6</_id>
+            <_system_object_id>125083</_system_object_id>
+            <_version>2</_version>
             <_standard>
-              <de-DE>J. Paul Getty Trust</de-DE>
-              <en-US>J. Paul Getty Trust</en-US>
+              <de-DE>gta Archiv</de-DE>
+              <en-US>gta Archives</en-US>
             </_standard>
             <_objecttype>generic_contributor</_objecttype>
-            <_global_object_id>125082@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
-            <_uuid>be74de9a-aa23-4a95-97e8-69f0569f783e</_uuid>
+            <_global_object_id>125083@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_uuid>a9fae7f3-2b3f-47ad-b776-5ace153294e7</_uuid>
           </generic_contributor>
         </pl_nc_name_source>
       </pl__pl_nc_name>
     </_nested__pl__pl_nc_name>
-    <_nested__pl__pl_nc_type>
-      <pl__pl_nc_type>
-        <pl_nc_type>
-          <pl_type>
-            <_version>3</_version>
-            <_id>1</_id>
-            <_system_object_id>123094</_system_object_id>
-            <_standard>
-              <de-DE>Siedlung</de-DE>
-              <en-US>inhabited places</en-US>
-            </_standard>
+    <pl_nc_type>
+      <pl_type>
+        <_id>2</_id>
+        <_system_object_id>123095</_system_object_id>
+        <_version>4</_version>
+        <_id_parent>184</_id_parent>
+        <_path>
+          <pl_type level="0" parent-level="1">
+            <_system_object_id>431569</_system_object_id>
+            <_global_object_id>431569@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_uuid>f58ae514-92b3-4846-8634-3c0959c9ad73</_uuid>
+            <_id>184</_id>
             <_objecttype>pl_type</_objecttype>
-            <_global_object_id>123094@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
-            <_uuid>d70ec8cc-04f8-4c72-85de-4b3beb5fbc6a</_uuid>
+            <_standard>
+              <de-DE>TGN</de-DE>
+              <en-US>TGN</en-US>
+            </_standard>
           </pl_type>
-        </pl_nc_type>
-      </pl__pl_nc_type>
-    </_nested__pl__pl_nc_type>
-    <custom name="pl_nc_indentifier_wikidata" type="custom:base.custom-data-type-link.link">
-      <string name="hostname">www.wikidata.org</string>
-      <string name="tld">org</string>
-      <string name="url">https://www.wikidata.org/entity/Q66142</string>
-      <object name="_fulltext">
-        <string name="string">https://www.wikidata.org/entity/Q66142</string>
-      </object>
-      <object name="_standard">
-        <string name="text">https://www.wikidata.org/entity/Q66142</string>
-      </object>
-    </custom>
-    <pl_nc_indentifier_wikidata_source type="text_oneline">sari-rds (wd:Q66142)</pl_nc_indentifier_wikidata_source>
-    <custom name="pl_nc_indentifier_geonames" type="custom:base.custom-data-type-link.link">
-      <string name="hostname">www.geonames.org</string>
-      <string name="tld">org</string>
-      <string name="url">https://www.geonames.org/2661036</string>
-      <object name="_fulltext">
-        <string name="string">https://www.geonames.org/2661036</string>
-      </object>
-      <object name="_standard">
-        <string name="text">https://www.geonames.org/2661036</string>
-      </object>
-    </custom>
-    <pl_nc_indentifier_geonames_source type="text_oneline">wd:Q66142</pl_nc_indentifier_geonames_source>
+          <pl_type level="1" parent-level="0">
+            <_system_object_id>123095</_system_object_id>
+            <_global_object_id>123095@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_uuid>3852fa8d-3e5e-48c6-a6be-ee50dec0f305</_uuid>
+            <_id>2</_id>
+            <_objecttype>pl_type</_objecttype>
+            <_standard>
+              <de-DE>Teile von bewohnten Orten</de-DE>
+              <en-US>parts of inhabited places</en-US>
+            </_standard>
+          </pl_type>
+        </_path>
+        <_standard>
+          <de-DE>Teile von bewohnten Orten</de-DE>
+          <en-US>parts of inhabited places</en-US>
+        </_standard>
+        <_objecttype>pl_type</_objecttype>
+        <_global_object_id>123095@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+        <_uuid>3852fa8d-3e5e-48c6-a6be-ee50dec0f305</_uuid>
+      </pl_type>
+    </pl_nc_type>
+    <pl_ph_current_partof_place>
+      <pl>
+        <_id>48391</_id>
+        <_system_object_id>301462</_system_object_id>
+        <_version>6</_version>
+        <_id_parent>44788</_id_parent>
+        <_path>
+          <pl level="0" parent-level="3">
+            <_system_object_id>95963</_system_object_id>
+            <_global_object_id>95963@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_uuid>6fcb97c3-7e11-4d53-a0ad-9e208766a986</_uuid>
+            <_id>29843</_id>
+            <_objecttype>pl</_objecttype>
+            <_standard>
+              <de-DE>World</de-DE>
+              <en-US>World</en-US>
+              <it-IT>World</it-IT>
+              <fr-FR>World</fr-FR>
+            </_standard>
+          </pl>
+          <pl level="1" parent-level="2">
+            <_system_object_id>97704</_system_object_id>
+            <_global_object_id>97704@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_uuid>f2419b9d-172f-4ffc-97ea-020272da7988</_uuid>
+            <_id>31584</_id>
+            <_objecttype>pl</_objecttype>
+            <_standard>
+              <de-DE>Europe</de-DE>
+              <en-US>Europe</en-US>
+              <it-IT>Europe</it-IT>
+              <fr-FR>Europe</fr-FR>
+            </_standard>
+          </pl>
+          <pl level="2" parent-level="1">
+            <_system_object_id>297859</_system_object_id>
+            <_global_object_id>297859@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_uuid>5d2dcfe8-033d-4e47-b014-cf8db88eacde</_uuid>
+            <_id>44788</_id>
+            <_objecttype>pl</_objecttype>
+            <_standard>
+              <de-DE>Schweiz</de-DE>
+              <en-US>Schweiz</en-US>
+              <it-IT>Schweiz</it-IT>
+              <fr-FR>Schweiz</fr-FR>
+            </_standard>
+          </pl>
+          <pl level="3" parent-level="0">
+            <_system_object_id>301462</_system_object_id>
+            <_global_object_id>301462@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_uuid>5927d90f-d5e8-4a55-b219-b600f2faa7ec</_uuid>
+            <_id>48391</_id>
+            <_objecttype>pl</_objecttype>
+            <_standard>
+              <de-DE>Zug</de-DE>
+              <en-US>Zug</en-US>
+              <it-IT>Zug</it-IT>
+              <fr-FR>Zug</fr-FR>
+            </_standard>
+          </pl>
+        </_path>
+        <_standard>
+          <de-DE>Zug [Kanton]</de-DE>
+          <en-US>Zug [Canton]</en-US>
+          <it-IT>Zug</it-IT>
+          <fr-FR>Zug</fr-FR>
+        </_standard>
+        <_objecttype>pl</_objecttype>
+        <_global_object_id>301462@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+        <_uuid>5927d90f-d5e8-4a55-b219-b600f2faa7ec</_uuid>
+        <pool id="36">
+          <de-DE>SwissTopo</de-DE>
+          <en-US>SwissTopo</en-US>
+        </pool>
+      </pl>
+    </pl_ph_current_partof_place>
+    <pl_ph_swisstopo_country type="string"/>
+    <pl_ph_swisstopo_canton type="string"/>
+    <pl_ph_swisstopo_disctrict type="string"/>
+    <pl_ph_swisstopo_valid type="date"/>
+    <pl_sub_coordinates_wkt_v1 type="text"/>
+    <pl_sub_coordinates_wkt_source_note_v1 type="text_oneline"/>
+    <pl_nc_indentifier_swisstopo type="string"/>
     <pl_nc_indentifier_swisstopo_source type="text_oneline"/>
-    <pl_nc_indentifier_gnd_source type="text_oneline"/>
-    <custom name="pl_nc_indentifier_viaf" type="custom:base.custom-data-type-link.link">
-      <string name="hostname">viaf.org</string>
-      <string name="tld">org</string>
-      <string name="url">http://viaf.org/viaf/234309117</string>
-      <object name="_fulltext">
-        <string name="string">http://viaf.org/viaf/234309117</string>
-      </object>
-      <object name="_standard">
-        <string name="text">http://viaf.org/viaf/234309117</string>
-      </object>
-    </custom>
-    <pl_nc_indentifier_viaf_source type="text_oneline">wd:Q66142</pl_nc_indentifier_viaf_source>
-    <custom name="pl_nc_indentifier_dbpedia" type="custom:base.custom-data-type-link.link">
-      <string name="hostname">dbpedia.org</string>
-      <string name="tld">org</string>
-      <string name="url">http://dbpedia.org/resource/Deitingen</string>
-      <object name="_fulltext">
-        <string name="string">http://dbpedia.org/resource/Deitingen</string>
-      </object>
-      <object name="_standard">
-        <string name="text">http://dbpedia.org/resource/Deitingen</string>
-      </object>
-    </custom>
-    <pl_nc_indentifier_dbpedia_source type="text_oneline">wd:Q66142</pl_nc_indentifier_dbpedia_source>
-    <custom name="pl_nc_indentifier_tgn" type="custom:base.custom-data-type-link.link">
-      <string name="hostname">vocab.getty.edu</string>
-      <string name="tld">edu</string>
-      <string name="url">http://vocab.getty.edu/page/tgn/8705471</string>
-      <object name="_fulltext">
-        <string name="string">http://vocab.getty.edu/page/tgn/8705471</string>
-      </object>
-      <object name="_standard">
-        <string name="text">http://vocab.getty.edu/page/tgn/8705471</string>
-      </object>
-    </custom>
+    <pl_nc_identifier_stzh type="string"/>
+    <pl_nc_identifier_stzh_source type="text_oneline"/>
+    <pl_nc_indentifier_tgn type="string"/>
     <pl_nc_indentifier_tgn_source type="text_oneline"/>
-    <pl_name_display type="text_oneline">Deitingen</pl_name_display>
-    <pl_parent_string type="text_oneline">Solothurn, Schweiz, Europe, World</pl_parent_string>
+    <pl_nc_indentifier_wikidata type="string"/>
+    <pl_nc_indentifier_wikidata_source type="text_oneline"/>
+    <pl_nc_indentifier_geonames type="string"/>
+    <pl_nc_indentifier_geonames_source type="text_oneline"/>
+    <pl_nc_indentifier_gnd type="string"/>
+    <pl_nc_indentifier_gnd_source type="text_oneline"/>
+    <pl_nc_indentifier_dbpedia type="string"/>
+    <pl_nc_indentifier_dbpedia_source type="text_oneline"/>
+    <pl_nc_indentifier_viaf type="string"/>
+    <pl_nc_indentifier_viaf_source type="text_oneline"/>
+    <pl_dc_isler_note type="text">_swiss_obsolete_do_no_longer_use</pl_dc_isler_note>
+    <pl_uuid type="string">37CC4F48-2139-4191-8391-48919839BE65</pl_uuid>
+    <pl_uuid_hierarchical type="string">EB3A21D4-47DF-4F92-B42C-6612E29F861D</pl_uuid_hierarchical>
+    <pl_dc_note_duplicate type="string"/>
+    <pl_dc_note type="text"/>
+    <pl_dc_note_misspelled_nowcorrect_duplicate type="string"/>
+    <pl_dc_note_misspelled_nowcorrect type="string"/>
+    <pl_dc_note_tgn_type type="string"/>
+    <pl_dc_note_tgn_failure type="string"/>
+    <pl_name_display type="text_oneline">Zug, Leimatt</pl_name_display>
+    <pl_parent_string type="text_oneline">Zug, Zug, Schweiz, Europe, World</pl_parent_string>
     <pl_uuid_parent type="string"/>
   </pl>
 </objects>

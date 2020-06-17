@@ -26,19 +26,19 @@
 	 	<xsl:value-of select="pr:_nested__pl__pl_nc_name/pr:pl__pl_nc_name/pr:pl_nc_name_source/pr:generic_contributor/pr:_standard/pr:de-DE"/>
 	 </plIdentifier_nameGeneric_source>
 	 <plIdentifier_nameEn>
-	 	<xsl:value-of select="pr:_path/pr:pl[4]/pr:_standard/pr:en-US"/>
+	 	<xsl:value-of select="pr:_path/pr:pl[5]/pr:_standard/pr:en-US"/>
 	 </plIdentifier_nameEn>
 	 <plIdentifier_nameEn_source/>
 	 <plIdentifier_nameDe>
-	 	<xsl:value-of select="pr:_path/pr:pl[4]/pr:_standard/pr:de-DE"/>
+	 	<xsl:value-of select="pr:_path/pr:pl[5]/pr:_standard/pr:de-DE"/>
 	 </plIdentifier_nameDe>
 	 <plIdentifier_nameDe_source/>
 	 <plIdentifier_nameFr>
-	 	<xsl:value-of select="pr:_path/pr:pl[4]/pr:_standard/pr:fr-FR"/>
+	 	<xsl:value-of select="pr:_path/pr:pl[5]/pr:_standard/pr:fr-FR"/>
 	 </plIdentifier_nameFr>
 	 <plIdentifier_nameFr_source/>
 	 <plIdentifier_nameIT>
-	 	<xsl:value-of select="pr:_path/pr:pl[4]/pr:_standard/pr:it-IT"/>
+	 	<xsl:value-of select="pr:_path/pr:pl[5]/pr:_standard/pr:it-IT"/>
 	 </plIdentifier_nameIT>
 	 <plIdentifier_nameIt_source/>
 	 <plIdentifier_type>
