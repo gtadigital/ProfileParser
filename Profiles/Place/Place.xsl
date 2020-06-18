@@ -42,7 +42,7 @@
 	 </plIdentifier_nameIT>
 	 <plIdentifier_nameIt_source/>
 	 <plIdentifier_type>
-	 	<xsl:value-of select="pr:pl_nc_type/pr:pl_type/pr:_path/pr:pl_type/pr:_id"/>
+	 	<xsl:value-of select="pr:pl_nc_type/pr:pl_type/pr:pl_type_aat_uri"/>
 	 </plIdentifier_type>
 	 <plParthood_currentPartOf>
 	 	<xsl:value-of select="pr:pl_ph_current_partof_place/pr:pl/pr:_uuid"/>
@@ -77,13 +77,9 @@
 	 <plIdentifier_tgn_type>
 	 	 <xsl:value-of select="pr:pl_nc_indentifier_tgn/@type"/>
 	 </plIdentifier_tgn_type>
-	 <plIdentifier_tgn_provider>
-	 	<xsl:value-of select="pr:_nested__pl__pl_nc_name/pr:pl__pl_nc_name/pr:pl_nc_name_source/pr:generic_contributor/pr:_standard/pr:de-DE"/>
-	 </plIdentifier_tgn_provider>
+	 
 	 <plIdentifier_tgn_preferredTerm></plIdentifier_tgn_preferredTerm>
-	 <plIdentifier_tgn_parentURI>
-	 	<xsl:value-of select="pr:pl_nc_indentifier_tgn"/>
-	 </plIdentifier_tgn_parentURI>
+	 
 	 <plIdentifier_tgn_parentString></plIdentifier_tgn_parentString>
 	 <plSubstance_tgn_lat></plSubstance_tgn_lat>
 	 <plSubstance_tgn_long></plSubstance_tgn_long>

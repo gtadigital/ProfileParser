@@ -14,7 +14,7 @@
         <plIdentifier_nameFr_source/>
         <plIdentifier_nameIT>Livorno</plIdentifier_nameIT>
         <plIdentifier_nameIt_source/>
-        <plIdentifier_type>184</plIdentifier_type>
+        <plIdentifier_type>http://vocab.getty.edu/aat/300008347</plIdentifier_type>
         <plParthood_currentPartOf>bcec8ddd-80fc-4f21-8681-3c0c672bc5de</plParthood_currentPartOf>
         <plParthood_currentHasPart/>
         <plSubstance_geoWKT>POINT(10.316666666667 43.55)</plSubstance_geoWKT>
@@ -26,9 +26,7 @@
         <plIdentifier_geonamesProvider/>
         <plIdentifier_tgn_uri>http://vocab.getty.edu/page/tgn/7006074</plIdentifier_tgn_uri>
         <plIdentifier_tgn_type>string</plIdentifier_tgn_type>
-        <plIdentifier_tgn_provider>J. Paul Getty Trust</plIdentifier_tgn_provider>
         <plIdentifier_tgn_preferredTerm/>
-        <plIdentifier_tgn_parentURI>http://vocab.getty.edu/page/tgn/7006074</plIdentifier_tgn_parentURI>
         <plIdentifier_tgn_parentString/>
         <plSubstance_tgn_lat/>
         <plSubstance_tgn_long/>
