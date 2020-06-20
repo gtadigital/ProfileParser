@@ -13,10 +13,10 @@
 <xsl:template match="pr:objects/pr:act">
  <entry>
 	 <_01_actor_local_institutionalContributor>
-	 	<xsl:value-of select="pr:_nested__act__act_descr_short/pr:act__act_descr_short/pr:act_descr_short_source/pr:generic_contributor/pr:_standard/pr:en-US"/>
+	 	 <xsl:value-of select="pr:_nested__act__act_descr_short/pr:act__act_descr_short/pr:act_descr_short_source/pr:generic_contributor/pr:_standard/pr:en-US"/>
 	 </_01_actor_local_institutionalContributor>
 	<_01_actor_local_type>
-		<xsl:value-of select="pr:act_type"/>
+		<xsl:value-of select="pr:act_type_crm/pr:act_type_crm/pr:act_type_crm_name"/>
 	</_01_actor_local_type>
 	<_01_actor_nameclass_identifier_identifier>
 		<xsl:value-of select="pr:act_uuid"/>
@@ -28,8 +28,12 @@
 	<_01_actor_nameclass_name>
 		<xsl:value-of select="pr:act_name"/>
 	</_01_actor_nameclass_name>
-	<_01_actor_nameclass_name_language/>
-	<_01_actor_nameclass_nameHonorific/>
+	<_01_actor_nameclass_name_language>
+		<xsl:value-of select="pr:act_name_lang/pr:generic_lang/pr:generic_lang_name/pr:en-US"/>
+	</_01_actor_nameclass_name_language>
+	<_01_actor_nameclass_nameHonorific>
+		<xsl:value-of select="pr:act_honname"/>
+	</_01_actor_nameclass_nameHonorific>
 	<_01_actor_nameclass_gender/>
 	<_02_actor_existence_birthDate_p81a/>
 	<_02_actor_existence_birthDate_p81b/>
@@ -55,19 +59,29 @@
 	<_05_actor_documentation_shortbio_en>
 		<xsl:value-of select="pr:act_description_bioshort/pr:en-US"/>
 	</_05_actor_documentation_shortbio_en>
-	<_99_actor_nameclass_identifierGND_identifier/>
+	<_99_actor_nameclass_identifierGND_identifier>
+		<xsl:value-of select="pr:act_identifier_gnd"/>
+	</_99_actor_nameclass_identifierGND_identifier>
 	<_99_actor_nameclass_identifierGND_identifierProvider/>
 	<_99_actor_nameclass_identifierGND_identifierType/>
-	<_99_actor_nameclass_identifierSIKART_identifier/>
+	<_99_actor_nameclass_identifierSIKART_identifier>
+		<xsl:value-of select="pr:act_identifier_sikart"/>
+	</_99_actor_nameclass_identifierSIKART_identifier>
 	<_99_actor_nameclass_identifierSIKART_identifierProvider/>
 	<_99_actor_nameclass_identifierSIKART_identifierType/>
-	<_99_actor_nameclass_identifierULAN_identifier/>
+	<_99_actor_nameclass_identifierULAN_identifier>
+		<xsl:value-of select="pr:act_identifier_ulan"/>
+	</_99_actor_nameclass_identifierULAN_identifier>
 	<_99_actor_nameclass_identifierULAN_identifierProvider/>
 	<_99_actor_nameclass_identifierULAN_identifierType/>
-	<_99_actor_nameclass_identifierWikidata_identifier/>
+	<_99_actor_nameclass_identifierWikidata_identifier>
+		<xsl:value-of select="pr:act_identifier_wikidata"/>
+	</_99_actor_nameclass_identifierWikidata_identifier>
 	<_99_actor_nameclass_identifierWikidata_identifierProvider/>
 	<_99_actor_nameclass_identifierWikidata_identifierType/>
-	<_99_actor_nameclass_identifierWikipedia_identifier/>
+	<_99_actor_nameclass_identifierWikipedia_identifier>
+		<xsl:value-of select="pr:act_identifier_wikipedia"/>
+	</_99_actor_nameclass_identifierWikipedia_identifier>
 	<_99_actor_nameclass_identifierWikipedia_identifierProvider/>
 	<_99_actor_nameclass_identifierWikipedia_identifierType/>
  </entry>
