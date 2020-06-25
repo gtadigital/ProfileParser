@@ -65,15 +65,7 @@
 	 <plIdentifier_tgn_uri>
 	 	<xsl:value-of select="pr:pl_nc_indentifier_tgn"/>
 	 </plIdentifier_tgn_uri>
-	 <plIdentifier_tgn_type>
-	 	 <xsl:value-of select="pr:pl_nc_indentifier_tgn/@type"/>
-	 </plIdentifier_tgn_type>
 	 
-	 <plIdentifier_tgn_preferredTerm></plIdentifier_tgn_preferredTerm>
-	 
-	 <plIdentifier_tgn_parentString></plIdentifier_tgn_parentString>
-	 <plSubstance_tgn_lat></plSubstance_tgn_lat>
-	 <plSubstance_tgn_long></plSubstance_tgn_long>
  </entry>
 </xsl:template>
 </xsl:stylesheet>
