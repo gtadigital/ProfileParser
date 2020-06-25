@@ -15,16 +15,7 @@
 	 <plIdentifier_uuid>
 	<xsl:value-of select="pr:_uuid"/> 
 	 </plIdentifier_uuid>
-	 <plIdentifier_uuid_type>
-	 	<xsl:value-of select="pr:pl_uuid/@type"/>
-	 </plIdentifier_uuid_type>
 	 <plIdentifier_uuid_provider></plIdentifier_uuid_provider>
-	 <plIdentifier_nameGeneric>
-	 	<xsl:value-of select="pr:pl_name_display"/>
-	 </plIdentifier_nameGeneric>
-	 <plIdentifier_nameGeneric_source>
-	 	<xsl:value-of select="pr:_nested__pl__pl_nc_name/pr:pl__pl_nc_name/pr:pl_nc_name_source/pr:generic_contributor/pr:_standard/pr:de-DE"/>
-	 </plIdentifier_nameGeneric_source>
 	 <plIdentifier_nameEn>
 	 	<xsl:value-of select="pr:_path/pr:pl[5]/pr:_standard/pr:en-US"/>
 	 </plIdentifier_nameEn>
