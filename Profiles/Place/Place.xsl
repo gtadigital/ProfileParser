@@ -61,7 +61,6 @@
 		<xsl:value-of select="pr:pl_nc_indentifier_viaf"/>
 	</plIdentifier_viafURI>
 
-	 <plIdentifier_geonamesProvider/>
 	 <plIdentifier_tgn_uri>
 	 	<xsl:value-of select="pr:pl_nc_indentifier_tgn"/>
 	 </plIdentifier_tgn_uri>
