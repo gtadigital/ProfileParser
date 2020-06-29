@@ -18,6 +18,7 @@
 	 <plIdentifier_name_literal>
 		<xsl:value-of select="pr:_nested__pl__pl_nc_name/pr:pl__pl_nc_name[2]/pr:pl_nc_name_literal"/> 
 	 </plIdentifier_name_literal>
+	 <!--
 	 <plIdentifier_nameEn>
 	 	<xsl:value-of select="pr:_nested__pl__pl_nc_name/pr:pl__pl_nc_name[2]/pr:pl_nc_name_language/pr:generic_lang/pr:_standard/pr:en-US"/>
 	 </plIdentifier_nameEn>
@@ -33,7 +34,7 @@
 	 <plIdentifier_nameIT>
 	 	<xsl:value-of select="pr:_nested__pl__pl_nc_name/pr:pl__pl_nc_name[2]/pr:pl_nc_name_language/pr:generic_lang/pr:_standard/pr:it-IT"/>
 	 </plIdentifier_nameIT>
-	 <plIdentifier_nameIt_source/>
+	 -->
 	 <plIdentifier_type>
 	 	<xsl:value-of select="pr:pl_nc_type/pr:pl_type/pr:_uuid"/>
 	 </plIdentifier_type>
