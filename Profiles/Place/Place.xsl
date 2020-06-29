@@ -38,7 +38,7 @@
 	 	<xsl:value-of select="pr:pl_nc_type/pr:pl_type/pr:_uuid"/>
 	 </plIdentifier_type>
 	 <plParthood_currentPartOf>
-	 	<xsl:value-of select="pr:pl_ph_current_partof_place/pr:pl/pr:_uuid"/>
+	 	<xsl:value-of select="pr:_nested__pl__pl_ph_current_partof_place_manual/pr:pl__pl_ph_current_partof_place_manual/pr:pl_ph_current_partof_place_manual_place/pr:pl/pr:_uuid"/> 
 	 </plParthood_currentPartOf>
 	 <plSubstance_geoWKT>
 	 	<xsl:value-of select="pr:pl_sub_coordinates_wkt_v1"/>
