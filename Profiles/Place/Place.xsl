@@ -42,32 +42,34 @@
 	 	<xsl:value-of select="pr:pl_sub_coordinates_wkt_v1"/>
 	 </plSubstance_geoWKT>
 									
-	<plIdentifier_swisstopo>
-		<xsl:value-of select="pr:pl_nc_indentifier_swisstopo"/>
-	</plIdentifier_swisstopo>
+	<plIdentifier_swisstopo_provider>
+		<xsl:value-of select="pr:pl_nc_indentifier_swisstopo_provider/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
+	</plIdentifier_swisstopo_provider>
 
 
-	<plIdentifier_wikidata>
-		<xsl:value-of select="pr:pl_nc_indentifier_wikidata"/>
-	</plIdentifier_wikidata>
+	<plIdentifier_wikidata_provider>
+		<xsl:value-of select="pr:pl_nc_indentifier_wikidata_provider/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
+	</plIdentifier_wikidata_provider>
 
-	 <plIdentifier_gnd>
-		<xsl:value-of select="pr:pl_nc_indentifier_gnd"/>
-	 </plIdentifier_gnd>
-	 <plIdentifier_geonamesURI>
-	 	<xsl:value-of select="pr:pl_nc_indentifier_geonames"/>
-	 </plIdentifier_geonamesURI>
-	<plIdentifier_dbpediaURI>
-		<xsl:value-of select="pr:pl_nc_indentifier_dbpedia"/>
-	</plIdentifier_dbpediaURI>
+	 <plIdentifier_gnd_provider>
+		<xsl:value-of select="pr:pl_nc_indentifier_gnd_provider/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
+	 </plIdentifier_gnd_provider>
+
+	 <plIdentifier_geonames_provider>
+	 	<xsl:value-of select="pr:pl_nc_indentifier_geonames_provider/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
+	 </plIdentifier_geonames_provider>
+
+	<plIdentifier_dbpedia_provider>
+		<xsl:value-of select="pr:pl_nc_indentifier_dbpedia_provider/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
+	</plIdentifier_dbpedia_provider>
 		
-	<plIdentifier_viafURI>
-		<xsl:value-of select="pr:pl_nc_indentifier_viaf"/>
-	</plIdentifier_viafURI>
+	<plIdentifier_viaf_provider>
+		<xsl:value-of select="pr:pl_nc_indentifier_viaf_provider/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
+	</plIdentifier_viaf_provider>
 
-	 <plIdentifier_tgn_uri>
-	 	<xsl:value-of select="pr:pl_nc_indentifier_tgn"/>
-	 </plIdentifier_tgn_uri>
+	 <plIdentifier_tgn_provider>
+	 	<xsl:value-of select="pr:pl_nc_indentifier_tgn_provider/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
+	 </plIdentifier_tgn_provider>
 	 
  </entry>
 </xsl:template>
