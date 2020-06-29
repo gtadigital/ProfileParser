@@ -33,7 +33,7 @@
 	 </plIdentifier_nameIT>
 	 <plIdentifier_nameIt_source/>
 	 <plIdentifier_type>
-	 	<xsl:value-of select="pr:pl_nc_type/pr:pl_type/pr:pl_type_aat_uri"/>
+	 	<xsl:value-of select="pr:pl_nc_type/pr:pl_type/pr:_uuid"/>
 	 </plIdentifier_type>
 	 <plParthood_currentPartOf>
 	 	<xsl:value-of select="pr:pl_ph_current_partof_place/pr:pl/pr:_uuid"/>
@@ -41,10 +41,15 @@
 	 <plSubstance_geoWKT>
 	 	<xsl:value-of select="pr:pl_sub_coordinates_wkt_v1"/>
 	 </plSubstance_geoWKT>
-
+									
 	<plIdentifier_swisstopo>
 		<xsl:value-of select="pr:pl_nc_indentifier_swisstopo"/>
 	</plIdentifier_swisstopo>
+
+
+	<plIdentifier_wikidata>
+		<xsl:value-of select="pr:pl_nc_indentifier_wikidata"/>
+	</plIdentifier_wikidata>
 
 	 <plIdentifier_gnd>
 		<xsl:value-of select="pr:pl_nc_indentifier_gnd"/>
