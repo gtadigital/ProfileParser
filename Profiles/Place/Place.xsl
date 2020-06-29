@@ -48,7 +48,7 @@
 	</plIdentifier_swisstopo_provider>
 	<!-- City of zurich -->
 	<plIdentifier_stzh_provider>
-		<xsl:value-of select="pr:pl_nc_indentifier_stzh_provider/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
+		<xsl:value-of select="pr:pl_nc_identifier_stzh_provider/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
 	</plIdentifier_stzh_provider>
 	<!-- TGN -->
 	<plIdentifier_tgn_provider>
