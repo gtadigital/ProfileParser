@@ -2,14 +2,14 @@
       
     <entry>
         <plIdentifier_uuid>ad684334-3ece-4c1d-b2d5-36517356b0c4</plIdentifier_uuid>
-        <plIdentifier_uuid_provider/>
-        <plIdentifier_nameEn/>
+        <plIdentifier_name_literal>Falscher Kanton</plIdentifier_name_literal>
+        <plIdentifier_nameEn>en</plIdentifier_nameEn>
         <plIdentifier_nameEn_source/>
-        <plIdentifier_nameDe/>
+        <plIdentifier_nameDe>de</plIdentifier_nameDe>
         <plIdentifier_nameDe_source/>
-        <plIdentifier_nameFr/>
+        <plIdentifier_nameFr>fr</plIdentifier_nameFr>
         <plIdentifier_nameFr_source/>
-        <plIdentifier_nameIT/>
+        <plIdentifier_nameIT>it</plIdentifier_nameIT>
         <plIdentifier_nameIt_source/>
         <plIdentifier_type>8b90d42e-0094-4f73-8a75-997b8c3a5aec</plIdentifier_type>
         <plParthood_currentPartOf>5d2dcfe8-033d-4e47-b014-cf8db88eacde</plParthood_currentPartOf>
