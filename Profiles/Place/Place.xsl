@@ -32,38 +32,59 @@
 	<plIdentifier_swisstopo_provider>
 		<xsl:value-of select="pr:pl_nc_indentifier_swisstopo_provider/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
 	</plIdentifier_swisstopo_provider>
-	<plIdentifier_swisstopo>
+	<plIdentifier_swisstopoURI>
 		<xsl:value-of select="pr:pl_nc_indentifier_swisstopo"/>
-	</plIdentifier_swisstopo> 
+	</plIdentifier_swisstopoURI> 
 	
 	<!-- City of zurich -->
 	<plIdentifier_stzh_provider>
 		<xsl:value-of select="pr:pl_nc_identifier_stzh_provider/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
 	</plIdentifier_stzh_provider>
+	<plIdentifier_stzhURI>
+		<xsl:value-of select="pr:pl_nc_identifier_stzh"/>
+	</plIdentifier_stzhURI> 
 	<!-- TGN -->
 	<plIdentifier_tgn_provider>
 	 	<xsl:value-of select="pr:pl_nc_indentifier_tgn_provider/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
 	</plIdentifier_tgn_provider>
+	<plIdentifier_tgnURI>
+	 	<xsl:value-of select="pr:pl_nc_indentifier_tgn"/>
+	</plIdentifier_tgnURI>
 	 <!--Wikidata-->
 	<plIdentifier_wikidata_provider>
 		<xsl:value-of select="pr:pl_nc_indentifier_wikidata_provider/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
 	</plIdentifier_wikidata_provider>
+	<plIdentifier_wikidataURI>
+		<xsl:value-of select="pr:pl_nc_indentifier_wikidata"/>
+	</plIdentifier_wikidataURI>
 	<!--Geonames-->
 	<plIdentifier_geonames_provider>
 	 	<xsl:value-of select="pr:pl_nc_indentifier_geonames_provider/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
 	</plIdentifier_geonames_provider>
+	<plIdentifier_geonamesURI>
+	 	<xsl:value-of select="pr:pl_nc_indentifier_geonames"/>
+	</plIdentifier_geonamesURI>
 	<!--GND-->
 	<plIdentifier_gnd_provider>
 		<xsl:value-of select="pr:pl_nc_indentifier_gnd_provider/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
 	</plIdentifier_gnd_provider>
+	<plIdentifier_gndURI>
+		<xsl:value-of select="pr:pl_nc_indentifier_gnd"/>
+	</plIdentifier_gndURI>
 	<!--DbPedia-->
 	<plIdentifier_dbpedia_provider>
 		<xsl:value-of select="pr:pl_nc_indentifier_dbpedia_provider/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
 	</plIdentifier_dbpedia_provider>
+	<plIdentifier_dbpediaURI>
+		<xsl:value-of select="pr:pl_nc_indentifier_dbpedia"/>
+	</plIdentifier_dbpediaURI>
 	<!--VIAF-->
 	<plIdentifier_viaf_provider>
 		<xsl:value-of select="pr:pl_nc_indentifier_viaf_provider/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
 	</plIdentifier_viaf_provider>
+	<plIdentifier_viafURI>
+		<xsl:value-of select="pr:pl_nc_indentifier_viaf"/>
+	</plIdentifier_viafURI>
 	
 
 
