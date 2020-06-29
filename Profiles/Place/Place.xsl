@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- author: ETH Zurich, gta digital, Zoe Reinke -->
+<!-- author: ETH Zurich, gta digital, Zoe Reinke, Matteo Lorenzini -->
 <!-- license: please refer to the license.txt file in our git repository (https://github.com/gtadigital/XSLT) -->
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:pr="https://schema.easydb.de/EASYDB/1.0/objects/" exclude-result-prefixes="pr">
@@ -15,21 +15,23 @@
 	 <plIdentifier_uuid>
 		<xsl:value-of select="pr:_uuid"/> 
 	 </plIdentifier_uuid>
-	 <plIdentifier_uuid_provider></plIdentifier_uuid_provider>
+	 <plIdentifier_name_literal>
+		<xsl:value-of select="pr:_nested__pl__pl_nc_name/pr:pl__pl_nc_name[2]/pr:pl_nc_name_literal"/> 
+	 </plIdentifier_name_literal>
 	 <plIdentifier_nameEn>
-	 	<xsl:value-of select="pr:_path/pr:pl[5]/pr:_standard/pr:en-US"/>
+	 	<xsl:value-of select="pr:_nested__pl__pl_nc_name/pr:pl__pl_nc_name[2]/pr:pl_nc_name_language/pr:generic_lang/pr:_standard/pr:en-US"/>
 	 </plIdentifier_nameEn>
 	 <plIdentifier_nameEn_source/>
 	 <plIdentifier_nameDe>
-	 	<xsl:value-of select="pr:_path/pr:pl[5]/pr:_standard/pr:de-DE"/>
+	 	<xsl:value-of select="pr:_nested__pl__pl_nc_name/pr:pl__pl_nc_name[2]/pr:pl_nc_name_language/pr:generic_lang/pr:_standard/pr:de-DE"/>  
 	 </plIdentifier_nameDe>
 	 <plIdentifier_nameDe_source/>
 	 <plIdentifier_nameFr>
-	 	<xsl:value-of select="pr:_path/pr:pl[5]/pr:_standard/pr:fr-FR"/>
+	 	<xsl:value-of select="pr:_nested__pl__pl_nc_name/pr:pl__pl_nc_name[2]/pr:pl_nc_name_language/pr:generic_lang/pr:_standard/pr:fr-FR"/>
 	 </plIdentifier_nameFr>
 	 <plIdentifier_nameFr_source/>
 	 <plIdentifier_nameIT>
-	 	<xsl:value-of select="pr:_path/pr:pl[5]/pr:_standard/pr:it-IT"/>
+	 	<xsl:value-of select="pr:_nested__pl__pl_nc_name/pr:pl__pl_nc_name[2]/pr:pl_nc_name_language/pr:generic_lang/pr:_standard/pr:it-IT"/>
 	 </plIdentifier_nameIT>
 	 <plIdentifier_nameIt_source/>
 	 <plIdentifier_type>
