@@ -20,8 +20,8 @@ public class XsltTransformer {
                 .newInstance()
                 .newTransformer(new StreamSource(Paths.get("/Users/mac-pro/GTA_Repo/ProfileParser/Profiles/Place/Place.xsl").toFile()));
         new XsltTransformer(
-                Paths.get("/Users/mac-pro/GTA_Repo/ProfileParser/Profiles/Place/GTA_dump"),
-                Paths.get("/Users/mac-pro/GTA_Repo/ProfileParser/Profiles/Place/EdB_target"),
+                Paths.get("/Users/mac-pro/GTA_Repo/ProfileParser/Profiles/Place/source_files"),
+                Paths.get("/Users/mac-pro/GTA_Repo/ProfileParser/Profiles/Place/target_files"),
                 transformer
         ).run();
     }
