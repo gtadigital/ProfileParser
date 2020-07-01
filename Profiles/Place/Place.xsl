@@ -85,19 +85,6 @@
 	<plIdentifier_viafURI>
 		<xsl:value-of select="pr:pl_nc_identifier_viaf"/>
 	</plIdentifier_viafURI>
-	
-
-
-	
-
-
-
-	 
-
-	
-		
-
-	 
  </entry>
 </xsl:template>
 </xsl:stylesheet>
