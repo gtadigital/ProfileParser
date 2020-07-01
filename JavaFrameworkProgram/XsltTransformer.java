@@ -1,23 +1,53 @@
-/* author: ETH Zurich, gta digital, Zoé Reinke
-        license: please refer to the license.txt file in our git repository (https://github.com/gtadigital/XSLT) */
+/* author: ETH Zurich, gta digital, Zoé Reinke, Matteo Lorenzini
+license: please refer to the license.txt file in our git repository (https://github.com/gtadigital/XSLT) */
 
 import javax.xml.transform.*;
-import javax.xml.transform.stream.StreamResult;
-import javax.xml.transform.stream.StreamSource;
-import java.io.File;
+import javax.xml.transform.stream.*;
 import java.io.IOException;
-import java.net.URISyntaxException;
-
-
+import java.nio.file.*;
 
 public class XsltTransformer {
-    public static void main(String[] args) throws IOException, URISyntaxException, TransformerException {
-            String xmlFile = "/home/matteolorenzini/GTARepo/ProfileParser/Profiles/Place/fake-canton-annotated-example_v2_20200629.xml"; //put path of input XML file between ""
-            String xslFile = "/home/matteolorenzini/GTARepo/ProfileParser/Profiles/Place/Place.xsl"; //put path of input XSL file between ""
-            TransformerFactory factory = TransformerFactory.newInstance();
-            Source xslt = new StreamSource(new File(xslFile));
-            Transformer transformer = factory.newTransformer(xslt);
-            Source text = new StreamSource(new File(xmlFile));
-            transformer.transform(text, new StreamResult(new File("/home/matteolorenzini/GTARepo/ProfileParser/Profiles/Place/target_new_v2.xml"))); //put path of newly created XML file between ""
+    private final Path input;
+    private final Path output;
+    private final Transformer transformer;
+
+    XsltTransformer(Path input, Path output, Transformer transformer) {
+        this.input = input;this.output = output;this.transformer = transformer;
+    }
+
+    public static void main(String[] args) throws Exception {
+        final Transformer transformer = TransformerFactory
+                .newInstance()
+                .newTransformer(new StreamSource(Paths.get("/Users/mac-pro/GTA_Repo/ProfileParser/Profiles/Place/Place.xsl").toFile()));
+        new XsltTransformer(
+                Paths.get("/Users/mac-pro/GTA_Repo/ProfileParser/Profiles/Place/GTA_dump"),
+                Paths.get("/Users/mac-pro/GTA_Repo/ProfileParser/Profiles/Place/EdB_target"),
+                transformer
+        ).run();
+    }
+
+    private Path transform(Path file) {
+        final StreamSource resource = new StreamSource(file.toFile());
+        final Path output = this.resolveOutput(file);
+        final Result result = new StreamResult(
+                output.toFile()
+        );
+        try {
+            this.transformer.transform(resource, result);
+            return output;
+        } catch (TransformerException ex) {
+            throw new IllegalStateException(ex);
+        }
+    }
+
+    private Path resolveOutput(Path file) {
+        return this.output.resolve(this.input.relativize(file));
+    }
+
+    public void run() throws IOException {
+        Files.walk(this.input)
+                .filter(file -> file.getFileName().toString().endsWith(".xml"))
+                .map(this::transform)
+                .forEach(System.out::println);
     }
 }
