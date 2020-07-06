@@ -45,6 +45,9 @@
                             </xsl:element>
                         </xsl:for-each>
                     </plIdentifier_nameLang>
+                    <plSource_uuid>
+                        <xsl:value-of select="pr:pl_nc_name_source/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
+                    </plSource_uuid>
                 </xsl:element>
             </xsl:for-each>
             <plIdentifier_type>
