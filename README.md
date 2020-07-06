@@ -9,14 +9,13 @@ The goal of the framework is to transform the XML dump(s) from EasyDB to the tar
 * Group (E74_Group).
 
 
-## Installation:
 
-prerequisites:
 
-1. XSLT version 3.0,
+## Prerequisites:
+
+1. XSLT version 1.0,
 2. Java SE 13
-
-The Java project can be run in Eclipse for instance.
+3. IDE to run XsltTransformer.java
 
 
 ## Usage:
