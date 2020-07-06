@@ -9,7 +9,7 @@
                 <lang>en</lang>
                 <lang>en</lang>
             </plIdentifier_nameLang>
-            <plSource/>
+            <plSource_uuid/>
         </place>
         <place>
             <plIdentifier_name_literal>Falscher Kanton</plIdentifier_name_literal>
@@ -19,7 +19,7 @@
                 <lang>de</lang>
                 <lang>de</lang>
             </plIdentifier_nameLang>
-            <plSource/>
+            <plSource_uuid/>
         </place>
         <plIdentifier_type>8b90d42e-0094-4f73-8a75-997b8c3a5aec</plIdentifier_type>
         <plParthood_currentPartOf/>
