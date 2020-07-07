@@ -18,10 +18,10 @@ public class XsltTransformer {
     public static void main(String[] args) throws Exception {
         final Transformer transformer = TransformerFactory
                 .newInstance()
-                .newTransformer(new StreamSource(Paths.get("/Users/mac-pro/GTA_Repo/ProfileParser/Profiles/Place/Place.xsl").toFile()));
+                .newTransformer(new StreamSource(Paths.get("/home/matteolorenzini/GTARepo/ProfileParser/Profiles/Place/Place.xsl").toFile()));
         new XsltTransformer(
-                Paths.get("/Users/mac-pro/GTA_Repo/ProfileParser/Profiles/Place/source_files"),
-                Paths.get("/Users/mac-pro/GTA_Repo/ProfileParser/Profiles/Place/target_files"),
+                Paths.get("/home/matteolorenzini/GTARepo/ProfileParser/Profiles/Place/source_files"),
+                Paths.get("/home/matteolorenzini/GTARepo/ProfileParser/Profiles/Place/target_files"),
                 transformer
         ).run();
     }
