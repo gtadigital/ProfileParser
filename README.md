@@ -2,7 +2,7 @@
 
 ## Description:
 
-The goal of the ProfileParser is to transform the XML documents dunped from EasyDB platform into another XML documents compliant with the CIDOC-CRM entities structure. The resulting XML file can be used as input schema by X3M mapping tool to create the final RDF knowledge graph according to CIDOC-CRM ontologies. 
+The goal of the ProfileParser is to transform the XML documents dumped from EasyDB platform into another XML documents compliant with the CIDOC-CRM entities structure. The resulting XML file can be used as input schema by X3M mapping tool to create the final RDF knowledge graph according to CIDOC-CRM ontologies. 
 
 The ProfileParser provides three XSLT stylesheets:
 
@@ -16,6 +16,15 @@ The ProfileParser provides three XSLT stylesheets:
 1. XSLT version 1.0,
 2. Java SE 13
 3. IDE to run XsltTransformer.java
+
+## Parser structure
+
+1. The JavaFrameworkProgram folder contains the exec file **XsltTransformer.java**.
+2. The Profiles folder contains three separate folders, Place, Person and Group.
+	* In each folder are
+		* The XSLT profile stylesheet
+		* source_files folder where should be stored the dump(s) from EasyDB
+		* target_files folder used to store the resulting XML files
 
 ## How To Use
 
@@ -31,14 +40,12 @@ $ git clone https://github.com/gtadigital/ProfileParser.git
 $ cd ProfileParser
 ```
 
-2. Edit the **XsltTransformer.java**
- * Line nr.21 specify the XSLT path
- * Line nr.23 specify the source directory of the XML file(s)
- * Line nr.24 specify the target directory where to save the XML output(s)
+2. Edit the **XsltTransformer.java**. According to the choosen profile modify as follows
+   * Line nr.21 specify the XSLT path
+   * Line nr.23 specify the source directory of the XML file(s)
+   * Line nr.24 specify the target directory where to save the XML output(s)
 3. Run the script
  * Run the **XsltTransformer.java** using an IDE
-
-
 
 ## Credits:
 
