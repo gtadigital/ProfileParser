@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><root>
+      
+    <entry>
+        <_01_actor_local_type>E21_Person</_01_actor_local_type>
+        <_01_actor_nameclass_identifier_identifier>38FC0E54-D3B0-461C-991D-A62EBB02D28A</_01_actor_nameclass_identifier_identifier>
+        <_01_actor_nameclass_name/>
+        <_01_actor_nameclass_name_language/>
+        <_01_actor_nameclass_nameHonorific/>
+        <_01_actor_nameclass_gender/>
+        <_02_actor_existence_birthplace_UUID/>
+        <_02_actor_existence_deathPlace_UUID/>
+        <_05_actor_documentation_fullbio_de/>
+        <_05_actor_documentation_fullbio_en/>
+        <_05_actor_documentation_shortbio_de/>
+        <_05_actor_documentation_shortbio_en/>
+        <_99_actor_nameclass_identifierGND_identifier/>
+        <_99_actor_nameclass_identifierSIKART_identifier/>
+        <_99_actor_nameclass_identifierULAN_identifier/>
+        <_99_actor_nameclass_identifierWikidata_identifier/>
+        <_99_actor_nameclass_identifierWikipedia_identifier/>
+    </entry>
+      
+    <entry>
+        <_01_actor_local_type>E21_Person</_01_actor_local_type>
+        <_01_actor_nameclass_identifier_identifier/>
+        <_01_actor_nameclass_name/>
+        <_01_actor_nameclass_name_language/>
+        <_01_actor_nameclass_nameHonorific/>
+        <_01_actor_nameclass_gender/>
+        <_02_actor_existence_birthplace_UUID/>
+        <_02_actor_existence_deathPlace_UUID/>
+        <_05_actor_documentation_fullbio_de/>
+        <_05_actor_documentation_fullbio_en/>
+        <_05_actor_documentation_shortbio_de/>
+        <_05_actor_documentation_shortbio_en/>
+        <_99_actor_nameclass_identifierGND_identifier/>
+        <_99_actor_nameclass_identifierSIKART_identifier/>
+        <_99_actor_nameclass_identifierULAN_identifier/>
+        <_99_actor_nameclass_identifierWikidata_identifier/>
+        <_99_actor_nameclass_identifierWikipedia_identifier/>
+    </entry>
+      
+    <entry>
+        <_01_actor_local_type>E21_Person</_01_actor_local_type>
+        <_01_actor_nameclass_identifier_identifier/>
+        <_01_actor_nameclass_name/>
+        <_01_actor_nameclass_name_language/>
+        <_01_actor_nameclass_nameHonorific/>
+        <_01_actor_nameclass_gender/>
+        <_02_actor_existence_birthplace_UUID/>
+        <_02_actor_existence_deathPlace_UUID/>
+        <_05_actor_documentation_fullbio_de/>
+        <_05_actor_documentation_fullbio_en/>
+        <_05_actor_documentation_shortbio_de/>
+        <_05_actor_documentation_shortbio_en/>
+        <_99_actor_nameclass_identifierGND_identifier/>
+        <_99_actor_nameclass_identifierSIKART_identifier/>
+        <_99_actor_nameclass_identifierULAN_identifier/>
+        <_99_actor_nameclass_identifierWikidata_identifier/>
+        <_99_actor_nameclass_identifierWikipedia_identifier/>
+    </entry>
+    
+</root>
