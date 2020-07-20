@@ -104,62 +104,71 @@
                 </xsl:element>
             </xsl:for-each>
 
-              <_01_actor_nameclass_gender>
-                    <xsl:value-of select="pr:act_nc_gender/pr:act_person_gender/pr:_standard/pr:de-DE"/>
-              </_01_actor_nameclass_gender>
-			<_01_actor_nameclass_gender>
-				<xsl:value-of select="pr:act_nc_gender/pr:act_person_gender/pr:_standard/pr:en-US"/>
-			</_01_actor_nameclass_gender>
-			<xsl:for-each select="pr:_nested__act__act_doc_biographical_note">
-				<xsl:element name="act_short_bio">
-					<act_doc_biographical_note_literal>
-						<xsl:value-of select="pr:act__act_doc_biographical_note/pr:act_doc_biographical_note_literal"/>
-					</act_doc_biographical_note_literal>
-					<act_doc_biographical_note_lang>
-						<xsl:value-of select="pr:act__act_doc_biographical_note/pr:act_doc_biographical_note_lang/pr:generic_lang/pr:_standard/pr:de-DE"/>
-					</act_doc_biographical_note_lang>
-					<act_doc_biographical_note_lang>
-						<xsl:value-of select="pr:act__act_doc_biographical_note/pr:act_doc_biographical_note_lang/pr:generic_lang/pr:_standard/pr:en-US"/>
-					</act_doc_biographical_note_lang>
-					<act_doc_biographical_note_lang>
-						<xsl:value-of select="pr:act__act_doc_biographical_note/pr:act_doc_biographical_note_lang/pr:generic_lang/pr:_standard/pr:it-IT"/>
-					</act_doc_biographical_note_lang>
-					<act_doc_biographical_note_lang>
-						<xsl:value-of select="pr:act__act_doc_biographical_note/pr:act_doc_biographical_note_lang/pr:generic_lang/pr:_standard/pr:fr-FR"/>
-					</act_doc_biographical_note_lang>
-					<act_doc_biographical_note_source>
-						<xsl:value-of select="pr:act__act_doc_biographical_note/pr:act_doc_biographical_note_source/pr:generic_contributor/pr:_uuid"/>
-					</act_doc_biographical_note_source>
-				</xsl:element>
-			</xsl:for-each>
-			
-              <_99_actor_nameclass_identifierGND_identifier>
-                  <xsl:value-of select="pr:act_nc_identifier_gnd"/>
-              </_99_actor_nameclass_identifierGND_identifier>
-			<_99_actor_nameclass_identifierGND_identifier_provider>
-				<xsl:value-of select="pr:act_nc_identifier_gnd_prov/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
-			</_99_actor_nameclass_identifierGND_identifier_provider>
+            <_01_actor_nameclass_gender>
+                <xsl:value-of select="pr:act_nc_gender/pr:act_person_gender/pr:_standard/pr:de-DE"/>
+            </_01_actor_nameclass_gender>
+            <_01_actor_nameclass_gender>
+                <xsl:value-of select="pr:act_nc_gender/pr:act_person_gender/pr:_standard/pr:en-US"/>
+            </_01_actor_nameclass_gender>
+            <xsl:for-each select="pr:_nested__act__act_doc_biographical_note">
+                <xsl:element name="act_short_bio">
+                    <act_doc_biographical_note_literal>
+                        <xsl:value-of select="pr:act__act_doc_biographical_note/pr:act_doc_biographical_note_literal"/>
+                    </act_doc_biographical_note_literal>
+                    <act_doc_biographical_note_lang>
+                        <xsl:value-of
+                                select="pr:act__act_doc_biographical_note/pr:act_doc_biographical_note_lang/pr:generic_lang/pr:_standard/pr:de-DE"/>
+                    </act_doc_biographical_note_lang>
+                    <act_doc_biographical_note_lang>
+                        <xsl:value-of
+                                select="pr:act__act_doc_biographical_note/pr:act_doc_biographical_note_lang/pr:generic_lang/pr:_standard/pr:en-US"/>
+                    </act_doc_biographical_note_lang>
+                    <act_doc_biographical_note_lang>
+                        <xsl:value-of
+                                select="pr:act__act_doc_biographical_note/pr:act_doc_biographical_note_lang/pr:generic_lang/pr:_standard/pr:it-IT"/>
+                    </act_doc_biographical_note_lang>
+                    <act_doc_biographical_note_lang>
+                        <xsl:value-of
+                                select="pr:act__act_doc_biographical_note/pr:act_doc_biographical_note_lang/pr:generic_lang/pr:_standard/pr:fr-FR"/>
+                    </act_doc_biographical_note_lang>
+                    <act_doc_biographical_note_source>
+                        <xsl:value-of
+                                select="pr:act__act_doc_biographical_note/pr:act_doc_biographical_note_source/pr:generic_contributor/pr:_uuid"/>
+                    </act_doc_biographical_note_source>
+                </xsl:element>
+            </xsl:for-each>
 
-			<_99_actor_nameclass_identifierSIKART_identifier>
-                  <xsl:value-of select="pr:act_nc_identifier_sikart"/>
-              </_99_actor_nameclass_identifierSIKART_identifier>
-			<_99_actor_nameclass_identifierSIKART_identifier_provider>
-				<xsl:value-of select="pr:act_nc_identifier_sikart_prov/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
-			</_99_actor_nameclass_identifierSIKART_identifier_provider>
+            <_99_actor_nameclass_identifierGND_identifier>
+                <xsl:value-of select="pr:act_nc_identifier_gnd"/>
+            </_99_actor_nameclass_identifierGND_identifier>
+            <_99_actor_nameclass_identifierGND_identifier_provider>
+                <xsl:value-of
+                        select="pr:act_nc_identifier_gnd_prov/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
+            </_99_actor_nameclass_identifierGND_identifier_provider>
 
-              <_99_actor_nameclass_identifierULAN_identifier>
-                  <xsl:value-of select="pr:act_nc_identifier_ulan"/>
-              </_99_actor_nameclass_identifierULAN_identifier>
-			<_99_actor_nameclass_identifierULAN_identifier_provider>
-				<xsl:value-of select="pr:act_nc_identifier_ulan_prov/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
-			</_99_actor_nameclass_identifierULAN_identifier_provider>
+            <_99_actor_nameclass_identifierSIKART_identifier>
+                <xsl:value-of select="pr:act_nc_identifier_sikart"/>
+            </_99_actor_nameclass_identifierSIKART_identifier>
+            <_99_actor_nameclass_identifierSIKART_identifier_provider>
+                <xsl:value-of
+                        select="pr:act_nc_identifier_sikart_prov/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
+            </_99_actor_nameclass_identifierSIKART_identifier_provider>
 
-              <_99_actor_nameclass_identifierWikidata_identifier>
-                  <xsl:value-of select="pr:act_nc_identifier_wikidata"/>
-              </_99_actor_nameclass_identifierWikidata_identifier>
-			<_99_actor_nameclass_identifierwikidata_identifier_provider>
-				<xsl:value-of select="pr:act_nc_identifier_wikidata__prov/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
-			</_99_actor_nameclass_identifierwikidata_identifier_provider>
+            <_99_actor_nameclass_identifierULAN_identifier>
+                <xsl:value-of select="pr:act_nc_identifier_ulan"/>
+            </_99_actor_nameclass_identifierULAN_identifier>
+            <_99_actor_nameclass_identifierULAN_identifier_provider>
+                <xsl:value-of
+                        select="pr:act_nc_identifier_ulan_prov/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
+            </_99_actor_nameclass_identifierULAN_identifier_provider>
+
+            <_99_actor_nameclass_identifierWikidata_identifier>
+                <xsl:value-of select="pr:act_nc_identifier_wikidata"/>
+            </_99_actor_nameclass_identifierWikidata_identifier>
+            <_99_actor_nameclass_identifierwikidata_identifier_provider>
+                <xsl:value-of
+                        select="pr:act_nc_identifier_wikidata__prov/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
+            </_99_actor_nameclass_identifierwikidata_identifier_provider>
 
 
         </entry>
