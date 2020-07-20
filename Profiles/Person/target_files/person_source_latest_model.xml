@@ -2,62 +2,161 @@
       
     <entry>
         <_01_actor_local_type>E21_Person</_01_actor_local_type>
-        <_01_actor_nameclass_identifier_identifier>38FC0E54-D3B0-461C-991D-A62EBB02D28A</_01_actor_nameclass_identifier_identifier>
-        <_01_actor_nameclass_name/>
-        <_01_actor_nameclass_name_language/>
-        <_01_actor_nameclass_nameHonorific/>
-        <_01_actor_nameclass_gender/>
-        <_02_actor_existence_birthplace_UUID/>
-        <_02_actor_existence_deathPlace_UUID/>
-        <_05_actor_documentation_fullbio_de/>
-        <_05_actor_documentation_fullbio_en/>
-        <_05_actor_documentation_shortbio_de/>
-        <_05_actor_documentation_shortbio_en/>
-        <_99_actor_nameclass_identifierGND_identifier/>
-        <_99_actor_nameclass_identifierSIKART_identifier/>
-        <_99_actor_nameclass_identifierULAN_identifier/>
-        <_99_actor_nameclass_identifierWikidata_identifier/>
-        <_99_actor_nameclass_identifierWikipedia_identifier/>
+        <_01_actor_local_type>E21_Person</_01_actor_local_type>
+        <_01_actor_local_type>E21_Person</_01_actor_local_type>
+        <_01_actor_local_type>E21_Person</_01_actor_local_type>
+        <_01_actor_nameclass_identifier_identifier>debb2cce-9ab9-4f68-8782-efea2ed5e152</_01_actor_nameclass_identifier_identifier>
+        <_01_actor_nameclass_name>Le Corbusier</_01_actor_nameclass_name>
+        <_01_actor_nameclass_name_language>en</_01_actor_nameclass_name_language>
+        <_01_actor_nameclass_name_language>en</_01_actor_nameclass_name_language>
+        <_01_actor_nameclass_name_language>en</_01_actor_nameclass_name_language>
+        <_01_actor_nameclass_name_language>en</_01_actor_nameclass_name_language>
+        <_01_actor_nameclass_nameHonorific>Grand officier de la Légion d'honneur (1964)</_01_actor_nameclass_nameHonorific>
+        <_01_actor_nameclass_nameHonorific_language>fr</_01_actor_nameclass_nameHonorific_language>
+        <_01_actor_nameclass_nameHonorific_language>fr</_01_actor_nameclass_nameHonorific_language>
+        <_01_actor_nameclass_nameHonorific_language>fr</_01_actor_nameclass_nameHonorific_language>
+        <_01_actor_nameclass_nameHonorific_language>fr</_01_actor_nameclass_nameHonorific_language>
+        <act_alt_name>
+            <act_alt_name_literal>
+                <act_nc_altname_literal>Le Corbusier</act_nc_altname_literal>
+                <act_nc_altname_literal_lang>fr</act_nc_altname_literal_lang>
+                <act_nc_altname_literal_lang>fr</act_nc_altname_literal_lang>
+                <act_nc_altname_literal_lang>fr</act_nc_altname_literal_lang>
+                <act_nc_altname_literal_lang>fr</act_nc_altname_literal_lang>
+                <act_nc_altname_type>Künstlername</act_nc_altname_type>
+                <act_nc_altname_type>Artist Name</act_nc_altname_type>
+            </act_alt_name_literal>
+            <act_alt_name_literal>
+                <act_nc_altname_literal>Jeanneret-Gris, Charles-Edouard</act_nc_altname_literal>
+                <act_nc_altname_literal_lang>fr</act_nc_altname_literal_lang>
+                <act_nc_altname_literal_lang>fr</act_nc_altname_literal_lang>
+                <act_nc_altname_literal_lang>fr</act_nc_altname_literal_lang>
+                <act_nc_altname_literal_lang>fr</act_nc_altname_literal_lang>
+                <act_nc_altname_type>Amtlicher Name</act_nc_altname_type>
+                <act_nc_altname_type>Official Name</act_nc_altname_type>
+            </act_alt_name_literal>
+        </act_alt_name>
+        <_01_actor_nameclass_gender>männlich</_01_actor_nameclass_gender>
+        <_01_actor_nameclass_gender>male</_01_actor_nameclass_gender>
+        <act_short_bio>
+            <act_doc_biographical_note_literal>Schweizerisch-Französischer Architekt, Städtebauer, Maler, Designer und Theoretiker, 1887–1965</act_doc_biographical_note_literal>
+            <act_doc_biographical_note_lang>de</act_doc_biographical_note_lang>
+            <act_doc_biographical_note_lang>de</act_doc_biographical_note_lang>
+            <act_doc_biographical_note_lang>de</act_doc_biographical_note_lang>
+            <act_doc_biographical_note_lang>de</act_doc_biographical_note_lang>
+            <act_doc_biographical_note_source>972907d6-bd01-4bba-bf2b-180416e5e947</act_doc_biographical_note_source>
+        </act_short_bio>
+        <_99_actor_nameclass_identifierGND_identifier>https://d-nb.info/gnd/118676873</_99_actor_nameclass_identifierGND_identifier>
+        <_99_actor_nameclass_identifierGND_identifier_provider>4a7a4e9c-4aa7-4808-a86f-ab2391b5bdc9</_99_actor_nameclass_identifierGND_identifier_provider>
+        <_99_actor_nameclass_identifierSIKART_identifier>http://www.sikart.ch/KuenstlerInnen.aspx?id=4000293</_99_actor_nameclass_identifierSIKART_identifier>
+        <_99_actor_nameclass_identifierSIKART_identifier_provider/>
+        <_99_actor_nameclass_identifierULAN_identifier>http://vocab.getty.edu/ulan/500027041</_99_actor_nameclass_identifierULAN_identifier>
+        <_99_actor_nameclass_identifierULAN_identifier_provider>f4ec3230-feea-4d4c-941a-ca1649dbf2ef</_99_actor_nameclass_identifierULAN_identifier_provider>
+        <_99_actor_nameclass_identifierWikidata_identifier>https://www.wikidata.org/wiki/Q4724</_99_actor_nameclass_identifierWikidata_identifier>
+        <_99_actor_nameclass_identifierwikidata_identifier_provider>9f885d77-ab06-4026-8a4a-5149740d99fc</_99_actor_nameclass_identifierwikidata_identifier_provider>
     </entry>
       
     <entry>
         <_01_actor_local_type>E21_Person</_01_actor_local_type>
-        <_01_actor_nameclass_identifier_identifier/>
-        <_01_actor_nameclass_name/>
-        <_01_actor_nameclass_name_language/>
-        <_01_actor_nameclass_nameHonorific/>
-        <_01_actor_nameclass_gender/>
-        <_02_actor_existence_birthplace_UUID/>
-        <_02_actor_existence_deathPlace_UUID/>
-        <_05_actor_documentation_fullbio_de/>
-        <_05_actor_documentation_fullbio_en/>
-        <_05_actor_documentation_shortbio_de/>
-        <_05_actor_documentation_shortbio_en/>
+        <_01_actor_local_type>E21_Person</_01_actor_local_type>
+        <_01_actor_local_type>E21_Person</_01_actor_local_type>
+        <_01_actor_local_type>E21_Person</_01_actor_local_type>
+        <_01_actor_nameclass_identifier_identifier>033e9df4-5c06-43fa-b37a-5a784dfdfd0f</_01_actor_nameclass_identifier_identifier>
+        <_01_actor_nameclass_name>TEST-PERSON</_01_actor_nameclass_name>
+        <_01_actor_nameclass_name_language>en</_01_actor_nameclass_name_language>
+        <_01_actor_nameclass_name_language>en</_01_actor_nameclass_name_language>
+        <_01_actor_nameclass_name_language>en</_01_actor_nameclass_name_language>
+        <_01_actor_nameclass_name_language>en</_01_actor_nameclass_name_language>
+        <_01_actor_nameclass_nameHonorific>TEXT HON TITLE</_01_actor_nameclass_nameHonorific>
+        <_01_actor_nameclass_nameHonorific_language>en</_01_actor_nameclass_nameHonorific_language>
+        <_01_actor_nameclass_nameHonorific_language>en</_01_actor_nameclass_nameHonorific_language>
+        <_01_actor_nameclass_nameHonorific_language>en</_01_actor_nameclass_nameHonorific_language>
+        <_01_actor_nameclass_nameHonorific_language>en</_01_actor_nameclass_nameHonorific_language>
+        <act_alt_name>
+            <act_alt_name_literal>
+                <act_nc_altname_literal>TEST-PERSON ALT NAME</act_nc_altname_literal>
+                <act_nc_altname_literal_lang>fr</act_nc_altname_literal_lang>
+                <act_nc_altname_literal_lang>fr</act_nc_altname_literal_lang>
+                <act_nc_altname_literal_lang>fr</act_nc_altname_literal_lang>
+                <act_nc_altname_literal_lang>fr</act_nc_altname_literal_lang>
+                <act_nc_altname_type>Alternate Spelling</act_nc_altname_type>
+                <act_nc_altname_type/>
+            </act_alt_name_literal>
+        </act_alt_name>
+        <_01_actor_nameclass_gender>weiblich</_01_actor_nameclass_gender>
+        <_01_actor_nameclass_gender>female</_01_actor_nameclass_gender>
+        <act_short_bio>
+            <act_doc_biographical_note_literal/>
+            <act_doc_biographical_note_lang/>
+            <act_doc_biographical_note_lang/>
+            <act_doc_biographical_note_lang/>
+            <act_doc_biographical_note_lang/>
+            <act_doc_biographical_note_source>972907d6-bd01-4bba-bf2b-180416e5e947</act_doc_biographical_note_source>
+        </act_short_bio>
         <_99_actor_nameclass_identifierGND_identifier/>
+        <_99_actor_nameclass_identifierGND_identifier_provider/>
         <_99_actor_nameclass_identifierSIKART_identifier/>
+        <_99_actor_nameclass_identifierSIKART_identifier_provider/>
         <_99_actor_nameclass_identifierULAN_identifier/>
+        <_99_actor_nameclass_identifierULAN_identifier_provider/>
         <_99_actor_nameclass_identifierWikidata_identifier/>
-        <_99_actor_nameclass_identifierWikipedia_identifier/>
+        <_99_actor_nameclass_identifierwikidata_identifier_provider/>
     </entry>
       
     <entry>
         <_01_actor_local_type>E21_Person</_01_actor_local_type>
-        <_01_actor_nameclass_identifier_identifier/>
-        <_01_actor_nameclass_name/>
-        <_01_actor_nameclass_name_language/>
+        <_01_actor_local_type>E21_Person</_01_actor_local_type>
+        <_01_actor_local_type>E21_Person</_01_actor_local_type>
+        <_01_actor_local_type>E21_Person</_01_actor_local_type>
+        <_01_actor_nameclass_identifier_identifier>bc3db4e9-aeff-49ce-a553-3119fb755096</_01_actor_nameclass_identifier_identifier>
+        <_01_actor_nameclass_name>THE OTHER TEST PERSON</_01_actor_nameclass_name>
+        <_01_actor_nameclass_name_language>en</_01_actor_nameclass_name_language>
+        <_01_actor_nameclass_name_language>en</_01_actor_nameclass_name_language>
+        <_01_actor_nameclass_name_language>en</_01_actor_nameclass_name_language>
+        <_01_actor_nameclass_name_language>en</_01_actor_nameclass_name_language>
         <_01_actor_nameclass_nameHonorific/>
-        <_01_actor_nameclass_gender/>
-        <_02_actor_existence_birthplace_UUID/>
-        <_02_actor_existence_deathPlace_UUID/>
-        <_05_actor_documentation_fullbio_de/>
-        <_05_actor_documentation_fullbio_en/>
-        <_05_actor_documentation_shortbio_de/>
-        <_05_actor_documentation_shortbio_en/>
+        <_01_actor_nameclass_nameHonorific_language/>
+        <_01_actor_nameclass_nameHonorific_language/>
+        <_01_actor_nameclass_nameHonorific_language/>
+        <_01_actor_nameclass_nameHonorific_language/>
+        <act_alt_name>
+            <act_alt_name_literal>
+                <act_nc_altname_literal>A TEST PERSON</act_nc_altname_literal>
+                <act_nc_altname_literal_lang>en</act_nc_altname_literal_lang>
+                <act_nc_altname_literal_lang>en</act_nc_altname_literal_lang>
+                <act_nc_altname_literal_lang>en</act_nc_altname_literal_lang>
+                <act_nc_altname_literal_lang>en</act_nc_altname_literal_lang>
+                <act_nc_altname_type>Künstlername</act_nc_altname_type>
+                <act_nc_altname_type>Artist Name</act_nc_altname_type>
+            </act_alt_name_literal>
+            <act_alt_name_literal>
+                <act_nc_altname_literal>EINE TEST PERSON</act_nc_altname_literal>
+                <act_nc_altname_literal_lang>de</act_nc_altname_literal_lang>
+                <act_nc_altname_literal_lang>de</act_nc_altname_literal_lang>
+                <act_nc_altname_literal_lang>de</act_nc_altname_literal_lang>
+                <act_nc_altname_literal_lang>de</act_nc_altname_literal_lang>
+                <act_nc_altname_type>Amtlicher Name</act_nc_altname_type>
+                <act_nc_altname_type>Official Name</act_nc_altname_type>
+            </act_alt_name_literal>
+        </act_alt_name>
+        <_01_actor_nameclass_gender>männlich</_01_actor_nameclass_gender>
+        <_01_actor_nameclass_gender>male</_01_actor_nameclass_gender>
+        <act_short_bio>
+            <act_doc_biographical_note_literal>Yet another Swiss test person, born 15.7.2020</act_doc_biographical_note_literal>
+            <act_doc_biographical_note_lang>en</act_doc_biographical_note_lang>
+            <act_doc_biographical_note_lang>en</act_doc_biographical_note_lang>
+            <act_doc_biographical_note_lang>en</act_doc_biographical_note_lang>
+            <act_doc_biographical_note_lang>en</act_doc_biographical_note_lang>
+            <act_doc_biographical_note_source>972907d6-bd01-4bba-bf2b-180416e5e947</act_doc_biographical_note_source>
+        </act_short_bio>
         <_99_actor_nameclass_identifierGND_identifier/>
+        <_99_actor_nameclass_identifierGND_identifier_provider/>
         <_99_actor_nameclass_identifierSIKART_identifier/>
+        <_99_actor_nameclass_identifierSIKART_identifier_provider/>
         <_99_actor_nameclass_identifierULAN_identifier/>
+        <_99_actor_nameclass_identifierULAN_identifier_provider/>
         <_99_actor_nameclass_identifierWikidata_identifier/>
-        <_99_actor_nameclass_identifierWikipedia_identifier/>
+        <_99_actor_nameclass_identifierwikidata_identifier_provider/>
     </entry>
     
 </root>
