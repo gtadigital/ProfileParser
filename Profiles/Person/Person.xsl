@@ -132,22 +132,7 @@
 					</act_doc_biographical_note_source>
 				</xsl:element>
 			</xsl:for-each>
-			<!--
-              <_02_actor_existence_birthplace_UUID>
-              </_02_actor_existence_birthplace_UUID>
-              <_02_actor_existence_deathPlace_UUID>
-              </_02_actor_existence_deathPlace_UUID>
-              <_05_actor_documentation_fullbio_de>
-              </_05_actor_documentation_fullbio_de>
-              <_05_actor_documentation_fullbio_en>
-              </_05_actor_documentation_fullbio_en>
-              <_05_actor_documentation_shortbio_de>
-                  <xsl:value-of select="pr:act_description_bioshort/pr:de-DE"/>
-              </_05_actor_documentation_shortbio_de>
-              <_05_actor_documentation_shortbio_en>
-                    <xsl:value-of select="pr:act_description_bioshort/pr:en-US"/>
-              </_05_actor_documentation_shortbio_en>
-              -->
+			
               <_99_actor_nameclass_identifierGND_identifier>
                   <xsl:value-of select="pr:act_nc_identifier_gnd"/>
               </_99_actor_nameclass_identifierGND_identifier>
