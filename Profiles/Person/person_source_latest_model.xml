@@ -10,7 +10,7 @@
     </_standard>
     <_objecttype>act</_objecttype>
     <_global_object_id>59747@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
-    <_uuid>debb2cce-9ab9-4f68-8782-efea2ed5e152</_uuid>
+  <_uuid>debb2cce-9ab9-4f68-8782-efea2ed5e152</_uuid> <!-- use as 01_actor_nameclass_identifier_identifier -->
     <pool id="32">
       <de-DE>gta Authoritative Reference Data (Dataset B)</de-DE>
       <en-US>gta Authoritative Reference Data (Dataset B)</en-US>
@@ -35,14 +35,14 @@
     <act_nc_identifier_fotoch_archive type="string"/>
     <act_nc_identifier_alat_archive type="string"/>
     <act_uuid_manual type="string"/>
-    <act_nc_name type="text_oneline">Le Corbusier</act_nc_name>
+    <act_nc_name type="text_oneline">Le Corbusier</act_nc_name> <!-- 01_actor_nameclass_name -->
     <act_nc_name_lang>
       <generic_lang>
         <_id>5</_id>
         <_system_object_id>111438</_system_object_id>
         <_version>2</_version>
         <_standard>
-          <de-DE>en</de-DE>
+          <de-DE>en</de-DE> <!-- use as 01_actor_nameclass_name_language -->
           <en-US>en</en-US>
           <it-IT>en</it-IT>
           <fr-FR>en</fr-FR>
@@ -58,14 +58,14 @@
         </generic_lang_name>
       </generic_lang>
     </act_nc_name_lang>
-    <act_nc_honname type="text_oneline">Grand officier de la Légion d'honneur (1964)</act_nc_honname>
+    <act_nc_honname type="text_oneline">Grand officier de la Légion d'honneur (1964)</act_nc_honname> <!-- use as 01_actor_nameclass_nameHonorific/ -->
     <act_nc_honname_lang>
       <generic_lang>
         <_id>4</_id>
         <_system_object_id>111435</_system_object_id>
         <_version>2</_version>
         <_standard>
-          <de-DE>fr</de-DE>
+          <de-DE>fr</de-DE>  <!-- use as 01_actor_nameclass_nameHonorific >> language -->
           <en-US>fr</en-US>
           <it-IT>fr</it-IT>
           <fr-FR>fr</fr-FR>
@@ -82,18 +82,18 @@
         </generic_lang_name>
       </generic_lang>
     </act_nc_honname_lang>
-    <_nested__act__act_nc_altname>
-      <act__act_nc_altname>
+    <_nested__act__act_nc_altname> <!-- HERE THE LOOP FOR ALT NAME STARTS -->
+      <act__act_nc_altname> 
         <_id>0</_id>
         <_system_object_id>0</_system_object_id>
-        <act_nc_altname_literal type="text_oneline">Le Corbusier</act_nc_altname_literal>
+        <act_nc_altname_literal type="text_oneline">Le Corbusier</act_nc_altname_literal> <!-- first ALT NAME LITERAL-->
         <act_nc_altname_lang>
           <generic_lang>
             <_id>4</_id>
             <_system_object_id>111435</_system_object_id>
             <_version>2</_version>
             <_standard>
-              <de-DE>fr</de-DE>
+              <de-DE>fr</de-DE> <!-- first ALT NAME LANG -->
               <en-US>fr</en-US>
               <it-IT>fr</it-IT>
               <fr-FR>fr</fr-FR>
@@ -116,7 +116,7 @@
             <_system_object_id>438012</_system_object_id>
             <_version>1</_version>
             <_standard>
-              <de-DE>Künstlername</de-DE>
+              <de-DE>Künstlername</de-DE> <!-- first ALT NAME TYPE // DO WE HAVE THAT IN THE MODEL ??-->
               <en-US>Artist Name</en-US>
             </_standard>
             <_objecttype>generic_nametype</_objecttype>
@@ -141,14 +141,14 @@
       <act__act_nc_altname>
         <_id>0</_id>
         <_system_object_id>0</_system_object_id>
-        <act_nc_altname_literal type="text_oneline">Jeanneret-Gris, Charles-Edouard</act_nc_altname_literal>
+        <act_nc_altname_literal type="text_oneline">Jeanneret-Gris, Charles-Edouard</act_nc_altname_literal> <!-- second ALT NAME LITERAL -->
         <act_nc_altname_lang>
           <generic_lang>
             <_id>4</_id>
             <_system_object_id>111435</_system_object_id>
             <_version>2</_version>
             <_standard>
-              <de-DE>fr</de-DE>
+              <de-DE>fr</de-DE><!-- second ALT NAME LANG -->
               <en-US>fr</en-US>
               <it-IT>fr</it-IT>
               <fr-FR>fr</fr-FR>
@@ -171,7 +171,7 @@
             <_system_object_id>438013</_system_object_id>
             <_version>1</_version>
             <_standard>
-              <de-DE>Amtlicher Name</de-DE>
+              <de-DE>Amtlicher Name</de-DE> <!-- second ALT NAME TYPE // DO WE HAVE THAT IN THE MODEL ?? -->
               <en-US>Official Name</en-US>
             </_standard>
             <_objecttype>generic_nametype</_objecttype>
@@ -204,14 +204,14 @@
           </act>
         </act_nc_altname_usedby>
       </act__act_nc_altname>
-    </_nested__act__act_nc_altname>
+    </_nested__act__act_nc_altname>  <!-- HERE THE LOOP FOR ALT NAME ENDS -->
     <act_type_crm>
       <act_type_crm>
         <_id>1</_id>
         <_system_object_id>111414</_system_object_id>
         <_version>1</_version>
         <_standard>
-          <de-DE>E21_Person</de-DE>
+          <de-DE>E21_Person</de-DE> <!-- use as 01_actor_local_type // SHOUDL WE USE AN UIR POINTING TO CRM HERE?-->
           <en-US>E21_Person</en-US>
           <it-IT>E21_Person</it-IT>
           <fr-FR>E21_Person</fr-FR>
@@ -229,7 +229,7 @@
         <_system_object_id>111395</_system_object_id>
         <_version>3</_version>
         <_standard>
-          <de-DE>männlich</de-DE>
+          <de-DE>männlich</de-DE> <!-- user for _01_actor_nameclass_gender -->
           <en-US>male</en-US>
         </_standard>
         <_objecttype>act_person_gender</_objecttype>
@@ -244,18 +244,18 @@
       </act_person_gender>
     </act_nc_gender>
     <act_nc_gender_source type="text_oneline">SARI</act_nc_gender_source>
-    <_nested__act__act_doc_biographical_note>
+    <_nested__act__act_doc_biographical_note> <!-- HERE STARTS THE LOOP FOR _05_actor_documentation_shortbio_de -->
       <act__act_doc_biographical_note>
         <_id>0</_id>
         <_system_object_id>0</_system_object_id>
-        <act_doc_biographical_note_literal type="text_oneline">Schweizerisch-Französischer Architekt, Städtebauer, Maler, Designer und Theoretiker, 1887–1965</act_doc_biographical_note_literal>
+        <act_doc_biographical_note_literal type="text_oneline">Schweizerisch-Französischer Architekt, Städtebauer, Maler, Designer und Theoretiker, 1887–1965</act_doc_biographical_note_literal>  <!-- first _05_actor_documentation_shortbio -->
         <act_doc_biographical_note_lang>
           <generic_lang>
             <_id>1</_id>
             <_system_object_id>111398</_system_object_id>
             <_version>2</_version>
             <_standard>
-              <de-DE>de</de-DE>
+              <de-DE>de</de-DE> <!-- first _05_actor_documentation_shortbio << LANG -->
               <en-US>de</en-US>
               <it-IT>de</it-IT>
               <fr-FR>de</fr-FR>
@@ -281,7 +281,7 @@
             </_standard>
             <_objecttype>generic_contributor</_objecttype>
             <_global_object_id>111475@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
-            <_uuid>972907d6-bd01-4bba-bf2b-180416e5e947</_uuid>
+            <_uuid>972907d6-bd01-4bba-bf2b-180416e5e947</_uuid> <!-- first _05_actor_documentation_shortbio << CONTRUBUTOR UUID // DO WE HAVE THAT IN THE MODEL ??-->
             <generic_contributor_sari_uuid type="string"/>
             <generic_contributor_short type="string"/>
             <generic_contributor_name type="text_l10n_oneline">
@@ -294,21 +294,21 @@
       <act__act_doc_biographical_note>
         <_id>0</_id>
         <_system_object_id>0</_system_object_id>
-        <act_doc_biographical_note_literal type="text_oneline">Swiss-French Architect, Urban Planer, Painter, Designer, and Writer, 1887–1965</act_doc_biographical_note_literal>
+        <act_doc_biographical_note_literal type="text_oneline">Swiss-French Architect, Urban Planer, Painter, Designer, and Writer, 1887–1965</act_doc_biographical_note_literal> <!-- second _05_actor_documentation_shortbio -->
         <act_doc_biographical_note_lang>
           <generic_lang>
             <_id>5</_id>
             <_system_object_id>111438</_system_object_id>
             <_version>2</_version>
             <_standard>
-              <de-DE>en</de-DE>
+              <de-DE>en</de-DE><!-- second _05_actor_documentation_shortbio >> LANG-->
               <en-US>en</en-US>
               <it-IT>en</it-IT>
               <fr-FR>en</fr-FR>
             </_standard>
             <_objecttype>generic_lang</_objecttype>
             <_global_object_id>111438@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
-            <_uuid>0178b42d-0f3f-4132-9e1d-f85425789823</_uuid>
+            <_uuid>0178b42d-0f3f-4132-9e1d-f85425789823</_uuid> 
             <generic_lang_uuid type="string"/>
             <generic_lang_akronym type="string">en</generic_lang_akronym>
             <generic_lang_name type="text_l10n_oneline">
@@ -327,7 +327,7 @@
             </_standard>
             <_objecttype>generic_contributor</_objecttype>
             <_global_object_id>111475@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
-            <_uuid>972907d6-bd01-4bba-bf2b-180416e5e947</_uuid>
+            <_uuid>972907d6-bd01-4bba-bf2b-180416e5e947</_uuid> <!-- second _05_actor_documentation_shortbio // CONTRIBUITOR UUID -->
             <generic_contributor_sari_uuid type="string"/>
             <generic_contributor_short type="string"/>
             <generic_contributor_name type="text_l10n_oneline">
@@ -429,7 +429,7 @@
         </act_doc_biographical_note_source>
       </act__act_doc_biographical_note>
     </_nested__act__act_doc_biographical_note>
-    <act_nc_identifier_gnd type="string">https://d-nb.info/gnd/118676873</act_nc_identifier_gnd>
+    <act_nc_identifier_gnd type="string">https://d-nb.info/gnd/118676873</act_nc_identifier_gnd>  <!-- use as _99_actor_nameclass_identifierGND_identifier -->
     <act_nc_identifier_gnd_src type="string"/>
     <act_nc_identifier_gnd_prov>
       <generic_contributor>
@@ -441,7 +441,7 @@
           <generic_contributor level="0" parent-level="1">
             <_system_object_id>297856</_system_object_id>
             <_global_object_id>297856@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
-            <_uuid>bcc635d9-0b26-46dd-9395-e23c391dc296</_uuid>
+            <_uuid>bcc635d9-0b26-46dd-9395-e23c391dc296</_uuid> 
             <_id>7</_id>
             <_objecttype>generic_contributor</_objecttype>
             <_standard>
@@ -474,7 +474,7 @@
         <_objecttype>generic_contributor</_objecttype>
         <_global_object_id>435884@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
         <_uuid>46c6cba3-f774-42ba-b47a-ea2e944c95be</_uuid>
-        <generic_contributor_sari_uuid type="string">4a7a4e9c-4aa7-4808-a86f-ab2391b5bdc9</generic_contributor_sari_uuid>
+        <generic_contributor_sari_uuid type="string">4a7a4e9c-4aa7-4808-a86f-ab2391b5bdc9</generic_contributor_sari_uuid>  <!-- use as _99_actor_nameclass_identifierGND_identifier >> Provider -->
         <generic_contributor_short type="string">gnd</generic_contributor_short>
         <generic_contributor_name type="text_l10n_oneline">
           <de-DE>Gemeinsame Normdatei</de-DE>
@@ -482,7 +482,7 @@
         </generic_contributor_name>
       </generic_contributor>
     </act_nc_identifier_gnd_prov>
-    <act_nc_identifier_ulan type="string">http://vocab.getty.edu/ulan/500027041</act_nc_identifier_ulan>
+    <act_nc_identifier_ulan type="string">http://vocab.getty.edu/ulan/500027041</act_nc_identifier_ulan> <!-- use as _99_actor_nameclass_identifierULAN_identifier --> 
     <act_nc_identifier_ulan_src type="string"/>
     <act_nc_identifier_ulan_prov>
       <generic_contributor>
@@ -540,7 +540,7 @@
         <_objecttype>generic_contributor</_objecttype>
         <_global_object_id>435888@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
         <_uuid>e5ba0531-960a-4992-9732-9fa65c56841e</_uuid>
-        <generic_contributor_sari_uuid type="string">f4ec3230-feea-4d4c-941a-ca1649dbf2ef</generic_contributor_sari_uuid>
+        <generic_contributor_sari_uuid type="string">f4ec3230-feea-4d4c-941a-ca1649dbf2ef</generic_contributor_sari_uuid> <!-- use as _99_actor_nameclass_identifierULAN_identifier >> PROVIDER -->
         <generic_contributor_short type="string">ulan</generic_contributor_short>
         <generic_contributor_name type="text_l10n_oneline">
           <de-DE>Union List of Artist Names®</de-DE>
@@ -548,7 +548,7 @@
         </generic_contributor_name>
       </generic_contributor>
     </act_nc_identifier_ulan_prov>
-    <act_nc_identifier_wikidata type="string">https://www.wikidata.org/wiki/Q4724</act_nc_identifier_wikidata>
+    <act_nc_identifier_wikidata type="string">https://www.wikidata.org/wiki/Q4724</act_nc_identifier_wikidata> <!-- use as _99_actor_nameclass_identifierWikidata_identifier -->
     <act_nc_identifier_wikidata_src type="string"/>
     <act_nc_identifier_wikidata__prov>
       <generic_contributor>
@@ -593,7 +593,7 @@
         <_objecttype>generic_contributor</_objecttype>
         <_global_object_id>297857@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
         <_uuid>bc6bbf91-ff0d-4209-8f9c-9574835cbb8f</_uuid>
-        <generic_contributor_sari_uuid type="string">9f885d77-ab06-4026-8a4a-5149740d99fc</generic_contributor_sari_uuid>
+        <generic_contributor_sari_uuid type="string">9f885d77-ab06-4026-8a4a-5149740d99fc</generic_contributor_sari_uuid> <!-- use as _99_actor_nameclass_identifierWikidata_identifier >> PROVIDER -->
         <generic_contributor_short type="string">wd</generic_contributor_short>
         <generic_contributor_name type="text_l10n_oneline">
           <de-DE>Wikidata.org</de-DE>
@@ -603,7 +603,7 @@
     </act_nc_identifier_wikidata__prov>
     <act_nc_identifier_archiinform type="string"/>
     <act_nc_identifier_archiinform_src type="string"/>
-    <act_nc_identifier_sikart type="string">http://www.sikart.ch/KuenstlerInnen.aspx?id=4000293</act_nc_identifier_sikart>
+    <act_nc_identifier_sikart type="string">http://www.sikart.ch/KuenstlerInnen.aspx?id=4000293</act_nc_identifier_sikart> <!-- use as _99_actor_nameclass_identifierSIKART_identifier -->
     <act_nc_identifier_sikart_src type="string"/>
     <act_nc_identifier_sikart_prov>
       <generic_contributor>
@@ -648,7 +648,7 @@
         <_objecttype>generic_contributor</_objecttype>
         <_global_object_id>436610@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
         <_uuid>47e0653d-cac0-4f20-aeba-dadbd55c7840</_uuid>
-        <generic_contributor_sari_uuid type="string"/>
+        <generic_contributor_sari_uuid type="string"/> <!-- use as _99_actor_nameclass_identifierSIKART_identifier >> PROVIDER -->
         <generic_contributor_short type="string">sikart</generic_contributor_short>
         <generic_contributor_name type="text_l10n_oneline">
           <de-DE>SIKART</de-DE>
