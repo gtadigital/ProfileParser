@@ -42,7 +42,7 @@
         <_system_object_id>111438</_system_object_id>
         <_version>2</_version>
         <_standard>
-          <de-DE>en</de-DE> <!-- use as 01_actor_nameclass_name_language -->
+          <de-DE>en</de-DE> <!-- use as 01_actor_nameclass_name_language --> <!-- ## probably better to take line 54 -->
           <en-US>en</en-US>
           <it-IT>en</it-IT>
           <fr-FR>en</fr-FR>
@@ -65,7 +65,7 @@
         <_system_object_id>111435</_system_object_id>
         <_version>2</_version>
         <_standard>
-          <de-DE>fr</de-DE>  <!-- use as 01_actor_nameclass_nameHonorific >> language -->
+          <de-DE>fr</de-DE>  <!-- use as 01_actor_nameclass_nameHonorific >> language --> <!-- ## porbably better to take line 77 -->
           <en-US>fr</en-US>
           <it-IT>fr</it-IT>
           <fr-FR>fr</fr-FR>
@@ -211,7 +211,7 @@
         <_system_object_id>111414</_system_object_id>
         <_version>1</_version>
         <_standard>
-          <de-DE>E21_Person</de-DE> <!-- use as 01_actor_local_type // SHOUDL WE USE AN UIR POINTING TO CRM HERE?-->
+          <de-DE>E21_Person</de-DE> <!-- use as 01_actor_local_type // SHOUDL WE USE AN UIR POINTING TO CRM HERE? ## CAN BE SKIPPED -->
           <en-US>E21_Person</en-US>
           <it-IT>E21_Person</it-IT>
           <fr-FR>E21_Person</fr-FR>
@@ -473,7 +473,7 @@
         </_standard>
         <_objecttype>generic_contributor</_objecttype>
         <_global_object_id>435884@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
-        <_uuid>46c6cba3-f774-42ba-b47a-ea2e944c95be</_uuid>
+        <_uuid>46c6cba3-f774-42ba-b47a-ea2e944c95be</_uuid>  
         <generic_contributor_sari_uuid type="string">4a7a4e9c-4aa7-4808-a86f-ab2391b5bdc9</generic_contributor_sari_uuid>  <!-- use as _99_actor_nameclass_identifierGND_identifier >> Provider -->
         <generic_contributor_short type="string">gnd</generic_contributor_short>
         <generic_contributor_name type="text_l10n_oneline">
@@ -800,7 +800,7 @@
         </_standard>
         <_objecttype>pl</_objecttype>
         <_global_object_id>307734@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
-        <_uuid>e56dc84d-04f0-4d40-880f-05d2958f5882</_uuid>
+        <_uuid>e56dc84d-04f0-4d40-880f-05d2958f5882</_uuid> <!-- ## usa as birth place UUID -->
         <pool id="36">
           <de-DE>SwissTopo</de-DE>
           <en-US>SwissTopo</en-US>
@@ -940,9 +940,9 @@
       </pl>
     </act_exist_birth_place>
     <act_exist_birth_timespan type="daterange">
-      <from>1887-10-06</from>
-      <to>1887-10-06</to>
-    </act_exist_birth_timespan>
+      <from>1887-10-06</from> <!-- ## us as birth date earliest -->
+      <to>1887-10-06</to>   <!-- ## us as birth date latest -->
+    </act_exist_birth_timespan> 
     <act_exist_birth_uncert>
       <generic_uncertainty>
         <_id>6</_id>
@@ -1043,7 +1043,7 @@
         </_standard>
         <_objecttype>pl</_objecttype>
         <_global_object_id>100365@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
-        <_uuid>3b0eb8fd-84f8-41b6-b3da-59160a3083ae</_uuid>
+        <_uuid>3b0eb8fd-84f8-41b6-b3da-59160a3083ae</_uuid> <!-- ## us as birth place UUID -->
         <pool id="4">
           <de-DE>gta Digital</de-DE>
           <en-US>gta Digital</en-US>
@@ -1168,8 +1168,8 @@
       </pl>
     </act_exist_death_place>
     <act_exist_death_timespan type="daterange">
-      <from>1956-08-27</from>
-      <to>1956-08-27</to>
+      <from>1956-08-27</from> <!-- ## us as death date earliest -->
+      <to>1956-08-27</to> <!-- ## us as death date latest -->
     </act_exist_death_timespan>
     <act_exist_death_uncert>
       <generic_uncertainty>
@@ -1203,7 +1203,7 @@
         </_standard>
         <_objecttype>act</_objecttype>
         <_global_object_id>29321@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
-        <_uuid>a864ee87-a70d-45db-abe9-be4755050165</_uuid>
+        <_uuid>a864ee87-a70d-45db-abe9-be4755050165</_uuid> <!-- ## use as father person UUID -->
         <pool id="33">
           <de-DE>gta Authoritative Reference Data (Dataset A)</de-DE>
           <en-US>gta Authoritative Reference Data (Dataset A)</en-US>
@@ -1400,7 +1400,7 @@
         </_standard>
         <_objecttype>act</_objecttype>
         <_global_object_id>35337@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
-        <_uuid>cdbccef4-daa2-4fbb-a911-b0a296169879</_uuid>
+        <_uuid>cdbccef4-daa2-4fbb-a911-b0a296169879</_uuid> <!-- ## use mother person UUID -->
         <pool id="33">
           <de-DE>gta Authoritative Reference Data (Dataset A)</de-DE>
           <en-US>gta Authoritative Reference Data (Dataset A)</en-US>
@@ -1640,7 +1640,7 @@
         <act_dc_chekbox_type type="text_oneline"/>
       </act>
     </act_social_mother>
-    <_nested__act__act_social_relation>
+    <_nested__act__act_social_relation> <!-- ## HERE LOOP FOR SOCIAL RELATION STARTS BUT DATA ARE NOT EXPORTED NET; SO LET US SKIP FOR THE MOMENT -->
       <act__act_social_relation>
         <_id>0</_id>
         <_system_object_id>0</_system_object_id>
@@ -1809,7 +1809,7 @@
         </act_social_inst_role>
       </act__act_social_inst>
     </_nested__act__act_social_inst>
-    <_nested__act__act_social_national_affiliation>
+    <_nested__act__act_social_national_affiliation> <!-- HERE LOOP FOR NATIONAL AFFILIATION STARTS -->
       <act__act_social_national_affiliation>
         <_id>0</_id>
         <_system_object_id>0</_system_object_id>
@@ -1824,7 +1824,7 @@
             </_standard>
             <_objecttype>act_nat</_objecttype>
             <_global_object_id>111093@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
-            <_uuid>3752fd5a-05f4-458a-bed6-762c8a48b7f0</_uuid>
+            <_uuid>3752fd5a-05f4-458a-bed6-762c8a48b7f0</_uuid> <!-- ## first national affiliation -->
             <act_nat_uuid type="string">7F880909-6694-485F-8109-71CAB0FE1C88</act_nat_uuid>
             <act_nat_name type="text_l10n_oneline">
               <de-DE>Schweizerisch</de-DE>
@@ -1852,7 +1852,7 @@
             </_standard>
             <_objecttype>act_nat</_objecttype>
             <_global_object_id>111094@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
-            <_uuid>4be8f6b9-8678-4c52-93fb-feecb0efea5b</_uuid>
+            <_uuid>4be8f6b9-8678-4c52-93fb-feecb0efea5b</_uuid> <!-- ## second national affiliation -->
             <act_nat_uuid type="string">7FE50602-E802-4418-B14E-012DD821A908</act_nat_uuid>
             <act_nat_name type="text_l10n_oneline">
               <de-DE>Französisch</de-DE>
