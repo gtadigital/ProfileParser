@@ -170,6 +170,57 @@
                         select="pr:act_nc_identifier_wikidata__prov/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
             </generic_contributor_sari_wikidata_uuid>
 
+            <act_exist_birth_place_uuid>
+                <xsl:value-of
+                        select="pr:act_exist_birth_place/pr:pl/pr:_uuid"/>
+            </act_exist_birth_place_uuid>
+
+            <act_exist_birth_timespan_from>
+                <xsl:value-of
+                        select="pr:act_exist_birth_timespan/pr:from"/>
+            </act_exist_birth_timespan_from>
+
+            <act_exist_birth_timespan_to>
+                <xsl:value-of
+                        select="pr:act_exist_birth_timespan/pr:to"/>
+            </act_exist_birth_timespan_to>
+
+            <act_exist_death_place>
+                <xsl:value-of
+                        select="pr:act_exist_death_place/pr:pl/pr:_uuid"/>
+            </act_exist_death_place>
+
+            <act_exist_death_timespan_from>
+                <xsl:value-of
+                        select="pr:act_exist_birth_timespan/pr:from"/>
+            </act_exist_death_timespan_from>
+
+            <act_exist_death_timespan_to>
+                <xsl:value-of
+                        select="pr:act_exist_birth_timespan/pr:to"/>
+            </act_exist_death_timespan_to>
+
+            <act_social_father_uuid>
+                <xsl:value-of
+                        select="pr:act_social_father/pr:act/pr:_uuid"/>
+            </act_social_father_uuid>
+
+            <act_social_mother_uuid>
+                <xsl:value-of
+                        select="pr:act_social_mother/pr:act/pr:_uuid"/>
+            </act_social_mother_uuid>
+
+            <xsl:for-each select="pr:_nested__act__act_social_national_affiliation">
+                <xsl:element name="act_social_national_affiliation">
+                    <xsl:for-each select="pr:act__act_social_national_affiliation">
+                        <act_social_national_affiliation_uuid>
+                            <xsl:value-of
+                                    select="pr:act_social_national_affiliation_nationality/pr:act_nat/pr:_uuid"/>
+                        </act_social_national_affiliation_uuid>
+                    </xsl:for-each>
+
+                </xsl:element>
+            </xsl:for-each>
 
         </entry>
     </xsl:template>
