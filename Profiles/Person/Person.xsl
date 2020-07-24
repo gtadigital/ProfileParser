@@ -60,18 +60,9 @@
                             <act_nc_altname_literal>
                                 <xsl:value-of select="pr:act_nc_altname_literal"/>
                             </act_nc_altname_literal>
-                            <act_nc_altname_lang_de>
-                                <xsl:value-of select="pr:act_nc_altname_lang/pr:generic_lang/pr:_standard/pr:de-DE"/>
-                            </act_nc_altname_lang_de>
-                            <act_nc_altname_lang_en>
-                                <xsl:value-of select="pr:act_nc_altname_lang/pr:generic_lang/pr:_standard/pr:en-US"/>
-                            </act_nc_altname_lang_en>
-                            <act_nc_altname_lang_it>
-                                <xsl:value-of select="pr:act_nc_altname_lang/pr:generic_lang/pr:_standard/pr:it-IT"/>
-                            </act_nc_altname_lang_it>
-                            <act_nc_altname_lang_fr>
-                                <xsl:value-of select="pr:act_nc_altname_lang/pr:generic_lang/pr:_standard/pr:fr-FR"/>
-                            </act_nc_altname_lang_fr>
+                            <act_nc_altname_lang_akronym>
+                                <xsl:value-of select="pr:act_nc_altname_lang/pr:generic_lang/pr:generic_lang_akronym"/>
+                            </act_nc_altname_lang_akronym>
                             <act_nc_altname_type_de>
                                 <xsl:value-of
                                         select="pr:act_nc_altname_type/pr:generic_nametype/pr:_standard/pr:de-DE"/>

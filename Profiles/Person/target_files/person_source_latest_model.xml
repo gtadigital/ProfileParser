@@ -13,19 +13,13 @@
         <act_altName>
             <act_alt_nameLiteral>
                 <act_nc_altname_literal>Le Corbusier</act_nc_altname_literal>
-                <act_nc_altname_lang_de>fr</act_nc_altname_lang_de>
-                <act_nc_altname_lang_en>fr</act_nc_altname_lang_en>
-                <act_nc_altname_lang_it>fr</act_nc_altname_lang_it>
-                <act_nc_altname_lang_fr>fr</act_nc_altname_lang_fr>
+                <act_nc_altname_lang_akronym>fr</act_nc_altname_lang_akronym>
                 <act_nc_altname_type_de>Künstlername</act_nc_altname_type_de>
                 <act_nc_altname_type_en>Artist Name</act_nc_altname_type_en>
             </act_alt_nameLiteral>
             <act_alt_nameLiteral>
                 <act_nc_altname_literal>Jeanneret-Gris, Charles-Edouard</act_nc_altname_literal>
-                <act_nc_altname_lang_de>fr</act_nc_altname_lang_de>
-                <act_nc_altname_lang_en>fr</act_nc_altname_lang_en>
-                <act_nc_altname_lang_it>fr</act_nc_altname_lang_it>
-                <act_nc_altname_lang_fr>fr</act_nc_altname_lang_fr>
+                <act_nc_altname_lang_akronym>fr</act_nc_altname_lang_akronym>
                 <act_nc_altname_type_de>Amtlicher Name</act_nc_altname_type_de>
                 <act_nc_altname_type_en>Official Name</act_nc_altname_type_en>
             </act_alt_nameLiteral>
@@ -75,10 +69,7 @@
         <act_altName>
             <act_alt_nameLiteral>
                 <act_nc_altname_literal>TEST-PERSON ALT NAME</act_nc_altname_literal>
-                <act_nc_altname_lang_de>fr</act_nc_altname_lang_de>
-                <act_nc_altname_lang_en>fr</act_nc_altname_lang_en>
-                <act_nc_altname_lang_it>fr</act_nc_altname_lang_it>
-                <act_nc_altname_lang_fr>fr</act_nc_altname_lang_fr>
+                <act_nc_altname_lang_akronym>fr</act_nc_altname_lang_akronym>
                 <act_nc_altname_type_de>Alternate Spelling</act_nc_altname_type_de>
                 <act_nc_altname_type_en/>
             </act_alt_nameLiteral>
@@ -127,19 +118,13 @@
         <act_altName>
             <act_alt_nameLiteral>
                 <act_nc_altname_literal>A TEST PERSON</act_nc_altname_literal>
-                <act_nc_altname_lang_de>en</act_nc_altname_lang_de>
-                <act_nc_altname_lang_en>en</act_nc_altname_lang_en>
-                <act_nc_altname_lang_it>en</act_nc_altname_lang_it>
-                <act_nc_altname_lang_fr>en</act_nc_altname_lang_fr>
+                <act_nc_altname_lang_akronym>en</act_nc_altname_lang_akronym>
                 <act_nc_altname_type_de>Künstlername</act_nc_altname_type_de>
                 <act_nc_altname_type_en>Artist Name</act_nc_altname_type_en>
             </act_alt_nameLiteral>
             <act_alt_nameLiteral>
                 <act_nc_altname_literal>EINE TEST PERSON</act_nc_altname_literal>
-                <act_nc_altname_lang_de>de</act_nc_altname_lang_de>
-                <act_nc_altname_lang_en>de</act_nc_altname_lang_en>
-                <act_nc_altname_lang_it>de</act_nc_altname_lang_it>
-                <act_nc_altname_lang_fr>de</act_nc_altname_lang_fr>
+                <act_nc_altname_lang_akronym>de</act_nc_altname_lang_akronym>
                 <act_nc_altname_type_de>Amtlicher Name</act_nc_altname_type_de>
                 <act_nc_altname_type_en>Official Name</act_nc_altname_type_en>
             </act_alt_nameLiteral>
