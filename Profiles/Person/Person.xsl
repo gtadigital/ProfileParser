@@ -42,35 +42,16 @@
                 <xsl:value-of select="pr:act_nc_name"/>
             </act_nc_name>
 
-            <act_nc_name_lang_de>
-                <xsl:value-of select="pr:act_nc_name_lang/pr:generic_lang/pr:_standard/pr:de-DE"/>
-            </act_nc_name_lang_de>
-            <act_nc_name_lang_en>
-                <xsl:value-of select="pr:act_nc_name_lang/pr:generic_lang/pr:_standard/pr:en-US"/>
-            </act_nc_name_lang_en>
-            <act_nc_name_lang_it>
-                <xsl:value-of select="pr:act_nc_name_lang/pr:generic_lang/pr:_standard/pr:it-IT"/>
-            </act_nc_name_lang_it>
-            <act_nc_name_lang_fr>
-                <xsl:value-of select="pr:act_nc_name_lang/pr:generic_lang/pr:_standard/pr:fr-FR"/>
-            </act_nc_name_lang_fr>
-
+            <act_nc_name_lang_akronym>
+                <xsl:value-of select="pr:act_nc_name_lang/pr:generic_lang/pr:generic_lang_akronym"/>
+            </act_nc_name_lang_akronym>
             <act_nc_honname>
                 <xsl:value-of select="pr:act_nc_honname"/>
             </act_nc_honname>
 
-            <act_nc_honname_lang_de>
-                <xsl:value-of select="pr:act_nc_honname_lang/pr:generic_lang/pr:_standard/pr:de-DE"/>
-            </act_nc_honname_lang_de>
-            <act_nc_honname_lang_en>
-                <xsl:value-of select="pr:act_nc_honname_lang/pr:generic_lang/pr:_standard/pr:en-US"/>
-            </act_nc_honname_lang_en>
-            <act_nc_honname_lang_it>
-                <xsl:value-of select="pr:act_nc_honname_lang/pr:generic_lang/pr:_standard/pr:it-IT"/>
-            </act_nc_honname_lang_it>
-            <act_nc_honname_lang_fr>
-                <xsl:value-of select="pr:act_nc_honname_lang/pr:generic_lang/pr:_standard/pr:fr-FR"/>
-            </act_nc_honname_lang_fr>
+            <act_nc_honname_lang_akronym>
+                <xsl:value-of select="pr:act_nc_honname_lang/pr:generic_lang/pr:generic_lang_akronym"/>
+            </act_nc_honname_lang_akronym>
 
             <xsl:for-each select="pr:_nested__act__act_nc_altname">
                 <xsl:element name="act_altName">

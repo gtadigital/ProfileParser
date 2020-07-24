@@ -7,15 +7,9 @@
         <act_type_crm_fr>E21_Person</act_type_crm_fr>
         <_uuid>debb2cce-9ab9-4f68-8782-efea2ed5e152</_uuid>
         <act_nc_name>Le Corbusier</act_nc_name>
-        <act_nc_name_lang_de>en</act_nc_name_lang_de>
-        <act_nc_name_lang_en>en</act_nc_name_lang_en>
-        <act_nc_name_lang_it>en</act_nc_name_lang_it>
-        <act_nc_name_lang_fr>en</act_nc_name_lang_fr>
+        <act_nc_name_lang_akronym>en</act_nc_name_lang_akronym>
         <act_nc_honname>Grand officier de la Légion d'honneur (1964)</act_nc_honname>
-        <act_nc_honname_lang_de>fr</act_nc_honname_lang_de>
-        <act_nc_honname_lang_en>fr</act_nc_honname_lang_en>
-        <act_nc_honname_lang_it>fr</act_nc_honname_lang_it>
-        <act_nc_honname_lang_fr>fr</act_nc_honname_lang_fr>
+        <act_nc_honname_lang_akronym>fr</act_nc_honname_lang_akronym>
         <act_altName>
             <act_alt_nameLiteral>
                 <act_nc_altname_literal>Le Corbusier</act_nc_altname_literal>
@@ -75,15 +69,9 @@
         <act_type_crm_fr>E21_Person</act_type_crm_fr>
         <_uuid>033e9df4-5c06-43fa-b37a-5a784dfdfd0f</_uuid>
         <act_nc_name>TEST-PERSON</act_nc_name>
-        <act_nc_name_lang_de>en</act_nc_name_lang_de>
-        <act_nc_name_lang_en>en</act_nc_name_lang_en>
-        <act_nc_name_lang_it>en</act_nc_name_lang_it>
-        <act_nc_name_lang_fr>en</act_nc_name_lang_fr>
+        <act_nc_name_lang_akronym>en</act_nc_name_lang_akronym>
         <act_nc_honname>TEXT HON TITLE</act_nc_honname>
-        <act_nc_honname_lang_de>en</act_nc_honname_lang_de>
-        <act_nc_honname_lang_en>en</act_nc_honname_lang_en>
-        <act_nc_honname_lang_it>en</act_nc_honname_lang_it>
-        <act_nc_honname_lang_fr>en</act_nc_honname_lang_fr>
+        <act_nc_honname_lang_akronym>en</act_nc_honname_lang_akronym>
         <act_altName>
             <act_alt_nameLiteral>
                 <act_nc_altname_literal>TEST-PERSON ALT NAME</act_nc_altname_literal>
@@ -133,15 +121,9 @@
         <act_type_crm_fr>E21_Person</act_type_crm_fr>
         <_uuid>bc3db4e9-aeff-49ce-a553-3119fb755096</_uuid>
         <act_nc_name>THE OTHER TEST PERSON</act_nc_name>
-        <act_nc_name_lang_de>en</act_nc_name_lang_de>
-        <act_nc_name_lang_en>en</act_nc_name_lang_en>
-        <act_nc_name_lang_it>en</act_nc_name_lang_it>
-        <act_nc_name_lang_fr>en</act_nc_name_lang_fr>
+        <act_nc_name_lang_akronym>en</act_nc_name_lang_akronym>
         <act_nc_honname/>
-        <act_nc_honname_lang_de/>
-        <act_nc_honname_lang_en/>
-        <act_nc_honname_lang_it/>
-        <act_nc_honname_lang_fr/>
+        <act_nc_honname_lang_akronym/>
         <act_altName>
             <act_alt_nameLiteral>
                 <act_nc_altname_literal>A TEST PERSON</act_nc_altname_literal>
