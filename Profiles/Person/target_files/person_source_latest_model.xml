@@ -28,10 +28,7 @@
         <act_person_gender_en>male</act_person_gender_en>
         <act_short_bio>
             <act_doc_biographical_note_literal>Schweizerisch-Französischer Architekt, Städtebauer, Maler, Designer und Theoretiker, 1887–1965</act_doc_biographical_note_literal>
-            <act_doc_biographical_note_lang_de>de</act_doc_biographical_note_lang_de>
-            <act_doc_biographical_note_lang_en>de</act_doc_biographical_note_lang_en>
-            <act_doc_biographical_note_lang_it>de</act_doc_biographical_note_lang_it>
-            <act_doc_biographical_note_lang_fr>de</act_doc_biographical_note_lang_fr>
+            <act_doc_biographical_note_akronym>de</act_doc_biographical_note_akronym>
             <act_doc_biographical_note_source_uuid>972907d6-bd01-4bba-bf2b-180416e5e947</act_doc_biographical_note_source_uuid>
         </act_short_bio>
         <act_nc_identifier_gnd>https://d-nb.info/gnd/118676873</act_nc_identifier_gnd>
@@ -78,10 +75,7 @@
         <act_person_gender_en>female</act_person_gender_en>
         <act_short_bio>
             <act_doc_biographical_note_literal/>
-            <act_doc_biographical_note_lang_de/>
-            <act_doc_biographical_note_lang_en/>
-            <act_doc_biographical_note_lang_it/>
-            <act_doc_biographical_note_lang_fr/>
+            <act_doc_biographical_note_akronym/>
             <act_doc_biographical_note_source_uuid>972907d6-bd01-4bba-bf2b-180416e5e947</act_doc_biographical_note_source_uuid>
         </act_short_bio>
         <act_nc_identifier_gnd/>
@@ -133,10 +127,7 @@
         <act_person_gender_en>male</act_person_gender_en>
         <act_short_bio>
             <act_doc_biographical_note_literal>Yet another Swiss test person, born 15.7.2020</act_doc_biographical_note_literal>
-            <act_doc_biographical_note_lang_de>en</act_doc_biographical_note_lang_de>
-            <act_doc_biographical_note_lang_en>en</act_doc_biographical_note_lang_en>
-            <act_doc_biographical_note_lang_it>en</act_doc_biographical_note_lang_it>
-            <act_doc_biographical_note_lang_fr>en</act_doc_biographical_note_lang_fr>
+            <act_doc_biographical_note_akronym>en</act_doc_biographical_note_akronym>
             <act_doc_biographical_note_source_uuid>972907d6-bd01-4bba-bf2b-180416e5e947</act_doc_biographical_note_source_uuid>
         </act_short_bio>
         <act_nc_identifier_gnd/>

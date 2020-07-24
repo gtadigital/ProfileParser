@@ -87,22 +87,11 @@
                     <act_doc_biographical_note_literal>
                         <xsl:value-of select="pr:act__act_doc_biographical_note/pr:act_doc_biographical_note_literal"/>
                     </act_doc_biographical_note_literal>
-                    <act_doc_biographical_note_lang_de>
+                    <act_doc_biographical_note_akronym>
                         <xsl:value-of
-                                select="pr:act__act_doc_biographical_note/pr:act_doc_biographical_note_lang/pr:generic_lang/pr:_standard/pr:de-DE"/>
-                    </act_doc_biographical_note_lang_de>
-                    <act_doc_biographical_note_lang_en>
-                        <xsl:value-of
-                                select="pr:act__act_doc_biographical_note/pr:act_doc_biographical_note_lang/pr:generic_lang/pr:_standard/pr:en-US"/>
-                    </act_doc_biographical_note_lang_en>
-                    <act_doc_biographical_note_lang_it>
-                        <xsl:value-of
-                                select="pr:act__act_doc_biographical_note/pr:act_doc_biographical_note_lang/pr:generic_lang/pr:_standard/pr:it-IT"/>
-                    </act_doc_biographical_note_lang_it>
-                    <act_doc_biographical_note_lang_fr>
-                        <xsl:value-of
-                                select="pr:act__act_doc_biographical_note/pr:act_doc_biographical_note_lang/pr:generic_lang/pr:_standard/pr:fr-FR"/>
-                    </act_doc_biographical_note_lang_fr>
+                                select="pr:act__act_doc_biographical_note/pr:act_doc_biographical_note_lang/pr:generic_lang/pr:generic_lang_akronym"/>
+                    </act_doc_biographical_note_akronym>
+
                     <act_doc_biographical_note_source_uuid>
                         <xsl:value-of
                                 select="pr:act__act_doc_biographical_note/pr:act_doc_biographical_note_source/pr:generic_contributor/pr:_uuid"/>
