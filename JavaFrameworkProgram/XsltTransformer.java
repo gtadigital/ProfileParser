@@ -11,36 +11,42 @@ public class XsltTransformer {
     private final Path output;
     private final Transformer transformer;
 
-    XsltTransformer(Path input, Path output, Transformer transformer) {
-        this.input = input;this.output = output;this.transformer = transformer;
+    XsltTransformer(final Path input, final Path output, final Transformer transformer) {
+        this.input = input;
+        this.output = output;
+        this.transformer = transformer;
     }
 
-    public static void main(String[] args) throws Exception {
-        final Transformer transformer = TransformerFactory
-                .newInstance()
-                .newTransformer(new StreamSource(Paths.get("/home/matteolorenzini/GTARepo/ProfileParser/Profiles/Person/Person.xsl").toFile()));
-        new XsltTransformer(
-                Paths.get("/home/matteolorenzini/GTARepo/ProfileParser/Profiles/Person/source_files"),
-                Paths.get("/home/matteolorenzini/GTARepo/ProfileParser/Profiles/Person/target_files"),
-                transformer
-        ).run();
+
+    public static void main(final String[] args) throws Exception {
+        
+
+        final String source = "/Users/matteo/GTARepo/ProfileParser/Profiles/Person/source_files";
+        final String target = "/Users/matteo/GTARepo/ProfileParser/Profiles/Person/target_files";
+        final String xsl = "/Users/matteo/GTARepo/ProfileParser/Profiles/Person/Person.xsl";
+        
+        
+        final Transformer transformer = TransformerFactory.newInstance().newTransformer(new StreamSource(
+                Paths.get(xsl).toFile()));
+                
+        new XsltTransformer(Paths.get(source),
+                Paths.get(target), transformer)
+                        .run();
     }
 
-    private Path transform(Path file) {
+    private Path transform(final Path file) {
         final StreamSource resource = new StreamSource(file.toFile());
         final Path output = this.resolveOutput(file);
-        final Result result = new StreamResult(
-                output.toFile()
-        );
+        final Result result = new StreamResult(output.toFile());
         try {
             this.transformer.transform(resource, result);
             return output;
-        } catch (TransformerException ex) {
+        } catch (final TransformerException ex) {
             throw new IllegalStateException(ex);
         }
     }
 
-    private Path resolveOutput(Path file) {
+    private Path resolveOutput(final Path file) {
         return this.output.resolve(this.input.relativize(file));
     }
 
