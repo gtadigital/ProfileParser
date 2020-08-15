@@ -19,19 +19,18 @@ public class XsltTransformer {
 
 
     public static void main(final String[] args) throws Exception {
-        
 
-        final String source = "/Users/matteo/GTARepo/ProfileParser/Profiles/Person/source_files";
-        final String target = "/Users/matteo/GTARepo/ProfileParser/Profiles/Person/target_files";
-        final String xsl = "/Users/matteo/GTARepo/ProfileParser/Profiles/Person/Person.xsl";
-        
-        
+        final String source = "/home/matteolorenzini/GTARepo/ProfileParser/Profiles/Person/source_files";
+        final String target = "/home/matteolorenzini/GTARepo/ProfileParser/Profiles/Person/target_files";
+        final String xsl = "/home/matteolorenzini/GTARepo/ProfileParser/Profiles/Person/Person.xsl";
+
         final Transformer transformer = TransformerFactory.newInstance().newTransformer(new StreamSource(
                 Paths.get(xsl).toFile()));
-                
+
         new XsltTransformer(Paths.get(source),
                 Paths.get(target), transformer)
-                        .run();
+                .run();
+
     }
 
     private Path transform(final Path file) {

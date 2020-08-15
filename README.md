@@ -41,9 +41,11 @@ $ cd ProfileParser
 ```
 
 2. Edit the **XsltTransformer.java**. According to the choosen profile modify as follows
-   * Line nr.21 specify the XSLT path
-   * Line nr.23 specify the source directory of the XML file(s)
-   * Line nr.24 specify the target directory where to save the XML output(s)
+ 
+   * Line nr.23 specify the source directory of the XML file(s).
+   * Line nr.24 specify the target directory where to save the XML output(s).
+   * Line nr.25 specify the XSL path.
+   
 3. Run the script
  * Run the **XsltTransformer.java** using an IDE
 
