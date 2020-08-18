@@ -1,18 +1,30 @@
+# author: ETH Zurich, gta digital, Zoé Reinke, Matteo Lorenzini
+# license: please refer to the license.txt file in our git repository (https://github.com/gtadigital/ProfileParser)
+
 import os
 import lxml.etree as ET
+import argparse
 
-inputpath = "/Users/lomatteo/REPO/ProfileParser/Profiles/Person/source_files"
-xsltfile = "/Users/lomatteo/REPO/ProfileParser/Profiles/Person/Person.xsl"
-outpath = "/Users/lomatteo/REPO/ProfileParser/Profiles/Person/target_files/"
 
-for root, dirs, files in os.walk(inputpath):
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='XMLProfiles Parser')
+    parser.add_argument('--sourcePath', dest="myFile",help='path of the source files')
+    parser.add_argument('--targetPath', dest="myOutput", help='path of the target files' )
+    parser.add_argument('--xslt', dest="myXslt", help='path of the XSLT file')
 
-    for item in files:
-        if item.endswith(('.xml')):
-            dom = ET.parse( root + "/" + item)
-            xslt = ET.parse(xsltfile)
-            transform = ET.XSLT(xslt)
-            newdom = transform(dom)
-            infile = (ET.tostring(newdom, pretty_print=True))
-            outfile = open(outpath + item, 'wb')
-            outfile.write(infile)
+    args = parser.parse_args()
+    myFile = args.myFile
+    myOutput = args.myOutput
+    myXslt = args.myXslt
+
+    for root, dirs, files in os.walk(myFile):
+
+        for item in files:
+            if item.endswith(('.xml')):
+                dom = ET.parse( root + "/" + item)
+                xslt = ET.parse(myXslt)
+                transform = ET.XSLT(xslt)
+                newdom = transform(dom)
+                infile = (ET.tostring(newdom, pretty_print=True))
+                outfile = open(myOutput + item, 'wb')
+                outfile.write(infile)

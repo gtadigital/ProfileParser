@@ -13,41 +13,46 @@ The ProfileParser provides three XSLT stylesheets:
 
 ## Prerequisites:
 
-1. XSLT version 1.0,
-2. Java SE 13
-3. IDE to run XsltTransformer.java
+1. [Python3](https://www.python.org/download/releases/3.0/)
+2. [Lxml library](https://lxml.de)
 
-## Parser structure
+## How To Use:
 
-1. The JavaFrameworkProgram folder contains the exec file **XsltTransformer.java**.
-2. The Profiles folder contains three separate folders, Place, Person and Group.
-	* In each folder are
-		* The XSLT profile stylesheet
-		* source_files folder where should be stored the dump(s) from EasyDB
-		* target_files folder used to store the resulting XML files
-
-## How To Use
-
-To clone and run this application, you'll need [Git](https://git-scm.com) and [Java 13](https://www.oracle.com/java/technologies/javase-jdk13-downloads.html)  installed on your computer. From your command line:
-
-1. Clone the repository and go into the directory
+* Clone the repository and go into the directory
 
 ```bash
-# Clone this repository
+# Clone the repository:
 $ git clone https://github.com/gtadigital/ProfileParser.git
+```
+ A new folder ```ProfileParser```will be created
 
+* Go into the new folder:
+
+```bash
 # Go into the repository
 $ cd ProfileParser
 ```
 
-2. Edit the **XsltTransformer.java**. According to the choosen profile modify as follows
- 
-   * Line nr.23 specify the source directory of the XML file(s).
-   * Line nr.24 specify the target directory where to save the XML output(s).
-   * Line nr.25 specify the XSL path.
+* Install ***lxml*** library (If needed):
+
+```bash
+# Go into the repository
+$ pip3 install lxml
+```
    
-3. Run the script
- * Run the **XsltTransformer.java** using an IDE
+* Run the script with arguments:
+
+```bash
+
+# Help documentation
+$ python3 profileParser.py --help
+
+OR
+
+# Run the script
+$ python3 profileParser.py --sourcePath "your source path" --targetPath "your target path" --xslt "xslt folder"
+```
+
 
 ## Credits:
 
