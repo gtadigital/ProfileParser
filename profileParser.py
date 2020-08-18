@@ -1,4 +1,4 @@
-# author: ETH Zurich, gta digital, Zoé Reinke, Matteo Lorenzini
+# author: ETH Zurich, gta digital, Matteo Lorenzini
 # license: please refer to the license.txt file in our git repository (https://github.com/gtadigital/ProfileParser)
 
 import os
