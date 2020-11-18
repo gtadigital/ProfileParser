@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><root>
+      
+    <entry>
+        <_uuid>5016055e-e0fe-48a7-bdd8-beecc457f1ee</_uuid>
+        <_last_modified>2020-11-15T10:42:00Z</_last_modified>
+        <oeu_tag>
+            <oeu_tag_de>Test Data – do not use</oeu_tag_de>
+            <oeu_tag_en>Test Data – do not use</oeu_tag_en>
+        </oeu_tag>
+        <oeu_tag>
+            <oeu_tag_de>Gebautes Werk</oeu_tag_de>
+            <oeu_tag_en>Built Work</oeu_tag_en>
+        </oeu_tag>
+        <oeu_nc_name_de>BUILT WORK SAMPLE TEST FOR MODELLING GERMAN</oeu_nc_name_de>
+        <oeu_nc_name_en>BUILT WORK SAMPLE TEST FOR MODELLING ENGLISH</oeu_nc_name_en>
+        <oeu_altName>
+            <oeu_alt_nameLiteral>
+                <oeu_nc_altname_literal>ALT NAME NUMBER 1</oeu_nc_altname_literal>
+                <oeu_alt_name_lan>
+                    <oeu_archive_nc_alt_name_lang_de>en</oeu_archive_nc_alt_name_lang_de>
+                    <oeu_archive_nc_alt_name_lang_en>en</oeu_archive_nc_alt_name_lang_en>
+                    <oeu_archive_nc_alt_name_lang_it>en</oeu_archive_nc_alt_name_lang_it>
+                    <oeu_archive_nc_alt_name_lang_fr>en</oeu_archive_nc_alt_name_lang_fr>
+                </oeu_alt_name_lan>
+            </oeu_alt_nameLiteral>
+            <oeu_nc_altname_uuid>0f876ee5-8fa7-44ef-a955-90d7096b72b8</oeu_nc_altname_uuid>
+            <oeu_name_used_timespan_from>1967-02-14</oeu_name_used_timespan_from>
+            <oeu_name_used_timespan_to>2020-11-14</oeu_name_used_timespan_to>
+        </oeu_altName>
+        <oeu__oeu_nc_identifier>
+            <oeu_nc_identifier_literal>IDENTIFIER 123</oeu_nc_identifier_literal>
+            <oeu_generic_identifier_type>
+                <oeu_nc_generic_identifier_type_uuid>1a54b2ca-f2c1-4875-9b53-68e64d5ff4a1</oeu_nc_generic_identifier_type_uuid>
+            </oeu_generic_identifier_type>
+            <oeu_generic_identifier_type_name>
+                <oeu_nc_generic_identifier_type_name>[for Archival Objects]</oeu_nc_generic_identifier_type_name>
+            </oeu_generic_identifier_type_name>
+            <oeu_generic_identifier_type>
+                <oeu_nc_generic_identifier_type_uuid>4f6550c3-a8ab-4635-9383-cbdf00245185</oeu_nc_generic_identifier_type_uuid>
+            </oeu_generic_identifier_type>
+            <oeu_generic_identifier_type_name>
+                <oeu_nc_generic_identifier_type_name>Owner's Identifier</oeu_nc_generic_identifier_type_name>
+            </oeu_generic_identifier_type_name>
+            <oeu_nc_identifier_usedby_uuid>9d15ebcf-5a9b-4093-9dab-ff95f710b5fd</oeu_nc_identifier_usedby_uuid>
+        </oeu__oeu_nc_identifier>
+    </entry>
+    
+</root>
