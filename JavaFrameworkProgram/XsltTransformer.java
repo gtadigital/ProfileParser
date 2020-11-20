@@ -20,9 +20,9 @@ public class XsltTransformer {
 
     public static void main(final String[] args) throws Exception {
 
-        final String source = "/Users/lomatteo/REPO/ProfileParser/Profiles/BuiltWorks/source_files/";
-        final String target = "/Users/lomatteo/REPO/ProfileParser/Profiles/BuiltWorks/target_files";
-        final String xsl = "/Users/lomatteo/REPO/ProfileParser/Profiles/BuiltWorks/built_works.xsl";
+        final String source = "/Users/matte/GitRepo/GTA/ProfileParser/Profiles/BuiltWorks/source_files/";
+        final String target = "/Users/matte/GitRepo/GTA/ProfileParser/Profiles/BuiltWorks/target_files";
+        final String xsl = "/Users/matte/GitRepo/GTA/ProfileParser/Profiles/BuiltWorks/built_works.xsl";
 
         final Transformer transformer = TransformerFactory.newInstance().newTransformer(new StreamSource(
                 Paths.get(xsl).toFile()));
