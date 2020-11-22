@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- author: ETH Zurich, gta digital, Matteo Lorenzini, Zoe Reinke -->
+<!-- author: ETH Zurich, gta digital, Matteo Lorenzini -->
 <!-- license: please refer to the license.txt file in our git repository (https://github.com/gtadigital/XSLT) -->
 
 <xsl:stylesheet version="1.0"
@@ -107,14 +107,15 @@
             <!-- ACTOR RELATION-->
             <xsl:element name="oeu_nc_actor_relation">
                 <xsl:for-each select="pr:_nested__oeu__oeu_archive_ar_creation/pr:oeu__oeu_archive_ar_creation">
-
                     <xsl:element name="oeu_nc_actor">
                         <actor_uuid>
                             <xsl:value-of select="pr:oeu_archive_ar_creation_actor/pr:act/pr:_uuid"></xsl:value-of>
                         </actor_uuid>
-
+                        <actor_type>
+                            <xsl:value-of select="pr:oeu_archive_ar_creation_actor/pr:act/pr:act_type_crm/pr:act_type_crm/pr:_standard/pr:de-DE"/>
+                        </actor_type>
                         <oeu_act_role_uuid>
-                            <xsl:value-of select="pr:oeu_archive_ar_creation_actor_role/pr:act_role/pr:_path/pr:act_role/pr:_uuid"></xsl:value-of>
+                            <xsl:value-of select="pr:oeu_archive_ar_creation_actor_role/pr:act_role/pr:_uuid"></xsl:value-of>
                         </oeu_act_role_uuid>
                     </xsl:element>
                 </xsl:for-each>
@@ -156,7 +157,7 @@
                 <xsl:for-each select="pr:_nested__oeu__oeu_archive_exist_construct_places/pr:oeu__oeu_archive_exist_construct_places">
                     <xsl:element name="oeu_nc_construction_place">
                         <oeu_construction_place_uuid>
-                            <xsl:value-of select="pr:oeu_archive_exist_construct_place_v2/pr:pl/pr:_path/pr:pl[7]/pr:_uuid"></xsl:value-of>
+                            <xsl:value-of select="pr:oeu_archive_exist_construct_place_v2/pr:pl/pr:_uuid"></xsl:value-of>
                         </oeu_construction_place_uuid>
                     </xsl:element>
                 </xsl:for-each>
@@ -170,14 +171,14 @@
                 </xsl:element>
                 <xsl:element name="construction_uncertainity">
                     <xsl:value-of select="pr:oeu_archive_exist_construct_timespan_uncert/pr:generic_uncertainty/pr:generic_uncertainty_uri"/>
-                </xsl:element>
+                </xsl:element>  
             </xsl:element>
             <!-- DESCTRUCTION -->
             <xsl:element name="oeu_nc_destruction">
                 <xsl:for-each select="pr:_nested__oeu__oeu_archive_exist_destruct_places/pr:oeu__oeu_archive_exist_destruct_places">
                     <xsl:element name="oeu_nc_destruction_place">
                         <oeu_destruction_place_uuid>
-                            <xsl:value-of select="pr:oeu_archive_exist_destruct_place_v2/pr:pl/pr:_path/pr:pl[6]/pr:_uuid"></xsl:value-of>
+                            <xsl:value-of select="pr:oeu_archive_exist_destruct_place_v2/pr:pl/pr:_uuid"></xsl:value-of>
                         </oeu_destruction_place_uuid>
                     </xsl:element>
                 </xsl:for-each>
