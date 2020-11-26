@@ -36,13 +36,15 @@
                     <xsl:value-of select="pr:tags/pr:tag[2]/pr:name/pr:en-US"/>
                 </oeu_nc_tag_en>
             </xsl:element>
-            <!--  BUILT WORK NAME -->
-            <oeu_nc_name_de>
-                <xsl:value-of select="pr:oeu_nc_name/pr:de-DE"/>
-            </oeu_nc_name_de>
-            <oeu_nc_name_en>
-                <xsl:value-of select="pr:oeu_nc_name/pr:en-US"/>
-            </oeu_nc_name_en>
+            <!--  BUILT APPELLATION -->
+            <xsl:element name="oeu_nc_preferred_appellation">
+                <oeu_nc_name_de>
+                    <xsl:value-of select="pr:oeu_nc_name/pr:de-DE"/>
+                </oeu_nc_name_de>
+                <oeu_nc_name_en>
+                    <xsl:value-of select="pr:oeu_nc_name/pr:en-US"/>
+                </oeu_nc_name_en>
+            </xsl:element>
             <!--  BUILT WORK ALTERNATIVE NAME -->
             <xsl:element name="oeu_nc_alternative_built_work_name">
                 <xsl:for-each select="pr:_nested__oeu__oeu_archive_nc_alt_name">
@@ -170,9 +172,9 @@
                     </oeu_nc_construction_time_span_to>
                 </xsl:element>
                 <xsl:element name="construction_uncertainity">
-                <oeu_nc_construction_time_span_uncertainity>
-                    <xsl:value-of select="pr:oeu_archive_exist_construct_timespan_uncert/pr:generic_uncertainty/pr:generic_uncertainty_uri"/>
-                </oeu_nc_construction_time_span_uncertainity>
+                    <oeu_nc_construction_time_span_uncertainity>
+                        <xsl:value-of select="pr:oeu_archive_exist_construct_timespan_uncert/pr:generic_uncertainty/pr:generic_uncertainty_uri"/>
+                    </oeu_nc_construction_time_span_uncertainity>
                 </xsl:element>
             </xsl:element>
             <!-- DESCTRUCTION -->
@@ -193,9 +195,9 @@
                     </oeu_nc_destruction_time_span_to>
                 </xsl:element>
                 <xsl:element name="destruction_uncertainity">
-                <oeu_nc_destruction_time_span_uncertainity>
-                    <xsl:value-of select="pr:oeu_archive_exist_destruct_timespan_uncert/pr:generic_uncertainty/pr:generic_uncertainty_uri"/>
-                </oeu_nc_destruction_time_span_uncertainity>
+                    <oeu_nc_destruction_time_span_uncertainity>
+                        <xsl:value-of select="pr:oeu_archive_exist_destruct_timespan_uncert/pr:generic_uncertainty/pr:generic_uncertainty_uri"/>
+                    </oeu_nc_destruction_time_span_uncertainity>
                 </xsl:element>
             </xsl:element>
         </entry>

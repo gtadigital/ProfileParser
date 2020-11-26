@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <root>
   <entry>
     <oeu_nc_uuid>5016055e-e0fe-48a7-bdd8-beecc457f1ee</oeu_nc_uuid>
@@ -6,8 +7,10 @@
       <oeu_nc_tag_de>Gebautes Werk</oeu_nc_tag_de>
       <oeu_nc_tag_en>Built Work</oeu_nc_tag_en>
     </oeu_tag_name>
-    <oeu_nc_name_de>BUILT WORK SAMPLE TEST FOR MODELLING GERMAN</oeu_nc_name_de>
-    <oeu_nc_name_en>BUILT WORK SAMPLE TEST FOR MODELLING ENGLISH</oeu_nc_name_en>
+    <oeu_nc_preferred_appellation>
+      <oeu_nc_name_de>BUILT WORK SAMPLE TEST FOR MODELLING GERMAN</oeu_nc_name_de>
+      <oeu_nc_name_en>BUILT WORK SAMPLE TEST FOR MODELLING ENGLISH</oeu_nc_name_en>
+    </oeu_nc_preferred_appellation>
     <oeu_nc_alternative_built_work_name>
       <oeu_altName>
         <oeu_alt_nameLiteral>
