@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<root>
+	<entry>
+		<oeu_nc_uuid>5016055e-e0fe-48a7-bdd8-beecc457f1ee</oeu_nc_uuid>
+		<oeu_nc_last_modified>2020-11-15T10:42:00Z</oeu_nc_last_modified>
+		<oeu_tag_name>
+			<oeu_nc_tag_de>Gebautes Werk</oeu_nc_tag_de>
+			<oeu_nc_tag_en>Built Work</oeu_nc_tag_en>
+		</oeu_tag_name>
+		<oeu_nc_preferred_built_work_name>
+			<oeu_nc_name_de>BUILT WORK SAMPLE TEST FOR MODELLING GERMAN</oeu_nc_name_de>
+			<oeu_nc_name_en>BUILT WORK SAMPLE TEST FOR MODELLING ENGLISH</oeu_nc_name_en>
+		</oeu_nc_preferred_built_work_name>
+		<oeu_nc_alternative_built_work_name>
+			<oeu_nc_altname_literal>ALT NAME NUMBER 1</oeu_nc_altname_literal>
+			<oeu_alt_name_lan>
+				<oeu_nc_archive_alt_name_lang_de>en</oeu_nc_archive_alt_name_lang_de>
+				<oeu_nc_archive_alt_name_lang_en>en</oeu_nc_archive_alt_name_lang_en>
+				<oeu_nc_archive_alt_name_lang_it>en</oeu_nc_archive_alt_name_lang_it>
+				<oeu_nc_archive_alt_name_lang_fr>en</oeu_nc_archive_alt_name_lang_fr>
+			</oeu_alt_name_lan>
+			<oeu_nc_altname_used_uuid>0f876ee5-8fa7-44ef-a955-90d7096b72b8</oeu_nc_altname_used_uuid>
+			<oeu_nc_name_used_timespan_from>1967-02-14</oeu_nc_name_used_timespan_from>
+			<oeu_nc_name_used_timespan_to>2020-11-14</oeu_nc_name_used_timespan_to>
+		</oeu_nc_alternative_built_work_name>
+		<oeu__oeu_nc_identifier>
+			<oeu_nc_identifier_literal>IDENTIFIER 123</oeu_nc_identifier_literal>
+			<oeu_generic_identifier_type>
+				<oeu_nc_generic_identifier_type_uuid>4f6550c3-a8ab-4635-9383-cbdf00245185</oeu_nc_generic_identifier_type_uuid>
+			</oeu_generic_identifier_type>
+			<oeu_generic_identifier_type_name>
+				<oeu_nc_generic_identifier_type_name>Owner's Identifier</oeu_nc_generic_identifier_type_name>
+			</oeu_generic_identifier_type_name>
+			<oeu_nc_identifier_usedby_uuid>9d15ebcf-5a9b-4093-9dab-ff95f710b5fd</oeu_nc_identifier_usedby_uuid>
+		</oeu__oeu_nc_identifier>
+		<oeu_nc_actor_relation>
+			<oeu_nc_actor>
+				<oeu_nc_actor_uuid>40c02a93-9a52-482a-9175-9b1a1eb7cbfd</oeu_nc_actor_uuid>
+				<oeu_nc_actor_type>E21_Person</oeu_nc_actor_type>
+				<oeu_nc_act_role_uuid>a1e1d619-d742-4f8f-930e-5d08c297bae6</oeu_nc_act_role_uuid>
+			</oeu_nc_actor>
+			<oeu_nc_actor>
+				<oeu_nc_actor_uuid>e81b191c-dfe6-4054-9039-43828d9e9854</oeu_nc_actor_uuid>
+				<oeu_nc_actor_type>E21_Person</oeu_nc_actor_type>
+				<oeu_nc_act_role_uuid>0a12db32-849a-48db-a354-0fa4977d0f11</oeu_nc_act_role_uuid>
+			</oeu_nc_actor>
+		</oeu_nc_actor_relation>
+		<oeu_nc_description>
+			<oeu_nc_description_scientific>
+				<oeu_nc_description_scientific_de>SCIENTIFIC COMMENT DEUTSCH</oeu_nc_description_scientific_de>
+				<oeu_nc_description_scientific_en>SCIENTIFIC COMMENT ENGLISH</oeu_nc_description_scientific_en>
+			</oeu_nc_description_scientific>
+			<oeu_nc_description>
+				<oeu_nc_description_de>DESCRIPTION ARCHIVE GERMAN</oeu_nc_description_de>
+				<oeu_nc_description_en>DESCRIPTION ARCHIVE ENGLISH</oeu_nc_description_en>
+			</oeu_nc_description>
+		</oeu_nc_description>
+		<oeu_nc_bibliographic_item>
+			<citation>
+				<oeu_nc_bibliographic_item_uuid>15b34678-aeec-4d72-929a-e352e462b503</oeu_nc_bibliographic_item_uuid>
+				<oeu_nc_citation_page>123</oeu_nc_citation_page>
+			</citation>
+			<citation>
+				<oeu_nc_bibliographic_item_uuid>01972eb9-e154-4f1a-8005-5056dfda89a1</oeu_nc_bibliographic_item_uuid>
+				<oeu_nc_citation_page>234</oeu_nc_citation_page>
+			</citation>
+		</oeu_nc_bibliographic_item>
+		<oeu_nc_construction>
+			<oeu_nc_construction_place>
+				<oeu_nc_construction_place_uuid>56e4a006-a862-4a21-8471-2f448d605d01</oeu_nc_construction_place_uuid>
+			</oeu_nc_construction_place>
+			<construction_time_span>
+				<oeu_nc_construction_time_span_from>1999</oeu_nc_construction_time_span_from>
+				<oeu_nc_construction_time_span_to>2001</oeu_nc_construction_time_span_to>
+			</construction_time_span>
+			<construction_uncertainity>
+				<oeu_nc_construction_time_span_uncertainity>https://resources.swissartresearch.net/vocab/uncertainty/Incomplete</oeu_nc_construction_time_span_uncertainity>
+			</construction_uncertainity>
+		</oeu_nc_construction>
+		<oeu_nc_destruction>
+			<oeu_nc_destruction_place>
+				<oeu_nc_destruction_place_uuid>782b24f5-5b18-42c7-9292-461c4c6fa79c</oeu_nc_destruction_place_uuid>
+			</oeu_nc_destruction_place>
+			<destruction_time_span>
+				<oeu_nc_destruction_time_span_from>2020-02-01</oeu_nc_destruction_time_span_from>
+				<oeu_nc_destruction_time_span_to>2020-02-01</oeu_nc_destruction_time_span_to>
+			</destruction_time_span>
+			<destruction_uncertainity>
+				<oeu_nc_destruction_time_span_uncertainity>https://resources.swissartresearch.net/vocab/uncertainty/Uncertain</oeu_nc_destruction_time_span_uncertainity>
+			</destruction_uncertainity>
+		</oeu_nc_destruction>
+	</entry>
+</root>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- author: ETH Zurich, gta digital, Matteo Lorenzini, Zoe Reinke -->
+<!-- author: ETH Zurich, gta digital, Matteo Lorenzini -->
 <!-- license: please refer to the license.txt file in our git repository (https://github.com/gtadigital/XSLT) -->
 
 <xsl:stylesheet version="1.0"
@@ -20,64 +20,62 @@
     <xsl:template match="pr:objects/pr:oeu">
         <entry>
             <!-- UUID -->
-            <_uuid>
+            <oeu_nc_uuid>
                 <xsl:value-of select="pr:_uuid"/>
-            </_uuid>
+            </oeu_nc_uuid>
             <!-- MODIFICATION -->
-            <_last_modified>
+            <oeu_nc_last_modified>
                 <xsl:value-of select="pr:_last_modified"/>
-            </_last_modified>
+            </oeu_nc_last_modified>
             <!-- TAG -->
             <xsl:element name="oeu_tag_name">
-                <oeu_tag_de>
+                <oeu_nc_tag_de>
                     <xsl:value-of select="pr:tags/pr:tag[2]/pr:name/pr:de-DE"/>
-                </oeu_tag_de>
-                <oeu_tag_en>
+                </oeu_nc_tag_de>
+                <oeu_nc_tag_en>
                     <xsl:value-of select="pr:tags/pr:tag[2]/pr:name/pr:en-US"/>
-                </oeu_tag_en>
+                </oeu_nc_tag_en>
             </xsl:element>
-            <!--  BUILT WORK NAME -->
-            <oeu_nc_name_de>
-                <xsl:value-of select="pr:oeu_nc_name/pr:de-DE"/>
-            </oeu_nc_name_de>
-            <oeu_nc_name_en>
-                <xsl:value-of select="pr:oeu_nc_name/pr:en-US"/>
-            </oeu_nc_name_en>
+            <!--  BUILT APPELLATION -->
+            <xsl:element name="oeu_nc_preferred_built_work_name">
+                <oeu_nc_name_de>
+                    <xsl:value-of select="pr:oeu_nc_name/pr:de-DE"/>
+                </oeu_nc_name_de>
+                <oeu_nc_name_en>
+                    <xsl:value-of select="pr:oeu_nc_name/pr:en-US"/>
+                </oeu_nc_name_en>
+            </xsl:element>
             <!--  BUILT WORK ALTERNATIVE NAME -->
             <xsl:element name="oeu_nc_alternative_built_work_name">
-                <xsl:for-each select="pr:_nested__oeu__oeu_archive_nc_alt_name">
-                    <xsl:element name="oeu_altName">
-                        <xsl:for-each select="pr:oeu__oeu_archive_nc_alt_name">
-                            <xsl:element name="oeu_alt_nameLiteral">
+                <xsl:for-each select="pr:_nested__oeu__oeu_archive_nc_alt_name/pr:oeu__oeu_archive_nc_alt_name">
+                           
                                 <oeu_nc_altname_literal>
                                     <xsl:value-of select="pr:oeu_archive_nc_alt_name_literal"/>
                                 </oeu_nc_altname_literal>
                                 <xsl:element name="oeu_alt_name_lan">
-                                    <oeu_archive_nc_alt_name_lang_de>
+                                    <oeu_nc_archive_alt_name_lang_de>
                                         <xsl:value-of select="pr:oeu_archive_nc_alt_name_lang/pr:generic_lang/pr:_standard/pr:de-DE"/>
-                                    </oeu_archive_nc_alt_name_lang_de>
-                                    <oeu_archive_nc_alt_name_lang_en>
+                                    </oeu_nc_archive_alt_name_lang_de>
+                                    <oeu_nc_archive_alt_name_lang_en>
                                         <xsl:value-of select="pr:oeu_archive_nc_alt_name_lang/pr:generic_lang/pr:_standard/pr:en-US"/>
-                                    </oeu_archive_nc_alt_name_lang_en>
-                                    <oeu_archive_nc_alt_name_lang_it>
+                                    </oeu_nc_archive_alt_name_lang_en>
+                                    <oeu_nc_archive_alt_name_lang_it>
                                         <xsl:value-of select="pr:oeu_archive_nc_alt_name_lang/pr:generic_lang/pr:_standard/pr:it-IT"/>
-                                    </oeu_archive_nc_alt_name_lang_it>
-                                    <oeu_archive_nc_alt_name_lang_fr>
+                                    </oeu_nc_archive_alt_name_lang_it>
+                                    <oeu_nc_archive_alt_name_lang_fr>
                                         <xsl:value-of select="pr:oeu_archive_nc_alt_name_lang/pr:generic_lang/pr:_standard/pr:fr-FR"/>
-                                    </oeu_archive_nc_alt_name_lang_fr>
+                                    </oeu_nc_archive_alt_name_lang_fr>
                                 </xsl:element>
-                            </xsl:element>
-                        </xsl:for-each>
-                        <oeu_nc_altname_uuid>
-                            <xsl:value-of select="pr:oeu__oeu_archive_nc_alt_name/pr:oeu_archive_nc_alt_name_used_by/pr:act/pr:_uuid"></xsl:value-of>
-                        </oeu_nc_altname_uuid>
-                        <oeu_name_used_timespan_from>
-                            <xsl:value-of select="pr:oeu__oeu_archive_nc_alt_name/pr:oeu_archive_nc_alt_name_used_timespan/pr:from"></xsl:value-of>
-                        </oeu_name_used_timespan_from>
-                        <oeu_name_used_timespan_to>
-                            <xsl:value-of select="pr:oeu__oeu_archive_nc_alt_name/pr:oeu_archive_nc_alt_name_used_timespan/pr:to"></xsl:value-of>
-                        </oeu_name_used_timespan_to>
-                    </xsl:element>
+                            
+                        <oeu_nc_altname_used_uuid>
+                            <xsl:value-of select="pr:oeu_archive_nc_alt_name_used_by/pr:act/pr:_uuid"></xsl:value-of>
+                        </oeu_nc_altname_used_uuid>
+                        <oeu_nc_name_used_timespan_from>
+                            <xsl:value-of select="pr:oeu_archive_nc_alt_name_used_timespan/pr:from"></xsl:value-of>
+                        </oeu_nc_name_used_timespan_from>
+                        <oeu_nc_name_used_timespan_to>
+                            <xsl:value-of select="pr:oeu_archive_nc_alt_name_used_timespan/pr:to"></xsl:value-of>
+                        </oeu_nc_name_used_timespan_to>
                 </xsl:for-each>
             </xsl:element>
             <!-- IDENTIFIER -->
@@ -107,35 +105,36 @@
             <!-- ACTOR RELATION-->
             <xsl:element name="oeu_nc_actor_relation">
                 <xsl:for-each select="pr:_nested__oeu__oeu_archive_ar_creation/pr:oeu__oeu_archive_ar_creation">
-
                     <xsl:element name="oeu_nc_actor">
-                        <actor_uuid>
+                        <oeu_nc_actor_uuid>
                             <xsl:value-of select="pr:oeu_archive_ar_creation_actor/pr:act/pr:_uuid"></xsl:value-of>
-                        </actor_uuid>
-
-                        <oeu_act_role_uuid>
-                            <xsl:value-of select="pr:oeu_archive_ar_creation_actor_role/pr:act_role/pr:_path/pr:act_role/pr:_uuid"></xsl:value-of>
-                        </oeu_act_role_uuid>
+                        </oeu_nc_actor_uuid>
+                        <oeu_nc_actor_type>
+                            <xsl:value-of select="pr:oeu_archive_ar_creation_actor/pr:act/pr:act_type_crm/pr:act_type_crm/pr:_standard/pr:de-DE"/>
+                        </oeu_nc_actor_type>
+                        <oeu_nc_act_role_uuid>
+                            <xsl:value-of select="pr:oeu_archive_ar_creation_actor_role/pr:act_role/pr:_uuid"></xsl:value-of>
+                        </oeu_nc_act_role_uuid>
                     </xsl:element>
                 </xsl:for-each>
             </xsl:element>
             <!-- DESCRIPTION -->
             <xsl:element name="oeu_nc_description">
                 <xsl:element name="oeu_nc_description_scientific">
-                    <oeu_description_scientific_de>
+                    <oeu_nc_description_scientific_de>
                         <xsl:value-of select="pr:oeu_descr_description_scientificcomment/pr:de-DE"></xsl:value-of>
-                    </oeu_description_scientific_de>
-                    <oeu_description_scientific_de>
+                    </oeu_nc_description_scientific_de>
+                    <oeu_nc_description_scientific_en>
                         <xsl:value-of select="pr:oeu_descr_description_scientificcomment/pr:en-US"></xsl:value-of>
-                    </oeu_description_scientific_de>
+                    </oeu_nc_description_scientific_en>
                 </xsl:element>
                 <xsl:element name="oeu_nc_description">
-                    <oeu_description_scientific_de>
+                    <oeu_nc_description_de>
                         <xsl:value-of select="pr:oeu_descr_description_descr/pr:de-DE"></xsl:value-of>
-                    </oeu_description_scientific_de>
-                    <oeu_description_scientific_de>
+                    </oeu_nc_description_de>
+                    <oeu_nc_description_en>
                         <xsl:value-of select="pr:oeu_descr_description_descr/pr:en-US"></xsl:value-of>
-                    </oeu_description_scientific_de>
+                    </oeu_nc_description_en>
                 </xsl:element>
             </xsl:element>
             <!-- BIBLIOGRAPHIC ITEM -->
@@ -155,42 +154,46 @@
             <xsl:element name="oeu_nc_construction">
                 <xsl:for-each select="pr:_nested__oeu__oeu_archive_exist_construct_places/pr:oeu__oeu_archive_exist_construct_places">
                     <xsl:element name="oeu_nc_construction_place">
-                        <oeu_construction_place_uuid>
-                            <xsl:value-of select="pr:oeu_archive_exist_construct_place_v2/pr:pl/pr:_path/pr:pl[7]/pr:_uuid"></xsl:value-of>
-                        </oeu_construction_place_uuid>
+                        <oeu_nc_construction_place_uuid>
+                            <xsl:value-of select="pr:oeu_archive_exist_construct_place_v2/pr:pl/pr:_uuid"></xsl:value-of>
+                        </oeu_nc_construction_place_uuid>
                     </xsl:element>
                 </xsl:for-each>
                 <xsl:element name="construction_time_span">
-                    <construction_time_span_from>
+                    <oeu_nc_construction_time_span_from>
                         <xsl:value-of select="pr:oeu_archive_exist_construct_timespan/pr:from"/>
-                    </construction_time_span_from>
-                    <construction_time_span_to>
+                    </oeu_nc_construction_time_span_from>
+                    <oeu_nc_construction_time_span_to>
                         <xsl:value-of select="pr:oeu_archive_exist_construct_timespan/pr:to"/>
-                    </construction_time_span_to>
+                    </oeu_nc_construction_time_span_to>
                 </xsl:element>
                 <xsl:element name="construction_uncertainity">
-                    <xsl:value-of select="pr:oeu_archive_exist_construct_timespan_uncert/pr:generic_uncertainty/pr:generic_uncertainty_uri"/>
+                    <oeu_nc_construction_time_span_uncertainity>
+                        <xsl:value-of select="pr:oeu_archive_exist_construct_timespan_uncert/pr:generic_uncertainty/pr:generic_uncertainty_uri"/>
+                    </oeu_nc_construction_time_span_uncertainity>
                 </xsl:element>
             </xsl:element>
             <!-- DESCTRUCTION -->
             <xsl:element name="oeu_nc_destruction">
                 <xsl:for-each select="pr:_nested__oeu__oeu_archive_exist_destruct_places/pr:oeu__oeu_archive_exist_destruct_places">
                     <xsl:element name="oeu_nc_destruction_place">
-                        <oeu_destruction_place_uuid>
-                            <xsl:value-of select="pr:oeu_archive_exist_destruct_place_v2/pr:pl/pr:_path/pr:pl[6]/pr:_uuid"></xsl:value-of>
-                        </oeu_destruction_place_uuid>
+                        <oeu_nc_destruction_place_uuid>
+                            <xsl:value-of select="pr:oeu_archive_exist_destruct_place_v2/pr:pl/pr:_uuid"></xsl:value-of>
+                        </oeu_nc_destruction_place_uuid>
                     </xsl:element>
                 </xsl:for-each>
                 <xsl:element name="destruction_time_span">
-                    <destruction_time_span_from>
+                    <oeu_nc_destruction_time_span_from>
                         <xsl:value-of select="pr:oeu_archive_exist_destruct_timespan/pr:from"/>
-                    </destruction_time_span_from>
-                    <destruction_time_span_to>
+                    </oeu_nc_destruction_time_span_from>
+                    <oeu_nc_destruction_time_span_to>
                         <xsl:value-of select="pr:oeu_archive_exist_destruct_timespan/pr:to"/>
-                    </destruction_time_span_to>
+                    </oeu_nc_destruction_time_span_to>
                 </xsl:element>
                 <xsl:element name="destruction_uncertainity">
-                    <xsl:value-of select="pr:oeu_archive_exist_destruct_timespan_uncert/pr:generic_uncertainty/pr:generic_uncertainty_uri"/>
+                    <oeu_nc_destruction_time_span_uncertainity>
+                        <xsl:value-of select="pr:oeu_archive_exist_destruct_timespan_uncert/pr:generic_uncertainty/pr:generic_uncertainty_uri"/>
+                    </oeu_nc_destruction_time_span_uncertainity>
                 </xsl:element>
             </xsl:element>
         </entry>
