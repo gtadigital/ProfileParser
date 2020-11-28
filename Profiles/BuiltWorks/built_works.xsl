@@ -37,7 +37,7 @@
                 </oeu_nc_tag_en>
             </xsl:element>
             <!--  BUILT APPELLATION -->
-            <xsl:element name="oeu_nc_preferred_appellation">
+            <xsl:element name="oeu_nc_preferred_built_work_name">
                 <oeu_nc_name_de>
                     <xsl:value-of select="pr:oeu_nc_name/pr:de-DE"/>
                 </oeu_nc_name_de>
@@ -47,10 +47,8 @@
             </xsl:element>
             <!--  BUILT WORK ALTERNATIVE NAME -->
             <xsl:element name="oeu_nc_alternative_built_work_name">
-                <xsl:for-each select="pr:_nested__oeu__oeu_archive_nc_alt_name">
-                    <xsl:element name="oeu_altName">
-                        <xsl:for-each select="pr:oeu__oeu_archive_nc_alt_name">
-                            <xsl:element name="oeu_alt_nameLiteral">
+                <xsl:for-each select="pr:_nested__oeu__oeu_archive_nc_alt_name/pr:oeu__oeu_archive_nc_alt_name">
+                           
                                 <oeu_nc_altname_literal>
                                     <xsl:value-of select="pr:oeu_archive_nc_alt_name_literal"/>
                                 </oeu_nc_altname_literal>
@@ -68,18 +66,16 @@
                                         <xsl:value-of select="pr:oeu_archive_nc_alt_name_lang/pr:generic_lang/pr:_standard/pr:fr-FR"/>
                                     </oeu_nc_archive_alt_name_lang_fr>
                                 </xsl:element>
-                            </xsl:element>
-                        </xsl:for-each>
-                        <oeu_nc_altname_uuid>
-                            <xsl:value-of select="pr:oeu__oeu_archive_nc_alt_name/pr:oeu_archive_nc_alt_name_used_by/pr:act/pr:_uuid"></xsl:value-of>
-                        </oeu_nc_altname_uuid>
+                            
+                        <oeu_nc_altname_used_uuid>
+                            <xsl:value-of select="pr:oeu_archive_nc_alt_name_used_by/pr:act/pr:_uuid"></xsl:value-of>
+                        </oeu_nc_altname_used_uuid>
                         <oeu_nc_name_used_timespan_from>
-                            <xsl:value-of select="pr:oeu__oeu_archive_nc_alt_name/pr:oeu_archive_nc_alt_name_used_timespan/pr:from"></xsl:value-of>
+                            <xsl:value-of select="pr:oeu_archive_nc_alt_name_used_timespan/pr:from"></xsl:value-of>
                         </oeu_nc_name_used_timespan_from>
                         <oeu_nc_name_used_timespan_to>
-                            <xsl:value-of select="pr:oeu__oeu_archive_nc_alt_name/pr:oeu_archive_nc_alt_name_used_timespan/pr:to"></xsl:value-of>
+                            <xsl:value-of select="pr:oeu_archive_nc_alt_name_used_timespan/pr:to"></xsl:value-of>
                         </oeu_nc_name_used_timespan_to>
-                    </xsl:element>
                 </xsl:for-each>
             </xsl:element>
             <!-- IDENTIFIER -->
@@ -128,17 +124,17 @@
                     <oeu_nc_description_scientific_de>
                         <xsl:value-of select="pr:oeu_descr_description_scientificcomment/pr:de-DE"></xsl:value-of>
                     </oeu_nc_description_scientific_de>
-                    <oeu_nc_description_scientific_de>
+                    <oeu_nc_description_scientific_en>
                         <xsl:value-of select="pr:oeu_descr_description_scientificcomment/pr:en-US"></xsl:value-of>
-                    </oeu_nc_description_scientific_de>
+                    </oeu_nc_description_scientific_en>
                 </xsl:element>
                 <xsl:element name="oeu_nc_description">
-                    <oeu_nc_description_scientific_de>
+                    <oeu_nc_description_de>
                         <xsl:value-of select="pr:oeu_descr_description_descr/pr:de-DE"></xsl:value-of>
-                    </oeu_nc_description_scientific_de>
-                    <oeu_nc_description_scientific_de>
+                    </oeu_nc_description_de>
+                    <oeu_nc_description_en>
                         <xsl:value-of select="pr:oeu_descr_description_descr/pr:en-US"></xsl:value-of>
-                    </oeu_nc_description_scientific_de>
+                    </oeu_nc_description_en>
                 </xsl:element>
             </xsl:element>
             <!-- BIBLIOGRAPHIC ITEM -->
