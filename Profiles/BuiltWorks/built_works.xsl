@@ -6,11 +6,13 @@
 <xsl:stylesheet version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:pr="https://schema.easydb.de/EASYDB/1.0/objects/" exclude-result-prefixes="pr">
-    <xsl:output method="xml" indent="yes"/>
+	
+    <xsl:output method="xml" indent="yes" encoding="UTF-8"/>
     <xsl:template match="/">
         <root>
             <xsl:apply-templates/>
         </root>
+		
     </xsl:template>
     <xsl:template match="@*|node()" mode="copy-no-namespaces">
         <xsl:copy>
