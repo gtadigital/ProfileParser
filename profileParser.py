@@ -25,6 +25,6 @@ if __name__ == "__main__":
                 xslt = ET.parse(myXslt)
                 transform = ET.XSLT(xslt)
                 newdom = transform(dom)
-                infile = (ET.tostring(newdom, pretty_print=True))
+                infile = (ET.tostring(newdom, pretty_print=True, encoding='utf-8'))
                 outfile = open(myOutput + item, 'wb')
                 outfile.write(infile)
