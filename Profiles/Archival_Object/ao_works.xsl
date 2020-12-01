@@ -53,24 +53,24 @@
 			<!--  ALTERNATIVE IDENTIFIER -->
 			<xsl:element name="ao_alternative_identifiers_list">
 				<xsl:for-each select="pr:_nested__ao__ao_nc_identifier_alt/pr:ao__ao_nc_identifier_alt">
-				<xsl:element name="ao_alternative_identifiers">
-					<ao_identifier_alt_id>
-						<xsl:value-of select="pr:ao_nc_identifier_alt_id"/>
-					</ao_identifier_alt_id>
-					<oeu_type_name_uuid>
-						<xsl:value-of select="pr:ao_nc_identifier_alt_type/pr:generic_identifier_type/pr:_uuid"/>
-					</oeu_type_name_uuid>
-					<xsl:element name="ao_identifiers_type_name">
-						<ao_identifiers_type_name_de>
-							<xsl:value-of select="pr:ao_nc_identifier_alt_type/pr:generic_identifier_type/pr:generic_identifier_type_name/pr:de-DE"/>
-						</ao_identifiers_type_name_de>
-						<ao_identifiers_type_name_en>
-							<xsl:value-of select="pr:ao_nc_identifier_alt_type/pr:generic_identifier_type/pr:generic_identifier_type_name/pr:en-US"/>
-						</ao_identifiers_type_name_en>
-					</xsl:element>
-					<oeu_nc_altname_used_by_uuid>
-						<xsl:value-of select="pr:ao_nc_identifier_alt_usedby/pr:act/pr:_uuid"/>
-					</oeu_nc_altname_used_by_uuid>
+					<xsl:element name="ao_alternative_identifiers">
+						<ao_identifier_alt_id>
+							<xsl:value-of select="pr:ao_nc_identifier_alt_id"/>
+						</ao_identifier_alt_id>
+						<ao_identifiers_type_uuid>
+							<xsl:value-of select="pr:ao_nc_identifier_alt_type/pr:generic_identifier_type/pr:_uuid"/>
+						</ao_identifiers_type_uuid>
+						<xsl:element name="ao_identifiers_type_name">
+							<ao_identifiers_type_name_de>
+								<xsl:value-of select="pr:ao_nc_identifier_alt_type/pr:generic_identifier_type/pr:generic_identifier_type_name/pr:de-DE"/>
+							</ao_identifiers_type_name_de>
+							<ao_identifiers_type_name_en>
+								<xsl:value-of select="pr:ao_nc_identifier_alt_type/pr:generic_identifier_type/pr:generic_identifier_type_name/pr:en-US"/>
+							</ao_identifiers_type_name_en>
+						</xsl:element>
+						<ao_alternative_identifiers_usedby_uuid>
+							<xsl:value-of select="pr:ao_nc_identifier_alt_usedby/pr:act/pr:_uuid"/>
+						</ao_alternative_identifiers_usedby_uuid>
 					</xsl:element>
 				</xsl:for-each>
 			</xsl:element>
@@ -88,36 +88,36 @@
 			</xsl:element>
 			<xsl:element name="ao_alternative_titles_list">
 				<xsl:for-each select="pr:_nested__ao__ao_nc_title_alt/pr:ao__ao_nc_title_alt">
-				<xsl:element name="ao_alternative_titles">
-					<ao_title_alt_title>
-						<xsl:value-of select="pr:ao_nc_title_alt_title"/>
-					</ao_title_alt_title>
-					<ao_alternative_title_lang>
-						<xsl:value-of select="pr:ao_nc_title_alt_lang/pr:generic_lang/pr:generic_lang_akronym"/>
-					</ao_alternative_title_lang>
-					<xsl:element name="ao_alternative_title_used_by_actor">
-						<xsl:for-each select="pr:ao_nc_title_alt_usedby/pr:act">
-							<ao_title_used_by_actor_uuid>
-								<xsl:value-of select="pr:_uuid"/>
-							</ao_title_used_by_actor_uuid>
-							<ao_title_used_by_actor_type>
-								<xsl:value-of select="pr:act_type_crm_archive/pr:act_type_crm/pr:act_type_crm_name"/>
-							</ao_title_used_by_actor_type>
-						</xsl:for-each>
-					</xsl:element>
+					<xsl:element name="ao_alternative_titles">
+						<ao_title_alt_title>
+							<xsl:value-of select="pr:ao_nc_title_alt_title"/>
+						</ao_title_alt_title>
+						<ao_alternative_title_lang>
+							<xsl:value-of select="pr:ao_nc_title_alt_lang/pr:generic_lang/pr:generic_lang_akronym"/>
+						</ao_alternative_title_lang>
+						<xsl:element name="ao_alternative_title_used_by_actor">
+							<xsl:for-each select="pr:ao_nc_title_alt_usedby/pr:act">
+								<ao_title_used_by_actor_uuid>
+									<xsl:value-of select="pr:_uuid"/>
+								</ao_title_used_by_actor_uuid>
+								<ao_title_used_by_actor_type>
+									<xsl:value-of select="pr:act_type_crm_archive/pr:act_type_crm/pr:act_type_crm_name"/>
+								</ao_title_used_by_actor_type>
+							</xsl:for-each>
+						</xsl:element>
 					</xsl:element>
 				</xsl:for-each>
 			</xsl:element>
 			<!-- TYPE -->
 			<xsl:element name="ao_document_type_list">
-				<xsl:for-each select="pr:ao_nc_type/pr:ao_type/pr:_path/pr:ao_type">
-				<xsl:element name="ao_document_type">
-					<ao_document_type_uuid>
-						<xsl:value-of select="pr:_uuid"/>
-					</ao_document_type_uuid>
-					<ao_document_type_appellation_de>
-						<xsl:value-of select="pr:_standard/pr:de-DE"/>
-					</ao_document_type_appellation_de>
+				<xsl:for-each select="pr:ao_nc_type/pr:ao_type">
+					<xsl:element name="ao_document_type">
+						<ao_document_type_uuid>
+							<xsl:value-of select="pr:_uuid"/>
+						</ao_document_type_uuid>
+						<ao_document_type_appellation_de>
+							<xsl:value-of select="pr:_standard/pr:de-DE"/>
+						</ao_document_type_appellation_de>
 					</xsl:element>
 				</xsl:for-each>
 			</xsl:element>
@@ -339,6 +339,15 @@
 				<ao_descr_transcription>
 					<xsl:value-of select="pr:ao_descr_transcription"/>
 				</ao_descr_transcription>
+				<ao_descr_actor_display_legacy>
+					<xsl:value-of select="pr:ao_descr_actor_display"/>
+				</ao_descr_actor_display_legacy>
+				<ao_descr_place_display_de>
+					<xsl:value-of select="pr:ao_descr_place_display/pr:de-DE"/>
+				</ao_descr_place_display_de>
+				<ao_descr_chrono_display_de>
+					<xsl:value-of select="pr:ao_descr_chrono_display/pr:de-DE"/>
+				</ao_descr_chrono_display_de>
 			</xsl:element>
 			<!-- Archive location -->
 			<xsl:element name="ao_archive_location">
@@ -406,15 +415,6 @@
 					<xsl:value-of select="pr:ao_actorrelation_former_ownership_note/pr:en-US"/>
 				</ao_former_ownership_note_en>
 			</xsl:element>
-			<ao_descr_actor_display_legacy>
-				<xsl:value-of select="pr:ao_descr_actor_display"/>
-			</ao_descr_actor_display_legacy>
-			<ao_descr_place_display_de>
-				<xsl:value-of select="pr:ao_descr_place_display/pr:de-DE"/>
-			</ao_descr_place_display_de>
-			<ao_descr_chrono_display_de>
-				<xsl:value-of select="pr:ao_descr_chrono_display/pr:de-DE"/>
-			</ao_descr_chrono_display_de>
 		</entry>
 	</xsl:template>
 </xsl:stylesheet>
