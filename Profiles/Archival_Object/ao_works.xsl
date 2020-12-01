@@ -78,7 +78,7 @@
 				<xsl:value-of select="pr:ao_nc_identifier_acquisition_nr_v2"/>
 			</ao_acquisition_identifier>
 			<!-- TITLE -->
-			<xsl:element name="pr:ao_file_name">
+			<xsl:element name="ao_file_name">
 				<ao_title_de>
 					<xsl:value-of select="pr:ao_nc_title/pr:de-DE"/>
 				</ao_title_de>
