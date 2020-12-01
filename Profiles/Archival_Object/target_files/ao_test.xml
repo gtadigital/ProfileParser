@@ -12,12 +12,12 @@
     <ao_alternative_identifiers_list>
       <ao_alternative_identifiers>
         <ao_identifier_alt_id>456-DEF</ao_identifier_alt_id>
-        <oeu_type_name_uuid>0bcc3e79-a95b-4e03-a3e1-2cc4b7eeabcf</oeu_type_name_uuid>
+        <ao_identifiers_type_uuid>0bcc3e79-a95b-4e03-a3e1-2cc4b7eeabcf</ao_identifiers_type_uuid>
         <ao_identifiers_type_name>
           <ao_identifiers_type_name_de>Signatur</ao_identifiers_type_name_de>
           <ao_identifiers_type_name_en>Signatur [translation missing]</ao_identifiers_type_name_en>
         </ao_identifiers_type_name>
-        <oeu_nc_altname_used_by_uuid>f4ec3230-feea-4d4c-941a-ca1649dbf2ef</oeu_nc_altname_used_by_uuid>
+        <ao_alternative_identifiers_usedby_uuid>f4ec3230-feea-4d4c-941a-ca1649dbf2ef</ao_alternative_identifiers_usedby_uuid>
       </ao_alternative_identifiers>
     </ao_alternative_identifiers_list>
     <ao_acquisition_identifier>ACCESSION ID 22-11-2020-123456</ao_acquisition_identifier>
@@ -36,10 +36,6 @@
       </ao_alternative_titles>
     </ao_alternative_titles_list>
     <ao_document_type_list>
-      <ao_document_type>
-        <ao_document_type_uuid>8f16b7d1-7d11-4d4b-a4dd-60c1e1f8c389</ao_document_type_uuid>
-        <ao_document_type_appellation_de>[gta Archives | Version 2, final]</ao_document_type_appellation_de>
-      </ao_document_type>
       <ao_document_type>
         <ao_document_type_uuid>61fbaf2e-a1fc-48dd-bb83-76430b0fd7c2</ao_document_type_uuid>
         <ao_document_type_appellation_de>Brief</ao_document_type_appellation_de>
@@ -157,6 +153,9 @@
       <ao_descr_holding_en>HOLDING NOTES ENGLISH</ao_descr_holding_en>
       <ao_descr_archivierung>ARCHIVING NOTES GERMAN</ao_descr_archivierung>
       <ao_descr_transcription>TRANSCRIPTION</ao_descr_transcription>
+      <ao_descr_actor_display_legacy>DESCRIPTION PERSONS LEGACY DE</ao_descr_actor_display_legacy>
+      <ao_descr_place_display_de>DESCRIPTION PLACES LEGACY DE</ao_descr_place_display_de>
+      <ao_descr_chrono_display_de>DESCRIPTION CHRONOLOGY LEGACY DE</ao_descr_chrono_display_de>
     </ao_descriptions>
     <ao_archive_location>
       <ao_loc_name_archive>
@@ -192,8 +191,5 @@
       <ao_former_ownership_note_de>NOTE IN FORMER OWNERSHIP GERMAN</ao_former_ownership_note_de>
       <ao_former_ownership_note_en>NOTE IN FORMER OWNERSHIP ENGLISH</ao_former_ownership_note_en>
     </ao_former_ownerhsip>
-    <ao_descr_actor_display_legacy>DESCRIPTION PERSONS LEGACY DE</ao_descr_actor_display_legacy>
-    <ao_descr_place_display_de>DESCRIPTION PLACES LEGACY DE</ao_descr_place_display_de>
-    <ao_descr_chrono_display_de>DESCRIPTION CHRONOLOGY LEGACY DE</ao_descr_chrono_display_de>
   </entry>
 </root>
