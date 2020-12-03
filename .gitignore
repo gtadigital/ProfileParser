@@ -42,3 +42,18 @@ Thumbs.db
 ######################
 
 virtual/
+
+Profiles/Archival_Object/source_files/
+Profiles/Archival_Object/target_files/
+
+Profiles/BuiltWorks/source_files/
+Profiles/BuiltWorks/target_files/
+
+Profiles/Group/source_files/
+Profiles/Group/target_files/
+
+Profiles/Person/source_files/
+Profiles/Person/target_files/
+
+Profiles/Place/source_files/
+Profiles/Place/target_files/
