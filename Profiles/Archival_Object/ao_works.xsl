@@ -101,7 +101,7 @@
 									<xsl:value-of select="pr:_uuid"/>
 								</ao_title_used_by_actor_uuid>
 								<ao_title_used_by_actor_type>
-									<xsl:value-of select="pr:act_type_crm_archive/pr:act_type_crm/pr:act_type_crm_name"/>
+									<xsl:value-of select="pr:act_type_crm/pr:act_type_crm/pr:act_type_crm_name"/>
 								</ao_title_used_by_actor_type>
 							</xsl:for-each>
 						</xsl:element>
@@ -159,7 +159,7 @@
 								<xsl:value-of select="pr:ao_actorrelation_usedby_actor/pr:act/pr:_uuid"/>
 							</ao_actor_user_uuid>
 							<ao_actor_user_type>
-								<xsl:value-of select="pr:ao_actorrelation_usedby_actor/pr:act/pr:act_type_crm_archive/pr:act_type_crm/pr:act_type_crm_name"/>
+								<xsl:value-of select="pr:ao_actorrelation_usedby_actor/pr:act/pr:act_type_crm/pr:act_type_crm/pr:act_type_crm_name"/>
 							</ao_actor_user_type>
 						</xsl:element>
 						<xsl:element name="ao_actor_user_role">
@@ -383,7 +383,7 @@
 						<ao_former_owner_uuid>
 							<xsl:value-of select="pr:ao_actorrelation_former_ownership_owner/pr:act/pr:_uuid"/>
 						</ao_former_owner_uuid>
-						<xsl:for-each select="pr:ao_actorrelation_former_ownership_owner/pr:act/pr:act_type_crm_archive/pr:act_type_crm">
+						<xsl:for-each select="pr:ao_actorrelation_former_ownership_owner/pr:act/pr:act_type_crm/pr:act_type_crm">
 							<xsl:element name="ao_former_owner_type">
 								<ao_owner_type_name>
 									<xsl:value-of select="pr:act_type_crm_name"/>
