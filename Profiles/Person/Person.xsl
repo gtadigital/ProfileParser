@@ -153,12 +153,12 @@
 
             <act_exist_death_timespan_from>
                 <xsl:value-of
-                        select="pr:act_exist_birth_timespan/pr:from"/>
+                        select="pr:act_exist_death_timespan/pr:from"/>
             </act_exist_death_timespan_from>
 
             <act_exist_death_timespan_to>
                 <xsl:value-of
-                        select="pr:act_exist_birth_timespan/pr:to"/>
+                        select="pr:act_exist_death_timespan/pr:to"/>
             </act_exist_death_timespan_to>
 
             <act_social_father_uuid>
