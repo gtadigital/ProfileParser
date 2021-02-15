@@ -154,25 +154,25 @@
 			<xsl:element name="actor_user">
 				<xsl:for-each select="pr:_nested__ao__ao_actorrelation_usedby/pr:ao__ao_actorrelation_usedby">
 					<xsl:element name="ao_actor_user">
-						<xsl:element name="ao_actor_type">
-							<ao_actor_user_uuid>
+						<xsl:element name="ao_actor_user_type_">
+							<ao_actor_user_type_uuid>
 								<xsl:value-of select="pr:ao_actorrelation_usedby_actor/pr:act/pr:_uuid"/>
-							</ao_actor_user_uuid>
+							</ao_actor_user_type_uuid>
 							<ao_actor_user_type>
-								<xsl:value-of select="pr:ao_actorrelation_usedby_actor/pr:act/pr:act_type_crm/pr:act_type_crm/pr:act_type_crm_name"/>
+								<xsl:value-of select="pr:ao_actorrelation_usedby_actor/pr:act/pr:act_type_crm_archive/pr:act_type_crm/pr:act_type_crm_name"/>
 							</ao_actor_user_type>
 						</xsl:element>
 						<xsl:element name="ao_actor_user_role">
 							<xsl:for-each select="pr:ao_actorrelation_usedby_role/pr:act_role">
-								<ao_actor_creator_uuid>
+								<ao_actor_user_uuid>
 									<xsl:value-of select="pr:_uuid"/>
-								</ao_actor_creator_uuid>
-								<ao_actor_creator_role_name_de>
+								</ao_actor_user_uuid>
+								<ao_actor_user_role_name_de>
 									<xsl:value-of select="pr:act_role_name_display/pr:de-DE"/>
-								</ao_actor_creator_role_name_de>
-								<ao_actor_creator_role_name_en>
+								</ao_actor_user_role_name_de>
+								<ao_actor_user_role_name_en>
 									<xsl:value-of select="pr:act_role_name_display/pr:en-US"/>
-								</ao_actor_creator_role_name_en>
+								</ao_actor_user_role_name_en>
 							</xsl:for-each>
 						</xsl:element>
 					</xsl:element>
