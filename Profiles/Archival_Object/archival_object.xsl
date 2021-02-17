@@ -224,30 +224,30 @@
 					</xsl:element>
 				</xsl:for-each>
 				<xsl:element name="ao_correspondance_from_time_span">
-					<ao_correspondance_time_span_from>
+					<ao_correspondance_time_span_from_earliest>
 						<xsl:value-of select="pr:ao_korr_from_timespan/pr:from"/>
-					</ao_correspondance_time_span_from>
-					<ao_correspondance_time_span_to>
+					</ao_correspondance_time_span_from_earliest>
+					<ao_correspondance_time_span_to_latest>
 						<xsl:value-of select="pr:ao_korr_from_timespan/pr:to"/>
-					</ao_correspondance_time_span_to>
+					</ao_correspondance_time_span_to_latest>
 				</xsl:element>
 			</xsl:element>
 			<!-- Korr to place -->
 			<xsl:element name="ao_correspondance_to">
 				<xsl:for-each select="pr:_nested__ao__ao_korr_to_places/pr:ao__ao_korr_to_places/pr:ao_korr_to_place/pr:pl">
 					<xsl:element name="ao_correspondance_to_place">
-						<ao_correspondance_place_from>
+						<ao_correspondance_place_to>
 							<xsl:value-of select="pr:_uuid"/>
-						</ao_correspondance_place_from>
+						</ao_correspondance_place_to>
 					</xsl:element>
 				</xsl:for-each>
 				<xsl:element name="ao_correspondance_to_time_span">
-					<ao_correspondance_time_span_from>
+					<ao_correspondance_time_span_from_earliest>
 						<xsl:value-of select="pr:ao_korr_to_timespan/pr:from"/>
-					</ao_correspondance_time_span_from>
-					<ao_correspondance_time_span_to>
+					</ao_correspondance_time_span_from_earliest>
+					<ao_correspondance_time_span_to_latest>
 						<xsl:value-of select="pr:ao_korr_to_timespan/pr:to"/>
-					</ao_correspondance_time_span_to>
+					</ao_correspondance_time_span_to_latest>
 				</xsl:element>
 			</xsl:element>
 			<!-- Coverage Places -->
