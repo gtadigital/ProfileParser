@@ -227,9 +227,9 @@
 					<ao_correspondance_time_span_from_earliest>
 						<xsl:value-of select="pr:ao_korr_from_timespan/pr:from"/>
 					</ao_correspondance_time_span_from_earliest>
-					<ao_correspondance_time_span_to_latest>
+					<ao_correspondance_time_span_from_latest>
 						<xsl:value-of select="pr:ao_korr_from_timespan/pr:to"/>
-					</ao_correspondance_time_span_to_latest>
+					</ao_correspondance_time_span_from_latest>
 				</xsl:element>
 			</xsl:element>
 			<!-- Korr to place -->
@@ -242,9 +242,9 @@
 					</xsl:element>
 				</xsl:for-each>
 				<xsl:element name="ao_correspondance_to_time_span">
-					<ao_correspondance_time_span_from_earliest>
+					<ao_correspondance_time_span_to_earliest>
 						<xsl:value-of select="pr:ao_korr_to_timespan/pr:from"/>
-					</ao_correspondance_time_span_from_earliest>
+					</ao_correspondance_time_span_to_earliest>
 					<ao_correspondance_time_span_to_latest>
 						<xsl:value-of select="pr:ao_korr_to_timespan/pr:to"/>
 					</ao_correspondance_time_span_to_latest>
