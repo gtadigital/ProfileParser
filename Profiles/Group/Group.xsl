@@ -192,6 +192,28 @@
 					<act_activity_floruit_place>
 						<xsl:value-of select="pr:act__act_activity_floruit/pr:act_activity_floruit_place/pr:pl/pr:_uuid"/>
 					</act_activity_floruit_place>
+					<act_activity_floruit_time-span_from>
+						<xsl:value-of select="pr:act__act_activity_floruit/pr:act_activity_floruit_timespan/pr:from"/>
+					</act_activity_floruit_time-span_from>
+					<act_activity_floruit_time-span_to>
+						<xsl:value-of select="pr:act__act_activity_floruit/pr:act_activity_floruit_timespan/pr:to"/>
+					</act_activity_floruit_time-span_to>
+				</xsl:element>
+			</xsl:for-each>
+			<xsl:for-each select="pr:_nested__act__act_activity_occupations">
+				<xsl:element name="act_occupations">
+					<act_activity_occupation_de>
+						<xsl:value-of select="pr:act__act_activity_occupations/pr:act_activity_occupation/pr:act_occ/pr:_standard/pr:de-DE"/>
+					</act_activity_occupation_de>
+					<act_activity_occupation_en>
+						<xsl:value-of select="pr:act__act_activity_occupations/pr:act_activity_occupation/pr:act_occ/pr:_standard/pr:en-US"/>
+					</act_activity_occupation_en>
+					<act_activity_occupation_uuid>
+						<xsl:value-of select="pr:act__act_activity_occupations/pr:act_activity_occupation/pr:act_occ/pr:_uuid"/>
+					</act_activity_occupation_uuid>
+					<act_activity_occupation_aat>
+						<xsl:value-of select="pr:act__act_activity_occupations/pr:act_activity_occupation/pr:act_occ/pr:custom/pr:string"/>
+					</act_activity_occupation_aat>
 				</xsl:element>
 			</xsl:for-each>
 		</entry>
