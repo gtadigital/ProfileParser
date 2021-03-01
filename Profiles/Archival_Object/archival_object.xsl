@@ -48,7 +48,7 @@
 			</xsl:element>
 			<!-- IDENTIFIERS -->
 			<ao_preferred_identifier>
-				<xsl:value-of select="pr:ao_nc_identifier_signature"/>
+				<xsl:value-of select="pr:ao_nc_identifier"/>
 			</ao_preferred_identifier>
 			<!--  ALTERNATIVE IDENTIFIER -->
 			<xsl:element name="ao_alternative_identifiers_list">
