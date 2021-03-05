@@ -6,8 +6,13 @@
 <xsl:stylesheet version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:pr="https://schema.easydb.de/EASYDB/1.0/objects/" exclude-result-prefixes="pr">
+<<<<<<< HEAD
 	
     <xsl:output method="xml" indent="yes" encoding="UTF-8"/>
+=======
+	<xsl:output version="1.0" encoding="UTF-8" standalone="yes"/>
+    
+>>>>>>> python
     <xsl:template match="/">
         <root>
             <xsl:apply-templates/>
@@ -68,7 +73,10 @@
                                         <xsl:value-of select="pr:oeu_archive_nc_alt_name_lang/pr:generic_lang/pr:_standard/pr:fr-FR"/>
                                     </oeu_nc_archive_alt_name_lang_fr>
                                 </xsl:element>
+<<<<<<< HEAD
                             
+=======
+>>>>>>> python
                         <oeu_nc_altname_used_uuid>
                             <xsl:value-of select="pr:oeu_archive_nc_alt_name_used_by/pr:act/pr:_uuid"></xsl:value-of>
                         </oeu_nc_altname_used_uuid>
