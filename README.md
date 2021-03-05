@@ -2,14 +2,15 @@
 
 ## Description:
 
-The goal of the ProfileParser is to transform the XML documents dumped from EasyDB platform into another XML documents compliant with the CIDOC-CRM entities structure. The resulting XML file can be used as input schema by X3M mapping tool to create the final RDF knowledge graph according to CIDOC-CRM ontologies. 
+The ProfileParser harmonizes XML files according to CIDOC-CRM entities mapping schema. 
 
-The ProfileParser provides three XSLT stylesheets:
+The ProfileParser provides the following harmonization schema:
 
-* Person 
-* Place 
-* Group 
-
+* Person (E21_Person)
+* Place (E53_Place)
+* Group (E74_Group)
+* BuiltWorks (E22_Man-Made_Obejct)
+* Collection (E78_Collection)
 
 ## Prerequisites:
 
