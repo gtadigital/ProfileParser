@@ -2,21 +2,17 @@
 <!-- author: ETH Zurich, gta digital, Matteo Lorenzini, Zoe Reinke -->
 <!-- license: please refer to the license.txt file in our git repository (https://github.com/gtadigital/XSLT) -->
 <xsl:stylesheet version="1.0"
-                xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:pr="https://schema.easydb.de/EASYDB/1.0/objects/"
-                exclude-result-prefixes="pr">
-	<xsl:output method="xml"
-	            indent="yes"/>
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:pr="https://schema.easydb.de/EASYDB/1.0/objects/" exclude-result-prefixes="pr">
+	<xsl:output method="xml" indent="yes"/>
 	<xsl:template match="/">
 		<root>
 			<xsl:apply-templates/>
 		</root>
 	</xsl:template>
-	<xsl:template match="@*|node()"
-	              mode="copy-no-namespaces">
+	<xsl:template match="@*|node()" mode="copy-no-namespaces">
 		<xsl:copy>
-			<xsl:apply-templates select="@*|node()"
-			                     mode="copy-no-namespaces"/>
+			<xsl:apply-templates select="@*|node()" mode="copy-no-namespaces"/>
 		</xsl:copy>
 	</xsl:template>
 	<xsl:template match="pr:objects/pr:act">
@@ -53,10 +49,24 @@
 								<xsl:value-of select="pr:act_nc_altname_type/pr:generic_nametype/pr:generic_nametype_name/pr:en-US"/>
 							</act_nc_altname_type_en>
 							<act_nc_altname_timespan_from>
-								<xsl:value-of select="pr:act_nc_altname_timespan/pr:from"/>
+								<xsl:choose>
+									<xsl:when test="string-length(pr:act_nc_altname_timespan/pr:from) = 4">
+										<xsl:value-of select="concat(pr:act_nc_altname_timespan/pr:from,'-1-1')"/>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="pr:act_nc_altname_timespan/pr:from"/>
+									</xsl:otherwise>
+								</xsl:choose>
 							</act_nc_altname_timespan_from>
 							<act_nc_altname_timespan_to>
-								<xsl:value-of select="pr:act_nc_altname_timespan/pr:to"/>
+								<xsl:choose>
+									<xsl:when test="string-length(pr:act_nc_altname_timespan/pr:to) = 4">
+										<xsl:value-of select="concat(pr:act_nc_altname_timespan/pr:to,'-1-1')"/>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="pr:act_nc_altname_timespan/pr:to"/>
+									</xsl:otherwise>
+								</xsl:choose>
 							</act_nc_altname_timespan_to>
 						</xsl:element>
 					</xsl:for-each>
@@ -66,19 +76,47 @@
 				<xsl:value-of select="pr:grp_exist_formation_place/pr:pl/pr:_uuid"/>
 			</grp_formation_place>
 			<grp_formation_timespan_from>
-				<xsl:value-of select="pr:grp_exist_formation_date/pr:from"/>
+				<xsl:choose>
+					<xsl:when test="string-length(pr:grp_exist_formation_date/pr:from) = 4">
+						<xsl:value-of select="concat(pr:grp_exist_formation_date/pr:from,'-1-1')"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="pr:grp_exist_formation_date/pr:from"/>
+					</xsl:otherwise>
+				</xsl:choose>
 			</grp_formation_timespan_from>
 			<grp_formation_timespan_to>
-				<xsl:value-of select="pr:grp_exist_formation_date/pr:to"/>
+				<xsl:choose>
+					<xsl:when test="string-length(pr:grp_exist_formation_date/pr:to) = 4">
+						<xsl:value-of select="concat(pr:grp_exist_formation_date/pr:to,'-1-1')"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="pr:grp_exist_formation_date/pr:to"/>
+					</xsl:otherwise>
+				</xsl:choose>
 			</grp_formation_timespan_to>
 			<grp_dissolution_place>
 				<xsl:value-of select="pr:grp_exist_dissolution_place/pr:pl/pr:_uuid"/>
 			</grp_dissolution_place>
 			<grp_dissolution_time_span_from>
-				<xsl:value-of select="pr:grp_exist_dissolution_date/pr:from"/>
+				<xsl:choose>
+					<xsl:when test="string-length(pr:grp_exist_dissolution_date/pr:from) = 4">
+						<xsl:value-of select="concat(pr:grp_exist_dissolution_date/pr:from,'-1-1')"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="pr:grp_exist_dissolution_date/pr:from"/>
+					</xsl:otherwise>
+				</xsl:choose>
 			</grp_dissolution_time_span_from>
 			<grp_dissolution_time_span_to>
-				<xsl:value-of select="pr:grp_exist_dissolution_date/pr:to"/>
+				<xsl:choose>
+					<xsl:when test="string-length(pr:grp_exist_dissolution_date/pr:to) = 4">
+						<xsl:value-of select="concat(pr:grp_exist_dissolution_date/pr:to,'-1-1')"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="pr:grp_exist_dissolution_date/pr:to"/>
+					</xsl:otherwise>
+				</xsl:choose>
 			</grp_dissolution_time_span_to>
 			<xsl:for-each select="pr:_nested__act__grp_loc_locations">
 				<xsl:element name="grp_loc_places">
@@ -193,10 +231,24 @@
 						<xsl:value-of select="pr:act__act_activity_floruit/pr:act_activity_floruit_place/pr:pl/pr:_uuid"/>
 					</act_activity_floruit_place>
 					<act_activity_floruit_time-span_from>
-						<xsl:value-of select="pr:act__act_activity_floruit/pr:act_activity_floruit_timespan/pr:from"/>
+						<xsl:choose>
+							<xsl:when test="string-length(pr:act__act_activity_floruit/pr:act_activity_floruit_timespan/pr:from) = 4">
+								<xsl:value-of select="concat(pr:act__act_activity_floruit/pr:act_activity_floruit_timespan/pr:from,'-1-1')"/>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="pr:act__act_activity_floruit/pr:act_activity_floruit_timespan/pr:from"/>
+							</xsl:otherwise>
+						</xsl:choose>
 					</act_activity_floruit_time-span_from>
 					<act_activity_floruit_time-span_to>
-						<xsl:value-of select="pr:act__act_activity_floruit/pr:act_activity_floruit_timespan/pr:to"/>
+						<xsl:choose>
+							<xsl:when test="string-length(pr:act__act_activity_floruit/pr:act_activity_floruit_timespan/pr:to) = 4">
+								<xsl:value-of select="concat(pr:act__act_activity_floruit/pr:act_activity_floruit_timespan/pr:to,'-1-1')"/>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="pr:act__act_activity_floruit/pr:act_activity_floruit_timespan/pr:to"/>
+							</xsl:otherwise>
+						</xsl:choose>
 					</act_activity_floruit_time-span_to>
 				</xsl:element>
 			</xsl:for-each>
