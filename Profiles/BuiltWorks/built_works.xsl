@@ -197,7 +197,7 @@
 					</xsl:element>
 				</xsl:for-each>
 				<xsl:element name="destruction_time_span">
-					<oeu_nc_construction_time_span_from>
+					<oeu_nc_destruction_time_span_from>
 						<xsl:choose>
 							<xsl:when test="string-length(pr:oeu_archive_exist_destruct_timespan/pr:from) = 4">
 								<xsl:value-of select="concat(pr:oeu_archive_exist_destruct_timespan/pr:from,'-1-1')"/>
@@ -206,8 +206,8 @@
 								<xsl:value-of select="pr:oeu_archive_exist_destruct_timespan/pr:from"/>
 							</xsl:otherwise>
 						</xsl:choose>
-					</oeu_nc_construction_time_span_from>
-					<oeu_nc_construction_time_span_to>
+					</oeu_nc_destruction_time_span_from>
+					<oeu_nc_destruction_time_span_to>
 						<xsl:choose>
 							<xsl:when test="string-length(pr:oeu_archive_exist_destruct_timespan/pr:to) = 4">
 								<xsl:value-of select="concat(pr:oeu_archive_exist_destruct_timespan/pr:to,'-1-1')"/>
@@ -216,7 +216,7 @@
 								<xsl:value-of select="pr:oeu_archive_exist_destruct_timespan/pr:to"/>
 							</xsl:otherwise>
 						</xsl:choose>
-					</oeu_nc_construction_time_span_to>
+					</oeu_nc_destruction_time_span_to>
 				</xsl:element>
 				<xsl:element name="destruction_uncertainity">
 					<oeu_nc_destruction_time_span_uncertainity>
