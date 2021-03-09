@@ -2,22 +2,17 @@
 <!-- author: ETH Zurich, gta digital, Matteo Lorenzini -->
 <!-- license: please refer to the license.txt file in our git repository (https://github.com/gtadigital/XSLT) -->
 <xsl:stylesheet version="1.0"
-                xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:pr="https://schema.easydb.de/EASYDB/1.0/objects/"
-                exclude-result-prefixes="pr">
-	<xsl:output method="xml"
-	            indent="yes"
-	            encoding="UTF-8"/>
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:pr="https://schema.easydb.de/EASYDB/1.0/objects/" exclude-result-prefixes="pr">
+	<xsl:output method="xml" indent="yes" encoding="UTF-8"/>
 	<xsl:template match="/">
 		<root>
 			<xsl:apply-templates/>
 		</root>
 	</xsl:template>
-	<xsl:template match="@*|node()"
-	              mode="copy-no-namespaces">
+	<xsl:template match="@*|node()" mode="copy-no-namespaces">
 		<xsl:copy>
-			<xsl:apply-templates select="@*|node()"
-			                     mode="copy-no-namespaces"/>
+			<xsl:apply-templates select="@*|node()" mode="copy-no-namespaces"/>
 		</xsl:copy>
 	</xsl:template>
 	<xsl:template match="pr:objects/pr:ao">
@@ -189,10 +184,24 @@
 				</xsl:for-each>
 				<xsl:element name="ao_production_time_span">
 					<ao_production_time_span_from>
-						<xsl:value-of select="pr:ao_exist_prod_timespan/pr:from"/>
+						<xsl:choose>
+							<xsl:when test="string-length(pr:ao_exist_prod_timespan/pr:from) = 4">
+								<xsl:value-of select="concat(pr:ao_exist_prod_timespan/pr:from,'-1-1')"/>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="pr:ao_exist_prod_timespan/pr:from"/>
+							</xsl:otherwise>
+						</xsl:choose>
 					</ao_production_time_span_from>
 					<ao_production_time_span_to>
-						<xsl:value-of select="pr:ao_exist_prod_timespan/pr:to"/>
+						<xsl:choose>
+							<xsl:when test="string-length(pr:ao_exist_prod_timespan/pr:to) = 4">
+								<xsl:value-of select="concat(pr:ao_exist_prod_timespan/pr:to,'-1-1')"/>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="pr:ao_exist_prod_timespan/pr:to"/>
+							</xsl:otherwise>
+						</xsl:choose>
 					</ao_production_time_span_to>
 				</xsl:element>
 			</xsl:element>
@@ -207,10 +216,24 @@
 				</xsl:for-each>
 				<xsl:element name="ao_destruction_time_span">
 					<ao_destruction_time_span_from>
-						<xsl:value-of select="pr:ao_exist_destr_timespan/pr:from"/>
+						<xsl:choose>
+							<xsl:when test="string-length(pr:ao_exist_destr_timespan/pr:from) = 4">
+								<xsl:value-of select="concat(pr:ao_exist_destr_timespan/pr:from,'-1-1')"/>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="pr:ao_exist_destr_timespan/pr:from"/>
+							</xsl:otherwise>
+						</xsl:choose>
 					</ao_destruction_time_span_from>
 					<ao_destruction_time_span_to>
-						<xsl:value-of select="pr:ao_exist_destr_timespan/pr:to"/>
+						<xsl:choose>
+							<xsl:when test="string-length(pr:ao_exist_destr_timespan/pr:to) = 4">
+								<xsl:value-of select="concat(pr:ao_exist_destr_timespan/pr:to,'-1-1')"/>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="pr:ao_exist_destr_timespan/pr:to"/>
+							</xsl:otherwise>
+						</xsl:choose>
 					</ao_destruction_time_span_to>
 				</xsl:element>
 			</xsl:element>
@@ -225,10 +248,24 @@
 				</xsl:for-each>
 				<xsl:element name="ao_correspondance_from_time_span">
 					<ao_correspondance_time_span_from_earliest>
-						<xsl:value-of select="pr:ao_korr_from_timespan/pr:from"/>
+						<xsl:choose>
+							<xsl:when test="string-length(pr:ao_korr_from_timespan/pr:from) = 4">
+								<xsl:value-of select="concat(pr:ao_korr_from_timespan/pr:from,'-1-1')"/>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="pr:ao_korr_from_timespan/pr:from"/>
+							</xsl:otherwise>
+						</xsl:choose>
 					</ao_correspondance_time_span_from_earliest>
 					<ao_correspondance_time_span_from_latest>
-						<xsl:value-of select="pr:ao_korr_from_timespan/pr:to"/>
+						<xsl:choose>
+							<xsl:when test="string-length(pr:ao_korr_from_timespan/pr:to) = 4">
+								<xsl:value-of select="concat(pr:ao_korr_from_timespan/pr:to,'-1-1')"/>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="pr:ao_korr_from_timespan/pr:to"/>
+							</xsl:otherwise>
+						</xsl:choose>
 					</ao_correspondance_time_span_from_latest>
 				</xsl:element>
 			</xsl:element>
@@ -243,10 +280,24 @@
 				</xsl:for-each>
 				<xsl:element name="ao_correspondance_to_time_span">
 					<ao_correspondance_time_span_to_earliest>
-						<xsl:value-of select="pr:ao_korr_to_timespan/pr:from"/>
+						<xsl:choose>
+							<xsl:when test="string-length(pr:ao_korr_to_timespan/pr:from) = 4">
+								<xsl:value-of select="concat(pr:ao_korr_to_timespan/pr:from,'-1-1')"/>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="pr:ao_korr_to_timespan/pr:from"/>
+							</xsl:otherwise>
+						</xsl:choose>
 					</ao_correspondance_time_span_to_earliest>
 					<ao_correspondance_time_span_to_latest>
-						<xsl:value-of select="pr:ao_korr_to_timespan/pr:to"/>
+						<xsl:choose>
+							<xsl:when test="string-length(pr:ao_korr_to_timespan/pr:to) = 4">
+								<xsl:value-of select="concat(pr:ao_korr_to_timespan/pr:to,'-1-1')"/>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="pr:ao_korr_to_timespan/pr:to"/>
+							</xsl:otherwise>
+						</xsl:choose>
 					</ao_correspondance_time_span_to_latest>
 				</xsl:element>
 			</xsl:element>
@@ -392,18 +443,46 @@
 						</xsl:for-each>
 						<xsl:element name="ownership_obtaining">
 							<ao_actorrelation_former_ownership_timespan_obtaining_from>
-								<xsl:value-of select="pr:ao_actorrelation_former_ownership_timespan_obtaining/pr:from"/>
+								<xsl:choose>
+									<xsl:when test="string-length(pr:ao_actorrelation_former_ownership_timespan_obtaining/pr:from) = 4">
+										<xsl:value-of select="concat(pr:ao_actorrelation_former_ownership_timespan_obtaining/pr:from,'-1-1')"/>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="pr:ao_actorrelation_former_ownership_timespan_obtaining/pr:from"/>
+									</xsl:otherwise>
+								</xsl:choose>
 							</ao_actorrelation_former_ownership_timespan_obtaining_from>
 							<ao_actorrelation_former_ownership_timespan_obtaining_to>
-								<xsl:value-of select="pr:ao_actorrelation_former_ownership_timespan_obtaining/pr:to"/>
+								<xsl:choose>
+									<xsl:when test="string-length(pr:ao_actorrelation_former_ownership_timespan_obtaining/pr:to) = 4">
+										<xsl:value-of select="concat(pr:ao_actorrelation_former_ownership_timespan_obtaining/pr:to,'-1-1')"/>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="pr:ao_actorrelation_former_ownership_timespan_obtaining/pr:to"/>
+									</xsl:otherwise>
+								</xsl:choose>
 							</ao_actorrelation_former_ownership_timespan_obtaining_to>
 						</xsl:element>
 						<xsl:element name="ownership_ceding">
 							<ao_actorrelation_former_ownership_timespan_ceding_from>
-								<xsl:value-of select="pr:ao_actorrelation_former_ownership_timespan_ceding/pr:from"/>
+								<xsl:choose>
+									<xsl:when test="string-length(pr:ao_actorrelation_former_ownership_timespan_ceding/pr:from) = 4">
+										<xsl:value-of select="concat(pr:ao_actorrelation_former_ownership_timespan_ceding/pr:from,'-1-1')"/>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="pr:ao_actorrelation_former_ownership_timespan_ceding/pr:from"/>
+									</xsl:otherwise>
+								</xsl:choose>
 							</ao_actorrelation_former_ownership_timespan_ceding_from>
 							<ao_actorrelation_former_ownership_timespan_ceding_to>
-								<xsl:value-of select="pr:ao_actorrelation_former_ownership_timespan_ceding/pr:to"/>
+								<xsl:choose>
+									<xsl:when test="string-length(pr:ao_actorrelation_former_ownership_timespan_ceding/pr:to) = 4">
+										<xsl:value-of select="concat(pr:ao_actorrelation_former_ownership_timespan_ceding/pr:to,'-1-1')"/>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="pr:ao_actorrelation_former_ownership_timespan_ceding/pr:to"/>
+									</xsl:otherwise>
+								</xsl:choose>
 							</ao_actorrelation_former_ownership_timespan_ceding_to>
 						</xsl:element>
 					</xsl:element>
