@@ -1,0 +1,14 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix la: <https://linked.art/ns/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://resource.swissarresearch.net/archivalobjet/145605> a crm:E22_Human-Made_Object ;
+
+   crm:P138i_has_representation [ a crm:E36_Visual_Item ;
+            la:digitally_shown_by [ a <http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object> ;
+                    rdfs:label "Image of Archival Object 145605" ;
+                    dc:format "image/jpeg" ;
+                    crm:P2_has_type <http://vocab.getty.edu/aat/300215302> ;
+                    la:access_point <https://collections.gta.arch.ethz.ch/eas/partitions-inline/2/0/95000/95690/db61c51c0be85ef7679b2dd5071efbf94b71174a/image/jpeg> ] ] .
+
