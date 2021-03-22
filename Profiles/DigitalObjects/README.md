@@ -1,6 +1,6 @@
-# Digital Objects XSL-File
+# Digital Objects XSL-File (partial transformation)
 
-The present XSL-File extracts the direct links (URLs) each individual asset in the asset repository (EasyDB Asset Server). As input file you ay use a standard EasyDB output of Digital Objects. However, since the extracted set of information is quite limited, the present xsl tranformation is not suitable for a full ETL process meant to create proper RDF data. 
+The present XSL-File extracts the direct links (URLs) to each individual asset in the asset repository (EasyDB Asset Server). As input file you may use a standard EasyDB output of Digital Objects or you may plug the present .xsl directly into EasyDBs export mechanism (recommended). However, since the extracted set of information is quite limited, the present xsl file is not suitable for a full ETL process meant to create proper RDF data. 
 
 See also: 
 - [XSL Transformation File](./digital_object.xsl)
