@@ -45,6 +45,8 @@ Thumbs.db
 virtual/
 =======
 virtual/
+__pycache__
+
 
 Profiles/Archival_Object/source_files/
 Profiles/Archival_Object/target_files/
