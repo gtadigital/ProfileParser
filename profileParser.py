@@ -4,7 +4,7 @@
 import os
 import lxml.etree as ET
 import argparse
-
+from emoji import emojize
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='XMLProfiles Parser')
@@ -18,7 +18,7 @@ if __name__ == "__main__":
     myXslt = args.myXslt
 
     for root, dirs, files in os.walk(myFile):
-
+        print("Start process")
         for item in files:
             if item.endswith(('.xml')):
                 dom = ET.parse( root + "/" + item)
@@ -28,3 +28,6 @@ if __name__ == "__main__":
                 infile = (ET.tostring(newdom, pretty_print=True, encoding='utf-8'))
                 outfile = open(myOutput + item, 'wb')
                 outfile.write(infile)
+                print(emojize("Process done:thumbs_up:"))
+            else: 
+                print(emojize("Something went wrong:thumbs_down:"))
