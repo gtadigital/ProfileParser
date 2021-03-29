@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- author: ETH Zurich, gta digital, Matteo Lorenzini, Zoe Reinke -->
 <!-- license: please refer to the license.txt file in our git repository (https://github.com/gtadigital/XSLT) -->
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:pr="https://schema.easydb.de/EASYDB/1.0/objects/" exclude-result-prefixes="pr">
-	<xsl:output method="xml" indent="yes"/>
+<xsl:stylesheet version="1.0"
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                xmlns:pr="https://schema.easydb.de/EASYDB/1.0/objects/"
+                exclude-result-prefixes="pr">
+	<xsl:output method="xml"
+	            indent="yes"/>
 	<xsl:template match="/">
 		<root>
 			<xsl:apply-templates/>
 		</root>
 	</xsl:template>
-	<xsl:template match="@*|node()" mode="copy-no-namespaces">
+	<xsl:template match="@*|node()"
+	              mode="copy-no-namespaces">
 		<xsl:copy>
-			<xsl:apply-templates select="@*|node()" mode="copy-no-namespaces"/>
+			<xsl:apply-templates select="@*|node()"
+			                     mode="copy-no-namespaces"/>
 		</xsl:copy>
 	</xsl:template>
 	<xsl:template match="pr:objects/pr:act">
@@ -109,19 +115,47 @@
 				<xsl:value-of select="pr:act_exist_birth_place/pr:pl/pr:_uuid"/>
 			</act_exist_birth_place_uuid>
 			<act_exist_birth_timespan_from>
-				<xsl:value-of select="pr:act_exist_birth_timespan/pr:from"/>
+				<xsl:choose>
+					<xsl:when test="string-length(pr:act_exist_birth_timespan/pr:from) = 4">
+						<xsl:value-of select="concat(pr:act_exist_birth_timespan/pr:from,'-1-1')"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="pr:act_exist_birth_timespan/pr:from"/>
+					</xsl:otherwise>
+				</xsl:choose>
 			</act_exist_birth_timespan_from>
 			<act_exist_birth_timespan_to>
-				<xsl:value-of select="pr:act_exist_birth_timespan/pr:to"/>
+				<xsl:choose>
+					<xsl:when test="string-length(pr:act_exist_birth_timespan/pr:to) = 4">
+						<xsl:value-of select="concat(pr:act_exist_birth_timespan/pr:to,'-1-1')"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="pr:act_exist_birth_timespan/pr:to"/>
+					</xsl:otherwise>
+				</xsl:choose>
 			</act_exist_birth_timespan_to>
 			<act_exist_death_place>
 				<xsl:value-of select="pr:act_exist_death_place/pr:pl/pr:_uuid"/>
 			</act_exist_death_place>
 			<act_exist_death_timespan_from>
-				<xsl:value-of select="pr:act_exist_death_timespan/pr:from"/>
+				<xsl:choose>
+					<xsl:when test="string-length(pr:act_exist_death_timespan/pr:from) = 4">
+						<xsl:value-of select="concat(pr:act_exist_death_timespan/pr:from,'-1-1')"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="pr:act_exist_death_timespan/pr:from"/>
+					</xsl:otherwise>
+				</xsl:choose>
 			</act_exist_death_timespan_from>
 			<act_exist_death_timespan_to>
-				<xsl:value-of select="pr:act_exist_death_timespan/pr:to"/>
+				<xsl:choose>
+					<xsl:when test="string-length(pr:act_exist_death_timespan/pr:from) = 4">
+						<xsl:value-of select="concat(pr:act_exist_death_timespan/pr:from,'-1-1')"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="pr:act_exist_death_timespan/pr:from"/>
+					</xsl:otherwise>
+				</xsl:choose>
 			</act_exist_death_timespan_to>
 			<act_social_father_uuid>
 				<xsl:value-of select="pr:act_social_father/pr:act/pr:_uuid"/>
