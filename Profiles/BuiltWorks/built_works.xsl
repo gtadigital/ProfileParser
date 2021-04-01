@@ -163,7 +163,7 @@
 					<oeu_nc_construction_time_span_from>
 						<xsl:choose>
 							<xsl:when test="string-length(pr:oeu_archive_exist_construct_timespan/pr:from) = 4">
-								<xsl:value-of select="concat(pr:oeu_archive_exist_construct_timespan/pr:from,'-1-1')"/>
+								<xsl:value-of select="concat(pr:oeu_archive_exist_construct_timespan/pr:from,'-01-01')"/>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:value-of select="pr:oeu_archive_exist_construct_timespan/pr:from"/>
@@ -173,7 +173,7 @@
 					<oeu_nc_construction_time_span_to>
 						<xsl:choose>
 							<xsl:when test="string-length(pr:oeu_archive_exist_construct_timespan/pr:to) = 4">
-								<xsl:value-of select="concat(pr:oeu_archive_exist_construct_timespan/pr:to,'-1-1')"/>
+								<xsl:value-of select="concat(pr:oeu_archive_exist_construct_timespan/pr:to,'-01-01')"/>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:value-of select="pr:oeu_archive_exist_construct_timespan/pr:to"/>
@@ -200,7 +200,7 @@
 					<oeu_nc_destruction_time_span_from>
 						<xsl:choose>
 							<xsl:when test="string-length(pr:oeu_archive_exist_destruct_timespan/pr:from) = 4">
-								<xsl:value-of select="concat(pr:oeu_archive_exist_destruct_timespan/pr:from,'-1-1')"/>
+								<xsl:value-of select="concat(pr:oeu_archive_exist_destruct_timespan/pr:from,'-01-01')"/>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:value-of select="pr:oeu_archive_exist_destruct_timespan/pr:from"/>
@@ -210,7 +210,7 @@
 					<oeu_nc_destruction_time_span_to>
 						<xsl:choose>
 							<xsl:when test="string-length(pr:oeu_archive_exist_destruct_timespan/pr:to) = 4">
-								<xsl:value-of select="concat(pr:oeu_archive_exist_destruct_timespan/pr:to,'-1-1')"/>
+								<xsl:value-of select="concat(pr:oeu_archive_exist_destruct_timespan/pr:to,'-01-01')"/>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:value-of select="pr:oeu_archive_exist_destruct_timespan/pr:to"/>
