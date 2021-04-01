@@ -186,7 +186,7 @@
 					<ao_production_time_span_from>
 						<xsl:choose>
 							<xsl:when test="string-length(pr:ao_exist_prod_timespan/pr:from) = 4">
-								<xsl:value-of select="concat(pr:ao_exist_prod_timespan/pr:from,'-1-1')"/>
+								<xsl:value-of select="concat(pr:ao_exist_prod_timespan/pr:from,'-01-01')"/>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:value-of select="pr:ao_exist_prod_timespan/pr:from"/>
@@ -196,7 +196,7 @@
 					<ao_production_time_span_to>
 						<xsl:choose>
 							<xsl:when test="string-length(pr:ao_exist_prod_timespan/pr:to) = 4">
-								<xsl:value-of select="concat(pr:ao_exist_prod_timespan/pr:to,'-1-1')"/>
+								<xsl:value-of select="concat(pr:ao_exist_prod_timespan/pr:to,'-01-01')"/>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:value-of select="pr:ao_exist_prod_timespan/pr:to"/>
@@ -218,7 +218,7 @@
 					<ao_destruction_time_span_from>
 						<xsl:choose>
 							<xsl:when test="string-length(pr:ao_exist_destr_timespan/pr:from) = 4">
-								<xsl:value-of select="concat(pr:ao_exist_destr_timespan/pr:from,'-1-1')"/>
+								<xsl:value-of select="concat(pr:ao_exist_destr_timespan/pr:from,'-01-01')"/>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:value-of select="pr:ao_exist_destr_timespan/pr:from"/>
@@ -228,7 +228,7 @@
 					<ao_destruction_time_span_to>
 						<xsl:choose>
 							<xsl:when test="string-length(pr:ao_exist_destr_timespan/pr:to) = 4">
-								<xsl:value-of select="concat(pr:ao_exist_destr_timespan/pr:to,'-1-1')"/>
+								<xsl:value-of select="concat(pr:ao_exist_destr_timespan/pr:to,'-01-01')"/>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:value-of select="pr:ao_exist_destr_timespan/pr:to"/>
