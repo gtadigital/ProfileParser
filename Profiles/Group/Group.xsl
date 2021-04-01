@@ -51,7 +51,7 @@
 							<act_nc_altname_timespan_from>
 								<xsl:choose>
 									<xsl:when test="string-length(pr:act_nc_altname_timespan/pr:from) = 4">
-										<xsl:value-of select="concat(pr:act_nc_altname_timespan/pr:from,'-1-1')"/>
+										<xsl:value-of select="concat(pr:act_nc_altname_timespan/pr:from,'-01-01')"/>
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:value-of select="pr:act_nc_altname_timespan/pr:from"/>
@@ -61,7 +61,7 @@
 							<act_nc_altname_timespan_to>
 								<xsl:choose>
 									<xsl:when test="string-length(pr:act_nc_altname_timespan/pr:to) = 4">
-										<xsl:value-of select="concat(pr:act_nc_altname_timespan/pr:to,'-1-1')"/>
+										<xsl:value-of select="concat(pr:act_nc_altname_timespan/pr:to,'-01-01')"/>
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:value-of select="pr:act_nc_altname_timespan/pr:to"/>
@@ -78,7 +78,7 @@
 			<grp_formation_timespan_from>
 				<xsl:choose>
 					<xsl:when test="string-length(pr:grp_exist_formation_date/pr:from) = 4">
-						<xsl:value-of select="concat(pr:grp_exist_formation_date/pr:from,'-1-1')"/>
+						<xsl:value-of select="concat(pr:grp_exist_formation_date/pr:from,'-01-01')"/>
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:value-of select="pr:grp_exist_formation_date/pr:from"/>
@@ -88,7 +88,7 @@
 			<grp_formation_timespan_to>
 				<xsl:choose>
 					<xsl:when test="string-length(pr:grp_exist_formation_date/pr:to) = 4">
-						<xsl:value-of select="concat(pr:grp_exist_formation_date/pr:to,'-1-1')"/>
+						<xsl:value-of select="concat(pr:grp_exist_formation_date/pr:to,'-01-01')"/>
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:value-of select="pr:grp_exist_formation_date/pr:to"/>
@@ -101,7 +101,7 @@
 			<grp_dissolution_time_span_from>
 				<xsl:choose>
 					<xsl:when test="string-length(pr:grp_exist_dissolution_date/pr:from) = 4">
-						<xsl:value-of select="concat(pr:grp_exist_dissolution_date/pr:from,'-1-1')"/>
+						<xsl:value-of select="concat(pr:grp_exist_dissolution_date/pr:from,'-01-01')"/>
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:value-of select="pr:grp_exist_dissolution_date/pr:from"/>
@@ -111,7 +111,7 @@
 			<grp_dissolution_time_span_to>
 				<xsl:choose>
 					<xsl:when test="string-length(pr:grp_exist_dissolution_date/pr:to) = 4">
-						<xsl:value-of select="concat(pr:grp_exist_dissolution_date/pr:to,'-1-1')"/>
+						<xsl:value-of select="concat(pr:grp_exist_dissolution_date/pr:to,'-01-01')"/>
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:value-of select="pr:grp_exist_dissolution_date/pr:to"/>
