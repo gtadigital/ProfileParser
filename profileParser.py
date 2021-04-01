@@ -1,6 +1,5 @@
 # author: ETH Zurich, gta digital, Matteo Lorenzini
 # license: please refer to the license.txt file in our git repository (https://github.com/gtadigital/ProfileParser)
-
 import os
 import lxml.etree as ET
 import argparse
@@ -18,8 +17,9 @@ if __name__ == "__main__":
     myXslt = args.myXslt
 
     for root, dirs, files in os.walk(myFile):
-        print("Start process")
         for item in files:
+            print (len([name for name in os.listdir('.') if os.path.isfile(name)]))
+            print("Start process")
             if item.endswith(('.xml')):
                 dom = ET.parse( root + "/" + item)
                 xslt = ET.parse(myXslt)
