@@ -15,6 +15,7 @@
 			<xsl:apply-templates select="@*|node()" mode="copy-no-namespaces"/>
 		</xsl:copy>
 	</xsl:template>
+	<xsl:template match="pr:do"/>
 	<xsl:template match="pr:objects/pr:ao">
 		<entry>
 			<!-- UUID -->
