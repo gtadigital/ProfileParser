@@ -31,9 +31,9 @@ if __name__ == "__main__":
                 infile = (ET.tostring(newdom, pretty_print=True, encoding='utf-8'))
                 outfile = open(myOutput + item, 'wb')
                 outfile.write(infile)
-                #print(index, item)
+                
                 print(("File nr:"),index, ("id:"),item,emojize("has been processed:thumbs_up:"))
             else: 
-                #print("Something went wrong")
+                
                 print(("File nr:"),index, ("id:"),item,emojize("has not been processed:thumbs_down:"))
     print(emojize("Process ended:check_mark_button:"))
