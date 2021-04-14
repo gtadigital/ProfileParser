@@ -18,6 +18,13 @@
         </xsl:copy>
     </xsl:template>
     <xsl:template match="pr:objects/pr:pl">
+	<xsl:variable name="wikidata" select="pr:pl_nc_identifier_wikidata" />
+	<xsl:variable name="tgn" select="pr:pl_nc_identifier_tgn" />
+	<xsl:variable name="geonames" select="pr:pl_nc_identifier_geonames" />
+	<xsl:variable name="gnd" select="pr:pl_nc_identifier_gnd" />
+	<xsl:variable name="dbpedia" select="pr:pl_nc_identifier_dbpedia" />
+	<xsl:variable name="viaf" select="pr:pl_nc_identifier_viaf" />
+	
         <entry>
             <plIdentifier_uuid>
                 <xsl:value-of select="pr:_uuid"/>
@@ -84,7 +91,8 @@
                         select="pr:pl_nc_identifier_tgn_provider/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
             </plIdentifier_tgn_provider>
             <plIdentifier_tgnURI>
-                <xsl:value-of select="pr:pl_nc_identifier_tgn"/>
+                <!--<xsl:value-of select="pr:pl_nc_identifier_tgn"/>-->
+				<xsl:value-of select="substring-after($tgn,'http://vocab.getty.edu/tgn/')"/>
             </plIdentifier_tgnURI>
             <!--Wikidata-->
             <plIdentifier_wikidata_provider>
@@ -92,7 +100,8 @@
                         select="pr:pl_nc_identifier_wikidata_provider/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
             </plIdentifier_wikidata_provider>
             <plIdentifier_wikidataURI>
-                <xsl:value-of select="pr:pl_nc_identifier_wikidata"/>
+                <!--<xsl:value-of select="pr:pl_nc_identifier_wikidata"/>-->
+				<xsl:value-of select="substring-after($wikidata,'https://www.wikidata.org/entity/')"/>
             </plIdentifier_wikidataURI>
             <!--Geonames-->
             <plIdentifier_geonames_provider>
@@ -100,7 +109,8 @@
                         select="pr:pl_nc_identifier_geonames_provider/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
             </plIdentifier_geonames_provider>
             <plIdentifier_geonamesURI>
-                <xsl:value-of select="pr:pl_nc_identifier_geonames"/>
+                <!--<xsl:value-of select="pr:pl_nc_identifier_geonames"/>-->
+				<xsl:value-of select="substring-after($geonames,'https://www.geonames.org/')"/>
             </plIdentifier_geonamesURI>
             <!--GND-->
             <plIdentifier_gnd_provider>
@@ -108,7 +118,8 @@
                         select="pr:pl_nc_identifier_gnd_provider/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
             </plIdentifier_gnd_provider>
             <plIdentifier_gndURI>
-                <xsl:value-of select="pr:pl_nc_identifier_gnd"/>
+                <!--<xsl:value-of select="pr:pl_nc_identifier_gnd"/>-->
+				<xsl:value-of select="substring-after($gnd,'http://d-nb.info/gnd/')"/>
             </plIdentifier_gndURI>
             <!--DbPedia-->
             <plIdentifier_dbpedia_provider>
@@ -116,7 +127,8 @@
                         select="pr:pl_nc_identifier_dbpedia_provider/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
             </plIdentifier_dbpedia_provider>
             <plIdentifier_dbpediaURI>
-                <xsl:value-of select="pr:pl_nc_identifier_dbpedia"/>
+                <!--<xsl:value-of select="pr:pl_nc_identifier_dbpedia"/>-->
+				<xsl:value-of select="substring-after($dbpedia,'http://dbpedia.org/resource/')"/>
             </plIdentifier_dbpediaURI>
             <!--VIAF-->
             <plIdentifier_viaf_provider>
@@ -124,7 +136,8 @@
                         select="pr:pl_nc_identifier_viaf_provider/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
             </plIdentifier_viaf_provider>
             <plIdentifier_viafURI>
-                <xsl:value-of select="pr:pl_nc_identifier_viaf"/>
+                <!--<xsl:value-of select="pr:pl_nc_identifier_viaf"/>-->
+				<xsl:value-of select="substring-after($viaf,'http://viaf.org/viaf/')"/>
             </plIdentifier_viafURI>
         </entry>
     </xsl:template>
