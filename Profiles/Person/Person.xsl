@@ -20,6 +20,11 @@
 		</xsl:copy>
 	</xsl:template>
 	<xsl:template match="pr:objects/pr:act">
+	<xsl:variable name="wikidata" select="pr:act_nc_identifier_wikidata" />
+	<xsl:variable name="gnd" select="pr:pl_nc_identifier_gnd" />
+	<xsl:variable name="ulan" select="pr:act_nc_identifier_ulan" />
+	<xsl:variable name="sikart" select="pr:act_nc_identifier_sikart" />
+	
 		<entry>
 			<act_type_crm_de>
 				<xsl:value-of select="pr:act_type_crm/pr:act_type_crm/pr:_standard/pr:de-DE"/>
@@ -88,25 +93,29 @@
 				</xsl:element>
 			</xsl:for-each>
 			<act_nc_identifier_gnd>
-				<xsl:value-of select="pr:act_nc_identifier_gnd"/>
+				<!--<xsl:value-of select="pr:act_nc_identifier_gnd"/>-->
+				<xsl:value-of select="substring-after($gnd,'https://d-nb.info/gnd/')"/>
 			</act_nc_identifier_gnd>
 			<generic_contributor_sari_gnd_uuid>
 				<xsl:value-of select="pr:act_nc_identifier_gnd_prov/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
 			</generic_contributor_sari_gnd_uuid>
 			<act_nc_identifier_sikart>
-				<xsl:value-of select="pr:act_nc_identifier_sikart"/>
+				<!--<xsl:value-of select="pr:act_nc_identifier_sikart"/>-->
+			<xsl:value-of select="substring-after($sikart,'http://www.sikart.ch/KuenstlerInnen.aspx?id=')"/>
 			</act_nc_identifier_sikart>
 			<generic_contributor_sari_sikart_uuid>
 				<xsl:value-of select="pr:act_nc_identifier_sikart_prov/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
 			</generic_contributor_sari_sikart_uuid>
 			<act_nc_identifier_ulan>
-				<xsl:value-of select="pr:act_nc_identifier_ulan"/>
+				<!--<xsl:value-of select="pr:act_nc_identifier_ulan"/>-->
+				<xsl:value-of select="substring-after($ulan,'http://vocab.getty.edu/ulan/')"/>
 			</act_nc_identifier_ulan>
 			<generic_contributor_sari_ulan_uuid>
 				<xsl:value-of select="pr:act_nc_identifier_ulan_prov/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
 			</generic_contributor_sari_ulan_uuid>
 			<act_nc_identifier_wikidata>
-				<xsl:value-of select="pr:act_nc_identifier_wikidata"/>
+				<!--<xsl:value-of select="pr:act_nc_identifier_wikidata"/>-->
+				<xsl:value-of select="substring-after($wikidata,'https://www.wikidata.org/wiki/')"/>
 			</act_nc_identifier_wikidata>
 			<generic_contributor_sari_wikidata_uuid>
 				<xsl:value-of select="pr:act_nc_identifier_wikidata__prov/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
