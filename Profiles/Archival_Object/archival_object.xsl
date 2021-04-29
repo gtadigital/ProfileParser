@@ -495,6 +495,18 @@
 					<xsl:value-of select="pr:ao_actorrelation_former_ownership_note/pr:en-US"/>
 				</ao_former_ownership_note_en>
 			</xsl:element>
+			<xsl:element name ="ao_entry_tax">
+				<xsl:for-each select="pr:_nested__ao__tax_transurbicide/pr:ao__tax_transurbicide">
+					<xsl:element name ="ao_entry_tax_transurbicide">
+					<tax_transurbicide_label>
+					<xsl:value-of select="pr:tax_transurbicide/pr:tax_transurbicide/pr:tax_transurbicide_name/pr:en-US"/>
+					</tax_transurbicide_label>
+						<tax_transurbicide_uri>
+					<xsl:value-of select="pr:tax_transurbicide/pr:tax_transurbicide/pr:tax_transurbicide_uri_gta_digital"/>
+					</tax_transurbicide_uri>
+					</xsl:element>
+				</xsl:for-each>
+			</xsl:element>
 		</entry>
 	</xsl:template>
 </xsl:stylesheet>
