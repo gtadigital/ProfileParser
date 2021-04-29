@@ -1,0 +1,61 @@
+<xsl:stylesheet version="1.0" 
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
+<xsl:strip-space elements="*"/>
+
+<!-- identity transform -->
+<xsl:template match="@*|node()">
+    <xsl:copy>
+        <xsl:apply-templates select="@*|node()"/>
+    </xsl:copy>
+</xsl:template>
+
+<xsl:template match="ao_production_time_span_from[string-length(.) = 4]">
+  <xsl:copy>
+    <xsl:value-of select="concat(., '-01-01')"/>
+  </xsl:copy>
+</xsl:template>
+
+<xsl:template match="ao_production_time_span_to[string-length(.) = 4]">
+  <xsl:copy>
+    <xsl:value-of select="concat(., '-01-01')"/>
+  </xsl:copy>
+</xsl:template>
+
+<xsl:template match="ao_destruction_time_span_from[string-length(.) = 4]">
+  <xsl:copy>
+    <xsl:value-of select="concat(., '-01-01')"/>
+  </xsl:copy>
+</xsl:template>
+
+<xsl:template match="ao_destruction_time_span_to[string-length(.) = 4]">
+  <xsl:copy>
+    <xsl:value-of select="concat(., '-01-01')"/>
+  </xsl:copy>
+</xsl:template>
+
+<xsl:template match="ao_correspondance_time_span_from_earliest[string-length(.) = 4]">
+  <xsl:copy>
+    <xsl:value-of select="concat(., '-01-01')"/>
+  </xsl:copy>
+</xsl:template>
+
+<xsl:template match="ao_correspondance_time_span_from_latest[string-length(.) = 4]">
+  <xsl:copy>
+    <xsl:value-of select="concat(., '-01-01')"/>
+  </xsl:copy>
+</xsl:template>
+
+<xsl:template match="ao_correspondance_time_span_to_earliest[string-length(.) = 4]">
+  <xsl:copy>
+    <xsl:value-of select="concat(., '-01-01')"/>
+  </xsl:copy>
+</xsl:template>
+
+<xsl:template match="ao_correspondance_time_span_to_latest[string-length(.) = 4]">
+  <xsl:copy>
+    <xsl:value-of select="concat(., '-01-01')"/>
+  </xsl:copy>
+</xsl:template>
+
+</xsl:stylesheet>
