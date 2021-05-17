@@ -41,10 +41,8 @@ Thumbs.db
 # Folders #
 ######################
 
-<<<<<<< HEAD
 virtual/
-=======
-virtual/
+parser/
 __pycache__
 
 
@@ -62,4 +60,3 @@ Profiles/Person/target_files/
 
 Profiles/Place/source_files/
 Profiles/Place/target_files/
->>>>>>> python
