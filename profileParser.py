@@ -4,6 +4,7 @@ import os
 import lxml.etree as ET
 import argparse
 from emoji import emojize
+from alive_progress import alive_bar
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='XMLProfiles Parser')
@@ -28,41 +29,45 @@ if __name__ == "__main__":
         index_dir+=1
     os.makedirs(current_dir)
     file_list= []   #in this list we will store the elements of the current subdirectory. This helps us to keep track of its current size
-
+    
+    
+    tifCounter = 0
     for root, dirs, files in os.walk(myFile):
-        index = 0
-        
-        for item in files:
-            
-            index += 1
-            
-            if item.endswith(('.xml')):
-                dom = ET.parse( root + "/" + item)
-                xslt = ET.parse(myXslt)
-                transform = ET.XSLT(xslt)
-                newdom = transform(dom)
-                infile = (ET.tostring(newdom, pretty_print=True, encoding='utf-8'))
+        for file in files:    
+            if file.endswith('.xml'):
+                tifCounter += 1
+    with alive_bar(tifCounter) as bar:
+        for root, dirs, files in os.walk(myFile):
+                   
+            for item in files:
+                
+                #index += 1
+                
+                if item.endswith(('.xml')):
+                    dom = ET.parse( root + "/" + item)
+                    xslt = ET.parse(myXslt)
+                    transform = ET.XSLT(xslt)
+                    newdom = transform(dom)
+                    infile = (ET.tostring(newdom, pretty_print=True, encoding='utf-8'))
 
-                #add new file to file_list and check wether the size of current subdirectory would now exceed 8MB
-                #if yes: create new subdirectory, update current_dir variable (s.t. the new file will be added to the new subdirectory), reset file_list
-                file_list.append(infile)
-                if sum(len(f) for f in file_list) > 8000000:
-                    current_dir = myOutput+ "//Folder"+ str(index_dir) + "//"
-                    index_dir+=1
-                    while os.path.exists(current_dir):
+                    #add new file to file_list and check wether the size of current subdirectory would now exceed 8MB
+                    #if yes: create new subdirectory, update current_dir variable (s.t. the new file will be added to the new subdirectory), reset file_list
+                    file_list.append(infile)
+                    if sum(len(f) for f in file_list) > 8000000:
                         current_dir = myOutput+ "//Folder"+ str(index_dir) + "//"
                         index_dir+=1
-                    os.makedirs(current_dir)
-                    file_list=[]
-                    file_list.append(infile)
+                        while os.path.exists(current_dir):
+                            current_dir = myOutput+ "//Folder"+ str(index_dir) + "//"
+                            index_dir+=1
+                        os.makedirs(current_dir)
+                        file_list=[]
+                        file_list.append(infile)
 
-                outfile = open(current_dir + item, 'wb')
-                outfile.write(infile)
-
+                    outfile = open(current_dir + item, 'wb')
+                    outfile.write(infile)
                 
-                print(("File nr:"),index, ("id:"),item,emojize("has been processed:thumbs_up:"))
-            else: 
+            bar()          
+                 
                 
-                print(("File nr:"),index, ("id:"),item,emojize("has not been processed:thumbs_down:"))
     print(emojize("Process ended:check_mark_button:"))
 
