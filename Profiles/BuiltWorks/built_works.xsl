@@ -224,6 +224,37 @@
 					</oeu_nc_destruction_time_span_uncertainity>
 				</xsl:element>
 			</xsl:element>
+			<!-- Isler specific name -->
+			<xsl:element name="oeu_isler_name">
+				<xsl:value-of select="pr:oeu_isler_name/pr:de-DE"/>
+			</xsl:element>
+			<!-- Isler specific description -->
+			<xsl:element name="oeu_isler_descr_description">
+				<xsl:value-of select="pr:oeu_isler_descr_description/pr:de-DE"/>
+			</xsl:element>
+			<!-- Isler specific note -->
+			<xsl:element name="oeu_isler_descr_notes">
+				<xsl:value-of select="pr:oeu_isler_descr_notes/pr:de-DE"/>
+			</xsl:element>
+			<!-- Isler shell data -->
+			<xsl:element name="_nested__oeu__oeu_isler_subst_shell">
+				<xsl:for-each select="pr:_nested__oeu__oeu_isler_subst_shell/pr:oeu__oeu_isler_subst_shell">
+					<xsl:element name="shell_info">
+						<xsl:element name="oeu__isler_subst_shell_nr">
+							<xsl:value-of select="pr:oeu__isler_subst_shell_nr"/>
+						</xsl:element>
+						<xsl:element name="typology_shell_name">
+							<xsl:value-of select="pr:oeu_isler_subst_shell_type/pr:typology_shell/pr:typology_shell_name/pr:de-DE"/>
+						</xsl:element>
+						<xsl:element name="oeu_isler_subst_shell_measurement_value">
+							<xsl:value-of select="pr:oeu_isler_subst_shell_measurement_value"/>
+						</xsl:element>
+						<xsl:element name="_nested__oeu__oeu_isler_subst_shell__oeu_isler_subst_shell_materials">
+							<xsl:value-of select="pr:_nested__oeu__oeu_isler_subst_shell__oeu_isler_subst_shell_materials/pr:oeu__oeu_isler_subst_shell__oeu_isler_subst_shell_materials/pr:oeu_isler_subst_shell_material/pr:generic_materials/pr:generic_material_name/pr:de-DE"/>
+						</xsl:element>
+					</xsl:element>
+				</xsl:for-each>
+			</xsl:element>
 		</entry>
 	</xsl:template>
 </xsl:stylesheet>
