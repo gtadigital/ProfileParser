@@ -50,7 +50,7 @@ $ source .venv/bin/activate
 
 ```bash
 # Type the command
-$ pip install -r requirements.txtl
+$ pip install -r requirements.txt
 ```
    
 * Run the script with arguments:
