@@ -1,23 +1,23 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- author: ETH Zurich, gta digital, Matteo Lorenzini -->
 <!-- license: please refer to the license.txt file in our git repository (https://github.com/gtadigital/XSLT) -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:pr="https://schema.easydb.de/EASYDB/1.0/objects/"
-                version="1.0"
-                exclude-result-prefixes="pr">
+				xmlns:pr="https://schema.easydb.de/EASYDB/1.0/objects/"
+				version="1.0"
+				exclude-result-prefixes="pr">
 	<xsl:output method="xml"
-	            indent="yes"
-	            encoding="UTF-8"/>
+				indent="yes"
+				encoding="UTF-8"/>
 	<xsl:template match="/">
 		<root>
 			<xsl:apply-templates/>
 		</root>
 	</xsl:template>
 	<xsl:template match="@*|node()"
-	              mode="copy-no-namespaces">
+				  mode="copy-no-namespaces">
 		<xsl:copy>
 			<xsl:apply-templates select="@*|node()"
-			                     mode="copy-no-namespaces"/>
+								 mode="copy-no-namespaces"/>
 		</xsl:copy>
 	</xsl:template>
 	<xsl:template match="pr:do"/>
@@ -30,6 +30,13 @@
 			<ao_record_uuid>
 				<xsl:value-of select="pr:_uuid"/>
 			</ao_record_uuid>
+			<_id>
+			<xsl:value-of select="pr:_id"/>
+			</_id>
+			<!-- PARENT ID -->
+			<_id_parent>
+			<xsl:value-of select="pr:_id_parent"/>
+			</_id_parent>
 			<!-- MODIFICATION -->
 			<ao_last_modified>
 				<xsl:value-of select="pr:_last_modified"/>
@@ -38,27 +45,6 @@
 			<ao_created>
 				<xsl:value-of select="pr:_created"/>
 			</ao_created>
-			<!-- TAG 
-			<xsl:element name="ao_tag_name">
-				<ao_tag_de>
-					<xsl:value-of select="pr:tags/pr:tag[2]/pr:name/pr:de-DE"/>
-				</ao_tag_de>
-				<ao_nc_tag_en>
-					<xsl:value-of select="pr:tags/pr:tag[2]/pr:name/pr:en-US"/>
-				</ao_nc_tag_en>
-                </xsl:element>
-            
-      <xsl:element name="ao_tag_name">
-        <xsl:for-each select="pr:tags/pr:tag">
-          <ao_tag_de>
-            <xsl:value-of select="pr:name/pr:de-DE"/>
-          </ao_tag_de>
-          <ao_nc_tag_en>
-            <xsl:value-of select="pr:name/pr:en-US"/>
-          </ao_nc_tag_en>
-        </xsl:for-each>
-      </xsl:element>
-	  -->
 			<!--Hierarchy-->
 			<xsl:element name="ao_type_isag">
 				<ao_type_isad_uri>
@@ -352,8 +338,13 @@
 						<ao_cover_actor_uuid>
 							<xsl:value-of select="pr:ao_cover_actors/pr:act/pr:_uuid"/>
 						</ao_cover_actor_uuid>
+						<!--
 						<ao_cover_actor_type>
 							<xsl:value-of select="pr:ao_cover_actors/pr:act/pr:act_type_crm/pr:act_type_crm/pr:act_type_crm_name"/>
+						</ao_cover_actor_type>
+						-->
+						<ao_cover_actor_type>
+							<xsl:value-of select="pr:ao_cover_actors/pr:act/pr:act_type_crm/pr:act_type_crm/pr:_standard/pr:de-DE"/>
 						</ao_cover_actor_type>
 					</xsl:element>
 					<xsl:element name="ao_cover_actor_role">
@@ -371,13 +362,13 @@
 			<!-- Coverage Oeuvres -->
 			<xsl:element name="ao_cover_oeuvres">
 				<xsl:for-each select="pr:_nested__ao__ao_cover_oeuvres/pr:ao__ao_cover_oeuvres">
-					<xsl:element name="ao_cover_actors_type">
+					<xsl:element name="ao_cover_oeuvre_type">
 						<ao_cover_oeuvres_uuid>
 							<xsl:value-of select="pr:ao_cover_oeuvres/pr:oeu/pr:_uuid"/>
 						</ao_cover_oeuvres_uuid>
 					</xsl:element>
 					<xsl:element name="ao_cover_oeuvres_role">
-						<xsl:for-each select="pr:ao_cover_oeuvre_role/pr:generic_reference">
+						<xsl:for-each select="pr:ao_cover_oeuvre_role/pr:generic_reference_types">
 							<ao_cover_oeuvres_type_de>
 								<xsl:value-of select="pr:generic_reference_name/pr:de-DE"/>
 							</ao_cover_oeuvres_type_de>
