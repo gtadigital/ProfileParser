@@ -15,7 +15,7 @@ The ProfileParser provides the following harmonization schema:
 ## Prerequisites:
 
 1. [Python3](https://www.python.org/download/releases/3.0/)
-2. [Lxml library](https://lxml.de)
+2. Virtual Environment
 
 ## How To Use:
 
@@ -33,12 +33,24 @@ $ git clone https://github.com/gtadigital/ProfileParser.git
 # Go into the repository
 $ cd ProfileParser
 ```
-
-* Install ***lxml*** library (If needed):
+* Install Virtual Environment
 
 ```bash
-# Go into the repository
-$ pip3 install lxml
+# Type the command 
+$ python3 -m venv .venv
+```
+* Activate the Virtual Environment
+
+```bash
+# Type the command
+$ source .venv/bin/activate
+```
+
+* Install the dependencies
+
+```bash
+# Type the command
+$ pip install -r requirements.txtl
 ```
    
 * Run the script with arguments:
