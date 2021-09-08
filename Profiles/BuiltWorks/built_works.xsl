@@ -2,22 +2,22 @@
 <!-- author: ETH Zurich, gta digital, Matteo Lorenzini -->
 <!-- license: please refer to the license.txt file in our git repository (https://github.com/gtadigital/XSLT) -->
 <xsl:stylesheet version="1.0"
-                xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:pr="https://schema.easydb.de/EASYDB/1.0/objects/"
-                exclude-result-prefixes="pr">
+				xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+				xmlns:pr="https://schema.easydb.de/EASYDB/1.0/objects/"
+				exclude-result-prefixes="pr">
 	<xsl:output method="xml"
-	            indent="yes"
-	            encoding="UTF-8"/>
+				indent="yes"
+				encoding="UTF-8"/>
 	<xsl:template match="/">
 		<root>
 			<xsl:apply-templates/>
 		</root>
 	</xsl:template>
 	<xsl:template match="@*|node()"
-	              mode="copy-no-namespaces">
+				  mode="copy-no-namespaces">
 		<xsl:copy>
 			<xsl:apply-templates select="@*|node()"
-			                     mode="copy-no-namespaces"/>
+								 mode="copy-no-namespaces"/>
 		</xsl:copy>
 	</xsl:template>
 	<xsl:template match="pr:objects/pr:oeu">
@@ -243,6 +243,9 @@
 						<xsl:element name="oeu__isler_subst_shell_nr">
 							<xsl:value-of select="pr:oeu__isler_subst_shell_nr"/>
 						</xsl:element>
+						<xsl:element name="typology_shell_uuid">
+							<xsl:value-of select="pr:oeu_isler_subst_shell_type/pr:typology_shell/pr:_uuid"/>
+						</xsl:element>
 						<xsl:element name="typology_shell_name">
 							<xsl:value-of select="pr:oeu_isler_subst_shell_type/pr:typology_shell/pr:typology_shell_name/pr:de-DE"/>
 						</xsl:element>
@@ -252,9 +255,13 @@
 						<xsl:element name="_nested__oeu__oeu_isler_subst_shell__oeu_isler_subst_shell_materials">
 							<xsl:value-of select="pr:_nested__oeu__oeu_isler_subst_shell__oeu_isler_subst_shell_materials/pr:oeu__oeu_isler_subst_shell__oeu_isler_subst_shell_materials/pr:oeu_isler_subst_shell_material/pr:generic_materials/pr:generic_material_name/pr:de-DE"/>
 						</xsl:element>
+						<xsl:element name="_nested__oeu__oeu_isler_subst_shell__oeu_isler_subst_shell_materials_uuid">
+							<xsl:value-of select="pr:_nested__oeu__oeu_isler_subst_shell__oeu_isler_subst_shell_materials/pr:oeu__oeu_isler_subst_shell__oeu_isler_subst_shell_materials/pr:oeu_isler_subst_shell_material/pr:generic_materials/pr:_uuid"/>
+						</xsl:element>
 					</xsl:element>
 				</xsl:for-each>
 			</xsl:element>
 		</entry>
 	</xsl:template>
 </xsl:stylesheet>
+
