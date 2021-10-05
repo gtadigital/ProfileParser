@@ -31,12 +31,21 @@ if __name__ == "__main__":
     file_list= []   #in this list we will store the elements of the current subdirectory. This helps us to keep track of its current size
     
     
-    tifCounter = 0
-    for root, dirs, files in os.walk(myFile):
-        for file in files:    
-            if file.endswith('.xml'):
-                tifCounter += 1
-    with alive_bar(tifCounter) as bar:
+    totalFiles = 0
+    totalDir = 0
+
+    for base, dirs, files in os.walk(myFile):
+        #print('Searching in : ',base)
+        for directories in dirs:
+            totalDir += 1
+        for Files in files:
+            totalFiles += 1
+
+
+    print('Total number of files',totalFiles)
+    print('Total Number of directories',totalDir)
+    print('Total:',(totalDir + totalFiles))
+    with alive_bar(totalFiles) as bar:
         for root, dirs, files in os.walk(myFile):
                    
             for item in files:
