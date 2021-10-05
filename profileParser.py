@@ -33,6 +33,8 @@ if __name__ == "__main__":
     
     totalFiles = 0
     totalDir = 0
+    totalFilesOut = 0
+    totalDirOut = 0
 
     for base, dirs, files in os.walk(myFile):
         #print('Searching in : ',base)
@@ -49,7 +51,7 @@ if __name__ == "__main__":
         for root, dirs, files in os.walk(myFile):
                    
             for item in files:
-                
+                print('Processing',item)
                 #index += 1
                 
                 if item.endswith(('.xml')):
@@ -77,6 +79,16 @@ if __name__ == "__main__":
                 
             bar()          
                  
-                
+    for base, dirs, files in os.walk(myOutput):
+        #print('Searching in : ',base)
+        for directories in dirs:
+            totalDirOut += 1
+        for Files in files:
+            totalFilesOut += 1
+
+
+    print('Total number of files processed',totalFilesOut)
+    print('Total Number of directories created',totalDirOut)
+    print('Total:',(totalDirOut + totalFilesOut))
     print(emojize("Process ended:check_mark_button:"))
 
