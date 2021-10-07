@@ -6,6 +6,7 @@ import argparse
 from emoji import emojize
 from alive_progress import alive_bar
 
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='XMLProfiles Parser')
     parser.add_argument('--sourcePath', dest="myFile",help='path of the source files')
@@ -17,8 +18,6 @@ if __name__ == "__main__":
     myOutput = args.myOutput
     myXslt = args.myXslt
     
-
-    print(emojize("Process started:rocket:"))
 
     #we want to store the output files in subdirectories of maximal 8MB
     #we create the first subdirectory
@@ -47,11 +46,12 @@ if __name__ == "__main__":
     print('Total number of files',totalFiles)
     print('Total Number of directories',totalDir)
     print('Total:',(totalDir + totalFiles))
+    print(emojize("Process started:rocket:"))
     with alive_bar(totalFiles) as bar:
         for root, dirs, files in os.walk(myFile):
                    
             for item in files:
-                print('Processing',item)
+                
                 #index += 1
                 
                 if item.endswith(('.xml')):
@@ -59,8 +59,9 @@ if __name__ == "__main__":
                     xslt = ET.parse(myXslt)
                     transform = ET.XSLT(xslt)
                     newdom = transform(dom)
-                    infile = (ET.tostring(newdom, pretty_print=True, encoding='utf-8'))
+                    result = len(newdom.xpath(".//entry"))
 
+                    infile = (ET.tostring(newdom, pretty_print=True, encoding='utf-8'))
                     #add new file to file_list and check wether the size of current subdirectory would now exceed 8MB
                     #if yes: create new subdirectory, update current_dir variable (s.t. the new file will be added to the new subdirectory), reset file_list
                     file_list.append(infile)
@@ -73,22 +74,27 @@ if __name__ == "__main__":
                         os.makedirs(current_dir)
                         file_list=[]
                         file_list.append(infile)
+                    
+
 
                     outfile = open(current_dir + item, 'wb')
                     outfile.write(infile)
-                
+                    
             bar()          
-                 
-    for base, dirs, files in os.walk(myOutput):
+    print(emojize("Process ended:check_mark_button:"))            
+    for base, dirs, files in os.walk(myOutput, topdown=True):
         #print('Searching in : ',base)
         for directories in dirs:
             totalDirOut += 1
         for Files in files:
             totalFilesOut += 1
-
-
+            
+            
     print('Total number of files processed',totalFilesOut)
     print('Total Number of directories created',totalDirOut)
     print('Total:',(totalDirOut + totalFilesOut))
-    print(emojize("Process ended:check_mark_button:"))
+    
+    
 
+    
+    
