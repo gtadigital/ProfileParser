@@ -1,0 +1,943 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects xmlns="https://schema.easydb.de/EASYDB/1.0/objects/" instance="gta_collections" uuid="8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5" base-schema="256" user-schema="303" timestamp="2021-11-03T10:46:07+01:00">
+  <do>
+    <_id>159815</_id>																											<!--  do_id  // use to create identifier --> 
+    <_system_object_id>810376</_system_object_id>																				<!--  do_system_object_id  --> 
+    <_version>5</_version>
+    <_uuid>6568a4a2-bda0-4972-b09a-1b462be1855a</_uuid>
+    <_objecttype>do</_objecttype>
+    <_global_object_id>810376@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+    <_system_object_id>810376</_system_object_id>
+    <pool id="38">
+      <en-US>gta Digital</en-US>
+      <de-DE>gta Digital</de-DE>
+    </pool>
+    <_standard>
+      <de-DE>#810376</de-DE>
+    </_standard>
+    <_standard-eas>
+      <files>
+        <file>
+          <eas-id>189002</eas-id>
+          <preferred>true</preferred>
+          <status>done</status>
+          <class>image</class>
+          <extension>png</extension>
+          <name/>
+          <original_filename>TEST_IMAGE.png</original_filename>
+          <compiled/>
+          <eas_parent_id/>
+          <date_inserted>2021-11-03T09:45:39Z</date_inserted>
+          <date_created/>
+          <date_uploaded>2021-11-03T09:34:29Z</date_uploaded>
+          <filesize>2943235</filesize>
+          <technical_metadata>
+            <file_sha224_checksum>f4e941400082488e4613c94fcb52661ed782c52d82d1ea8eae0daa1a</file_sha224_checksum>
+            <width>1797</width>
+            <height>774</height>
+            <format>landscape</format>
+            <max_dimension>1797</max_dimension>
+            <aspect_ratio>2.3217054263565893</aspect_ratio>
+            <colordepth>32</colordepth>
+            <colorspace>rgb</colorspace>
+            <colorprofile>Display</colorprofile>
+          </technical_metadata>
+          <versions>
+            <version name="small">
+              <filesize>271044</filesize>
+              <height>250</height>
+              <has_more_jobs>0</has_more_jobs>
+              <class>image</class>
+              <width>580</width>
+              <url>https://collections.gta.arch.ethz.ch/eas/partitions-inline/2/0/189000/189002/489ea9f301b19edfb262ff7f15cd4d71378f584b/image/png</url>
+              <status>done</status>
+              <extension>png</extension>
+              <aspect_ratio>2.3199999332427979</aspect_ratio>
+              <download_url>https://collections.gta.arch.ethz.ch/eas/partitions/2/0/189000/189002/489ea9f301b19edfb262ff7f15cd4d71378f584b/image/png/TEST_IMAGE-small.png</download_url>
+              <_download_allowed>0</_download_allowed>
+              <deep_link_url>https://collections.gta.arch.ethz.ch/api/v1/objects/uuid/6568a4a2-bda0-4972-b09a-1b462be1855a/file/id/189002/file_version/name/small/disposition/inline</deep_link_url>
+            </version>
+          </versions>
+        </file>
+      </files>
+    </_standard-eas>
+    <_exported_at>2021-11-03T10:46:07+01:00</_exported_at>
+    <_mask>do__generic_import</_mask>
+    <_last_modified>2021-11-03T09:45:39Z</_last_modified>
+    <_created>2021-11-03T09:32:49Z</_created>
+    <tags/>
+    <collections/>
+    <_urls>
+      <url type="deep-link">https://collections.gta.arch.ethz.ch/api/v1/objects/uuid/6568a4a2-bda0-4972-b09a-1b462be1855a</url>
+      <url type="easydb-id">https://collections.gta.arch.ethz.ch/detail/810376</url>
+    </_urls>
+    <do_nc_title type="text_l10n_oneline">
+      <en-US>TEST_IMAGE</en-US>
+    </do_nc_title>
+    <do_nc_format type="text_oneline">PNG</do_nc_format>
+    <do_digitalobject>
+      <files>
+        <file>
+          <eas-id>189002</eas-id>
+          <preferred>true</preferred>
+          <status>done</status>
+          <class>image</class>
+          <extension>png</extension>
+          <name/>
+          <original_filename>TEST_IMAGE.png</original_filename>
+          <compiled>png image, 1797 x 774 @ 32 bit, 2.81 MB</compiled>
+          <eas_parent_id/>
+          <date_inserted>2021-11-03T09:45:39Z</date_inserted>
+          <date_created>2021-11-03T09:34:23+00:00</date_created>
+          <date_uploaded>2021-11-03T09:34:29Z</date_uploaded>
+          <filesize>2943235</filesize>
+          <technical_metadata>
+            <file_sha224_checksum>f4e941400082488e4613c94fcb52661ed782c52d82d1ea8eae0daa1a</file_sha224_checksum>
+            <width>1797</width>
+            <height>774</height>
+            <format>landscape</format>
+            <max_dimension>1797</max_dimension>
+            <aspect_ratio>2.3217054263565893</aspect_ratio>
+            <colordepth>32</colordepth>
+            <colorspace>rgb</colorspace>
+            <colorprofile>Display</colorprofile>
+          </technical_metadata>
+          <versions>
+            <version name="preview">
+              <filesize>833928</filesize>
+              <height>431</height>
+              <has_more_jobs>0</has_more_jobs>
+              <class>image</class>
+              <width>1000</width>
+              <url>https://collections.gta.arch.ethz.ch/eas/partitions-inline/2/0/189000/189002/a1d989d8feaf6a3d4ea9910fe427938eee0b035d/image/png</url>
+              <status>done</status>
+              <extension>png</extension>
+              <aspect_ratio>2.3199999332427979</aspect_ratio>
+              <zoom_url>https://collections.gta.arch.ethz.ch/eas/zoomer/189002/febb0517c7d627b8e7ff1ce006d84bdc?instance=easydb5</zoom_url>
+              <download_url>https://collections.gta.arch.ethz.ch/eas/partitions/2/0/189000/189002/a1d989d8feaf6a3d4ea9910fe427938eee0b035d/image/png/TEST_IMAGE-preview.png</download_url>
+              <_download_allowed>1</_download_allowed>
+              <deep_link_url>https://collections.gta.arch.ethz.ch/api/v1/objects/uuid/6568a4a2-bda0-4972-b09a-1b462be1855a/file/id/189002/file_version/name/preview/disposition/inline</deep_link_url>
+            </version>
+            <version name="small">
+              <filesize>271044</filesize>
+              <height>250</height>
+              <has_more_jobs>0</has_more_jobs>
+              <class>image</class>
+              <width>580</width>
+              <url>https://collections.gta.arch.ethz.ch/eas/partitions-inline/2/0/189000/189002/489ea9f301b19edfb262ff7f15cd4d71378f584b/image/png</url>
+              <status>done</status>
+              <extension>png</extension>
+              <aspect_ratio>2.3199999332427979</aspect_ratio>
+              <download_url>https://collections.gta.arch.ethz.ch/eas/partitions/2/0/189000/189002/489ea9f301b19edfb262ff7f15cd4d71378f584b/image/png/TEST_IMAGE-small.png</download_url>
+              <_download_allowed>1</_download_allowed>
+              <deep_link_url>https://collections.gta.arch.ethz.ch/api/v1/objects/uuid/6568a4a2-bda0-4972-b09a-1b462be1855a/file/id/189002/file_version/name/small/disposition/inline</deep_link_url>
+            </version>
+            <version name="original">
+              <filesize>2943235</filesize>
+              <height>774</height>
+              <has_more_jobs>0</has_more_jobs>
+              <class>image</class>
+              <width>1797</width>
+              <url>https://collections.gta.arch.ethz.ch/eas/partitions-inline/1/0/189000/189002/5797c80a1d2c7460950daed561d424f42b7d4f1e/image/png</url>
+              <status>done</status>
+              <extension>png</extension>
+              <aspect_ratio>2.3210000991821289</aspect_ratio>
+              <compiled>png image, 1797 x 774 @ 32 bit, 2.81 MB</compiled>
+              <date_created>2021-11-03T09:34:23+00:00</date_created>
+              <download_url>https://collections.gta.arch.ethz.ch/eas/partitions/1/0/189000/189002/5797c80a1d2c7460950daed561d424f42b7d4f1e/image/png/TEST_IMAGE.png</download_url>
+              <_download_allowed>1</_download_allowed>
+              <deep_link_url>https://collections.gta.arch.ethz.ch/api/v1/objects/uuid/6568a4a2-bda0-4972-b09a-1b462be1855a/file/id/189002/file_version/name/original/disposition/inline</deep_link_url>
+            </version>
+            <version name="huge">
+              <filesize>3002193</filesize>
+              <height>774</height>
+              <has_more_jobs>0</has_more_jobs>
+              <class>image</class>
+              <width>1797</width>
+              <url>https://collections.gta.arch.ethz.ch/eas/partitions-inline/2/0/189000/189002/af03c7d55316875371366c8febbab1b266999fe3/image/png</url>
+              <status>done</status>
+              <extension>png</extension>
+              <aspect_ratio>2.3210000991821289</aspect_ratio>
+              <zoom_url>https://collections.gta.arch.ethz.ch/eas/zoomer/189002/6ac17e3a8ec242ae28d09e5b47686944?instance=easydb5</zoom_url>
+              <download_url>https://collections.gta.arch.ethz.ch/eas/partitions/2/0/189000/189002/af03c7d55316875371366c8febbab1b266999fe3/image/png/TEST_IMAGE-huge.png</download_url>
+              <_download_allowed>1</_download_allowed>
+              <deep_link_url>https://collections.gta.arch.ethz.ch/api/v1/objects/uuid/6568a4a2-bda0-4972-b09a-1b462be1855a/file/id/189002/file_version/name/huge/disposition/inline</deep_link_url>
+            </version>
+          </versions>
+        </file>
+      </files>
+    </do_digitalobject>
+    <do_existence_creation_date type="daterange">
+      <from>2021-11-01</from>																									<!--  do_existence_creation_data_earliest  --> 
+      <to>2021-11-01</to>																										<!--  do_existence_creation_data_latest  --> 
+    </do_existence_creation_date>
+    <_nested__do__do_actrel_creation>
+      <do__do_actrel_creation>
+        <do_actrel_creation_creator>
+          <act>
+            <_id>34397</_id>
+            <_system_object_id>111401</_system_object_id>
+            <_version>8</_version>
+            <_has_children>false</_has_children>
+            <_uuid>0f876ee5-8fa7-44ef-a955-90d7096b72b8</_uuid>
+            <_objecttype>act</_objecttype>
+            <_global_object_id>111401@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_system_object_id>111401</_system_object_id>
+            <pool id="4">
+              <en-US>gta Digital</en-US>
+              <de-DE>gta Digital</de-DE>
+            </pool>
+            <_standard>
+              <en-US>[Hänsli, Thomas]</en-US>
+              <de-DE>[Hänsli, Thomas]</de-DE>
+            </_standard>
+            <act_nc_name type="text_oneline">Hänsli, Thomas</act_nc_name>
+            <act_nc_name_lang>
+              <generic_lang>
+                <_id>1</_id>
+                <_system_object_id>111398</_system_object_id>
+                <_objecttype>generic_lang</_objecttype>
+                <_system_object_id>111398</_system_object_id>
+                <_standard>
+                  <en-US>de</en-US>
+                  <de-DE>de</de-DE>
+                </_standard>
+              </generic_lang>
+            </act_nc_name_lang>
+            <_nested__act__act_nc_altname>
+              <act__act_nc_altname>
+                <act_nc_altname_lang>
+                  <generic_lang>
+                    <_id>1</_id>
+                    <_system_object_id>111398</_system_object_id>
+                    <_objecttype>generic_lang</_objecttype>
+                    <_system_object_id>111398</_system_object_id>
+                    <_standard>
+                      <en-US>de</en-US>
+                      <de-DE>de</de-DE>
+                    </_standard>
+                  </generic_lang>
+                </act_nc_altname_lang>
+              </act__act_nc_altname>
+            </_nested__act__act_nc_altname>
+            <act_nc_gender>
+              <act_person_gender>
+                <_id>1</_id>
+                <_system_object_id>111395</_system_object_id>
+                <_objecttype>act_person_gender</_objecttype>
+                <_system_object_id>111395</_system_object_id>
+                <_standard>
+                  <en-US>male</en-US>
+                  <de-DE>männlich</de-DE>
+                </_standard>
+              </act_person_gender>
+            </act_nc_gender>
+            <_nested__act__act_doc_biographical_note>
+              <act__act_doc_biographical_note>
+                <act_doc_biographical_note_source>
+                  <generic_contributor>
+                    <_id>2</_id>
+                    <_system_object_id>111475</_system_object_id>
+                    <_objecttype>generic_contributor</_objecttype>
+                    <_system_object_id>111475</_system_object_id>
+                    <_standard>
+                      <de-DE>#111475</de-DE>
+                    </_standard>
+                  </generic_contributor>
+                </act_doc_biographical_note_source>
+              </act__act_doc_biographical_note>
+            </_nested__act__act_doc_biographical_note>
+            <act_exist_birth_place>
+              <pl>
+                <_id>37176</_id>
+                <_system_object_id>103296</_system_object_id>
+                <_objecttype>pl</_objecttype>
+                <_system_object_id>103296</_system_object_id>
+                <_standard>
+                  <en-US>Däniken</en-US>
+                  <de-DE>Däniken</de-DE>
+                </_standard>
+              </pl>
+            </act_exist_birth_place>
+            <act_exist_birth_timespan type="daterange">
+              <from>1967-02-14</from>
+              <to>1967-02-14</to>
+            </act_exist_birth_timespan>
+            <_nested__act__act_social_inst>
+              <act__act_social_inst>
+                <act_social_inst_institution>
+                  <act>
+                    <_id>29605</_id>
+                    <_system_object_id>56329</_system_object_id>
+                    <_objecttype>act</_objecttype>
+                    <_system_object_id>56329</_system_object_id>
+                    <_standard>
+                      <en-US>[ETH Zürich]</en-US>
+                      <de-DE>[ETH Zürich]</de-DE>
+                    </_standard>
+                  </act>
+                </act_social_inst_institution>
+                <act_social_inst_role>
+                  <generic_institutional_relations>
+                    <_id>1</_id>
+                    <_system_object_id>111400</_system_object_id>
+                    <_objecttype>generic_institutional_relations</_objecttype>
+                    <_system_object_id>111400</_system_object_id>
+                    <_standard>
+                      <en-US>student</en-US>
+                      <de-DE>Student/in</de-DE>
+                    </_standard>
+                  </generic_institutional_relations>
+                </act_social_inst_role>
+                <act_social_inst_time_from type="daterange">
+                  <from>1987</from>
+                  <to>1992</to>
+                </act_social_inst_time_from>
+              </act__act_social_inst>
+              <act__act_social_inst>
+                <act_social_inst_institution>
+                  <act>
+                    <_id>23960</_id>
+                    <_system_object_id>45796</_system_object_id>
+                    <_objecttype>act</_objecttype>
+                    <_system_object_id>45796</_system_object_id>
+                    <_standard>
+                      <en-US>gta Institut [gta Institut]</en-US>
+                      <de-DE>gta Institut [gta Institut]</de-DE>
+                    </_standard>
+                  </act>
+                </act_social_inst_institution>
+                <act_social_inst_role>
+                  <generic_institutional_relations>
+                    <_id>5</_id>
+                    <_system_object_id>111412</_system_object_id>
+                    <_objecttype>generic_institutional_relations</_objecttype>
+                    <_system_object_id>111412</_system_object_id>
+                    <_standard>
+                      <en-US>lecturer</en-US>
+                      <de-DE>Dozent/in</de-DE>
+                    </_standard>
+                  </generic_institutional_relations>
+                </act_social_inst_role>
+                <act_social_inst_time_from type="daterange">
+                  <from>1999</from>
+                  <to>2011</to>
+                </act_social_inst_time_from>
+              </act__act_social_inst>
+            </_nested__act__act_social_inst>
+            <_nested__act__act_social_citizenship>
+              <act__act_social_citizenship>
+                <act_social_citizenship_place>
+                  <pl>
+                    <_id>41496</_id>
+                    <_system_object_id>107616</_system_object_id>
+                    <_objecttype>pl</_objecttype>
+                    <_system_object_id>107616</_system_object_id>
+                    <_standard>
+                      <en-US>Romoos</en-US>
+                      <de-DE>Romoos</de-DE>
+                    </_standard>
+                  </pl>
+                </act_social_citizenship_place>
+              </act__act_social_citizenship>
+            </_nested__act__act_social_citizenship>
+            <_nested__act__act_social_national_affiliation>
+              <act__act_social_national_affiliation>
+                <act_social_national_affiliation_nationality>
+                  <act_nat>
+                    <_id>33</_id>
+                    <_system_object_id>111093</_system_object_id>
+                    <_objecttype>act_nat</_objecttype>
+                    <_system_object_id>111093</_system_object_id>
+                    <_standard>
+                      <en-US>Swiss</en-US>
+                      <de-DE>Schweizerisch</de-DE>
+                    </_standard>
+                  </act_nat>
+                </act_social_national_affiliation_nationality>
+                <act_social_national_affiliation_timespan type="daterange">
+                  <from>1967</from>
+                </act_social_national_affiliation_timespan>
+              </act__act_social_national_affiliation>
+            </_nested__act__act_social_national_affiliation>
+            <_nested__act__act_activity_occupations>
+              <act__act_activity_occupations>
+                <act_activity_occupation>
+                  <act_occ>
+                    <_id>9</_id>
+                    <_system_object_id>110860</_system_object_id>
+                    <_objecttype>act_occ</_objecttype>
+                    <_system_object_id>110860</_system_object_id>
+                    <_standard>
+                      <en-US>architect</en-US>
+                      <de-DE>Architekt/in</de-DE>
+                    </_standard>
+                    <_standard-3>
+                      <en-US>architects</en-US>
+                      <de-DE>architects</de-DE>
+                    </_standard-3>
+                  </act_occ>
+                </act_activity_occupation>
+              </act__act_activity_occupations>
+              <act__act_activity_occupations>
+                <act_activity_occupation>
+                  <act_occ>
+                    <_id>18</_id>
+                    <_system_object_id>110869</_system_object_id>
+                    <_objecttype>act_occ</_objecttype>
+                    <_system_object_id>110869</_system_object_id>
+                    <_standard>
+                      <en-US>art historian</en-US>
+                      <de-DE>Kunsthistoriker/in</de-DE>
+                    </_standard>
+                    <_standard-3>
+                      <en-US>art historians</en-US>
+                      <de-DE>art historians</de-DE>
+                    </_standard-3>
+                  </act_occ>
+                </act_activity_occupation>
+              </act__act_activity_occupations>
+            </_nested__act__act_activity_occupations>
+            <_reverse_nested__act_matching_term_21__act_matching_term_actor>
+              <act_matching_term_21>
+                <_uuid>40e5733d-8c5e-493b-b664-ab33a147fd24</_uuid>
+                <_objecttype>act_matching_term_21</_objecttype>
+                <_global_object_id>678934@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+                <_system_object_id>678934</_system_object_id>
+                <pool id="83">
+                  <en-US>Actors</en-US>
+                  <de-DE>Actors</de-DE>
+                </pool>
+                <act_matching_term_term type="text_oneline">Thomas Hänsli</act_matching_term_term>
+                <act_matching_term_source type="string">archivar:nonmatch:562:from:master:without</act_matching_term_source>
+              </act_matching_term_21>
+            </_reverse_nested__act_matching_term_21__act_matching_term_actor>
+            <act_descr_description_short_import type="text_l10n_oneline">
+              <en-US>Swiss Architect and Art Historian, born 1967</en-US>
+              <de-DE>Schweizer Architekt und Kunsthistoriker, geboren 1967</de-DE>
+            </act_descr_description_short_import>
+            <act_type_crm>
+              <act_type_crm>
+                <_id>1</_id>
+                <_system_object_id>111414</_system_object_id>
+                <_objecttype>act_type_crm</_objecttype>
+                <_system_object_id>111414</_system_object_id>
+                <_standard>
+                  <en-US>E21_Person</en-US>
+                  <de-DE>E21_Person</de-DE>
+                </_standard>
+              </act_type_crm>
+            </act_type_crm>
+          </act>
+        </do_actrel_creation_creator>
+      </do__do_actrel_creation>
+    </_nested__do__do_actrel_creation>
+    <_nested__do__do_existence_modification>																					<!--  BEGINN NESTED MODIFICATION --> 
+      <do__do_existence_modification>																							<!--  BEGINN NESTED MODIFICATION, FIRST BLOCK --> 
+        <do_existence_modification_date type="daterange">		
+          <from>2021-11-03</from>																								<!--  do_existence_modification_data_earliest  --> 
+          <to>2021-11-03</to>																									<!--  do_existence_modification_data_latest  --> 
+        </do_existence_modification_date>
+        <do_actrel_modification_actor>
+          <act>
+            <_id>34397</_id>																									<!--  do_existence_modification_actor_id  --> 
+            <_system_object_id>111401</_system_object_id>
+            <_version>8</_version>
+            <_has_children>false</_has_children>
+            <_uuid>0f876ee5-8fa7-44ef-a955-90d7096b72b8</_uuid>
+            <_objecttype>act</_objecttype>
+            <_global_object_id>111401@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_system_object_id>111401</_system_object_id>
+            <pool id="4">
+              <en-US>gta Digital</en-US>
+              <de-DE>gta Digital</de-DE>
+            </pool>
+            <_standard>
+              <en-US>[Hänsli, Thomas]</en-US>																					<!--  do_existence_modification_actor_appellation //JUST FOR INFORMATION  --> 
+              <de-DE>[Hänsli, Thomas]</de-DE>
+            </_standard>
+            <act_nc_name type="text_oneline">Hänsli, Thomas</act_nc_name>
+            <act_nc_name_lang>
+              <generic_lang>
+                <_id>1</_id>
+                <_system_object_id>111398</_system_object_id>
+                <_objecttype>generic_lang</_objecttype>
+                <_system_object_id>111398</_system_object_id>
+                <_standard>
+                  <en-US>de</en-US>
+                  <de-DE>de</de-DE>
+                </_standard>
+              </generic_lang>
+            </act_nc_name_lang>
+            <_nested__act__act_nc_altname>
+              <act__act_nc_altname>
+                <act_nc_altname_lang>
+                  <generic_lang>
+                    <_id>1</_id>
+                    <_system_object_id>111398</_system_object_id>
+                    <_objecttype>generic_lang</_objecttype>
+                    <_system_object_id>111398</_system_object_id>
+                    <_standard>
+                      <en-US>de</en-US>
+                      <de-DE>de</de-DE>
+                    </_standard>
+                  </generic_lang>
+                </act_nc_altname_lang>
+              </act__act_nc_altname>
+            </_nested__act__act_nc_altname>
+            <act_nc_gender>
+              <act_person_gender>
+                <_id>1</_id>
+                <_system_object_id>111395</_system_object_id>
+                <_objecttype>act_person_gender</_objecttype>
+                <_system_object_id>111395</_system_object_id>
+                <_standard>
+                  <en-US>male</en-US>
+                  <de-DE>männlich</de-DE>
+                </_standard>
+              </act_person_gender>
+            </act_nc_gender>
+            <_nested__act__act_doc_biographical_note>
+              <act__act_doc_biographical_note>
+                <act_doc_biographical_note_source>
+                  <generic_contributor>
+                    <_id>2</_id>
+                    <_system_object_id>111475</_system_object_id>
+                    <_objecttype>generic_contributor</_objecttype>
+                    <_system_object_id>111475</_system_object_id>
+                    <_standard>
+                      <de-DE>#111475</de-DE>
+                    </_standard>
+                  </generic_contributor>
+                </act_doc_biographical_note_source>
+              </act__act_doc_biographical_note>
+            </_nested__act__act_doc_biographical_note>
+            <act_exist_birth_place>
+              <pl>
+                <_id>37176</_id>
+                <_system_object_id>103296</_system_object_id>
+                <_objecttype>pl</_objecttype>
+                <_system_object_id>103296</_system_object_id>
+                <_standard>
+                  <en-US>Däniken</en-US>
+                  <de-DE>Däniken</de-DE>
+                </_standard>
+              </pl>
+            </act_exist_birth_place>
+            <act_exist_birth_timespan type="daterange">
+              <from>1967-02-14</from>
+              <to>1967-02-14</to>
+            </act_exist_birth_timespan>
+            <_nested__act__act_social_inst>
+              <act__act_social_inst>
+                <act_social_inst_institution>
+                  <act>
+                    <_id>29605</_id>
+                    <_system_object_id>56329</_system_object_id>
+                    <_objecttype>act</_objecttype>
+                    <_system_object_id>56329</_system_object_id>
+                    <_standard>
+                      <en-US>[ETH Zürich]</en-US>
+                      <de-DE>[ETH Zürich]</de-DE>
+                    </_standard>
+                  </act>
+                </act_social_inst_institution>
+                <act_social_inst_role>
+                  <generic_institutional_relations>
+                    <_id>1</_id>
+                    <_system_object_id>111400</_system_object_id>
+                    <_objecttype>generic_institutional_relations</_objecttype>
+                    <_system_object_id>111400</_system_object_id>
+                    <_standard>
+                      <en-US>student</en-US>
+                      <de-DE>Student/in</de-DE>
+                    </_standard>
+                  </generic_institutional_relations>
+                </act_social_inst_role>
+                <act_social_inst_time_from type="daterange">
+                  <from>1987</from>
+                  <to>1992</to>
+                </act_social_inst_time_from>
+              </act__act_social_inst>
+              <act__act_social_inst>
+                <act_social_inst_institution>
+                  <act>
+                    <_id>23960</_id>
+                    <_system_object_id>45796</_system_object_id>
+                    <_objecttype>act</_objecttype>
+                    <_system_object_id>45796</_system_object_id>
+                    <_standard>
+                      <en-US>gta Institut [gta Institut]</en-US>
+                      <de-DE>gta Institut [gta Institut]</de-DE>
+                    </_standard>
+                  </act>
+                </act_social_inst_institution>
+                <act_social_inst_role>
+                  <generic_institutional_relations>
+                    <_id>5</_id>
+                    <_system_object_id>111412</_system_object_id>
+                    <_objecttype>generic_institutional_relations</_objecttype>
+                    <_system_object_id>111412</_system_object_id>
+                    <_standard>
+                      <en-US>lecturer</en-US>
+                      <de-DE>Dozent/in</de-DE>
+                    </_standard>
+                  </generic_institutional_relations>
+                </act_social_inst_role>
+                <act_social_inst_time_from type="daterange">
+                  <from>1999</from>
+                  <to>2011</to>
+                </act_social_inst_time_from>
+              </act__act_social_inst>
+            </_nested__act__act_social_inst>
+            <_nested__act__act_social_citizenship>
+              <act__act_social_citizenship>
+                <act_social_citizenship_place>
+                  <pl>
+                    <_id>41496</_id>
+                    <_system_object_id>107616</_system_object_id>
+                    <_objecttype>pl</_objecttype>
+                    <_system_object_id>107616</_system_object_id>
+                    <_standard>
+                      <en-US>Romoos</en-US>
+                      <de-DE>Romoos</de-DE>
+                    </_standard>
+                  </pl>
+                </act_social_citizenship_place>
+              </act__act_social_citizenship>
+            </_nested__act__act_social_citizenship>
+            <_nested__act__act_social_national_affiliation>
+              <act__act_social_national_affiliation>
+                <act_social_national_affiliation_nationality>
+                  <act_nat>
+                    <_id>33</_id>
+                    <_system_object_id>111093</_system_object_id>
+                    <_objecttype>act_nat</_objecttype>
+                    <_system_object_id>111093</_system_object_id>
+                    <_standard>
+                      <en-US>Swiss</en-US>
+                      <de-DE>Schweizerisch</de-DE>
+                    </_standard>
+                  </act_nat>
+                </act_social_national_affiliation_nationality>
+                <act_social_national_affiliation_timespan type="daterange">
+                  <from>1967</from>
+                </act_social_national_affiliation_timespan>
+              </act__act_social_national_affiliation>
+            </_nested__act__act_social_national_affiliation>
+            <_nested__act__act_activity_occupations>
+              <act__act_activity_occupations>
+                <act_activity_occupation>
+                  <act_occ>
+                    <_id>9</_id>
+                    <_system_object_id>110860</_system_object_id>
+                    <_objecttype>act_occ</_objecttype>
+                    <_system_object_id>110860</_system_object_id>
+                    <_standard>
+                      <en-US>architect</en-US>
+                      <de-DE>Architekt/in</de-DE>
+                    </_standard>
+                    <_standard-3>
+                      <en-US>architects</en-US>
+                      <de-DE>architects</de-DE>
+                    </_standard-3>
+                  </act_occ>
+                </act_activity_occupation>
+              </act__act_activity_occupations>
+              <act__act_activity_occupations>
+                <act_activity_occupation>
+                  <act_occ>
+                    <_id>18</_id>
+                    <_system_object_id>110869</_system_object_id>
+                    <_objecttype>act_occ</_objecttype>
+                    <_system_object_id>110869</_system_object_id>
+                    <_standard>
+                      <en-US>art historian</en-US>
+                      <de-DE>Kunsthistoriker/in</de-DE>
+                    </_standard>
+                    <_standard-3>
+                      <en-US>art historians</en-US>
+                      <de-DE>art historians</de-DE>
+                    </_standard-3>
+                  </act_occ>
+                </act_activity_occupation>
+              </act__act_activity_occupations>
+            </_nested__act__act_activity_occupations>
+            <_reverse_nested__act_matching_term_21__act_matching_term_actor>
+              <act_matching_term_21>
+                <_uuid>40e5733d-8c5e-493b-b664-ab33a147fd24</_uuid>
+                <_objecttype>act_matching_term_21</_objecttype>
+                <_global_object_id>678934@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+                <_system_object_id>678934</_system_object_id>
+                <pool id="83">
+                  <en-US>Actors</en-US>
+                  <de-DE>Actors</de-DE>
+                </pool>
+                <act_matching_term_term type="text_oneline">Thomas Hänsli</act_matching_term_term>
+                <act_matching_term_source type="string">archivar:nonmatch:562:from:master:without</act_matching_term_source>
+              </act_matching_term_21>
+            </_reverse_nested__act_matching_term_21__act_matching_term_actor>
+            <act_descr_description_short_import type="text_l10n_oneline">
+              <en-US>Swiss Architect and Art Historian, born 1967</en-US>
+              <de-DE>Schweizer Architekt und Kunsthistoriker, geboren 1967</de-DE>
+            </act_descr_description_short_import>
+            <act_type_crm>
+              <act_type_crm>
+                <_id>1</_id>
+                <_system_object_id>111414</_system_object_id>
+                <_objecttype>act_type_crm</_objecttype>
+                <_system_object_id>111414</_system_object_id>
+                <_standard>
+                  <en-US>E21_Person</en-US>
+                  <de-DE>E21_Person</de-DE>
+                </_standard>
+              </act_type_crm>
+            </act_type_crm>
+          </act>
+        </do_actrel_modification_actor>
+      </do__do_existence_modification>
+      <do__do_existence_modification>																							<!--  BEGINN NESTED MODIFICATION, NEXT BLOCK -/ @MATTEO: the model sees only 'latest modification' wich is not enough, can we do something about this?? --> 
+        <do_existence_modification_date type="daterange">
+          <from>2021-11-02</from>
+          <to>2021-11-02</to>
+        </do_existence_modification_date>
+        <do_actrel_modification_actor>
+          <act>
+            <_id>40665</_id>
+            <_system_object_id>438040</_system_object_id>
+            <_version>3</_version>
+            <_has_children>false</_has_children>
+            <_uuid>c956599e-1a5a-4468-8bea-fd48b148a475</_uuid>
+            <_objecttype>act</_objecttype>
+            <_global_object_id>438040@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_system_object_id>438040</_system_object_id>
+            <pool id="4">
+              <en-US>gta Digital</en-US>
+              <de-DE>gta Digital</de-DE>
+            </pool>
+            <_standard>
+              <en-US>Lorenzini, Matteo</en-US>
+              <de-DE>Lorenzini, Matteo</de-DE>
+            </_standard>
+            <act_nc_name_archive type="text_oneline">Lorenzini, Matteo</act_nc_name_archive>
+            <act_nc_name_lang_archive>
+              <generic_lang>
+                <_id>9</_id>
+                <_system_object_id>111512</_system_object_id>
+                <_objecttype>generic_lang</_objecttype>
+                <_system_object_id>111512</_system_object_id>
+                <_standard>
+                  <en-US>it</en-US>
+                  <de-DE>it</de-DE>
+                </_standard>
+              </generic_lang>
+            </act_nc_name_lang_archive>
+            <act_nc_gender_archive>
+              <act_person_gender>
+                <_id>1</_id>
+                <_system_object_id>111395</_system_object_id>
+                <_objecttype>act_person_gender</_objecttype>
+                <_system_object_id>111395</_system_object_id>
+                <_standard>
+                  <en-US>male</en-US>
+                  <de-DE>männlich</de-DE>
+                </_standard>
+              </act_person_gender>
+            </act_nc_gender_archive>
+            <act_exist_birth_place_archive>
+              <pl>
+                <_id>44579</_id>
+                <_system_object_id>110699</_system_object_id>
+                <_objecttype>pl</_objecttype>
+                <_system_object_id>110699</_system_object_id>
+                <_standard>
+                  <en-US>Livorno</en-US>
+                  <de-DE>Livorno</de-DE>
+                </_standard>
+              </pl>
+            </act_exist_birth_place_archive>
+            <act_nc_identifier_wikidata_archive type="string">https://www.wikidata.org/wiki/Q54037363</act_nc_identifier_wikidata_archive>
+            <_reverse_nested__act_matching_term_21__act_matching_term_actor>
+              <act_matching_term_21>
+                <_uuid>11969241-b7c9-4b47-8df1-c96c79916fb7</_uuid>
+                <_objecttype>act_matching_term_21</_objecttype>
+                <_global_object_id>678881@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+                <_system_object_id>678881</_system_object_id>
+                <pool id="83">
+                  <en-US>Actors</en-US>
+                  <de-DE>Actors</de-DE>
+                </pool>
+                <act_matching_term_term type="text_oneline">Matteo Lorenzini</act_matching_term_term>
+                <act_matching_term_source type="string">archivar:nonmatch:562:from:local:without</act_matching_term_source>
+              </act_matching_term_21>
+            </_reverse_nested__act_matching_term_21__act_matching_term_actor>
+            <act_type_crm>
+              <act_type_crm>
+                <_id>1</_id>
+                <_system_object_id>111414</_system_object_id>
+                <_objecttype>act_type_crm</_objecttype>
+                <_system_object_id>111414</_system_object_id>
+                <_standard>
+                  <en-US>E21_Person</en-US>
+                  <de-DE>E21_Person</de-DE>
+                </_standard>
+              </act_type_crm>
+            </act_type_crm>
+            <act_type_crm_archive>
+              <act_type_crm>
+                <_id>1</_id>
+                <_system_object_id>111414</_system_object_id>
+                <_objecttype>act_type_crm</_objecttype>
+                <_system_object_id>111414</_system_object_id>
+                <_standard>
+                  <en-US>E21_Person</en-US>
+                  <de-DE>E21_Person</de-DE>
+                </_standard>
+              </act_type_crm>
+            </act_type_crm_archive>
+          </act>
+        </do_actrel_modification_actor>
+      </do__do_existence_modification>
+    </_nested__do__do_existence_modification>
+    <do_loc_locator type="string">https://iiif.gta.arch.ethz.ch/iiif/2/cms-TEXT_IMAGE/full/max/0/default.png</do_loc_locator>	<!-- do_locator -->
+    <do_loc_locator_type type="text_l10n_oneline">
+      <en-US>IIIF</en-US>																										<!-- do_locator_type-->
+    </do_loc_locator_type>
+    <_nested__do__do_rights>
+      <do__do_rights>
+        <do_rights_holder>
+          <act>
+            <_id>23960</_id>																									<!-- do_right_holder_id -->
+            <_system_object_id>45796</_system_object_id>
+            <_version>10</_version>
+            <_has_children>false</_has_children>
+            <_uuid>573b6fa0-c266-43a9-ae72-408e1386f9c7</_uuid>
+            <_objecttype>act</_objecttype>
+            <_global_object_id>45796@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_system_object_id>45796</_system_object_id>
+            <pool id="33">
+              <en-US>Dataset A</en-US>
+              <de-DE>Dataset A</de-DE>
+            </pool>
+            <_standard>
+              <en-US>gta Institut [gta Institut]</en-US>																		<!-- do_right_holder_appellation // JUST FOR INFORMATION  -->
+              <de-DE>gta Institut [gta Institut]</de-DE>
+            </_standard>
+            <act_nc_name_archive type="text_oneline">gta Institut</act_nc_name_archive>
+            <act_nc_name type="text_oneline">gta Institut</act_nc_name>
+            <_nested__act__act_doc_biographical_note>
+              <act__act_doc_biographical_note>
+                <act_doc_biographical_note_source>
+                  <generic_contributor>
+                    <_id>6</_id>
+                    <_system_object_id>125083</_system_object_id>
+                    <_objecttype>generic_contributor</_objecttype>
+                    <_system_object_id>125083</_system_object_id>
+                    <_standard>
+                      <de-DE>#125083</de-DE>
+                    </_standard>
+                  </generic_contributor>
+                </act_doc_biographical_note_source>
+              </act__act_doc_biographical_note>
+            </_nested__act__act_doc_biographical_note>
+            <_reverse_nested__act_matching_term_21__act_matching_term_actor>
+              <act_matching_term_21>
+                <_uuid>eeaad4cb-b3c5-47b0-9530-bbece76235c1</_uuid>
+                <_objecttype>act_matching_term_21</_objecttype>
+                <_global_object_id>478001@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+                <_system_object_id>478001</_system_object_id>
+                <pool id="33">
+                  <en-US>Dataset A</en-US>
+                  <de-DE>Dataset A</de-DE>
+                </pool>
+                <act_matching_term_term type="text_oneline">gta Institut</act_matching_term_term>
+                <act_matching_term_source type="string">GRP_nonMatching28k_termTransferDisplay_20180710_th</act_matching_term_source>
+              </act_matching_term_21>
+              <act_matching_term_21>
+                <_uuid>547480e1-7e2f-4c66-93ee-fb1a27e5eb10</_uuid>
+                <_objecttype>act_matching_term_21</_objecttype>
+                <_global_object_id>508162@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+                <_system_object_id>508162</_system_object_id>
+                <pool id="33">
+                  <en-US>Dataset A</en-US>
+                  <de-DE>Dataset A</de-DE>
+                </pool>
+                <act_matching_term_term type="text_oneline">Institut für Geschichte und Theorie der Architektur</act_matching_term_term>
+                <act_matching_term_source type="string">RP3 Normdatenredaktion</act_matching_term_source>
+              </act_matching_term_21>
+              <act_matching_term_21>
+                <_uuid>f9b74dc4-ea8d-4d1b-a568-8be7d19ab83f</_uuid>
+                <_objecttype>act_matching_term_21</_objecttype>
+                <_global_object_id>648039@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+                <_system_object_id>648039</_system_object_id>
+                <pool id="30">
+                  <en-US>gta Archive</en-US>
+                  <de-DE>gta Archiv</de-DE>
+                </pool>
+                <act_matching_term_term type="text_oneline">gta</act_matching_term_term>
+                <act_matching_term_source type="string">cdc:remaining:batch:9</act_matching_term_source>
+              </act_matching_term_21>
+            </_reverse_nested__act_matching_term_21__act_matching_term_actor>
+            <act_uuid type="string">384686BA-806C-4026-8A02-0624B97185D7</act_uuid>
+            <act_name_display type="text_l10n_oneline">
+              <de-DE>gta Institut</de-DE>
+            </act_name_display>
+            <act_descr_description_short_import type="text_l10n_oneline">
+              <en-US>Non-individualised Legal Body</en-US>
+              <de-DE>Nicht individualisierte Körperschaft</de-DE>
+            </act_descr_description_short_import>
+            <act_type type="string">E40_LegalBody</act_type>
+            <act_type_crm>
+              <act_type_crm>
+                <_id>3</_id>
+                <_system_object_id>111416</_system_object_id>
+                <_objecttype>act_type_crm</_objecttype>
+                <_system_object_id>111416</_system_object_id>
+                <_standard>
+                  <en-US>E40_LegalBody</en-US>
+                  <de-DE>E40_LegalBody</de-DE>
+                </_standard>
+              </act_type_crm>
+            </act_type_crm>
+            <act_migrationlog_source>
+              <act_migrationlog_source>
+                <_id>1</_id>
+                <_system_object_id>111454</_system_object_id>
+                <_objecttype>act_migrationlog_source</_objecttype>
+                <_system_object_id>111454</_system_object_id>
+                <_standard>
+                  <en-US>grp Authoritative Dataset (Batch A)</en-US>
+                  <de-DE>grp Authoritative Dataset (Batch A)</de-DE>
+                </_standard>
+              </act_migrationlog_source>
+            </act_migrationlog_source>
+          </act>
+        </do_rights_holder>
+        <do_rights_type>
+          <generic_rights_type>
+            <_id>1</_id>																										<!-- do_right_type_id -->
+            <_system_object_id>431624</_system_object_id>
+            <_version>1</_version>
+            <_has_children>false</_has_children>
+            <_uuid>0f4d6950-f2fb-495c-ab49-a1053189759a</_uuid>
+            <_objecttype>generic_rights_type</_objecttype>
+            <_global_object_id>431624@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_system_object_id>431624</_system_object_id>
+            <_standard>
+              <en-US>Urheberrecht</en-US>
+              <de-DE>Urheberrecht</de-DE>
+            </_standard>
+            <generic_rights_type_name type="text_l10n_oneline">
+              <en-US>Urheberrecht</en-US>
+              <de-DE>Urheberrecht</de-DE>
+            </generic_rights_type_name>
+          </generic_rights_type>
+        </do_rights_type>
+        <do_rights_description type="text_l10n">
+          <en-US>Copyright by gta Institute/ETH Zurich</en-US>																	<!-- do_right_type_description_en -->
+          <de-DE>Urheberrecht Institut gta / ETH Zürich</de-DE>																	<!-- do_right_type_description_de -->
+        </do_rights_description>
+      </do__do_rights>
+    </_nested__do__do_rights>
+  </do>
+</objects>
