@@ -72,7 +72,7 @@ if __name__ == "__main__":
                 transform = ET.XSLT(xslt)
                 newdom = transform(dom)
                 result = len(newdom.xpath(".//entry"))
-                print(newdom)
+                #print(newdom)
                 infile = (ET.tostring(newdom, pretty_print=True, encoding='utf-8'))
 
                 file_list.append(infile)
