@@ -2,7 +2,7 @@
 
 ## Description:
 
-The ProfileParser harmonizes XML files according to CIDOC-CRM entities mapping schema. 
+The ProfileParser harmonizes XML files according to CIDOC-CRM entities mapping schema.
 
 The ProfileParser provides the following harmonization schema:
 
@@ -11,6 +11,7 @@ The ProfileParser provides the following harmonization schema:
 * Group (E74_Group)
 * BuiltWorks (E22_Man-Made_Obejct)
 * Collection (E78_Collection)
+* Digital Object (D1_Digital_Object)
 
 ## Prerequisites:
 
@@ -36,7 +37,7 @@ $ cd ProfileParser
 * Install Virtual Environment
 
 ```bash
-# Type the command 
+# Type the command
 $ python3 -m venv .venv
 ```
 * Activate the Virtual Environment
@@ -52,7 +53,7 @@ $ source .venv/bin/activate
 # Type the command
 $ pip install -r requirements.txt
 ```
-   
+
 * Run the script with arguments:
 
 ```bash
