@@ -95,6 +95,9 @@
                         <do_modification_actor_appellation_de>
                             <xsl:value-of select = "pr:do_actrel_modification_actor/pr:act/pr:_standard/pr:de-DE"/>
                         </do_modification_actor_appellation_de>
+                        <do_modification_actor_type>
+                            <xsl:value-of select = "pr:do_actrel_modification_actor/pr:act/pr:act_type_crm_uri"/>
+                        </do_modification_actor_type>
                     </xsl:element>
                 </xsl:for-each>
             </xsl:element>
