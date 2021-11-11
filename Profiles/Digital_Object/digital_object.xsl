@@ -16,6 +16,8 @@
     </xsl:template>
     <xsl:template match="pr:do"/>
     <xsl:template match="pr:objects/pr:do">
+    <xsl:variable name="IIIF-locator" select="pr:do_loc_locator " />
+
         <entry>
             <!-- UUID -->
             <do_system_object_id>
@@ -103,7 +105,7 @@
             </xsl:element>
             <!-- IIIF SPEC-->
             <do_locator>
-                <xsl:value-of select ="pr:do_loc_locator"/>
+                <xsl:value-of select="substring-after($IIIF-locator,'https://iiif.gta.arch.ethz.ch/iiif/2/')"/>
             </do_locator>
             <do_locator_type>
                 <xsl:value-of select ="pr:do_loc_locator_type/pr:en-US"/>
