@@ -114,6 +114,9 @@
             <do_rights_holder>
                 <xsl:value-of select ="pr:_nested__do__do_rights/pr:do__do_rights/pr:do_rights_holder/pr:act/pr:_id"/>
             </do_rights_holder>
+            <do_rights_holder_type>
+                <xsl:value-of select ="pr:_nested__do__do_rights/pr:do__do_rights/pr:do_rights_holder/pr:act/pr:act_type_crm_uri"/>
+            </do_rights_holder_type>
             <do_rights_holder_appellation>
                 <xsl:value-of select ="pr:_nested__do__do_rights/pr:do__do_rights/pr:do_rights_holder/pr:act/pr:_standard/pr:en-US"/>
             </do_rights_holder_appellation>
