@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects xmlns="https://schema.easydb.de/EASYDB/1.0/objects/" instance="gta_collections" uuid="8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5" base-schema="256" user-schema="306" timestamp="2021-11-10T10:58:03+01:00">
+<objects xmlns="https://schema.easydb.de/EASYDB/1.0/objects/" instance="gta_collections" uuid="8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5" base-schema="256" user-schema="306" timestamp="2021-11-11T16:15:16+01:00">
   <do>
-    <_id>159815</_id>																											<!--  do_id  // use to create identifier -->
-    <_system_object_id>810376</_system_object_id>																				<!--  do_system_object_id  -->
+    <_id>159815</_id>
+    <_system_object_id>810376</_system_object_id>
     <_version>5</_version>
     <_uuid>6568a4a2-bda0-4972-b09a-1b462be1855a</_uuid>
     <_objecttype>do</_objecttype>
@@ -13,6 +13,7 @@
       <en-US>gta Digital</en-US>
     </pool>
     <_standard-2>
+      <de-DE>TEST_IMAGE</de-DE>
       <en-US>TEST_IMAGE</en-US>
     </_standard-2>
     <_standard-eas>
@@ -61,7 +62,7 @@
         </file>
       </files>
     </_standard-eas>
-    <_exported_at>2021-11-10T10:58:03+01:00</_exported_at>
+    <_exported_at>2021-11-11T16:15:16+01:00</_exported_at>
     <_mask>do__generic_import</_mask>
     <_last_modified>2021-11-03T09:45:39Z</_last_modified>
     <_created>2021-11-03T09:32:49Z</_created>
@@ -173,7 +174,7 @@
           <act>
             <_id>34397</_id>
             <_system_object_id>111401</_system_object_id>
-            <_version>9</_version>
+            <_version>10</_version>
             <_has_children>false</_has_children>
             <_uuid>0f876ee5-8fa7-44ef-a955-90d7096b72b8</_uuid>
             <_objecttype>act</_objecttype>
@@ -379,7 +380,7 @@
                 </act_activity_occupation>
               </act__act_activity_occupations>
             </_nested__act__act_activity_occupations>
-            <act_type_crm_uri type="string">http://www.cidoc-crm.org/cidoc-crm/E21_Person</act_type_crm_uri>					<!-- NEW act_type_crm_uri  -->
+            <act_type_crm_uri type="string">http://www.cidoc-crm.org/cidoc-crm/E21_Person</act_type_crm_uri>
             <_reverse_nested__act_matching_term_21__act_matching_term_actor>
               <act_matching_term_21>
                 <_uuid>40e5733d-8c5e-493b-b664-ab33a147fd24</_uuid>
@@ -415,16 +416,16 @@
       </do__do_actrel_creation>
     </_nested__do__do_actrel_creation>
     <do_existence_creation_date type="daterange">
-      <from>2021-11-01</from>																									<!-- do_existence_creation_date_earliest-->
-      <to>2021-11-01</to>																										<!-- do_existence_creation_date_latest-->
+      <from>2021-11-01</from>
+      <to>2021-11-01</to>
     </do_existence_creation_date>
-    <_nested__do__do_existence_modification>																					<!--  BEGINN NESTED MODIFICATION -->
-      <do__do_existence_modification>																							<!--  BEGINN NESTED MODIFICATION, FIRST BLOCK -->
+    <_nested__do__do_existence_modification>
+      <do__do_existence_modification>
         <do_actrel_modification_actor>
           <act>
-            <_id>34397</_id>																									<!--  do_existence_modification_actor_id  -->
+            <_id>34397</_id>
             <_system_object_id>111401</_system_object_id>
-            <_version>9</_version>
+            <_version>10</_version>
             <_has_children>false</_has_children>
             <_uuid>0f876ee5-8fa7-44ef-a955-90d7096b72b8</_uuid>
             <_objecttype>act</_objecttype>
@@ -435,7 +436,7 @@
               <en-US>gta Digital</en-US>
             </pool>
             <_standard>
-              <de-DE>[Hänsli, Thomas]</de-DE>																					<!--  do_existence_modification_actor_appellation //JUST FOR INFORMATION  -->
+              <de-DE>[Hänsli, Thomas]</de-DE>
               <en-US>[Hänsli, Thomas]</en-US>
             </_standard>
             <act_nc_name type="text_oneline">Hänsli, Thomas</act_nc_name>
@@ -630,7 +631,7 @@
                 </act_activity_occupation>
               </act__act_activity_occupations>
             </_nested__act__act_activity_occupations>
-            <act_type_crm_uri type="string">http://www.cidoc-crm.org/cidoc-crm/E21_Person</act_type_crm_uri>					<!-- NEW act_type_crm_uri  for first actor of modification -->
+            <act_type_crm_uri type="string">http://www.cidoc-crm.org/cidoc-crm/E21_Person</act_type_crm_uri>
             <_reverse_nested__act_matching_term_21__act_matching_term_actor>
               <act_matching_term_21>
                 <_uuid>40e5733d-8c5e-493b-b664-ab33a147fd24</_uuid>
@@ -664,16 +665,16 @@
           </act>
         </do_actrel_modification_actor>
         <do_existence_modification_date type="daterange">
-          <from>2021-11-03</from>																								<!--  do_existence_modification_data_earliest  -->
-          <to>2021-11-03</to>																									<!--  do_existence_modification_data_latest  -->
+          <from>2021-11-03</from>
+          <to>2021-11-03</to>
         </do_existence_modification_date>
       </do__do_existence_modification>
-      <do__do_existence_modification>																							<!--  BEGINN NESTED MODIFICATION, NEXT BLOCK -/ @MATTEO: the model sees only 'latest modification' wich is not enough, can we do something about this?? -->
+      <do__do_existence_modification>
         <do_actrel_modification_actor>
           <act>
-            <_id>40665</_id>																									<!--  do_existence_modification_actor_id  -->
+            <_id>40665</_id>
             <_system_object_id>438040</_system_object_id>
-            <_version>3</_version>
+            <_version>4</_version>
             <_has_children>false</_has_children>
             <_uuid>c956599e-1a5a-4468-8bea-fd48b148a475</_uuid>
             <_objecttype>act</_objecttype>
@@ -684,14 +685,91 @@
               <en-US>gta Digital</en-US>
             </pool>
             <_standard>
-              <de-DE>Lorenzini, Matteo</de-DE>																					<!--  do_existence_modification_actor_appellation //JUST FOR INFORMATION  -->
+              <de-DE>Lorenzini, Matteo</de-DE>
               <en-US>Lorenzini, Matteo</en-US>
             </_standard>
+            <act_nc_name_archive type="text_oneline">Lorenzini, Matteo</act_nc_name_archive>
+            <act_nc_name_lang_archive>
+              <generic_lang>
+                <_id>9</_id>
+                <_system_object_id>111512</_system_object_id>
+                <_objecttype>generic_lang</_objecttype>
+                <_system_object_id>111512</_system_object_id>
+                <_standard>
+                  <de-DE>it</de-DE>
+                  <en-US>it</en-US>
+                </_standard>
+              </generic_lang>
+            </act_nc_name_lang_archive>
+            <act_nc_gender_archive>
+              <act_person_gender>
+                <_id>1</_id>
+                <_system_object_id>111395</_system_object_id>
+                <_objecttype>act_person_gender</_objecttype>
+                <_system_object_id>111395</_system_object_id>
+                <_standard>
+                  <de-DE>männlich</de-DE>
+                  <en-US>male</en-US>
+                </_standard>
+              </act_person_gender>
+            </act_nc_gender_archive>
+            <act_exist_birth_place_archive>
+              <pl>
+                <_id>44579</_id>
+                <_system_object_id>110699</_system_object_id>
+                <_objecttype>pl</_objecttype>
+                <_system_object_id>110699</_system_object_id>
+                <_standard>
+                  <de-DE>Livorno</de-DE>
+                  <en-US>Livorno</en-US>
+                </_standard>
+              </pl>
+            </act_exist_birth_place_archive>
+            <act_nc_identifier_wikidata_archive type="string">https://www.wikidata.org/wiki/Q54037363</act_nc_identifier_wikidata_archive>
+            <act_type_crm_uri type="string">http://www.cidoc-crm.org/cidoc-crm/E21_Person</act_type_crm_uri>
+            <_reverse_nested__act_matching_term_21__act_matching_term_actor>
+              <act_matching_term_21>
+                <_uuid>11969241-b7c9-4b47-8df1-c96c79916fb7</_uuid>
+                <_objecttype>act_matching_term_21</_objecttype>
+                <_global_object_id>678881@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+                <_system_object_id>678881</_system_object_id>
+                <pool id="83">
+                  <de-DE>Actors</de-DE>
+                  <en-US>Actors</en-US>
+                </pool>
+                <act_matching_term_term type="text_oneline">Matteo Lorenzini</act_matching_term_term>
+                <act_matching_term_source type="string">archivar:nonmatch:562:from:local:without</act_matching_term_source>
+              </act_matching_term_21>
+            </_reverse_nested__act_matching_term_21__act_matching_term_actor>
+            <act_type_crm>
+              <act_type_crm>
+                <_id>1</_id>
+                <_system_object_id>111414</_system_object_id>
+                <_objecttype>act_type_crm</_objecttype>
+                <_system_object_id>111414</_system_object_id>
+                <_standard>
+                  <de-DE>E21_Person</de-DE>
+                  <en-US>E21_Person</en-US>
+                </_standard>
+              </act_type_crm>
+            </act_type_crm>
+            <act_type_crm_archive>
+              <act_type_crm>
+                <_id>1</_id>
+                <_system_object_id>111414</_system_object_id>
+                <_objecttype>act_type_crm</_objecttype>
+                <_system_object_id>111414</_system_object_id>
+                <_standard>
+                  <de-DE>E21_Person</de-DE>
+                  <en-US>E21_Person</en-US>
+                </_standard>
+              </act_type_crm>
+            </act_type_crm_archive>
           </act>
         </do_actrel_modification_actor>
         <do_existence_modification_date type="daterange">
-          <from>2021-11-02</from>																								<!--  do_existence_modification_data_earliest  -->
-          <to>2021-11-02</to>																									<!--  do_existence_modification_data_latest  -->
+          <from>2021-11-02</from>
+          <to>2021-11-02</to>
         </do_existence_modification_date>
       </do__do_existence_modification>
     </_nested__do__do_existence_modification>
@@ -721,7 +799,7 @@
           <act>
             <_id>23960</_id>
             <_system_object_id>45796</_system_object_id>
-            <_version>10</_version>
+            <_version>11</_version>
             <_has_children>false</_has_children>
             <_uuid>573b6fa0-c266-43a9-ae72-408e1386f9c7</_uuid>
             <_objecttype>act</_objecttype>
@@ -735,6 +813,83 @@
               <de-DE>[gta Institut] gta Institut</de-DE>
               <en-US>[gta Institut] gta Institut</en-US>
             </_standard>
+            <act_nc_name type="text_oneline">gta Institut</act_nc_name>
+            <act_nc_name_archive type="text_oneline">gta Institut</act_nc_name_archive>
+            <act_type_crm_uri type="string">http://www.cidoc-crm.org/cidoc-crm/E74_Group</act_type_crm_uri>
+            <_reverse_nested__act_matching_term_21__act_matching_term_actor>
+              <act_matching_term_21>
+                <_uuid>eeaad4cb-b3c5-47b0-9530-bbece76235c1</_uuid>
+                <_objecttype>act_matching_term_21</_objecttype>
+                <_global_object_id>478001@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+                <_system_object_id>478001</_system_object_id>
+                <pool id="33">
+                  <de-DE>Dataset A</de-DE>
+                  <en-US>Dataset A</en-US>
+                </pool>
+                <act_matching_term_term type="text_oneline">gta Institut</act_matching_term_term>
+                <act_matching_term_source type="string">GRP_nonMatching28k_termTransferDisplay_20180710_th</act_matching_term_source>
+                <act_matching_term_uuid type="string">F46AA5CB-AEAC-464F-9993-227A843240E5</act_matching_term_uuid>
+              </act_matching_term_21>
+              <act_matching_term_21>
+                <_uuid>547480e1-7e2f-4c66-93ee-fb1a27e5eb10</_uuid>
+                <_objecttype>act_matching_term_21</_objecttype>
+                <_global_object_id>508162@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+                <_system_object_id>508162</_system_object_id>
+                <pool id="33">
+                  <de-DE>Dataset A</de-DE>
+                  <en-US>Dataset A</en-US>
+                </pool>
+                <act_matching_term_term type="text_oneline">Institut für Geschichte und Theorie der Architektur</act_matching_term_term>
+                <act_matching_term_source type="string">RP3 Normdatenredaktion</act_matching_term_source>
+                <act_matching_term_uuid type="string">DC48B5EF-3176-42EF-B360-F15F7457A095</act_matching_term_uuid>
+              </act_matching_term_21>
+              <act_matching_term_21>
+                <_uuid>f9b74dc4-ea8d-4d1b-a568-8be7d19ab83f</_uuid>
+                <_objecttype>act_matching_term_21</_objecttype>
+                <_global_object_id>648039@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+                <_system_object_id>648039</_system_object_id>
+                <pool id="30">
+                  <de-DE>gta Archiv</de-DE>
+                  <en-US>gta Archive</en-US>
+                </pool>
+                <act_matching_term_term type="text_oneline">gta</act_matching_term_term>
+                <act_matching_term_source type="string">cdc:remaining:batch:9</act_matching_term_source>
+                <act_matching_term_note type="string">cdc:batch:orangeturnred:merged:from:36109</act_matching_term_note>
+              </act_matching_term_21>
+            </_reverse_nested__act_matching_term_21__act_matching_term_actor>
+            <act_migrationlog_source>
+              <act_migrationlog_source>
+                <_id>1</_id>
+                <_system_object_id>111454</_system_object_id>
+                <_objecttype>act_migrationlog_source</_objecttype>
+                <_system_object_id>111454</_system_object_id>
+                <_standard>
+                  <de-DE>grp Authoritative Dataset (Batch A)</de-DE>
+                  <en-US>grp Authoritative Dataset (Batch A)</en-US>
+                </_standard>
+              </act_migrationlog_source>
+            </act_migrationlog_source>
+            <act_uuid type="string">384686BA-806C-4026-8A02-0624B97185D7</act_uuid>
+            <act_name_display type="text_l10n_oneline">
+              <de-DE>gta Institut</de-DE>
+            </act_name_display>
+            <act_descr_description_short_import type="text_l10n_oneline">
+              <de-DE>Nicht individualisierte Körperschaft</de-DE>
+              <en-US>Non-individualised Legal Body</en-US>
+            </act_descr_description_short_import>
+            <act_type_crm>
+              <act_type_crm>
+                <_id>3</_id>
+                <_system_object_id>111416</_system_object_id>
+                <_objecttype>act_type_crm</_objecttype>
+                <_system_object_id>111416</_system_object_id>
+                <_standard>
+                  <de-DE>E40_LegalBody</de-DE>
+                  <en-US>E40_LegalBody</en-US>
+                </_standard>
+              </act_type_crm>
+            </act_type_crm>
+            <act_type type="string">E40_LegalBody</act_type>
           </act>
         </do_rights_holder>
         <do_rights_description type="text_l10n">
@@ -743,9 +898,9 @@
         </do_rights_description>
       </do__do_rights>
     </_nested__do__do_rights>
-    <do_loc_locator type="string">https://iiif.gta.arch.ethz.ch/iiif/2/cms-TEXT_IMAGE/full/max/0/default.png</do_loc_locator>	<!-- do_locator -->
+    <do_loc_locator type="string">https://iiif.gta.arch.ethz.ch/iiif/2/cms-TEXT_IMAGE/full/max/0/default.png</do_loc_locator>
     <do_loc_locator_type type="text_l10n_oneline">
-      <en-US>IIIF</en-US>																										<!-- do_locator_type -->
+      <en-US>URI</en-US>
     </do_loc_locator_type>
   </do>
 </objects>
