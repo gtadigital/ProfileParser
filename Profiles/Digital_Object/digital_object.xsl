@@ -17,6 +17,8 @@
     <xsl:template match="pr:do"/>
     <xsl:template match="pr:objects/pr:do">
     <xsl:variable name="IIIF-locator" select="pr:do_loc_locator " />
+    <xsl:variable name="time-span-from-creation" select="pr:do_existence_creation_date/pr:from" />
+    <xsl:variable name="time-span-to-creation" select="pr:do_existence_creation_date/pr:to" />
 
         <entry>
             <!-- UUID -->
@@ -47,7 +49,7 @@
                             <xsl:value-of select="concat(pr:do_existence_creation_date/pr:from,'-01-01')"/>
                         </xsl:when>
                         <xsl:otherwise>
-                            <xsl:value-of select="pr:do_existence_creation_date/pr:from"/>
+                            <xsl:value-of select="substring-before($time-span-from-creation,'T')"/>
                         </xsl:otherwise>
                     </xsl:choose>
                 </do_production_time_span_from>
@@ -57,7 +59,7 @@
                             <xsl:value-of select="concat(pr:do_existence_creation_date/pr:to,'-01-01')"/>
                         </xsl:when>
                         <xsl:otherwise>
-                            <xsl:value-of select="pr:do_existence_creation_date/pr:to"/>
+                            <xsl:value-of select="substring-before($time-span-to-creation,'T')"/>
                         </xsl:otherwise>
                     </xsl:choose>
                 </do_production_time_span_to>
