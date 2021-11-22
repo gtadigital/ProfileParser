@@ -19,7 +19,8 @@
     <xsl:variable name="IIIF-locator" select="pr:do_loc_locator " />
     <xsl:variable name="time-span-from-creation" select="pr:do_existence_creation_date/pr:from" />
     <xsl:variable name="time-span-to-creation" select="pr:do_existence_creation_date/pr:to" />
-
+    <xsl:variable name="time-span-from-modification" select="pr:do_existence_modification_date/pr:from" />
+	<xsl:variable name="time-span-to-modification" select="pr:do_existence_modification_date/pr:to" />
         <entry>
             <!-- UUID -->
             <do_system_object_id>
@@ -74,7 +75,7 @@
                                     <xsl:value-of select="concat(pr:do_existence_modification_date/pr:from,'-01-01')"/>
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    <xsl:value-of select="pr:do_existence_modification_date/pr:from"/>
+                                    <xsl:value-of select="substring-before($time-span-from-modification,'T')"/>
                                 </xsl:otherwise>
                             </xsl:choose>
                         </do_modification_time_span_from>
@@ -84,7 +85,7 @@
                                     <xsl:value-of select="concat(pr:do_existence_modification_date/pr:to,'-01-01')"/>
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    <xsl:value-of select="pr:do_existence_modification_date/pr:to"/>
+                                    <xsl:value-of select="substring-before($time-span-to-modification,'T')"/>
                                 </xsl:otherwise>
                             </xsl:choose>
                         </do_modification_time_span_to>
