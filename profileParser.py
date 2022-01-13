@@ -1,4 +1,4 @@
-# author: ETH Zurich, gta digital, Matteo Lorenzini, Zoé Reinke
+# author: ETH Zurich, gta digital, Matteo Lorenzini
 # license: please refer to the license.txt file in our git repository (https://github.com/gtadigital/ProfileParser)
 import os
 import lxml.etree as ET
@@ -20,19 +20,31 @@ if __name__ == "__main__":
     print(emojize("Process started:rocket:"))
 
    
-    current_dir = myOutput + "//Folder" + str(0) + "//"
+    current_dir = myOutput + "//E78/E78_" + str(0) + "//"
     index_dir = 1
     while os.path.exists(
             current_dir):
-        current_dir = myOutput + "//Folder" + str(index_dir) + "//"
+        current_dir = myOutput + "//E78/E78_" + str(index_dir) + "//"
         index_dir += 1
     os.makedirs(current_dir)
     file_list = []
+
+
+    current_do_dir = myOutput + "//D1/D1_" + str(0) + "//"
+    index_do_dir = 1
+    while os.path.exists(
+            current_do_dir):
+        current_do_dir = myOutput + "//D1/D1_" + str(index_do_dir) + "//"
+        index_do_dir += 1
+    os.makedirs(current_do_dir)
+    file_do_list = []
 
     totalFiles = 0
     totalDir = 0
     totalFilesOut = 0
     totalDirOut = 0
+    totalFiles_do_Out = 0
+    totalDir_do_Out = 0
 
     for base, dirs, files in os.walk(myFile):
         # print('Searching in : ',base)
@@ -58,29 +70,52 @@ if __name__ == "__main__":
             if item.endswith(('.xml')):
                 
                 dom = ET.parse( root + "/" + item)
+
                 xslt = ET.parse(myXslt)
                 transform = ET.XSLT(xslt)
                 newdom = transform(dom)
-                
-                infile = (ET.tostring(newdom, pretty_print=True, encoding='utf-8'))
-                
-                #add new file to file_list and check wether the size of current subdirectory would now exceed 8MB
-            
-                file_list.append(infile)
-                if sum(len(f) for f in file_list) > 8000000:
-                
-                    current_dir = myOutput+ "//Folder"+ str(index_dir) + "//"
-                    index_dir+=1
-                    while os.path.exists(current_dir):
-                        current_dir = myOutput+ "//Folder"+ str(index_dir) + "//"
-                        index_dir+=1
-                    os.makedirs(current_dir)
-                    file_list=[]
-                    file_list.append(infile)
+                for element in newdom.iter():
+                    if element.tag == 'do_system_object_id':
+                    
+                        do = (ET.tostring(newdom, pretty_print=True, encoding='utf-8'))
+                        #add new file to file_list and check wether the size of current subdirectory would now exceed 8MB
+                        file_do_list.append(do)                        
+                       
+                        if sum(len(f) for f in file_do_list) > 80000000:
+                            
+                            current_do_dir = myOutput+ "//D1/D1_"+ str(index_do_dir) + "//"
 
-                outfile = open(current_dir + item, 'wb')
-                outfile.write(infile)
-
+                            index_do_dir+=1
+                            while os.path.exists(current_do_dir):
+                                current_do_dir = myOutput+ "//D1/D1_"+ str(index_do_dir) + "//"
+                                index_do_dir+=1
+                            os.makedirs(current_do_dir)
+                            file_do_list=[]
+                            file_do_list.append(do)
+                    
+                        outfile = open(current_do_dir + item, 'wb')
+                        outfile.write(do)
+                       
+                    elif element.tag == 'ao_system_object_id':
+                        infile = (ET.tostring(newdom, pretty_print=True, encoding='utf-8'))
+                        #add new file to file_list and check wether the size of current subdirectory would now exceed 8MB
+                        
+                        file_list.append(infile)
+                         
+                        if sum(len(f) for f in file_list) > 80000000:
+                            
+                            current_dir = myOutput+ "//E78/E78_"+ str(index_dir) + "//"
+                            index_dir+=1
+                            while os.path.exists(current_dir):
+                                current_dir = myOutput+ "//E78/E78_"+ str(index_dir) + "//"
+                                index_dir+=1
+                            os.makedirs(current_dir)
+                            file_list=[]
+                            file_list.append(infile)
+                
+                        outfile = open(current_dir + item, 'wb')
+                        outfile.write(infile)
+                    
                 
     print(emojize("Process ended:check_mark_button:"))
     for base, dirs, files in os.walk(myOutput, topdown=True):
@@ -89,7 +124,16 @@ if __name__ == "__main__":
         for Files in files:
             if Files.endswith('.xml'):
                 totalFilesOut += 1
-
     print('Total number of files processed', totalFilesOut)
     print('Total Number of directories created', totalDirOut)
     print('Total:', (totalDirOut + totalFilesOut))
+
+    for base, dirs, files in os.walk(myOutput + "/D1", topdown=True):
+        for directories in dirs:
+            totalDir_do_Out += 1
+        for Files in files:
+            if Files.endswith('.xml'):
+                totalFiles_do_Out += 1
+    print('Total number of D1 files processed', totalFiles_do_Out)
+    print('Total Number of D1 directories created', totalDir_do_Out)
+    print('Total D1:', (totalDir_do_Out + totalFiles_do_Out))
