@@ -1,8 +1,11 @@
-# author: ETH Zurich, gta digital, Matteo Lorenzini
+# author: ETH Zurich, gta digital, Matteo Lorenzini, Zoé Reinke
 # license: please refer to the license.txt file in our git repository (https://github.com/gtadigital/ProfileParser)
+from importlib.resources import path
+from itertools import count
 import os
 import lxml.etree as ET
 import argparse
+import shutil
 from emoji import emojize
 
 if __name__ == "__main__":
@@ -19,62 +22,55 @@ if __name__ == "__main__":
 
     print(emojize("Process started:rocket:"))
 
-   # Definition of E78 folder path
-    current_dir = myOutput + "//E78/E78_" + str(0) + "//"
-    index_dir = 1
-    while os.path.exists(
-            current_dir):
-        current_dir = myOutput + "//E78/E78_" + str(index_dir) + "//"
-        index_dir += 1
+   
+    current_dir = myOutput+ "//E78/E78_"+  "//"    #current_dir stores path of current subdirectory
+    index_dir=0
+    while os.path.exists(current_dir): #check if subdirectory already exists, if yes we presume it is already full and create new one
+        current_dir = myOutput+ "//E78/E78_"+  "//"
+        index_dir+=1
     os.makedirs(current_dir)
-    file_list = []
+    file_ao_list= []   #in this list we will store the elements of the current subdirectory. This helps us to keep track of its current size
 
-    # Definition of D1 folder path
-    current_do_dir = myOutput + "//D1/D1_" + str(0) + "//"
-    index_do_dir = 1
-    while os.path.exists(
-            current_do_dir):
-        current_do_dir = myOutput + "//D1/D1_" + str(index_do_dir) + "//"
-        index_do_dir += 1
-    os.makedirs(current_do_dir)
-    file_do_list = []
-    # Definition of E53 folder path
-    current_pl_dir = myOutput + "//E53/E53_" + str(0) + "//"
-    index_pl_dir = 1
-    while os.path.exists(
-            current_pl_dir):
-        current_pl_dir = myOutput + "//E53/E53_" + str(index_do_dir) + "//"
-        index_pl_dir += 1
-    os.makedirs(current_pl_dir)
-    file_pl_list = []
-    # Definition of E21 folder path
-    current_act_dir = myOutput + "//E21/E21_" + str(0) + "//"
-    index_act_dir = 1
-    while os.path.exists(
-            current_act_dir):
-        current_act_dir = myOutput + "//E21/E21_" + str(index_act_dir) + "//"
-        index_act_dir += 1
-    os.makedirs(current_act_dir)
-    file_act_list = []
-    # Definition of E22 folder path
-    current_bw_dir = myOutput + "//E22/E22_" + str(0) + "//"
-    index_bw_dir = 1
-    while os.path.exists(
-            current_bw_dir):
-        current_bw_dir = myOutput + "//E22/E22_" + str(index_bw_dir) + "//"
-        index_bw_dir += 1
+    current_bw_dir = myOutput+ "//E22/E22_"+ "//"    #current_dir stores path of current subdirectory
+    index_bw_dir=0
+    while os.path.exists(current_bw_dir): #check if subdirectory already exists, if yes we presume it is already full and create new one
+        current_bw_dir = myOutput+ "//E22/E22_"+ "//"
+        index_bw_dir+=1
     os.makedirs(current_bw_dir)
-    file_bw_list = []
-    # Definition of E74 folder path
-    current_grp_dir = myOutput + "//E74/E74_" + str(0) + "//"
-    index_grp_dir = 1
-    while os.path.exists(
-            current_grp_dir):
-        current_grp_dir = myOutput + "//E74/E74_" + str(index_grp_dir) + "//"
-        index_grp_dir += 1
+    file_bw_list= []
+    
+    current_do_dir = myOutput+ "//D1/D1_"+ "//"    #current_dir stores path of current subdirectory
+    index_do_dir=0
+    while os.path.exists(current_do_dir): #check if subdirectory already exists, if yes we presume it is already full and create new one
+        current_do_dir = myOutput+ "//D1/D1_"+ "//"
+        index_do_dir+=1
+    os.makedirs(current_do_dir)
+    file_do_list= []
+    
+    current_pl_dir = myOutput+ "//E53/E53_"+ "//"    #current_dir stores path of current subdirectory
+    index_pl_dir=0
+    while os.path.exists(current_pl_dir): #check if subdirectory already exists, if yes we presume it is already full and create new one
+        current_pl_dir = myOutput+ "//E53/E53_"+ "//"
+        index_pl_dir+=1
+    os.makedirs(current_pl_dir)
+    file_pl_list= []
+    
+    current_per_dir = myOutput+ "//E21/E21_"+ "//"    #current_dir stores path of current subdirectory
+    index_per_dir=0
+    while os.path.exists(current_per_dir): #check if subdirectory already exists, if yes we presume it is already full and create new one
+        current_per_dir = myOutput+ "//E21/E21_"+ "//"
+        index_per_dir+=1
+    os.makedirs(current_per_dir)
+    file_per_list= []
+    
+    current_grp_dir = myOutput+ "//E74/E74_"+ "//"    #current_dir stores path of current subdirectory
+    index_grp_dir=0
+    while os.path.exists(current_grp_dir): #check if subdirectory already exists, if yes we presume it is already full and create new one
+        current_grp_dir = myOutput+ "//E74/E74_"+ "//"
+        index_grp_dir+=1
     os.makedirs(current_grp_dir)
-    file_grp_list = []
-
+    file_grp_list= []
+    
     totalFiles = 0
     totalDir = 0
     totalFilesOut = 0
@@ -107,129 +103,89 @@ if __name__ == "__main__":
     print("Hey dude, I'm processing, go for a coffee!")  
 
     for root, dirs, files in os.walk(myFile):
-        index = 0
-        
+    
         for item in files:
-            
-            index += 1
-            
+              
             if item.endswith(('.xml')):
-                
                 dom = ET.parse( root + "/" + item)
-
                 xslt = ET.parse(myXslt)
                 transform = ET.XSLT(xslt)
                 newdom = transform(dom)
+                infile = (ET.tostring(newdom, pretty_print=True, encoding='utf-8'))
+                file_ao_list.append(infile)
+                file_bw_list.append(infile)
+                file_do_list.append(infile)
+                file_pl_list.append(infile)
+                file_per_list.append(infile)
+                file_grp_list.append(infile)
                 for element in newdom.iter():
-                    #Parsing E78 files
-                    if element.tag == 'do_system_object_id':
-                    
-                        do = (ET.tostring(newdom, pretty_print=True, encoding='utf-8'))
-                        #add new file to file_list and check wether the size of current subdirectory would now exceed 8MB
-                        file_do_list.append(do)                        
-                       
-                        if sum(len(f) for f in file_do_list) > 80000000:
-                            
-                            current_do_dir = myOutput+ "//D1/D1_"+ str(index_do_dir) + "//"
-
-                            index_do_dir+=1
-                            while os.path.exists(current_do_dir):
-                                current_do_dir = myOutput+ "//D1/D1_"+ str(index_do_dir) + "//"
-                                index_do_dir+=1
-                            os.makedirs(current_do_dir)
-                            file_do_list=[]
-                            file_do_list.append(do)
-                    
-                        outfile = open(current_do_dir + item, 'wb')
-                        outfile.write(do)
-                    #Parsing E78 files
-                    elif element.tag == 'ao_system_object_id':
-                        infile = (ET.tostring(newdom, pretty_print=True, encoding='utf-8'))
-                        #add new file to file_list and check wether the size of current subdirectory would now exceed 8MB
+                    if element.tag == 'ao_system_object_id':
                         
-                        file_list.append(infile)
-                         
-                        if sum(len(f) for f in file_list) > 80000000:
-                            
+                        if sum(len(f) for f in file_ao_list) > 8000000:
+                           
                             current_dir = myOutput+ "//E78/E78_"+ str(index_dir) + "//"
                             index_dir+=1
                             while os.path.exists(current_dir):
                                 current_dir = myOutput+ "//E78/E78_"+ str(index_dir) + "//"
                                 index_dir+=1
                             os.makedirs(current_dir)
-                            file_list=[]
-                            file_list.append(infile)
-                
+                            file_ao_list=[]
+                            file_ao_list.append(infile)
+
                         outfile = open(current_dir + item, 'wb')
                         outfile.write(infile)
-                    #Parsing E53 files
-                    elif element.tag == 'plIdentifier_uuid':
-                        pl = (ET.tostring(newdom, pretty_print=True, encoding='utf-8'))
-                        #add new file to file_list and check wether the size of current subdirectory would now exceed 8MB
+                                        
+                    if element.tag == 'oeu_nc_uuid':
                         
-                        file_pl_list.append(pl)
-                         
-                        if sum(len(f) for f in file_pl_list) > 80000000:
+                        if sum(len(f) for f in file_bw_list) > 8000000:
+                            
+                            current_bw_dir = myOutput+ "//E22/E22_"+ str(index_bw_dir) + "//"
+                            index_bw_dir+=1
+                            while os.path.exists(current_bw_dir):
+                                current_bw_dir = myOutput+ "//E22/E22_"+ str(index_bw_dir) + "//"
+                                index_bw_dir+=1
+                            os.makedirs(current_bw_dir)
+                            file_bw_list=[]
+                            file_bw_list.append(infile)
+
+                        outfile = open(current_bw_dir + item, 'wb')
+                        outfile.write(infile)
+                    
+                    if element.tag == 'do_system_object_id':
+                        
+                        if sum(len(f) for f in file_do_list) > 8000000:
+                            
+                            current_do_dir = myOutput+ "//D1/D1_"+ str(index_do_dir) + "//"
+                            index_do_dir+=1
+                            while os.path.exists(current_do_dir):
+                                current_do_dir = myOutput+ "//D1/D1_"+ str(index_do_dir) + "//"
+                                index_do_dir+=1
+                            os.makedirs(current_do_dir)
+                            file_do_list=[]
+                            file_do_list.append(infile)
+
+                        outfile = open(current_do_dir + item, 'wb')
+                        outfile.write(infile)
+                    
+                    if element.tag == 'plIdentifier_uuid':
+                        
+                        if sum(len(f) for f in file_pl_list) > 8000000:
                             
                             current_pl_dir = myOutput+ "//E53/E53_"+ str(index_pl_dir) + "//"
-                            index_dir+=1
+                            index_pl_dir+=1
                             while os.path.exists(current_pl_dir):
                                 current_pl_dir = myOutput+ "//E53/E53_"+ str(index_pl_dir) + "//"
                                 index_pl_dir+=1
                             os.makedirs(current_pl_dir)
                             file_pl_list=[]
-                            file_pl_list.append(pl)
-                
+                            file_pl_list.append(infile)
+
                         outfile = open(current_pl_dir + item, 'wb')
-                        outfile.write(pl)
-                    #Parsing E21 files 
-                    elif element.tag == 'per_uuid':
-                        act = (ET.tostring(newdom, pretty_print=True, encoding='utf-8'))
-                        #add new file to file_list and check wether the size of current subdirectory would now exceed 8MB
+                        outfile.write(infile)
+                    
+                    if element.tag == 'grp_system_object_id':
                         
-                        file_act_list.append(act)
-                         
-                        if sum(len(f) for f in file_act_list) > 80000000:
-                            
-                            current_act_dir = myOutput+ "//E21/E21_"+ str(index_act_dir) + "//"
-                            index_dir+=1
-                            while os.path.exists(current_act_dir):
-                                current_act_dir = myOutput+ "//E21/E21_"+ str(index_act_dir) + "//"
-                                index_act_dir+=1
-                            os.makedirs(current_act_dir)
-                            file_act_list=[]
-                            file_act_list.append(act)
-                
-                        outfile = open(current_act_dir + item, 'wb')
-                        outfile.write(act)
-                    #Parsing E22 files 
-                    elif element.tag == 'oeu_nc_uuid':
-                        bw = (ET.tostring(newdom, pretty_print=True, encoding='utf-8'))
-                        #add new file to file_list and check wether the size of current subdirectory would now exceed 8MB
-                        
-                        file_bw_list.append(bw)
-                         
-                        if sum(len(f) for f in file_bw_list) > 80000000:
-                            
-                            current_bw_dir = myOutput+ "//E22/E22_"+ str(index_bw_dir) + "//"
-                            index_dir+=1
-                            while os.path.exists(current_act_dir):
-                                current_bw_dir = myOutput+ "//E22/E22_"+ str(index_bw_dir) + "//"
-                                index_bw_dir+=1
-                            os.makedirs(current_bw_dir)
-                            file_bw_list=[]
-                            file_bw_list.append(bw)
-                
-                        outfile = open(current_bw_dir + item, 'wb')
-                        outfile.write(bw)
-                    #Parsing E74 files 
-                    elif element.tag == 'grp_system_object_id':
-                        grp = (ET.tostring(newdom, pretty_print=True, encoding='utf-8'))
-                        #add new file to file_list and check wether the size of current subdirectory would now exceed 8MB
-                        
-                        file_grp_list.append(grp)
-                         
-                        if sum(len(f) for f in file_grp_list) > 80000000:
+                        if sum(len(f) for f in file_grp_list) > 8000000:
                             
                             current_grp_dir = myOutput+ "//E74/E74_"+ str(index_grp_dir) + "//"
                             index_grp_dir+=1
@@ -238,13 +194,36 @@ if __name__ == "__main__":
                                 index_grp_dir+=1
                             os.makedirs(current_grp_dir)
                             file_grp_list=[]
-                            file_grp_list.append(grp)
-                
+                            file_grp_list.append(infile)
+
                         outfile = open(current_grp_dir + item, 'wb')
-                        outfile.write(grp)
+                        outfile.write(infile)
+                        
+                    if element.tag == 'per_uuid':
+                        
+                        if sum(len(f) for f in file_per_list) > 8000000:
+                            
+                            current_per_dir = myOutput+ "//E21/E21_"+ str(index_per_dir) + "//"
+                            index_per_dir+=1
+                            while os.path.exists(current_per_dir):
+                                current_per_dir = myOutput+ "//E21/E21_"+ str(index_per_dir) + "//"
+                                index_per_dir+=1
+                            os.makedirs(current_per_dir)
+                            file_per_list=[]
+                            file_per_list.append(infile)
+
+                        outfile = open(current_per_dir + item, 'wb')
+                        outfile.write(infile)
+                        
                     
+                print(("id:"),item,emojize("has been processed:thumbs_up:"))
+            else: 
                 
+                print(("id:"),item,emojize("has not been processed:thumbs_down:"))
+            
     print(emojize("Process ended:check_mark_button:"))
+    
+  
     # Count total pasrsed files
     for base, dirs, files in os.walk(myOutput, topdown=True):
         for directories in dirs:
@@ -324,3 +303,4 @@ if __name__ == "__main__":
     print('Total number of files processed', totalFilesOut)
     print('Total Number of directories created', totalDirOut)
     print('Total:', (totalDirOut + totalFilesOut))
+    
