@@ -5,8 +5,9 @@ from itertools import count
 import os
 import lxml.etree as ET
 import argparse
-import shutil
+from tabulate import tabulate
 from emoji import emojize
+from colored import fore, back, style
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='XMLProfiles Parser')
@@ -19,10 +20,6 @@ if __name__ == "__main__":
     myOutput = args.myOutput
     myXslt = args.myXslt
     
-
-    print(emojize("Process started:rocket:"))
-
-   
     current_dir = myOutput+ "//E78/E78_"+  "//"    #current_dir stores path of current subdirectory
     index_dir=0
     while os.path.exists(current_dir): #check if subdirectory already exists, if yes we presume it is already full and create new one
@@ -95,13 +92,14 @@ if __name__ == "__main__":
             totalDir += 1
         for Files in files:
             totalFiles += 1
-
-    print('Total number of files', totalFiles)
-    print('Total Number of directories', totalDir)
-    print('Total:', (totalDir + totalFiles))
+  
+    print  (fore.LIGHT_BLUE  + "### Summary of files to be processed ### " + style.RESET)
+   
+    print(tabulate([[fore.LIGHT_GREEN + 'Total number of files'+ style.RESET, totalFiles], [fore.LIGHT_GREEN + 'Total Number of directories'+ style.RESET, totalDir], [fore.LIGHT_GREEN + 'Total:'+ style.RESET, (totalDir + totalFiles)]], headers=[fore.LIGHT_RED+'Summary'+style.RESET, fore.LIGHT_RED+'Value'+style.RESET], tablefmt="fancy_grid"))
+    
     print(emojize("Process started:rocket:"))
     print("Hey dude, I'm processing, go for a coffee!")  
-
+    
     for root, dirs, files in os.walk(myFile):
     
         for item in files:
@@ -216,12 +214,15 @@ if __name__ == "__main__":
                         outfile.write(infile)
                         
                     
-                print(("id:"),item,emojize("has been processed:thumbs_up:"))
+                print(("id:"),item,emojize("has been processed:thumbs_up:"),end="\r")
+                    
             else: 
-                
-                print(("id:"),item,emojize("has not been processed:thumbs_down:"))
+                        
+                print(("id:"),item,emojize("has not been processed:thumbs_down:"),end="\r")
+    print()
             
     print(emojize("Process ended:check_mark_button:"))
+    
     
   
     # Count total pasrsed files
@@ -231,9 +232,7 @@ if __name__ == "__main__":
         for Files in files:
             if Files.endswith('.xml'):
                 totalFilesOut += 1
-    print('Total number of files processed', totalFilesOut)
-    print('Total Number of directories created', totalDirOut)
-    print('Total:', (totalDirOut + totalFilesOut))
+   
     # Count D1 pasrsed files
     for base, dirs, files in os.walk(myOutput + "/D1", topdown=True):
         for directories in dirs:
@@ -241,9 +240,7 @@ if __name__ == "__main__":
         for Files in files:
             if Files.endswith('.xml'):
                 totalFiles_do_Out += 1
-    print('Total number of D1 files processed', totalFiles_do_Out)
-    print('Total Number of D1 directories created', totalDir_do_Out)
-    print('Total D1:', (totalDir_do_Out + totalFiles_do_Out))
+   
     # Count E78 pasrsed files
     for base, dirs, files in os.walk(myOutput + "/E78", topdown=True):
         for directories in dirs:
@@ -251,9 +248,7 @@ if __name__ == "__main__":
         for Files in files:
             if Files.endswith('.xml'):
                 totalFiles_ao_Out += 1
-    print('Total number of E78 files processed', totalFiles_ao_Out)
-    print('Total Number of E78 directories created', totalDir_ao_Out)
-    print('Total E78:', (totalDir_ao_Out + totalFiles_ao_Out))
+    
     # Count E53 pasrsed files
     for base, dirs, files in os.walk(myOutput + "/E53", topdown=True):
         for directories in dirs:
@@ -261,9 +256,7 @@ if __name__ == "__main__":
         for Files in files:
             if Files.endswith('.xml'):
                 totalFiles_pl_Out += 1
-    print('Total number of E53 files processed', totalFiles_pl_Out)
-    print('Total Number of E53 directories created', totalDir_pl_Out)
-    print('Total E53:', (totalDir_pl_Out + totalFiles_pl_Out))
+
     # Count E21 pasrsed files
     for base, dirs, files in os.walk(myOutput + "/E21", topdown=True):
         for directories in dirs:
@@ -271,9 +264,7 @@ if __name__ == "__main__":
         for Files in files:
             if Files.endswith('.xml'):
                 totalFiles_act_Out += 1
-    print('Total number of E21 files processed', totalFiles_act_Out)
-    print('Total Number of E21 directories created', totalDir_act_Out)
-    print('Total E21:', (totalDir_act_Out + totalFiles_act_Out))
+
     # Count E22 pasrsed files
     for base, dirs, files in os.walk(myOutput + "/E22", topdown=True):
         for directories in dirs:
@@ -281,9 +272,7 @@ if __name__ == "__main__":
         for Files in files:
             if Files.endswith('.xml'):
                 totalFiles_bw_Out += 1
-    print('Total number of E22 files processed', totalFiles_bw_Out)
-    print('Total Number of E22 directories created', totalDir_bw_Out)
-    print('Total E22:', (totalDir_bw_Out + totalFiles_bw_Out))
+   
     # Count E74 pasrsed files
     for base, dirs, files in os.walk(myOutput + "/E74", topdown=True):
         for directories in dirs:
@@ -291,16 +280,16 @@ if __name__ == "__main__":
         for Files in files:
             if Files.endswith('.xml'):
                 totalFiles_grp_Out += 1
-    print('Total number of E74 files processed', totalFiles_grp_Out)
-    print('Total Number of E74 directories created', totalDir_grp_Out)
-    print('Total E74:', (totalDir_grp_Out + totalFiles_grp_Out))
+   
     for base, dirs, files in os.walk(myOutput, topdown=True):
         for directories in dirs:
             totalDirOut += 1
         for Files in files:
             if Files.endswith('.xml'):
                 totalFilesOut += 1
-    print('Total number of files processed', totalFilesOut)
-    print('Total Number of directories created', totalDirOut)
-    print('Total:', (totalDirOut + totalFilesOut))
     
+    
+    print  (fore.LIGHT_BLUE  + "### Summary of processed files ### " + style.RESET)
+    
+    print(tabulate([[fore.LIGHT_GREEN+'Total'+style.RESET, totalFilesOut, totalDirOut], [fore.LIGHT_GREEN+'D1'+style.RESET, totalFiles_do_Out, totalDir_do_Out], [fore.LIGHT_GREEN+'E78'+style.RESET, totalFiles_ao_Out,totalDir_ao_Out], [fore.LIGHT_GREEN+'E53'+style.RESET, totalFiles_pl_Out, totalDir_pl_Out], [fore.LIGHT_GREEN+'E21'+style.RESET, totalFiles_act_Out, totalDir_act_Out], [fore.LIGHT_GREEN+'E22'+style.RESET, totalFiles_bw_Out, totalDir_bw_Out], [fore.LIGHT_GREEN+'E74'+style.RESET, totalFiles_grp_Out, totalDir_grp_Out]], headers=[fore.LIGHT_RED+'Type'+style.RESET, fore.LIGHT_RED+'Number of files'+style.RESET,fore.LIGHT_RED+'Number of directories'+style.RESET], tablefmt="fancy_grid"))
+
