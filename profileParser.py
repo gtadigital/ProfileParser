@@ -3,11 +3,15 @@
 from importlib.resources import path
 from itertools import count
 import os
+from re import sub
 import lxml.etree as ET
 import argparse
 from tabulate import tabulate
 from emoji import emojize
 from colored import fore, back, style
+import subprocess
+
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='XMLProfiles Parser')
@@ -230,3 +234,112 @@ if __name__ == "__main__":
                 print  (fore.LIGHT_RED  + "### DANGER! The following file is larger than 8MB ### " + style.RESET)
                 
                 print(tabulate([[fore.LIGHT_GREEN+'File'+style.RESET, url, size]], headers=[fore.LIGHT_RED+' '+style.RESET, fore.LIGHT_RED+'Path'+style.RESET,fore.LIGHT_RED+'Size(MB)'+style.RESET], tablefmt="fancy_grid"))
+                
+                cmd = "awk -f chunk/chunk.awk " + url
+                rename = "./rename_E53.sh"
+                mv = "mv *.xml output/Entities/E53"
+                subprocess.call(cmd, shell=True)
+                subprocess.call(rename, shell=True)
+                subprocess.call(mv, shell=True)
+                
+    for root, dirnames, filenames in os.walk("output/Entities/D1", topdown=True):
+        for filename in filenames:
+            #if the size of a file is greater than 8MB then print the name of the file and its path and size
+            if os.path.getsize(os.path.join(root, filename)) > 8000000:
+                #print(os.path.join(root, filename), os.path.getsize(os.path.join(root, filename)))
+                
+                url = os.path.join(root, filename)
+                size = os.path.getsize(os.path.join(root, filename))
+             
+                print  (fore.LIGHT_RED  + "### DANGER! The following file is larger than 8MB ### " + style.RESET)
+                
+                print(tabulate([[fore.LIGHT_GREEN+'File'+style.RESET, url, size]], headers=[fore.LIGHT_RED+' '+style.RESET, fore.LIGHT_RED+'Path'+style.RESET,fore.LIGHT_RED+'Size(MB)'+style.RESET], tablefmt="fancy_grid"))
+                
+                cmd = "awk -f chunk/chunk.awk " + url
+                rename = "./rename_D1.sh"
+                mv = "mv *.xml output/Entities/D1"
+                subprocess.call(cmd, shell=True)
+                subprocess.call(rename, shell=True)
+                subprocess.call(mv, shell=True)
+                
+    for root, dirnames, filenames in os.walk("output/Entities/E21", topdown=True):
+        for filename in filenames:
+            #if the size of a file is greater than 8MB then print the name of the file and its path and size
+            if os.path.getsize(os.path.join(root, filename)) > 8000000:
+                #print(os.path.join(root, filename), os.path.getsize(os.path.join(root, filename)))
+                
+                url = os.path.join(root, filename)
+                size = os.path.getsize(os.path.join(root, filename))
+             
+                print  (fore.LIGHT_RED  + "### DANGER! The following file is larger than 8MB ### " + style.RESET)
+                
+                print(tabulate([[fore.LIGHT_GREEN+'File'+style.RESET, url, size]], headers=[fore.LIGHT_RED+' '+style.RESET, fore.LIGHT_RED+'Path'+style.RESET,fore.LIGHT_RED+'Size(MB)'+style.RESET], tablefmt="fancy_grid"))
+                
+                cmd = "awk -f chunk/chunk.awk " + url
+                rename = "./rename_E21.sh"
+                mv = "mv *.xml output/Entities/E21"
+                subprocess.call(cmd, shell=True)
+                subprocess.call(rename, shell=True)
+                subprocess.call(mv, shell=True)
+    
+    for root, dirnames, filenames in os.walk("output/Entities/E22", topdown=True):
+        for filename in filenames:
+            #if the size of a file is greater than 8MB then print the name of the file and its path and size
+            if os.path.getsize(os.path.join(root, filename)) > 8000000:
+                #print(os.path.join(root, filename), os.path.getsize(os.path.join(root, filename)))
+                
+                url = os.path.join(root, filename)
+                size = os.path.getsize(os.path.join(root, filename))
+             
+                print  (fore.LIGHT_RED  + "### DANGER! The following file is larger than 8MB ### " + style.RESET)
+                
+                print(tabulate([[fore.LIGHT_GREEN+'File'+style.RESET, url, size]], headers=[fore.LIGHT_RED+' '+style.RESET, fore.LIGHT_RED+'Path'+style.RESET,fore.LIGHT_RED+'Size(MB)'+style.RESET], tablefmt="fancy_grid"))
+                
+                cmd = "awk -f chunk/chunk.awk " + url
+                rename = "./rename_E22.sh"
+                mv = "mv *.xml output/Entities/E22"
+                subprocess.call(cmd, shell=True)
+                subprocess.call(rename, shell=True)
+                subprocess.call(mv, shell=True)
+    
+    for root, dirnames, filenames in os.walk("output/Entities/E74", topdown=True):
+        for filename in filenames:
+            #if the size of a file is greater than 8MB then print the name of the file and its path and size
+            if os.path.getsize(os.path.join(root, filename)) > 8000000:
+                #print(os.path.join(root, filename), os.path.getsize(os.path.join(root, filename)))
+                
+                url = os.path.join(root, filename)
+                size = os.path.getsize(os.path.join(root, filename))
+             
+                print  (fore.LIGHT_RED  + "### DANGER! The following file is larger than 8MB ### " + style.RESET)
+                
+                print(tabulate([[fore.LIGHT_GREEN+'File'+style.RESET, url, size]], headers=[fore.LIGHT_RED+' '+style.RESET, fore.LIGHT_RED+'Path'+style.RESET,fore.LIGHT_RED+'Size(MB)'+style.RESET], tablefmt="fancy_grid"))
+                
+                cmd = "awk -f chunk/chunk.awk " + url
+                rename = "./rename_E74.sh"
+                mv = "mv *.xml output/Entities/E74"
+                subprocess.call(cmd, shell=True)
+                subprocess.call(rename, shell=True)
+                subprocess.call(mv, shell=True)
+                
+    for root, dirnames, filenames in os.walk("output/Entities/E78", topdown=True):
+        for filename in filenames:
+            #if the size of a file is greater than 8MB then print the name of the file and its path and size
+            if os.path.getsize(os.path.join(root, filename)) > 8000000:
+                #print(os.path.join(root, filename), os.path.getsize(os.path.join(root, filename)))
+                
+                url = os.path.join(root, filename)
+                size = os.path.getsize(os.path.join(root, filename))
+             
+                print  (fore.LIGHT_RED  + "### DANGER! The following file is larger than 8MB ### " + style.RESET)
+                
+                print(tabulate([[fore.LIGHT_GREEN+'File'+style.RESET, url, size]], headers=[fore.LIGHT_RED+' '+style.RESET, fore.LIGHT_RED+'Path'+style.RESET,fore.LIGHT_RED+'Size(MB)'+style.RESET], tablefmt="fancy_grid"))
+                
+                cmd = "awk -f chunk/chunk.awk " + url
+                rename = "./rename_E78.sh"
+                mv = "mv *.xml output/Entities/E78"
+                subprocess.call(cmd, shell=True)
+                subprocess.call(rename, shell=True)
+                subprocess.call(mv, shell=True)
+                
+    print  (fore.LIGHT_GREEN  + "### Files are ready to be batched run the file batcher.py ### " + style.RESET)
