@@ -24,6 +24,10 @@ if __name__ == "__main__":
     myOutput = "output"
     myXslt = args.myXslt
     
+    asps = []
+    index_dir=0
+    
+    
     current_dir = myOutput+ "//Entities/E78"+  "//"    #current_dir stores path of current subdirectory
     os.makedirs(current_dir)
     file_ao_list= []   #in this list we will store the elements of the current subdirectory. This helps us to keep track of its current size
@@ -81,8 +85,7 @@ if __name__ == "__main__":
    
     print(tabulate([[fore.LIGHT_GREEN + 'Total number of files'+ style.RESET, totalFiles], [fore.LIGHT_GREEN + 'Total Number of directories'+ style.RESET, totalDir], [fore.LIGHT_GREEN + 'Total:'+ style.RESET, (totalDir + totalFiles)]], headers=[fore.LIGHT_RED+'Summary'+style.RESET, fore.LIGHT_RED+'Value'+style.RESET], tablefmt="fancy_grid"))
     
-    print(emojize("Process started:rocket:"))
-    print("Hey dude, I'm processing, go for a coffee!")  
+    print  (fore.LIGHT_YELLOW  + "### I'm now processing, go for a coffee! ### " + style.RESET) 
     
     for root, dirs, files in os.walk(myFile):
     
@@ -158,7 +161,7 @@ if __name__ == "__main__":
                 print(("id:"),item,emojize("has not been processed:thumbs_down:"),end="\r")
     print()
             
-    print(emojize("Process ended:check_mark_button:"))
+    print  (fore.LIGHT_GREEN  + "### I'm done! ### " + style.RESET)
     
    
     
@@ -231,7 +234,7 @@ if __name__ == "__main__":
                 url = os.path.join(root, filename)
                 size = os.path.getsize(os.path.join(root, filename))
              
-                print  (fore.LIGHT_RED  + "### DANGER! The following file is larger than 8MB ### " + style.RESET)
+                print  (fore.LIGHT_RED  + "### DANGER! The following file is larger than 8MB. I'll take care of it. Wait a minute.### " + style.RESET)
                 
                 print(tabulate([[fore.LIGHT_GREEN+'File'+style.RESET, url, size]], headers=[fore.LIGHT_RED+' '+style.RESET, fore.LIGHT_RED+'Path'+style.RESET,fore.LIGHT_RED+'Size(MB)'+style.RESET], tablefmt="fancy_grid"))
                 
@@ -242,6 +245,10 @@ if __name__ == "__main__":
                 subprocess.call(rename, shell=True)
                 subprocess.call(mv, shell=True)
                 
+                #then remove the file
+                os.remove(url)
+                print  (fore.LIGHT_GREEN  + "### The file is now under 8MB ### " + style.RESET)
+                
     for root, dirnames, filenames in os.walk("output/Entities/D1", topdown=True):
         for filename in filenames:
             #if the size of a file is greater than 8MB then print the name of the file and its path and size
@@ -251,7 +258,7 @@ if __name__ == "__main__":
                 url = os.path.join(root, filename)
                 size = os.path.getsize(os.path.join(root, filename))
              
-                print  (fore.LIGHT_RED  + "### DANGER! The following file is larger than 8MB ### " + style.RESET)
+                print  (fore.LIGHT_RED  + "### DANGER! The following file is larger than 8MB. I'll take care of it. Wait a minute.### " + style.RESET)
                 
                 print(tabulate([[fore.LIGHT_GREEN+'File'+style.RESET, url, size]], headers=[fore.LIGHT_RED+' '+style.RESET, fore.LIGHT_RED+'Path'+style.RESET,fore.LIGHT_RED+'Size(MB)'+style.RESET], tablefmt="fancy_grid"))
                 
@@ -262,6 +269,10 @@ if __name__ == "__main__":
                 subprocess.call(rename, shell=True)
                 subprocess.call(mv, shell=True)
                 
+                #then remove the file
+                os.remove(url)
+                print  (fore.LIGHT_GREEN  + "### The file is now under 8MB ### " + style.RESET)
+                
     for root, dirnames, filenames in os.walk("output/Entities/E21", topdown=True):
         for filename in filenames:
             #if the size of a file is greater than 8MB then print the name of the file and its path and size
@@ -271,7 +282,7 @@ if __name__ == "__main__":
                 url = os.path.join(root, filename)
                 size = os.path.getsize(os.path.join(root, filename))
              
-                print  (fore.LIGHT_RED  + "### DANGER! The following file is larger than 8MB ### " + style.RESET)
+                print  (fore.LIGHT_RED  + "### DANGER! The following file is larger than 8MB. I'll take care of it. Wait a minute.### " + style.RESET)
                 
                 print(tabulate([[fore.LIGHT_GREEN+'File'+style.RESET, url, size]], headers=[fore.LIGHT_RED+' '+style.RESET, fore.LIGHT_RED+'Path'+style.RESET,fore.LIGHT_RED+'Size(MB)'+style.RESET], tablefmt="fancy_grid"))
                 
@@ -281,7 +292,11 @@ if __name__ == "__main__":
                 subprocess.call(cmd, shell=True)
                 subprocess.call(rename, shell=True)
                 subprocess.call(mv, shell=True)
-    
+                
+                #then remove the file
+                os.remove(url)
+                print  (fore.LIGHT_GREEN  + "### The file is now under 8MB ### " + style.RESET)
+                
     for root, dirnames, filenames in os.walk("output/Entities/E22", topdown=True):
         for filename in filenames:
             #if the size of a file is greater than 8MB then print the name of the file and its path and size
@@ -291,7 +306,7 @@ if __name__ == "__main__":
                 url = os.path.join(root, filename)
                 size = os.path.getsize(os.path.join(root, filename))
              
-                print  (fore.LIGHT_RED  + "### DANGER! The following file is larger than 8MB ### " + style.RESET)
+                print  (fore.LIGHT_RED  + "### DANGER! The following file is larger than 8MB. I'll take care of it. Wait a minute.### " + style.RESET)
                 
                 print(tabulate([[fore.LIGHT_GREEN+'File'+style.RESET, url, size]], headers=[fore.LIGHT_RED+' '+style.RESET, fore.LIGHT_RED+'Path'+style.RESET,fore.LIGHT_RED+'Size(MB)'+style.RESET], tablefmt="fancy_grid"))
                 
@@ -301,7 +316,11 @@ if __name__ == "__main__":
                 subprocess.call(cmd, shell=True)
                 subprocess.call(rename, shell=True)
                 subprocess.call(mv, shell=True)
-    
+                
+                #then remove the file
+                os.remove(url)
+                print  (fore.LIGHT_GREEN  + "### The file is now under 8MB ### " + style.RESET)
+                
     for root, dirnames, filenames in os.walk("output/Entities/E74", topdown=True):
         for filename in filenames:
             #if the size of a file is greater than 8MB then print the name of the file and its path and size
@@ -311,7 +330,7 @@ if __name__ == "__main__":
                 url = os.path.join(root, filename)
                 size = os.path.getsize(os.path.join(root, filename))
              
-                print  (fore.LIGHT_RED  + "### DANGER! The following file is larger than 8MB ### " + style.RESET)
+                print  (fore.LIGHT_RED  + "### DANGER! The following file is larger than 8MB. I'll take care of it. Wait a minute.### " + style.RESET)
                 
                 print(tabulate([[fore.LIGHT_GREEN+'File'+style.RESET, url, size]], headers=[fore.LIGHT_RED+' '+style.RESET, fore.LIGHT_RED+'Path'+style.RESET,fore.LIGHT_RED+'Size(MB)'+style.RESET], tablefmt="fancy_grid"))
                 
@@ -322,6 +341,10 @@ if __name__ == "__main__":
                 subprocess.call(rename, shell=True)
                 subprocess.call(mv, shell=True)
                 
+                #then remove the file
+                os.remove(url)
+                print  (fore.LIGHT_GREEN  + "### The file is now under 8MB ### " + style.RESET)
+                
     for root, dirnames, filenames in os.walk("output/Entities/E78", topdown=True):
         for filename in filenames:
             #if the size of a file is greater than 8MB then print the name of the file and its path and size
@@ -331,7 +354,7 @@ if __name__ == "__main__":
                 url = os.path.join(root, filename)
                 size = os.path.getsize(os.path.join(root, filename))
              
-                print  (fore.LIGHT_RED  + "### DANGER! The following file is larger than 8MB ### " + style.RESET)
+                print  (fore.LIGHT_RED  + "### DANGER! The following file is larger than 8MB. I'll take care of it. Wait a minute.### " + style.RESET)
                 
                 print(tabulate([[fore.LIGHT_GREEN+'File'+style.RESET, url, size]], headers=[fore.LIGHT_RED+' '+style.RESET, fore.LIGHT_RED+'Path'+style.RESET,fore.LIGHT_RED+'Size(MB)'+style.RESET], tablefmt="fancy_grid"))
                 
@@ -342,4 +365,106 @@ if __name__ == "__main__":
                 subprocess.call(rename, shell=True)
                 subprocess.call(mv, shell=True)
                 
+                #then remove the file
+                os.remove(url)
+                print  (fore.LIGHT_GREEN  + "### The file is now under 8MB ### " + style.RESET)
+                
     print  (fore.LIGHT_GREEN  + "### Files are ready to be batched run the file batcher.py ### " + style.RESET)
+    
+    ################################################################################################################################
+    #                                                                                                                              #
+    #                                                                                                                              #
+    # If errors this part can be executed running the file batcher.py                                                              #
+    #                                                                                                                              #
+    ################################################################################################################################
+    
+    myBatchPath = 'output'
+    
+    for root, dirs, files in os.walk(myBatchPath):
+        for file in files:
+            
+            asps.append(file)
+            
+            #if the sum of the size of the files is greater than 8MB 
+            if sum(os.path.getsize(os.path.join(root, name)) for name in files) > 8000000:
+                #create batches of files with the same size of 8MB
+                batch = []
+                for name in files:
+                    batch.append(name)
+                    if sum(os.path.getsize(os.path.join(root, name)) for name in batch) > 8000000:
+                        #create a new folder progressively
+                        index_dir+=1
+                        os.mkdir(os.path.join(root, "batch_A" +  str(index_dir)))
+                        #move the files to the new folder
+                        for name in batch:
+                            os.rename(os.path.join(root, name), os.path.join(root, "batch_A" + str(index_dir), name))
+                        #clear the batch
+                        batch = []
+                        
+                #else move all .xml files in directory batch_B
+                else:
+                    os.mkdir(os.path.join(root, "batch_B"))
+                    #move the files to the new folder
+                    for name in batch:
+                        os.rename(os.path.join(root, name), os.path.join(root, "batch_B", name))
+            
+                     
+            break
+            
+    
+    # Count D1 pasrsed files
+    for base, dirs, files in os.walk(myBatchPath + "//Entities/D1", topdown=True):
+        for directories in dirs:
+            totalDir_do_Out += 1
+        for Files in files:
+            if Files.endswith('.xml'):
+                totalFiles_do_Out += 1
+   
+    # Count E78 pasrsed files
+    for base, dirs, files in os.walk(myBatchPath + "//Entities/E78", topdown=True):
+        for directories in dirs:
+            totalDir_ao_Out += 1
+        for Files in files:
+            if Files.endswith('.xml'):
+                totalFiles_ao_Out += 1
+    
+    # Count E53 pasrsed files
+    for base, dirs, files in os.walk(myBatchPath + "//Entities/E53", topdown=True):
+        for directories in dirs:
+            totalDir_pl_Out += 1
+        for Files in files:
+            if Files.endswith('.xml'):
+                totalFiles_pl_Out += 1
+
+    # Count E21 pasrsed files
+    for base, dirs, files in os.walk(myBatchPath + "//Entities/E21", topdown=True):
+        for directories in dirs:
+            totalDir_act_Out += 1
+        for Files in files:
+            if Files.endswith('.xml'):
+                totalFiles_act_Out += 1
+
+    # Count E22 pasrsed files
+    for base, dirs, files in os.walk(myBatchPath + "//Entities/E22", topdown=True):
+        for directories in dirs:
+            totalDir_bw_Out += 1
+        for Files in files:
+            if Files.endswith('.xml'):
+                totalFiles_bw_Out += 1
+   
+    # Count E74 pasrsed files
+    for base, dirs, files in os.walk(myBatchPath + "//Entities/E74", topdown=True):
+        for directories in dirs:
+            totalDir_grp_Out += 1
+        for Files in files:
+            if Files.endswith('.xml'):
+                totalFiles_grp_Out += 1
+   
+   
+    
+    
+    print  (fore.LIGHT_BLUE  + "### Summary of batched files ### " + style.RESET)            
+    
+    print(tabulate([[fore.LIGHT_GREEN+'D1'+style.RESET, totalFiles_do_Out, totalDir_do_Out], [fore.LIGHT_GREEN+'E78'+style.RESET, totalFiles_ao_Out,totalDir_ao_Out], [fore.LIGHT_GREEN+'E53'+style.RESET, totalFiles_pl_Out, totalDir_pl_Out], [fore.LIGHT_GREEN+'E21'+style.RESET, totalFiles_act_Out, totalDir_act_Out], [fore.LIGHT_GREEN+'E22'+style.RESET, totalFiles_bw_Out, totalDir_bw_Out], [fore.LIGHT_GREEN+'E74'+style.RESET, totalFiles_grp_Out, totalDir_grp_Out]], headers=[fore.LIGHT_RED+'Type'+style.RESET, fore.LIGHT_RED+'Number of files'+style.RESET,fore.LIGHT_RED+'Number of batches'+style.RESET], tablefmt="fancy_grid"))
+            
+    print  (fore.LIGHT_GREEN  + "### Proceed with rdf file transformation ### " + style.RESET) 
