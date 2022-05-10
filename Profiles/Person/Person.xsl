@@ -20,11 +20,11 @@
 		</xsl:copy>
 	</xsl:template>
 	<xsl:template match="pr:objects/pr:act">
-	<xsl:variable name="wikidata" select="pr:act_nc_identifier_wikidata" />
-	<xsl:variable name="gnd" select="pr:pl_nc_identifier_gnd" />
-	<xsl:variable name="ulan" select="pr:act_nc_identifier_ulan" />
-	<xsl:variable name="sikart" select="pr:act_nc_identifier_sikart" />
-	
+	<xsl:variable name="wikidata" select="pr:act_nc_identifier_wikidata_archive" />
+	<xsl:variable name="gnd" select="pr:pl_nc_identifier_gnd_archive" />
+	<xsl:variable name="ulan" select="pr:act_nc_identifier_ulan_archive" />
+	<xsl:variable name="sikart" select="pr:act_nc_identifier_sikart_archive" />
+
 		<entry>
 			<per_type_crm_de>
 				<xsl:value-of select="pr:act_type_crm/pr:act_type_crm/pr:_standard/pr:de-DE"/>
@@ -42,43 +42,44 @@
 				<xsl:value-of select="pr:_uuid"/>
 			</per_uuid>
 			<per_nc_name>
-				<xsl:value-of select="pr:act_nc_name"/>
+				<xsl:value-of select="pr:act_nc_name_archive"/>
 			</per_nc_name>
 			<per_nc_name_lang_akronym>
-				<xsl:value-of select="pr:act_nc_name_lang/pr:generic_lang/pr:generic_lang_akronym"/>
+				<xsl:value-of select="pr:act_nc_name_lang_archive/pr:generic_lang/pr:generic_lang_akronym"/> 
 			</per_nc_name_lang_akronym>
 			<per_nc_honname>
-				<xsl:value-of select="pr:act_nc_honname"/>
+				<xsl:value-of select="pr:act_nc_honname_archive"/>
 			</per_nc_honname>
 			<per_nc_honname_lang_akronym>
-				<xsl:value-of select="pr:act_nc_honname_lang/pr:generic_lang/pr:generic_lang_akronym"/>
+				<xsl:value-of select="pr:act_nc_honname_lang_archive/pr:generic_lang/pr:generic_lang_akronym"/>
 			</per_nc_honname_lang_akronym>
-			<xsl:for-each select="pr:_nested__act__act_nc_altname">
+			<xsl:for-each select="pr:_nested__act__act_nc_altname_archive">
 				<xsl:element name="act_altName">
-					<xsl:for-each select="pr:act__act_nc_altname">
+					<xsl:for-each select="pr:act__act_nc_altname_archive">
 						<xsl:element name="act_alt_nameLiteral">
 							<per_nc_altname_literal>
-								<xsl:value-of select="pr:act_nc_altname_literal"/>
+								<xsl:value-of select="pr:act_nc_altname_literal_archive"/>
 							</per_nc_altname_literal>
 							<per_nc_altname_lang_akronym>
-								<xsl:value-of select="pr:act_nc_altname_lang/pr:generic_lang/pr:generic_lang_akronym"/>
+								<xsl:value-of select="pr:act_nc_altname_lang_archive/pr:generic_lang/pr:generic_lang_akronym"/>
 							</per_nc_altname_lang_akronym>
 							<per_nc_altname_type_de>
-								<xsl:value-of select="pr:act_nc_altname_type/pr:generic_nametype/pr:_standard/pr:de-DE"/>
+								<xsl:value-of select="pr:act_nc_altname_type_archive/pr:generic_nametype/pr:_standard/pr:de-DE"/>
 							</per_nc_altname_type_de>
 							<per_nc_altname_type_en>
-								<xsl:value-of select="pr:act_nc_altname_type/pr:generic_nametype/pr:_standard/pr:en-US"/>
+								<xsl:value-of select="pr:act_nc_altname_type_archive/pr:generic_nametype/pr:_standard/pr:en-US"/>
 							</per_nc_altname_type_en>
 						</xsl:element>
 					</xsl:for-each>
 				</xsl:element>
 			</xsl:for-each>
 			<per_person_gender_de>
-				<xsl:value-of select="pr:act_nc_gender/pr:act_person_gender/pr:_standard/pr:de-DE"/>
+				<xsl:value-of select="pr:act_nc_gender_archive/pr:act_person_gender/pr:_standard/pr:de-DE"/>
 			</per_person_gender_de>
 			<per_person_gender_en>
-				<xsl:value-of select="pr:act_nc_gender/pr:act_person_gender/pr:_standard/pr:en-US"/>
+				<xsl:value-of select="pr:act_nc_gender_archive/pr:act_person_gender/pr:_standard/pr:en-US"/>
 			</per_person_gender_en>
+			<!--
 			<xsl:for-each select="pr:_nested__act__act_doc_biographical_note">
 				<xsl:element name="act_short_bio">
 					<per_doc_biographical_note_literal>
@@ -91,7 +92,10 @@
 						<xsl:value-of select="pr:act__act_doc_biographical_note/pr:act_doc_biographical_note_source/pr:generic_contributor/pr:_uuid"/>
 					</per_doc_biographical_note_source_uuid>
 				</xsl:element>
-			</xsl:for-each>
+			</xsl:for-each>-->
+			<xsl:element name="act_short_bio">
+			<xsl:value-of select="pr:act_doc_biographical_note_archives/pr:de-DE"/>
+			</xsl:element>
 			<per_nc_identifier_gnd>
 				<!--<xsl:value-of select="pr:act_nc_identifier_gnd"/>-->
 				<xsl:value-of select="substring-after($gnd,'https://d-nb.info/gnd/')"/>
@@ -121,25 +125,25 @@
 				<xsl:value-of select="pr:act_nc_identifier_wikidata__prov/pr:generic_contributor/pr:generic_contributor_sari_uuid"/>
 			</generic_contributor_sari_wikidata_uuid>
 			<per_exist_birth_place_uuid>
-				<xsl:value-of select="pr:act_exist_birth_place/pr:pl/pr:_uuid"/>
+				<xsl:value-of select="pr:act_exist_birth_place/pr:pl/pr:_uuid"/> 
 			</per_exist_birth_place_uuid>
 			<per_exist_birth_timespan_from>
 				<xsl:choose>
-					<xsl:when test="string-length(pr:act_exist_birth_timespan/pr:from) = 4">
-						<xsl:value-of select="concat(pr:act_exist_birth_timespan/pr:from,'-01-01')"/>
+					<xsl:when test="string-length(pr:act_exist_birth_timespan_archive/pr:from) = 4">
+						<xsl:value-of select="concat(pr:act_exist_birth_timespan_archive/pr:from,'-01-01')"/>
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:value-of select="pr:act_exist_birth_timespan/pr:from"/>
+						<xsl:value-of select="pr:act_exist_birth_timespan_archive/pr:from"/>
 					</xsl:otherwise>
 				</xsl:choose>
 			</per_exist_birth_timespan_from>
 			<per_exist_birth_timespan_to>
 				<xsl:choose>
-					<xsl:when test="string-length(pr:act_exist_birth_timespan/pr:to) = 4">
-						<xsl:value-of select="concat(pr:act_exist_birth_timespan/pr:to,'-01-01')"/>
+					<xsl:when test="string-length(pr:act_exist_birth_timespan_archive/pr:to) = 4">
+						<xsl:value-of select="concat(pr:act_exist_birth_timespan_archive/pr:to,'-01-01')"/>
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:value-of select="pr:act_exist_birth_timespan/pr:to"/>
+						<xsl:value-of select="pr:act_exist_birth_timespan_archive/pr:to"/>
 					</xsl:otherwise>
 				</xsl:choose>
 			</per_exist_birth_timespan_to>
@@ -148,35 +152,35 @@
 			</per_exist_death_place>
 			<per_exist_death_timespan_from>
 				<xsl:choose>
-					<xsl:when test="string-length(pr:act_exist_death_timespan/pr:from) = 4">
-						<xsl:value-of select="concat(pr:act_exist_death_timespan/pr:from,'-01-01')"/>
+					<xsl:when test="string-length(pr:act_exist_death_timespan_archive/pr:from) = 4">
+						<xsl:value-of select="concat(pr:act_exist_death_timespan_archive/pr:from,'-01-01')"/>
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:value-of select="pr:act_exist_death_timespan/pr:from"/>
+						<xsl:value-of select="pr:act_exist_death_timespan_archive/pr:from"/>
 					</xsl:otherwise>
 				</xsl:choose>
 			</per_exist_death_timespan_from>
 			<per_exist_death_timespan_to>
 				<xsl:choose>
-					<xsl:when test="string-length(pr:act_exist_death_timespan/pr:from) = 4">
-						<xsl:value-of select="concat(pr:act_exist_death_timespan/pr:from,'-01-01')"/>
+					<xsl:when test="string-length(pr:act_exist_death_timespan_archive/pr:from) = 4">
+						<xsl:value-of select="concat(pr:act_exist_death_timespan_archive/pr:from,'-01-01')"/>
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:value-of select="pr:act_exist_death_timespan/pr:from"/>
+						<xsl:value-of select="pr:act_exist_death_timespan_archive/pr:from"/>
 					</xsl:otherwise>
 				</xsl:choose>
 			</per_exist_death_timespan_to>
 			<per_social_father_uuid>
-				<xsl:value-of select="pr:act_social_father/pr:act/pr:_uuid"/>
+				<xsl:value-of select="pr:act_social_father_archive/pr:act/pr:_uuid"/>
 			</per_social_father_uuid>
 			<per_social_mother_uuid>
-				<xsl:value-of select="pr:act_social_mother/pr:act/pr:_uuid"/>
+				<xsl:value-of select="pr:act_social_mother_archive/pr:act/pr:_uuid"/>
 			</per_social_mother_uuid>
-			<xsl:for-each select="pr:_nested__act__act_social_national_affiliation">
-				<xsl:element name="act_social_national_affiliation">
-					<xsl:for-each select="pr:act__act_social_national_affiliation">
+			<xsl:for-each select="pr:_nested__act__act_social_national_affiliation_archive">
+				<xsl:element name="act_social_national_affiliation_archive">
+					<xsl:for-each select="pr:act__act_social_national_affiliation_archive">
 						<per_social_national_affiliation_uuid>
-							<xsl:value-of select="pr:act_social_national_affiliation_nationality/pr:act_nat/pr:_uuid"/>
+							<xsl:value-of select="pr:act_social_national_affiliation_nationality_archive/pr:act_nat/pr:_uuid"/>
 						</per_social_national_affiliation_uuid>
 					</xsl:for-each>
 				</xsl:element>
