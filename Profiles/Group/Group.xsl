@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- author: ETH Zurich, gta digital, Matteo Lorenzini, Zoe Reinke -->
+<!-- author: ETH Zurich, gta digital, Matteo Lorenzini	 -->
 <!-- license: please refer to the license.txt file in our git repository (https://github.com/gtadigital/XSLT) -->
-<xsl:stylesheet version="1.0"
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-	xmlns:pr="https://schema.easydb.de/EASYDB/1.0/objects/" exclude-result-prefixes="pr">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:pr="https://schema.easydb.de/EASYDB/1.0/objects/" exclude-result-prefixes="pr">
 	<xsl:output method="xml" indent="yes"/>
 	<xsl:template match="/">
 		<root>
@@ -17,17 +15,14 @@
 	</xsl:template>
 	<xsl:template match="pr:objects/pr:act">
 		<entry>
-			<grp_system_object_id>
-				<xsl:value-of select="pr:act_nc_name_lang_archive/pr:generic_lang/pr:_system_object_id"/>
-			</grp_system_object_id>
-			<!--
+			
 			<grp_last_modified>
-				<xsl:value-of select="pr:act_last_modified"/>
+				<xsl:value-of select="pr:_last_modified"/>
 			</grp_last_modified>
-			-->
-			<grp_uuid>
-				<xsl:value-of select="pr:_uuid"/>
-			</grp_uuid>
+			
+			<grp_id>
+				<xsl:value-of select="pr:_id"/>
+			</grp_id>
 			<grp_nc_name>
 				<xsl:value-of select="pr:act_nc_name_archive"/>
 			</grp_nc_name>
@@ -127,17 +122,11 @@
 					</grp_location_place>
 				</xsl:element>
 			</xsl:for-each>
-			<xsl:for-each select="pr:_nested__act__act_doc_biographical_note">
+			<xsl:for-each select="pr:_nested__act__act_nc_altname_archive/pr:act__act_nc_altname_archive/pr:act_nc_altname_usedby_archive/pr:act/pr:_nested__act__act_doc_biographical_note/pr:act__act_doc_biographical_note">
 				<xsl:element name="act_short_bio">
 					<grp_doc_biographical_note_literal>
-						<xsl:value-of select="pr:act__act_doc_biographical_note/pr:act_doc_biographical_note_literal"/>
+						<xsl:value-of select="pr:act_doc_biographical_note_literal"/>
 					</grp_doc_biographical_note_literal>
-					<grp_doc_biographical_note_akronym>
-						<xsl:value-of select="pr:act__act_doc_biographical_note/pr:act_doc_biographical_note_lang/pr:generic_lang/pr:generic_lang_akronym"/>
-					</grp_doc_biographical_note_akronym>
-					<grp_doc_biographical_note_source_uuid>
-						<xsl:value-of select="pr:act__act_doc_biographical_note/pr:act_doc_biographical_note_source/pr:generic_contributor/pr:_uuid"/>
-					</grp_doc_biographical_note_source_uuid>
 				</xsl:element>
 			</xsl:for-each>
 			
@@ -207,33 +196,37 @@
 				</grp_nc_identifier_fotoch_2>
 			</xsl:element>
 			
-			<xsl:for-each select="pr:_nested__act__act_social_national_affiliation">
+			<xsl:for-each select="pr:_nested__act__grp_exist_formation_from_archive/pr:act__grp_exist_formation_from_archive/pr:grp_exist_formation_from_group_archive/pr:act/pr:_nested__act__act_social_national_affiliation/pr:act__act_social_national_affiliation/pr:act_social_national_affiliation_nationality/pr:act_nat">
 				<xsl:element name="act_social_national_affiliation">
-					<xsl:for-each select="pr:act__act_social_national_affiliation">
-						<grp_social_national_affiliation_uuid>
-							<xsl:value-of select="pr:act_social_national_affiliation_nationality/pr:act_nat/pr:_uuid"/>
-						</grp_social_national_affiliation_uuid>
-					</xsl:for-each>
+					<grp_social_national_affiliation_id>
+						<xsl:value-of select="pr:_id"/>
+					</grp_social_national_affiliation_id>
 				</xsl:element>
 			</xsl:for-each>
-			<!--
-			<xsl:for-each select="pr:_nested__act__grp_social_founding_members">
-			<xsl:element name="">
-			</xsl:element>
-			</xsl:for-each>
-			-->
 			
+			<xsl:element name="grp_foundation_member">
+				<xsl:for-each select="pr:_nested__act__grp_social_founding_members_archive/pr:act__grp_social_founding_members_archive/pr:grp_social_founding_member_archive/pr:act">
+			
+					<grp_foundation_member_id>
+						<xsl:value-of select="pr:_id"/>
+					</grp_foundation_member_id>
+			
+				</xsl:for-each>
+			</xsl:element>
+			<xsl:element name="act_nat_id">
 			<xsl:for-each select="pr:_nested__act__grp_social_national_affiliation_archive">
-				<xsl:element name="act_nat_uuid">
+				
 					<grp_national_affiliation>
-						<xsl:value-of select="pr:act__grp_social_national_affiliation_archive/pr:act_social_national_affiliation_nationality_archive/pr:act_nat/pr:_uuid"/>
+						<xsl:value-of select="pr:act__grp_social_national_affiliation_archive/pr:act_social_national_affiliation_nationality_archive/pr:act_nat/pr:_id"/>
 					</grp_national_affiliation>
-				</xsl:element>
+				
 			</xsl:for-each>
+			</xsl:element>
+			<xsl:element name="actor_activity_floruit">
 			<xsl:for-each select="pr:_nested__act__act_activity_floruit_archive">
-				<xsl:element name="actor_activity_floruit">
+				
 					<grp_activity_floruit_place>
-						<xsl:value-of select="pr:act__act_activity_floruit_archive/pr:act_activity_floruit_place_archive/pr:pl/pr:id"/>
+						<xsl:value-of select="pr:act__act_activity_floruit_archive/pr:act_activity_floruit_place_archive/pr:pl/pr:_id"/>
 					</grp_activity_floruit_place>
 					<grp_activity_floruit_time-span_from>
 						<xsl:choose>
@@ -255,24 +248,27 @@
 							</xsl:otherwise>
 						</xsl:choose>
 					</grp_activity_floruit_time-span_to>
-				</xsl:element>
+				
 			</xsl:for-each>
+			</xsl:element>
+			<xsl:element name="act_occupations">
 			<xsl:for-each select="pr:_nested__act__grp_exist_formation_from_archive/pr:act__grp_exist_formation_from_archive/pr:grp_exist_formation_from_group_archive/pr:act/pr:_nested__act__act_activity_occupations/pr:act__act_activity_occupations/pr:act_activity_occupation">
-				<xsl:element name="act_occupations">
+				
 					<grp_activity_occupation_de>
 						<xsl:value-of select="pr:act_occ/pr:_standard/pr:de-DE"/>
 					</grp_activity_occupation_de>
 					<grp_activity_occupation_en>
-						<xsl:value-of select="pr:act_activity_occupation/pr:act_occ/pr:_standard/pr:en-US"/>
+						<xsl:value-of select="pr:act_occ/pr:_standard/pr:en-US"/>
 					</grp_activity_occupation_en>
-					<grp_activity_occupation_uuid>
-						<xsl:value-of select="pr:act_activity_occupation/pr:act_occ/pr:_uuid"/>
-					</grp_activity_occupation_uuid>
+					<grp_activity_occupation_id>
+						<xsl:value-of select="pr:act_occ/pr:_id"/>
+					</grp_activity_occupation_id>
 					<grp_activity_occupation_aat>
 						<xsl:value-of select="pr:act_activity_occupation/pr:act_occ/pr:custom/pr:string"/>
 					</grp_activity_occupation_aat>
-				</xsl:element>
+				
 			</xsl:for-each>
+			</xsl:element>
 		</entry>
 	</xsl:template>
 </xsl:stylesheet>
