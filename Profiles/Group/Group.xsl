@@ -248,9 +248,6 @@
 					<grp_activity_occupation_id>
 						<xsl:value-of select="pr:act_occ/pr:_id"/>
 					</grp_activity_occupation_id>
-					<grp_activity_occupation_aat>
-						<xsl:value-of select="pr:act_activity_occupation/pr:act_occ/pr:custom/pr:string"/>
-					</grp_activity_occupation_aat>
 				
 			</xsl:for-each>
 			</xsl:element>
