@@ -53,6 +53,9 @@
 				<per_nc_identifier_alat>
 					<xsl:value-of select="pr:act_nc_identifier_alat_archive"/>
 				</per_nc_identifier_alat>
+				<per_nc_identifier_gnd>
+					<xsl:value-of select="pr:custom/pr:string[@name='conceptURI']"/>
+				</per_nc_identifier_gnd>
 			</per_identifiers>
 			<per_last_modified>
 				<xsl:value-of select="pr:_last_modified"/>

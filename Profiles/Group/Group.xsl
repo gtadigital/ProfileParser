@@ -55,7 +55,10 @@
 				</grp_nc_identifier_fotoch>
 				<grp_nc_identifier_alat>
 					<xsl:value-of select="pr:act_nc_identifier_alat_archive"/>
-				</grp_nc_identifier_alat>>
+				</grp_nc_identifier_alat>
+				<per_nc_identifier_gnd>
+					<xsl:value-of select="pr:custom/pr:string[@name='conceptURI']"/>
+				</per_nc_identifier_gnd>
 			</grp_identifiers>
 			
 			<grp_nc_name>
