@@ -23,10 +23,10 @@
 				<xsl:value-of select="pr:_last_modified"/>
 			</grp_last_modified>
 			<grp_identifiers>
-			<_id>
-				<xsl:value-of select="pr:_id"/>
-			</_id>
-			<grp_cms_id>
+				<_id>
+					<xsl:value-of select="pr:_id"/>
+				</_id>
+				<grp_cms_id>
 					<xsl:value-of select="pr:_urls/pr:url[@type='easydb-id']"/>
 				</grp_cms_id>
 				<grp_nc_identifier_ulan>
@@ -110,7 +110,7 @@
 			<grp_nc_honname_lang_akronym>
 				<xsl:value-of select="pr:act_nc_honname_lang_archive/pr:generic_lang/pr:generic_lang_akronym"/>
 			</grp_nc_honname_lang_akronym>
-
+			
 			<grp_formation_place>
 				<xsl:value-of select="pr:grp_exist_formation_place_archive/pr:pl/pr:_id"/>
 			</grp_formation_place>
@@ -191,25 +191,25 @@
 			
 			<xsl:element name="grp_foundation_member">
 				<xsl:for-each select="pr:_nested__act__grp_social_founding_members_archive/pr:act__grp_social_founding_members_archive/pr:grp_social_founding_member_archive/pr:act">
-			
+					
 					<grp_foundation_member_id>
 						<xsl:value-of select="pr:_id"/>
 					</grp_foundation_member_id>
-			
+				
 				</xsl:for-each>
 			</xsl:element>
 			<xsl:element name="act_nat_id">
-			<xsl:for-each select="pr:_nested__act__grp_social_national_affiliation_archive">
-				
+				<xsl:for-each select="pr:_nested__act__grp_social_national_affiliation_archive">
+					
 					<grp_national_affiliation>
 						<xsl:value-of select="pr:act__grp_social_national_affiliation_archive/pr:act_social_national_affiliation_nationality_archive/pr:act_nat/pr:_id"/>
 					</grp_national_affiliation>
-				
-			</xsl:for-each>
+			
+				</xsl:for-each>
 			</xsl:element>
 			<xsl:element name="actor_activity_floruit">
-			<xsl:for-each select="pr:_nested__act__act_activity_floruit_archive">
-				
+				<xsl:for-each select="pr:_nested__act__act_activity_floruit_archive">
+					
 					<grp_activity_floruit_place>
 						<xsl:value-of select="pr:act__act_activity_floruit_archive/pr:act_activity_floruit_place_archive/pr:pl/pr:_id"/>
 					</grp_activity_floruit_place>
@@ -233,12 +233,12 @@
 							</xsl:otherwise>
 						</xsl:choose>
 					</grp_activity_floruit_time-span_to>
-				
-			</xsl:for-each>
+			
+				</xsl:for-each>
 			</xsl:element>
 			<xsl:element name="act_occupations">
-			<xsl:for-each select="pr:_nested__act__grp_exist_formation_from_archive/pr:act__grp_exist_formation_from_archive/pr:grp_exist_formation_from_group_archive/pr:act/pr:_nested__act__act_activity_occupations/pr:act__act_activity_occupations/pr:act_activity_occupation">
-				
+				<xsl:for-each select="pr:_nested__act__grp_exist_formation_from_archive/pr:act__grp_exist_formation_from_archive/pr:grp_exist_formation_from_group_archive/pr:act/pr:_nested__act__act_activity_occupations/pr:act__act_activity_occupations/pr:act_activity_occupation">
+					
 					<grp_activity_occupation_de>
 						<xsl:value-of select="pr:act_occ/pr:_standard/pr:de-DE"/>
 					</grp_activity_occupation_de>
@@ -248,8 +248,8 @@
 					<grp_activity_occupation_id>
 						<xsl:value-of select="pr:act_occ/pr:_id"/>
 					</grp_activity_occupation_id>
-				
-			</xsl:for-each>
+			
+				</xsl:for-each>
 			</xsl:element>
 		</entry>
 	</xsl:template>
