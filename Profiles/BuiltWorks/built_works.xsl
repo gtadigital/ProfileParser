@@ -24,7 +24,7 @@
 		<entry>
 			<!-- UUID -->
 			<oeu_nc_uuid>
-				<xsl:value-of select="pr:_uuid"/>
+				<xsl:value-of select="pr:_id"/>
 			</oeu_nc_uuid>
 			<!-- MODIFICATION -->
 			<oeu_nc_last_modified>
