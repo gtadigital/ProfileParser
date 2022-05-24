@@ -45,7 +45,7 @@
 					<xsl:value-of select="substring-after($wikidata,'https://www.wikidata.org/wiki/')"/>
 				</per_nc_identifier_wikidata>
 				<per_nc_identifier_akl>
-					<xsl:value-of select="substring-after($akl,'https://www.degruyter.com/document/database/AKL/entry/')"/>
+					<xsl:value-of select="substring-after($akl,'https://www.degruyter.com/')"/>
 				</per_nc_identifier_akl>
 				<per_nc_identifier_morphe>
 					<xsl:value-of select="substring-after($morphe,'https://morphe.epfl.ch/index.php/')"/>
