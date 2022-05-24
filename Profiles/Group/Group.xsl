@@ -25,9 +25,11 @@
 		<xsl:variable name="fotoch" select="pr:act_nc_identifier_fotoch_archive" />
 		<xsl:variable name="alat" select="pr:act_nc_identifier_alat_archive" />
 		<xsl:variable name="gnd" select="pr:custom/pr:string[@name='conceptURI']" />
+		<xsl:variable name="cidoc" select="pr:act_type_crm_uri" />
+		
 		<entry>
 			<grp_type_crm_uri>
-				<xsl:value-of select="pr:act_type_crm_uri"/>
+				<xsl:value-of select="substring-after($cidoc,'http://www.cidoc-crm.org/cidoc-crm/')"/>
 			</grp_type_crm_uri>
 			
 			<grp_last_modified>
