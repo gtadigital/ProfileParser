@@ -14,47 +14,59 @@
 		</xsl:copy>
 	</xsl:template>
 	<xsl:template match="pr:objects/pr:act">
+	<xsl:variable name="cms" select="pr:_urls/pr:url[@type='easydb-id']" />
+		<xsl:variable name="ulan" select="pr:act_nc_identifier_ulan_archive" />
+		<xsl:variable name="wikidata" select="pr:act_nc_identifier_wikidata_archive" />
+		<xsl:variable name="akl" select="pr:act_nc_identifier_akl_archive" />
+		<xsl:variable name="morphe" select="pr:act_nc_identifier_morphe_archive" />
+		<xsl:variable name="sikart" select="pr:act_nc_identifier_sikart_archive" />
+		<xsl:variable name="hls" select="pr:act_nc_identifier_hls_archive" />
+		<xsl:variable name="archinform" select="pr:act_nc_identifier_archinform_archive" />
+		<xsl:variable name="fotoch" select="pr:act_nc_identifier_fotoch_archive" />
+		<xsl:variable name="alat" select="pr:act_nc_identifier_alat_archive" />
+		<xsl:variable name="gnd" select="pr:custom/pr:string[@name='conceptURI']" />
+		<xsl:variable name="cidoc" select="pr:act_type_crm_uri" />
 		
 		<entry>
 			<per_type_crm_uri>
-				<xsl:value-of select="pr:act_type_crm_uri"/>
+				<xsl:value-of select="substring-after($cidoc,'http://www.cidoc-crm.org/cidoc-crm/')"/>
 			</per_type_crm_uri>
-			<per_identifiers>
+		<per_identifiers>
 				<_id>
 					<xsl:value-of select="pr:_id"/>
 				</_id>
 				<per_cms_id>
-					<xsl:value-of select="pr:_urls/pr:url[@type='easydb-id']"/>
+					<xsl:value-of select="substring-after($cms,'https://collections.gta.arch.ethz.ch/detail/')"/>
 				</per_cms_id>
 				<per_nc_identifier_ulan>
-					<xsl:value-of select="pr:act_nc_identifier_ulan_archive"/>
+					<xsl:value-of select="substring-after($ulan,'http://vocab.getty.edu/ulan/')"/>
 				</per_nc_identifier_ulan>
 				<per_nc_identifier_wikidata>
-					<xsl:value-of select="pr:act_nc_identifier_wikidata_archive"/>
+					<xsl:value-of select="substring-after($wikidata,'https://www.wikidata.org/wiki/')"/>
 				</per_nc_identifier_wikidata>
 				<per_nc_identifier_akl>
-					<xsl:value-of select="pr:act_nc_identifier_akl_archive"/>
+					<xsl:value-of select="substring-after($akl,'https://www.degruyter.com/document/database/AKL/entry/')"/>
 				</per_nc_identifier_akl>
 				<per_nc_identifier_morphe>
-					<xsl:value-of select="pr:act_nc_identifier_morphe_archive"/>
+					<xsl:value-of select="substring-after($morphe,'https://morphe.epfl.ch/index.php/')"/>
 				</per_nc_identifier_morphe>
 				<per_nc_identifier_sikart>
-					<xsl:value-of select="pr:act_nc_identifier_sikart_archive"/>
+					<xsl:value-of select="substring-after($sikart,'http://www.sikart.ch/')"/>
 				</per_nc_identifier_sikart>
 				<per_nc_identifier_hls>
-					<xsl:value-of select="pr:act_nc_identifier_hls_archive"/>
+					<xsl:value-of select="substring-after($hls,'https://hls-dhs-dss.ch/de/articles/')"/>
 				</per_nc_identifier_hls>
 				<per_nc_identifier_archinform>
-					<xsl:value-of select="pr:act_nc_identifier_archinform_archive"/>
+					<xsl:value-of select="substring-after($archinform,'https://deu.archinform.net/arch/')"/>
 				</per_nc_identifier_archinform>
 				<per_nc_identifier_fotoch>
-					<xsl:value-of select="pr:act_nc_identifier_fotoch_archive"/>
+					<xsl:value-of select="substring-after($fotoch,'https://www.foto-ch.ch/')"/>
 				</per_nc_identifier_fotoch>
 				<per_nc_identifier_alat>
-					<xsl:value-of select="pr:act_nc_identifier_alat_archive"/>
+					<xsl:value-of select="substring-after($alat,'http://www.architektenlexikon.at/de/')"/>
 				</per_nc_identifier_alat>
 				<per_nc_identifier_gnd>
-					<xsl:value-of select="pr:custom/pr:string[@name='conceptURI']"/>
+					<xsl:value-of select="substring-after($gnd,'https://d-nb.info/gnd/')"/>
 				</per_nc_identifier_gnd>
 			</per_identifiers>
 			<per_last_modified>
