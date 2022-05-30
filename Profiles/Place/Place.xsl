@@ -27,7 +27,7 @@
 	
         <entry>
             <plIdentifier_uuid>
-                <xsl:value-of select="pr:_uuid"/>
+                <xsl:value-of select="pr:_id"/>
             </plIdentifier_uuid>
 
             <xsl:for-each select="pr:_nested__pl__pl_nc_name/pr:pl__pl_nc_name">
