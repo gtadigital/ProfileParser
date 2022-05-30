@@ -45,25 +45,25 @@
 					<xsl:value-of select="substring-after($wikidata,'https://www.wikidata.org/wiki/')"/>
 				</per_nc_identifier_wikidata>
 				<per_nc_identifier_akl>
-					<xsl:value-of select="substring-after($akl,'https://www.degruyter.com/')"/>
+					<xsl:value-of select="substring-before(substring-after($akl,'https://www.degruyter.com/database/AKL/entry/'),'/html')"/>
 				</per_nc_identifier_akl>
 				<per_nc_identifier_morphe>
 					<xsl:value-of select="substring-after($morphe,'https://morphe.epfl.ch/index.php/')"/>
 				</per_nc_identifier_morphe>
 				<per_nc_identifier_sikart>
-					<xsl:value-of select="substring-after($sikart,'http://www.sikart.ch/')"/>
+					<xsl:value-of select="substring-after($sikart,'http://www.sikart.ch/kuenstlerinnen.aspx?id=')"/>
 				</per_nc_identifier_sikart>
-				<per_nc_identifier_hls>
-					<xsl:value-of select="substring-after($hls,'https://hls-dhs-dss.ch/de/articles/')"/>
+				<per_nc_identifier_hls>	
+					<xsl:value-of select="substring-before(substring-after($hls,'https://hls-dhs-dss.ch/de/articles/'),'/')"/>
 				</per_nc_identifier_hls>
 				<per_nc_identifier_archinform>
-					<xsl:value-of select="substring-after($archinform,'https://deu.archinform.net/arch/')"/>
+					<xsl:value-of select="substring-before(substring-after($archinform,'https://deu.archinform.net/arch/'),'.htm')"/>
 				</per_nc_identifier_archinform>
 				<per_nc_identifier_fotoch>
-					<xsl:value-of select="substring-after($fotoch,'https://www.foto-ch.ch/')"/>
+					<xsl:value-of select="substring-after($fotoch,'https://www.foto-ch.ch/?a=fotograph&amp;id=')"/>
 				</per_nc_identifier_fotoch>
 				<per_nc_identifier_alat>
-					<xsl:value-of select="substring-after($alat,'http://www.architektenlexikon.at/de/')"/>
+					<xsl:value-of select="substring-before(substring-after($alat,'http://www.architektenlexikon.at/de/'),'.htm')"/>
 				</per_nc_identifier_alat>
 				<per_nc_identifier_gnd>
 					<xsl:value-of select="substring-after($gnd,'https://d-nb.info/gnd/')"/>
