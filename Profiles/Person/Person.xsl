@@ -143,7 +143,7 @@
 			<per_exist_birth_timespan_to>
 				<xsl:choose>
 					<xsl:when test="string-length(pr:act_exist_birth_timespan_archive/pr:to) = 4">
-						<xsl:value-of select="concat(pr:act_exist_birth_timespan_archive/pr:to,'-01-01')"/>
+						<xsl:value-of select="concat(pr:act_exist_birth_timespan_archive/pr:to,'-12-31')"/>
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:value-of select="pr:act_exist_birth_timespan_archive/pr:to"/>
@@ -166,7 +166,7 @@
 			<per_exist_death_timespan_to>
 				<xsl:choose>
 					<xsl:when test="string-length(pr:act_exist_death_timespan_archive/pr:from) = 4">
-						<xsl:value-of select="concat(pr:act_exist_death_timespan_archive/pr:from,'-01-01')"/>
+						<xsl:value-of select="concat(pr:act_exist_death_timespan_archive/pr:from,'-12-31')"/>
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:value-of select="pr:act_exist_death_timespan_archive/pr:from"/>

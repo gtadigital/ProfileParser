@@ -35,7 +35,7 @@
 			<grp_last_modified>
 				<xsl:value-of select="pr:_last_modified"/>
 			</grp_last_modified>
-			<grp_identifiers>
+		<grp_identifiers>
 				<_id>
 					<xsl:value-of select="pr:_id"/>
 				</_id>
@@ -49,25 +49,25 @@
 					<xsl:value-of select="substring-after($wikidata,'https://www.wikidata.org/wiki/')"/>
 				</grp_nc_identifier_wikidata>
 				<grp_nc_identifier_akl>
-					<xsl:value-of select="substring-after($akl,'https://www.degruyter.com/document/database/AKL/entry/')"/>
+					<xsl:value-of select="substring-before(substring-after($akl,'https://www.degruyter.com/database/AKL/entry/'),'/html')"/>
 				</grp_nc_identifier_akl>
 				<grp_nc_identifier_morphe>
 					<xsl:value-of select="substring-after($morphe,'https://morphe.epfl.ch/index.php/')"/>
 				</grp_nc_identifier_morphe>
 				<grp_nc_identifier_sikart>
-					<xsl:value-of select="substring-after($sikart,'http://www.sikart.ch/')"/>
+					<xsl:value-of select="substring-after($sikart,'http://www.sikart.ch/kuenstlerinnen.aspx?id=')"/>
 				</grp_nc_identifier_sikart>
-				<grp_nc_identifier_hls>
-					<xsl:value-of select="substring-after($hls,'https://hls-dhs-dss.ch/de/articles/')"/>
+				<grp_nc_identifier_hls>	
+					<xsl:value-of select="substring-before(substring-after($hls,'https://hls-dhs-dss.ch/de/articles/'),'/')"/>
 				</grp_nc_identifier_hls>
 				<grp_nc_identifier_archinform>
-					<xsl:value-of select="substring-after($archinform,'https://deu.archinform.net/arch/')"/>
+					<xsl:value-of select="substring-before(substring-after($archinform,'https://deu.archinform.net/arch/'),'.htm')"/>
 				</grp_nc_identifier_archinform>
 				<grp_nc_identifier_fotoch>
-					<xsl:value-of select="substring-after($fotoch,'https://www.foto-ch.ch/')"/>
+					<xsl:value-of select="substring-after($fotoch,'https://www.foto-ch.ch/?a=fotograph&amp;id=')"/>
 				</grp_nc_identifier_fotoch>
 				<grp_nc_identifier_alat>
-					<xsl:value-of select="substring-after($alat,'http://www.architektenlexikon.at/de/')"/>
+					<xsl:value-of select="substring-before(substring-after($alat,'http://www.architektenlexikon.at/de/'),'.htm')"/>
 				</grp_nc_identifier_alat>
 				<per_nc_identifier_gnd>
 					<xsl:value-of select="substring-after($gnd,'https://d-nb.info/gnd/')"/>
@@ -109,7 +109,7 @@
 							<grp_nc_altname_timespan_to>
 								<xsl:choose>
 									<xsl:when test="string-length(pr:act_nc_altname_timespan_archive/pr:to) = 4">
-										<xsl:value-of select="concat(pr:act_nc_altname_timespan_archive/pr:to,'-01-01')"/>
+										<xsl:value-of select="concat(pr:act_nc_altname_timespan_archive/pr:to,'-12-31')"/>
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:value-of select="pr:act_nc_altname_timespan_archive/pr:to"/>
@@ -143,7 +143,7 @@
 			<grp_formation_timespan_to>
 				<xsl:choose>
 					<xsl:when test="string-length(pr:grp_exist_formation_date_archive/pr:to) = 4">
-						<xsl:value-of select="concat(pr:grp_exist_formation_date_archive/pr:to,'-01-01')"/>
+						<xsl:value-of select="concat(pr:grp_exist_formation_date_archive/pr:to,'-12-31')"/>
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:value-of select="pr:grp_exist_formation_date_archive/pr:to"/>
@@ -166,7 +166,7 @@
 			<grp_dissolution_time_span_to>
 				<xsl:choose>
 					<xsl:when test="string-length(pr:grp_exist_dissolution_date_archive/pr:to) = 4">
-						<xsl:value-of select="concat(pr:grp_exist_dissolution_date_archive/pr:to,'-01-01')"/>
+						<xsl:value-of select="concat(pr:grp_exist_dissolution_date_archive/pr:to,'-12-31')"/>
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:value-of select="pr:grp_exist_dissolution_date_archive/pr:to"/>
@@ -232,7 +232,7 @@
 					<grp_activity_floruit_time-span_from>
 						<xsl:choose>
 							<xsl:when test="string-length(pr:act__act_activity_floruit_archive/pr:act_activity_floruit_timespan_archive/pr:from) = 4">
-								<xsl:value-of select="concat(pr:act__act_activity_floruit_archive/pr:act_activity_floruit_timespan_archive/pr:from,'-1-1')"/>
+								<xsl:value-of select="concat(pr:act__act_activity_floruit_archive/pr:act_activity_floruit_timespan_archive/pr:from,'-01-01')"/>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:value-of select="pr:act__act_activity_floruit/pr:act_activity_floruit_timespan_archive/pr:from"/>
@@ -242,7 +242,7 @@
 					<grp_activity_floruit_time-span_to>
 						<xsl:choose>
 							<xsl:when test="string-length(pr:act__act_activity_floruit_archive/pr:act_activity_floruit_timespan_archive/pr:to) = 4">
-								<xsl:value-of select="concat(pr:act__act_activity_floruit_archive/pr:act_activity_floruit_timespan_archive/pr:to,'-1-1')"/>
+								<xsl:value-of select="concat(pr:act__act_activity_floruit_archive/pr:act_activity_floruit_timespan_archive/pr:to,'-12-31')"/>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:value-of select="pr:act__act_activity_floruit_archive/pr:act_activity_floruit_timespan_archive/pr:to"/>

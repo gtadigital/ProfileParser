@@ -107,13 +107,13 @@
 				<xsl:for-each select="pr:_nested__oeu__oeu_archive_ar_creation/pr:oeu__oeu_archive_ar_creation">
 					<xsl:element name="oeu_nc_actor">
 						<oeu_nc_actor_uuid>
-							<xsl:value-of select="pr:oeu_archive_ar_creation_actor/pr:act/pr:_uuid"/>
+							<xsl:value-of select="pr:oeu_archive_ar_creation_actor/pr:act/pr:_id"/>
 						</oeu_nc_actor_uuid>
 						<oeu_nc_actor_type>
 							<xsl:value-of select="pr:oeu_archive_ar_creation_actor/pr:act/pr:act_type_crm/pr:act_type_crm/pr:_standard/pr:de-DE"/>
 						</oeu_nc_actor_type>
 						<oeu_nc_act_role_uuid>
-							<xsl:value-of select="pr:oeu_archive_ar_creation_actor_role/pr:act_role/pr:_uuid"/>
+							<xsl:value-of select="pr:oeu_archive_ar_creation_actor_role/pr:act_role/pr:_id"/>
 						</oeu_nc_act_role_uuid>
 					</xsl:element>
 				</xsl:for-each>
@@ -155,7 +155,7 @@
 				<xsl:for-each select="pr:_nested__oeu__oeu_archive_exist_construct_places/pr:oeu__oeu_archive_exist_construct_places">
 					<xsl:element name="oeu_nc_construction_place">
 						<oeu_nc_construction_place_uuid>
-							<xsl:value-of select="pr:oeu_archive_exist_construct_place_v2/pr:pl/pr:_uuid"/>
+							<xsl:value-of select="pr:oeu_archive_exist_construct_place_v2/pr:pl/pr:_id"/>
 						</oeu_nc_construction_place_uuid>
 					</xsl:element>
 				</xsl:for-each>
@@ -173,7 +173,7 @@
 					<oeu_nc_construction_time_span_to>
 						<xsl:choose>
 							<xsl:when test="string-length(pr:oeu_archive_exist_construct_timespan/pr:to) = 4">
-								<xsl:value-of select="concat(pr:oeu_archive_exist_construct_timespan/pr:to,'-01-01')"/>
+								<xsl:value-of select="concat(pr:oeu_archive_exist_construct_timespan/pr:to,'-12-31')"/>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:value-of select="pr:oeu_archive_exist_construct_timespan/pr:to"/>
@@ -192,7 +192,7 @@
 				<xsl:for-each select="pr:_nested__oeu__oeu_archive_exist_destruct_places/pr:oeu__oeu_archive_exist_destruct_places">
 					<xsl:element name="oeu_nc_destruction_place">
 						<oeu_nc_destruction_place_uuid>
-							<xsl:value-of select="pr:oeu_archive_exist_destruct_place_v2/pr:pl/pr:_uuid"/>
+							<xsl:value-of select="pr:oeu_archive_exist_destruct_place_v2/pr:pl/pr:_id"/>
 						</oeu_nc_destruction_place_uuid>
 					</xsl:element>
 				</xsl:for-each>
@@ -210,7 +210,7 @@
 					<oeu_nc_destruction_time_span_to>
 						<xsl:choose>
 							<xsl:when test="string-length(pr:oeu_archive_exist_destruct_timespan/pr:to) = 4">
-								<xsl:value-of select="concat(pr:oeu_archive_exist_destruct_timespan/pr:to,'-01-01')"/>
+								<xsl:value-of select="concat(pr:oeu_archive_exist_destruct_timespan/pr:to,'-12-31')"/>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:value-of select="pr:oeu_archive_exist_destruct_timespan/pr:to"/>

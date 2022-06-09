@@ -58,11 +58,11 @@
                 </xsl:element>
             </xsl:for-each>
             <plIdentifier_type>
-                <xsl:value-of select="pr:pl_nc_type/pr:pl_type/pr:_uuid"/>
+                <xsl:value-of select="pr:pl_nc_type/pr:pl_type/pr:_id"/>
             </plIdentifier_type>
 		
             <plParthood_currentPartOf>
-                <xsl:value-of select="pr:pl_ph_current_partof_place/pr:pl/pr:_uuid"/>
+                <xsl:value-of select="pr:pl_ph_current_partof_place/pr:pl/pr:_id"/>
             </plParthood_currentPartOf>
 		
             <plSubstance_geoWKT>

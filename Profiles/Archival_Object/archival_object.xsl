@@ -27,15 +27,17 @@
 			<ao_system_object_id>
 				<xsl:value-of select="pr:_system_object_id"/>
 			</ao_system_object_id>
+			<!--
 			<ao_record_uuid>
 				<xsl:value-of select="pr:_uuid"/>
 			</ao_record_uuid>
+			-->
 			<_id>
-			<xsl:value-of select="pr:_id"/>
+				<xsl:value-of select="pr:_id"/>
 			</_id>
 			<!-- PARENT ID -->
 			<_id_parent>
-			<xsl:value-of select="pr:_id_parent"/>
+				<xsl:value-of select="pr:_id_parent"/>
 			</_id_parent>
 			<!-- MODIFICATION -->
 			<ao_last_modified>
@@ -63,7 +65,7 @@
 							<xsl:value-of select="pr:ao_nc_identifier_alt_id"/>
 						</ao_identifier_alt_id>
 						<ao_identifiers_type_uuid>
-							<xsl:value-of select="pr:ao_nc_identifier_alt_type/pr:generic_identifier_type/pr:_uuid"/>
+							<xsl:value-of select="pr:ao_nc_identifier_alt_type/pr:generic_identifier_type/pr:_id"/>
 						</ao_identifiers_type_uuid>
 						<xsl:element name="ao_identifiers_type_name">
 							<ao_identifiers_type_name_de>
@@ -103,7 +105,7 @@
 						<xsl:element name="ao_alternative_title_used_by_actor">
 							<xsl:for-each select="pr:ao_nc_title_alt_usedby/pr:act">
 								<ao_title_used_by_actor_uuid>
-									<xsl:value-of select="pr:_uuid"/>
+									<xsl:value-of select="pr:_id"/>
 								</ao_title_used_by_actor_uuid>
 								<ao_title_used_by_actor_type>
 									<xsl:value-of select="pr:act_type_crm/pr:act_type_crm/pr:act_type_crm_name"/>
@@ -136,7 +138,7 @@
 					<xsl:element name="ao_actor_creator">
 						<xsl:element name="ao_actor_type">
 							<ao_actor_creator_type_uuid>
-								<xsl:value-of select="pr:ao_actorrelation_creation_actor/pr:act/pr:_uuid"/>
+								<xsl:value-of select="pr:ao_actorrelation_creation_actor/pr:act/pr:_id"/>
 							</ao_actor_creator_type_uuid>
 							<ao_actor_creator_type>
 								<xsl:value-of select="pr:ao_actorrelation_creation_actor/pr:act/pr:act_type_crm/pr:act_type_crm/pr:act_type_crm_name"/>
@@ -145,7 +147,7 @@
 						<xsl:element name="ao_actor_role">
 							<xsl:for-each select="pr:ao_actorrelation_creation_role/pr:act_role">
 								<ao_actor_creator_role_uuid>
-									<xsl:value-of select="pr:_uuid"/>
+									<xsl:value-of select="pr:_id"/>
 								</ao_actor_creator_role_uuid>
 								<ao_actor_creator_role_name>
 									<xsl:value-of select="pr:act_role_name_display/pr:de-DE"/>
@@ -161,7 +163,7 @@
 					<xsl:element name="ao_actor_user">
 						<xsl:element name="ao_actor_user_type_">
 							<ao_actor_user_type_uuid>
-								<xsl:value-of select="pr:ao_actorrelation_usedby_actor/pr:act/pr:_uuid"/>
+								<xsl:value-of select="pr:ao_actorrelation_usedby_actor/pr:act/pr:_id"/>
 							</ao_actor_user_type_uuid>
 							<ao_actor_user_type>
 								<xsl:value-of select="pr:ao_actorrelation_usedby_actor/pr:act/pr:act_type_crm_archive/pr:act_type_crm/pr:act_type_crm_name"/>
@@ -170,7 +172,7 @@
 						<xsl:element name="ao_actor_user_role">
 							<xsl:for-each select="pr:ao_actorrelation_usedby_role/pr:act_role">
 								<ao_actor_user_uuid>
-									<xsl:value-of select="pr:_uuid"/>
+									<xsl:value-of select="pr:_id"/>
 								</ao_actor_user_uuid>
 								<ao_actor_user_role_name_de>
 									<xsl:value-of select="pr:act_role_name_display/pr:de-DE"/>
@@ -188,7 +190,7 @@
 				<xsl:for-each select="pr:_nested__ao__ao_exist_prod_places/pr:ao__ao_exist_prod_places/pr:ao_exist_prod_place/pr:pl">
 					<xsl:element name="ao_production">
 						<ao_production_place_uuid>
-							<xsl:value-of select="pr:_uuid"/>
+							<xsl:value-of select="pr:_id"/>
 						</ao_production_place_uuid>
 					</xsl:element>
 				</xsl:for-each>
@@ -206,7 +208,7 @@
 					<ao_production_time_span_to>
 						<xsl:choose>
 							<xsl:when test="string-length(pr:ao_exist_prod_timespan/pr:to) = 4">
-								<xsl:value-of select="concat(pr:ao_exist_prod_timespan/pr:to,'-01-01')"/>
+								<xsl:value-of select="concat(pr:ao_exist_prod_timespan/pr:to,'-12-31')"/>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:value-of select="pr:ao_exist_prod_timespan/pr:to"/>
@@ -220,7 +222,7 @@
 				<xsl:for-each select="pr:_nested__ao__ao_exist_destr_places/pr:ao__ao_exist_destr_places/pr:ao_exist_destr_place/pr:pl">
 					<xsl:element name="ao_destruction_place">
 						<ao_destruction_place_uuid>
-							<xsl:value-of select="pr:_uuid"/>
+							<xsl:value-of select="pr:_id"/>
 						</ao_destruction_place_uuid>
 					</xsl:element>
 				</xsl:for-each>
@@ -238,7 +240,7 @@
 					<ao_destruction_time_span_to>
 						<xsl:choose>
 							<xsl:when test="string-length(pr:ao_exist_destr_timespan/pr:to) = 4">
-								<xsl:value-of select="concat(pr:ao_exist_destr_timespan/pr:to,'-01-01')"/>
+								<xsl:value-of select="concat(pr:ao_exist_destr_timespan/pr:to,'-12-31')"/>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:value-of select="pr:ao_exist_destr_timespan/pr:to"/>
@@ -252,7 +254,7 @@
 				<xsl:for-each select="pr:_nested__ao__ao_korr_from_places/pr:ao__ao_korr_from_places/pr:ao_korr_from_place/pr:pl">
 					<xsl:element name="ao_correspondance_from_place">
 						<ao_correspondance_place_from>
-							<xsl:value-of select="pr:_uuid"/>
+							<xsl:value-of select="pr:_id"/>
 						</ao_correspondance_place_from>
 					</xsl:element>
 				</xsl:for-each>
@@ -260,7 +262,7 @@
 					<ao_correspondance_time_span_from_earliest>
 						<xsl:choose>
 							<xsl:when test="string-length(pr:ao_korr_from_timespan/pr:from) = 4">
-								<xsl:value-of select="concat(pr:ao_korr_from_timespan/pr:from,'-1-1')"/>
+								<xsl:value-of select="concat(pr:ao_korr_from_timespan/pr:from,'-01-01')"/>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:value-of select="pr:ao_korr_from_timespan/pr:from"/>
@@ -270,7 +272,7 @@
 					<ao_correspondance_time_span_from_latest>
 						<xsl:choose>
 							<xsl:when test="string-length(pr:ao_korr_from_timespan/pr:to) = 4">
-								<xsl:value-of select="concat(pr:ao_korr_from_timespan/pr:to,'-1-1')"/>
+								<xsl:value-of select="concat(pr:ao_korr_from_timespan/pr:to,'-12-31')"/>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:value-of select="pr:ao_korr_from_timespan/pr:to"/>
@@ -284,7 +286,7 @@
 				<xsl:for-each select="pr:_nested__ao__ao_korr_to_places/pr:ao__ao_korr_to_places/pr:ao_korr_to_place/pr:pl">
 					<xsl:element name="ao_correspondance_to_place">
 						<ao_correspondance_place_to>
-							<xsl:value-of select="pr:_uuid"/>
+							<xsl:value-of select="pr:_id"/>
 						</ao_correspondance_place_to>
 					</xsl:element>
 				</xsl:for-each>
@@ -292,7 +294,7 @@
 					<ao_correspondance_time_span_to_earliest>
 						<xsl:choose>
 							<xsl:when test="string-length(pr:ao_korr_to_timespan/pr:from) = 4">
-								<xsl:value-of select="concat(pr:ao_korr_to_timespan/pr:from,'-1-1')"/>
+								<xsl:value-of select="concat(pr:ao_korr_to_timespan/pr:from,'-01-01')"/>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:value-of select="pr:ao_korr_to_timespan/pr:from"/>
@@ -302,7 +304,7 @@
 					<ao_correspondance_time_span_to_latest>
 						<xsl:choose>
 							<xsl:when test="string-length(pr:ao_korr_to_timespan/pr:to) = 4">
-								<xsl:value-of select="concat(pr:ao_korr_to_timespan/pr:to,'-1-1')"/>
+								<xsl:value-of select="concat(pr:ao_korr_to_timespan/pr:to,'-12-31')"/>
 							</xsl:when>
 							<xsl:otherwise>
 								<xsl:value-of select="pr:ao_korr_to_timespan/pr:to"/>
@@ -316,7 +318,7 @@
 				<xsl:for-each select="pr:_nested__ao__ao_cover_places/pr:ao__ao_cover_places">
 					<xsl:element name="ao_cover_place">
 						<ao_cover_places_uuid>
-							<xsl:value-of select="pr:ao_cover_places/pr:pl/pr:_uuid"/>
+							<xsl:value-of select="pr:ao_cover_places/pr:pl/pr:_id"/>
 						</ao_cover_places_uuid>
 					</xsl:element>
 					<xsl:element name="ao_cover_place_role">
@@ -336,7 +338,7 @@
 				<xsl:for-each select="pr:_nested__ao__ao_cover_actors/pr:ao__ao_cover_actors">
 					<xsl:element name="ao_cover_actors_type">
 						<ao_cover_actor_uuid>
-							<xsl:value-of select="pr:ao_cover_actors/pr:act/pr:_uuid"/>
+							<xsl:value-of select="pr:ao_cover_actors/pr:act/pr:_id"/>
 						</ao_cover_actor_uuid>
 						<!--
 						<ao_cover_actor_type>
@@ -364,7 +366,7 @@
 				<xsl:for-each select="pr:_nested__ao__ao_cover_oeuvres/pr:ao__ao_cover_oeuvres">
 					<xsl:element name="ao_cover_oeuvre_type">
 						<ao_cover_oeuvres_uuid>
-							<xsl:value-of select="pr:ao_cover_oeuvres/pr:oeu/pr:_uuid"/>
+							<xsl:value-of select="pr:ao_cover_oeuvres/pr:oeu/pr:_id"/>
 						</ao_cover_oeuvres_uuid>
 					</xsl:element>
 					<xsl:element name="ao_cover_oeuvres_role">
@@ -430,7 +432,7 @@
 				<xsl:for-each select="pr:_nested__ao__ao_actorrelation_current_owners/pr:ao__ao_actorrelation_current_owners/pr:ao_actorrelation_current_owner">
 					<xsl:element name="ao_current_owner">
 						<ao_current_owner_uuid>
-							<xsl:value-of select="pr:act/pr:_uuid"/>
+							<xsl:value-of select="pr:act/pr:_id"/>
 						</ao_current_owner_uuid>
 						<xsl:for-each select="pr:act/pr:act_type_crm/pr:act_type_crm">
 							<xsl:element name="ao_owner_type">
@@ -447,7 +449,7 @@
 				<xsl:for-each select="pr:_nested__ao__ao_actorrelation_former_ownership/pr:ao__ao_actorrelation_former_ownership">
 					<xsl:element name="ao_former_owner">
 						<ao_former_owner_uuid>
-							<xsl:value-of select="pr:ao_actorrelation_former_ownership_owner/pr:act/pr:_uuid"/>
+							<xsl:value-of select="pr:ao_actorrelation_former_ownership_owner/pr:act/pr:_id"/>
 						</ao_former_owner_uuid>
 						<xsl:for-each select="pr:ao_actorrelation_former_ownership_owner/pr:act/pr:act_type_crm/pr:act_type_crm">
 							<xsl:element name="ao_former_owner_type">
@@ -460,7 +462,7 @@
 							<ao_actorrelation_former_ownership_timespan_obtaining_from>
 								<xsl:choose>
 									<xsl:when test="string-length(pr:ao_actorrelation_former_ownership_timespan_obtaining/pr:from) = 4">
-										<xsl:value-of select="concat(pr:ao_actorrelation_former_ownership_timespan_obtaining/pr:from,'-1-1')"/>
+										<xsl:value-of select="concat(pr:ao_actorrelation_former_ownership_timespan_obtaining/pr:from,'-01-01')"/>
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:value-of select="pr:ao_actorrelation_former_ownership_timespan_obtaining/pr:from"/>
@@ -470,7 +472,7 @@
 							<ao_actorrelation_former_ownership_timespan_obtaining_to>
 								<xsl:choose>
 									<xsl:when test="string-length(pr:ao_actorrelation_former_ownership_timespan_obtaining/pr:to) = 4">
-										<xsl:value-of select="concat(pr:ao_actorrelation_former_ownership_timespan_obtaining/pr:to,'-1-1')"/>
+										<xsl:value-of select="concat(pr:ao_actorrelation_former_ownership_timespan_obtaining/pr:to,'-12-31')"/>
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:value-of select="pr:ao_actorrelation_former_ownership_timespan_obtaining/pr:to"/>
@@ -482,7 +484,7 @@
 							<ao_actorrelation_former_ownership_timespan_ceding_from>
 								<xsl:choose>
 									<xsl:when test="string-length(pr:ao_actorrelation_former_ownership_timespan_ceding/pr:from) = 4">
-										<xsl:value-of select="concat(pr:ao_actorrelation_former_ownership_timespan_ceding/pr:from,'-1-1')"/>
+										<xsl:value-of select="concat(pr:ao_actorrelation_former_ownership_timespan_ceding/pr:from,'-01-01')"/>
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:value-of select="pr:ao_actorrelation_former_ownership_timespan_ceding/pr:from"/>
@@ -492,7 +494,7 @@
 							<ao_actorrelation_former_ownership_timespan_ceding_to>
 								<xsl:choose>
 									<xsl:when test="string-length(pr:ao_actorrelation_former_ownership_timespan_ceding/pr:to) = 4">
-										<xsl:value-of select="concat(pr:ao_actorrelation_former_ownership_timespan_ceding/pr:to,'-1-1')"/>
+										<xsl:value-of select="concat(pr:ao_actorrelation_former_ownership_timespan_ceding/pr:to,'-12-31')"/>
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:value-of select="pr:ao_actorrelation_former_ownership_timespan_ceding/pr:to"/>
@@ -518,6 +520,15 @@
 						<tax_transurbicide_uri>
 							<xsl:value-of select="pr:tax_transurbicide/pr:tax_transurbicide/pr:tax_transurbicide_uri_gta_digital"/>
 						</tax_transurbicide_uri>
+					</xsl:element>
+				</xsl:for-each>
+			</xsl:element>
+			<xsl:element name="entry_point">
+			<xsl:for-each select="pr:_nested__ao__ao_repr_do_archive/pr:ao__ao_repr_do_archive/pr:ao_repr_do_archive/pr:do">
+					<xsl:element name="_id">
+						<id>
+							<xsl:value-of select="pr:_id"/>
+						</id>
 					</xsl:element>
 				</xsl:for-each>
 			</xsl:element>
