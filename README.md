@@ -13,7 +13,7 @@ The ProfileParser provides the following harmonization schema:
 * Collection (E78_Collection)
 * Digital Object (D1_Digital_Object)
 
-To understand how to process XML files check the [Wiki](https://github.com/gtadigital/ProfileParser/wiki)
+The workflow about how to process the XML file is the [Wiki](https://github.com/gtadigital/ProfileParser/wiki)
 
 ## Credits:
 
