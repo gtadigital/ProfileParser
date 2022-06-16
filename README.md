@@ -59,14 +59,17 @@ $ pip install -r requirements.txt
 ```bash
 
 # Help documentation
-$ python3 profileParser.py --help
+$ python3 Parser1.0.py --help
 
 OR
 
 # Run the script
-$ python3 profileParser.py --sourcePath "your source path" --targetPath "your target path" --xslt "xslt folder"
+$ python3 Parser1.0.py --sourcePath "your source path" --targetPath "your target path" --xslt "~/ProfileParser/Profiles/(Archival_Object, BuiltWorks, Digital_Object, Group, Person, Place)"
 ```
 
+## Output
+
+* Resulting XML files will be saved in the targetPath in folders of a maximum size of 8MB
 
 ## Credits:
 
