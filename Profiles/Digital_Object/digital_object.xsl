@@ -16,11 +16,8 @@
     </xsl:template>
     <xsl:template match="pr:do"/>
     <xsl:template match="pr:objects/pr:do">
-    <xsl:variable name="IIIF-locator" select="pr:do_loc_locator " />
-    <xsl:variable name="time-span-from-creation" select="pr:do_existence_creation_date/pr:from" />
-    <xsl:variable name="time-span-to-creation" select="pr:do_existence_creation_date/pr:to" />
-    <xsl:variable name="time-span-from-modification" select="pr:do_existence_modification_date/pr:from" />
-	<xsl:variable name="time-span-to-modification" select="pr:do_existence_modification_date/pr:to" />
+    <!--<xsl:variable name="IIIF-locator" select="pr:do_loc_locator " />-->
+ 
         <entry>
             <!-- UUID -->
             <do_system_object_id>
@@ -50,17 +47,17 @@
                             <xsl:value-of select="concat(pr:do_existence_creation_date/pr:from,'-01-01')"/>
                         </xsl:when>
                         <xsl:otherwise>
-                            <xsl:value-of select="substring-before($time-span-from-creation,'T')"/>
+                            <xsl:value-of select="pr:do_existence_creation_date/pr:from"/>
                         </xsl:otherwise>
                     </xsl:choose>
                 </do_production_time_span_from>
                 <do_production_time_span_to>
                     <xsl:choose>
                         <xsl:when test="string-length(pr:do_existence_creation_date/pr:to) = 4">
-                            <xsl:value-of select="concat(pr:do_existence_creation_date/pr:to,'-01-01')"/>
+                            <xsl:value-of select="concat(pr:do_existence_creation_date/pr:to,'-12-31')"/>
                         </xsl:when>
                         <xsl:otherwise>
-                            <xsl:value-of select="substring-before($time-span-to-creation,'T')"/>
+                            <xsl:value-of select="pr:do_existence_creation_date/pr:to"/>
                         </xsl:otherwise>
                     </xsl:choose>
                 </do_production_time_span_to>
@@ -75,17 +72,17 @@
                                     <xsl:value-of select="concat(pr:do_existence_modification_date/pr:from,'-01-01')"/>
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    <xsl:value-of select="substring-before($time-span-from-modification,'T')"/>
+                                    <xsl:value-of select="pr:do_existence_modification_date/pr:from"/>
                                 </xsl:otherwise>
                             </xsl:choose>
                         </do_modification_time_span_from>
                         <do_modification_time_span_to>
                             <xsl:choose>
                                 <xsl:when test="string-length(pr:do_existence_modification_date/pr:to) = 4">
-                                    <xsl:value-of select="concat(pr:do_existence_modification_date/pr:to,'-01-01')"/>
+                                    <xsl:value-of select="concat(pr:do_existence_modification_date/pr:to,'-12-31')"/>
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    <xsl:value-of select="substring-before($time-span-to-modification,'T')"/>
+                                    <xsl:value-of select="pr:do_existence_modification_date/pr:to"/>
                                 </xsl:otherwise>
                             </xsl:choose>
                         </do_modification_time_span_to>
@@ -106,13 +103,13 @@
                     </xsl:element>
                 </xsl:for-each>
             </xsl:element>
-            <!-- IIIF SPEC-->
+            <!-- IIIF SPEC
             <do_locator>
                 <xsl:value-of select="substring-after($IIIF-locator,'https://iiif.gta.arch.ethz.ch/iiif/2/')"/>
             </do_locator>
             <do_locator_type>
                 <xsl:value-of select ="pr:do_loc_locator_type/pr:en-US"/>
-            </do_locator_type>
+            </do_locator_type>-->
             <!-- RIGHTS-->
             <do_rights_holder>
                 <xsl:value-of select ="pr:_nested__do__do_rights/pr:do__do_rights/pr:do_rights_holder/pr:act/pr:_id"/>
