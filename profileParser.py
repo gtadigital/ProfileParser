@@ -135,7 +135,7 @@ if __name__ == "__main__":
                         outfile = open(current_pl_dir + item, 'wb')
                         outfile.write(infile)
                     
-                    if element.tag == 'grp_system_object_id':
+                    if element.tag == 'grp_identifiers':
                         
                         
                         file_grp_list=[]
@@ -144,7 +144,7 @@ if __name__ == "__main__":
                         outfile = open(current_grp_dir + item, 'wb')
                         outfile.write(infile)
                         
-                    if element.tag == 'per_uuid':
+                    if element.tag == 'per_identifiers':
                         
                         
                         file_per_list=[]

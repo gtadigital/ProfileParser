@@ -140,6 +140,10 @@
                 <!--<xsl:value-of select="pr:pl_nc_identifier_viaf"/>-->
 				<xsl:value-of select="substring-after($viaf,'http://viaf.org/viaf/')"/>
             </plIdentifier_viafURI>
+	    <plType>
+	      <xsl:value-of select="pr:pl_nc_type_stwd/pr:pl_type/pr:pl_type_name/pr:en-US"/>  
+	    </plType>
         </entry>
     </xsl:template>
 </xsl:stylesheet>
+
